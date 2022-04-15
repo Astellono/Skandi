@@ -1,0 +1,12 @@
+@media (max-width: 1655px) {
+    
+    .header__contant {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .header__menu {
+        order: 3;
+        margin:0 auto;
+        margin-top: 50px;
+    }
+  }

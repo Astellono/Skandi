@@ -1,0 +1,194 @@
+
+@font-face {
+    font-family: 'Aguafina Script';
+    src: url('AguafinaScript-Regular.eot');
+    src: local('Aguafina Script Regular'), local('AguafinaScript-Regular'),
+        
+        url('../fonts/AguafinaScript-Regular.woff2') format('woff2'),
+        url('../fonts/AguafinaScript-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto-Regular"),
+      url("../fonts/Roboto.woff2") format("woff2"),
+      url("../fonts/Roboto.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto-Bold"),
+      url("../fonts/RobotoBold.woff2") format("woff2"),
+      url("../fonts/RobotoBold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto-Light"),
+      url("../fonts/RobotoLight.woff2") format("woff2"),
+      url("../fonts/RobotoLight.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto-Medium"),
+      url("../fonts/RobotoMedium.woff2") format("woff2"),
+      url("../fonts/RobotoMedium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto-italic"),
+      url("../fonts/Robotobolditalic.woff2") format("woff2"),
+      url("../fonts/Robotobolditalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+* {
+  margin:0;
+  padding: 0;
+}
+
+body {
+    font-family: "Roboto","Aguafina Script", "Arial", sans-serif;
+    padding-top: 20px;
+}
+ul,li,a {
+    text-decoration:none;
+    list-style-type: none;
+    color: black;
+}
+.header {
+  padding-bottom: 20px;
+    width: 100%;
+    height: max-content;
+}
+.container {
+    margin: 0 auto;
+    box-sizing: content-box;
+    
+    max-width: 1770px;
+    padding: 0 77px;
+}
+/*---------------------------------------------------------------------------------------header---*/
+.header__logo {
+    height: 107px;
+}
+.header__contant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+.header__menu {
+    display: flex;
+    width: 918px;
+    max-width: 919px;
+    justify-content: space-between;
+}
+
+.header__link {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #4F3156;
+}
+
+
+
+
+.header__contacts {
+    max-width: 259px;
+    height: 111px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__number {
+    font-family: 'Aguafina Script';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 74px;
+}
+.header__soc-list {
+    display: flex;
+}
+.header__soc-item:not(:last-child) {
+    margin-right: 20px;
+}
+.header__soc-icon {
+    width: 42px;
+    height: 39px;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------Hero---*/
+
+.hero {
+ 
+  position: relative;
+  width: 100%;
+  height: 910px;
+  background-image: url(../img/hero/hero.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center center;
+  
+}
+/* .hero__fon {
+  width: 100%;
+  height: 100%;
+}
+/* .hero__fon-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+} */ 
+.hero__contant {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 802px;
+  
+  margin-left: -401px;  
+  margin-top: -244px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero__title {
+  margin-bottom: 45px;
+  
+  font-weight: 700;
+  font-size: 85px;
+  line-height: 112px;
+  color: white;
+}
+.hero__desc {
+  margin-bottom: 100px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: white;
+}
+.hero__link {
+  margin: 0 auto;
+}
