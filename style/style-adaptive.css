@@ -5,8 +5,8 @@
         flex-wrap: wrap;
     }
     .header__menu {
+        width: 100%;
         order: 3;
-        margin:0 auto;
         margin-top: 50px;
     }
   }
