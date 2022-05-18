@@ -1,3 +1,21 @@
+@media (max-width: 1280px) {
+    .adv__item {
+        width: 362px;
+        height: 300px;
+        border-radius:30px ;
+        padding-top: 10px;
+    }
+    .adv__item-title {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .adv__img {
+        width: 250px;
+    }
+    .teamlead__img {
+        width: 500px;
+    }
+}
 @media (max-width: 1060px) {
     
     .header__contant {
@@ -9,4 +27,64 @@
         order: 3;
         margin-top: 50px;
     }
+
+  }
+  @media (max-width: 877px) {
+      .about__title {
+        width: 100%;
+        text-align: center;
+      }
+      .adv__title {
+          width: 100%;
+          font-size: 32px;
+          text-align: center;
+      }
+      .adv__list {
+          width: 100%;
+          justify-content: center;
+      }
+      .adv__item{
+          width: 100%;
+      }
+      .teamlead__img {
+        width: 300px;
+      }
+      .adv__item-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+      .adv__img {
+          width: 300px;
+      }
   } 
+  @media (max-width: 877px) { 
+    .header__menu {
+        display: none;
+    }
+    .header__contacts {
+        display: none;
+    }
+    .hero__contant { 
+        width: 500px;
+        
+      }
+      .hero__title {
+        
+        margin-bottom: 45px;
+        
+        font-size: 48px;
+        line-height: 112px;
+        
+      }
+      .hero__desc {
+        margin-bottom: 100px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 38px;
+        color: white;
+      }
+      .teamlead__desc {
+          font-size: 24px;
+      }
+  }

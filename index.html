@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-adaptive.css">
+    <link rel="stylesheet" href="modal/modal.css">
     <title>Document</title>
 </head>
 
@@ -116,7 +117,7 @@
                 </li>
                 <li class="adv__item">
                     <h3 class="adv__item-title">
-                        Профилактика болей в суставах и спине  
+                        Профилактика болей в суставах и спине
                     </h3>
                     <img class="adv__img" src="img/about/5.png">
                 </li>
@@ -129,7 +130,67 @@
             </ul>
         </div>
     </section>
-    
+    <section class="teamlead">
+        <div class="container">
+            <h2 class="teamlead__title">Руководитель</h2>
+            <img class="teamlead__img" src="img/team/Lider.png" alt="">
+            <p class="teamlead__desc">Волосюк Маргарита<br>
+                Инструктор Nordic Walking
+                (скандинавская ходьба)
+                организатор туров и экскурсий
+                ‌в формате Scandi-trip</p>
+        </div>
+    </section>
+    <!-- <section class="team">
+        <div class="container">
+            <h2 class="team__title">Наша команда</h2>
+            <ul class="team__list">
+                <li class="team__item">
+                    <img class="team__img" src="img/team/shab.png" alt="">
+                    <button id="show-modal" class="team__btn btn">Подробнее</button>
+                </li>
+                <li class="team__item">
+                    <img class="team__img" src="img/team/shab.png" alt="">
+                    <button class="team__btn">Подробнее</button>
+                </li>
+                <li class="team__item">
+                    <img class="team__img" src="img/team/shab.png" alt="">
+                    <button class="team__btn">Подробнее</button>
+                </li>
+                <li class="team__item">
+                    <img class="team__img" src="img/team/shab.png" alt="">
+                    <button class="team__btn">Подробнее</button>
+                </li>
+                <li class="team__item">
+                    <img class="team__img" src="img/team/shab.png" alt="">
+                    <button class="team__btn">Подробнее</button>
+                </li>
+                <li class="team__item">
+                    <img class="team__img" src="img/team/shab.png" alt="">
+                    <button class="team__btn">Подробнее</button>
+                </li>
+            </ul>
+        </div>
+    </section> -->
+    <script src="modal/modal.js"></script>
+    <script>
+        (function () {
+            // создаём модальное окно
+            var modal = $modal({
+                title: 'Текст заголовка',
+                content: '<p>Содержимое модального окна...</p>',
+                footerButtons: [
+                    { class: 'btn btn__cancel', text: 'Отмена', handler: 'modalHandlerCancel' },
+                    { class: 'btn btn__ok', text: 'ОК', handler: 'modalHandlerOk' }
+                ]
+            });
+            // при клике по кнопке #show-modal
+            document.querySelector('#show-modal').addEventListener('click', function () {
+                // отобразим модальное окно
+                modal.show();
+            });
+        })();
+    </script>
 </body>
 
 </html>
