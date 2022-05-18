@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+  }
 @font-face {
     font-family: 'Aguafina Script';
     src: url('AguafinaScript-Regular.eot');

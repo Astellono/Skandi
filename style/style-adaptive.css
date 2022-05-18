@@ -117,10 +117,23 @@
   @media (max-width: 540px) {
       .container {
           padding: 0 10px;
+      }
+      .hero__contant {
+
+      }
+      .hero__title {
+          font-size: 32px;
+          margin-bottom: 20px;
       } 
+      .hero__desc {
+          font-size: 16px;
+          margin-bottom: 30px;
+      }
+      .about__story {
+          font-size: 16px;
+      }
       .adv__item-title {
-          font-size: 18px;
-          
+          font-size: 16px; 
       }
       
   }
