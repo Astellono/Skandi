@@ -1,3 +1,8 @@
+@media (max-width: 1360px) {
+    .team__item-3 {
+       margin-left: 300px;
+    }
+}
 @media (max-width: 1280px) {
     .adv__item {
         width: 362px;

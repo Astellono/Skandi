@@ -86,6 +86,11 @@ ul,li,a {
     max-width: 1770px;
     padding: 0 77px;
 }
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 /*---------------------------------------------------------------------------------------header---*/
 .header__logo img {
     width: 170px;
@@ -265,6 +270,7 @@ ul,li,a {
 /*---------------------------------------------------------------------------------------team---*/
 
 .teamlead {
+  padding-bottom: 43px;
   padding-top: 43px;
 }
 
@@ -276,6 +282,9 @@ ul,li,a {
   max-width: 1122px;
   border-top: 1px solid #60326B;
   font-size: 32px;
+  color: #60326B;
+}
+.team__btn {
   color: #60326B;
 }
 .teamlead__img {
@@ -297,33 +306,53 @@ ul,li,a {
 /*----------------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------------------------team---*/
+.team {
+ 
+  background: rgba(236, 229, 238, 0.6);
+  
+}
 .team__title {
   margin: 0 auto;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   text-align: center;
   padding-top: 30px;
   font-size: 32px;
   color: #60326B;
 }
-.team__img {
-  margin-bottom: 30px;
-  width: 400px;
-  height: 400px;
+.team__desc {
+  color: #60326B;
+  margin-bottom: 10px;
 }
+.team__title-member {
+  color: #60326B;
+  margin-bottom: 7px;
+}
+.team__img {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+}
+
 .team__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  
 }
 .team__item {
-  
-  width: 500px;
+
+  width: max-content;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 500px;
+  margin-bottom: 30px;
 }
 .team__btn {
-  width: 200px;
-  height: 60px;
+  width: max-content;
+  align-items: center;
+  display: flex;
+ 
+  
 }
