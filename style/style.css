@@ -254,7 +254,7 @@ button {
   background: rgba(255, 255, 255, 0.7);
 }
 .adv__item-title {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   text-align: center;
   font-weight: 200;
   font-size: 36px;
@@ -354,5 +354,21 @@ button {
   align-items: center;
   display: flex;
  
+}
+.modal-content {
+  padding: 30px;
+}
+.team__modal-img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+.modal-body {
+  text-align: center;
   
+}
+.modal-desc {
+  text-align: justify;
+  margin-bottom: 10px;
 }

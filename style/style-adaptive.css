@@ -119,7 +119,7 @@
           font-size: 24px;
       }
   }
-  @media (max-width: 540px) {
+  @media (max-width: 600px) {
       .container {
           padding: 0 10px;
       }
@@ -140,5 +140,8 @@
       .adv__item-title {
           font-size: 16px; 
       }
-      
+      .team__list {
+          flex-direction: column;
+          align-items: center;
+      }
   }
