@@ -1,4 +1,5 @@
 <?php
+echo "<h2>PHP это легко!</h2>";
 $fio = $_POST['fio'];
 $email = $_POST['email'];
 $fio = htmlspecialchars($fio);
@@ -14,4 +15,5 @@ if (mail("milko-v@yandex.ru", "Заявка с сайта", "ФИО:".$fio.". E-
  {     echo "сообщение успешно отправлено";
 } else {
     echo "при отправке сообщения возникли ошибки";
-}?>
+}
+?>
