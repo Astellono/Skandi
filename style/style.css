@@ -309,7 +309,7 @@ button {
 .team {
  
   background: rgba(236, 229, 238, 0.6);
-  
+  padding: 50px 0;
 }
 .team__title {
   margin: 0 auto;
@@ -371,4 +371,41 @@ button {
 .modal-desc {
   text-align: justify;
   margin-bottom: 10px;
+}
+/*----------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------quest--*/
+
+.questions {
+  
+  padding: 70px 0;
+  background-color: #48344E;
+}
+.questions__title {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
+  width: 70%;
+  border-bottom: 1px solid #824292;
+  color: white;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 49px;
+  margin-bottom: 40px;
+}
+.questions__form {
+  display: flex;
+  flex-direction: column;
+}
+.questions__form input {
+  margin: 0 auto;
+  height: 50px;
+  margin-bottom: 20px;
+  width: 50%;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+}
+.questions__input-text {
+  height: 200px !important; 
 }
