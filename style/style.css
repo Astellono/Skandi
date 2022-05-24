@@ -115,8 +115,14 @@ button {
     font-size: 24px;
     line-height: 38px;
     color: #4F3156;
+    border-bottom:2px solid white;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 5px;
 }
-
+.header__link:hover {
+  color: black;
+  border-bottom: 2px solid black ;
+}
 
 
 
@@ -162,8 +168,8 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 620px;
-  background-image: url(../img/hero/hero.png);
+  height:800px;
+  background-image: url(../img/hero/HeroT.jpg);
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center center;
@@ -171,7 +177,9 @@ button {
 }
 
 .hero__contant { 
-  width: 802px;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -193,8 +201,12 @@ button {
   color: white;
 }
 .hero__link {
- 
+  opacity: 1;
   margin: 0 auto;
+  transition: opacity 0.2s ease-in-out;
+}
+.hero__link:hover {
+  opacity: 0.5;
 }
 /*----------------------------------------------------------------------------------------------*/
 
@@ -291,10 +303,11 @@ button {
   display: block;
   max-width: 747px;
   margin: 0 auto;
-  margin-bottom: 43px;
+  margin-bottom: 30px;
 }
 .teamlead__desc {
   margin: 0 auto;
+  margin-bottom: 20px;
   max-width: 475px;
   font-size: 32px ;
   font-weight: 400;
@@ -302,7 +315,21 @@ button {
   text-align: center;
   color: #60326B;
 } 
-
+.teamlead__btn {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 5px;
+  font-size:16px;
+  color: white;
+  background: #60326B;
+  border-radius: 10px;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+.teamlead__btn:hover {
+  opacity: 0.7;
+}
 /*----------------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------------------------team---*/
@@ -394,6 +421,8 @@ button {
   margin-bottom: 40px;
 }
 .questions__form {
+  margin: 0 auto;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -401,11 +430,45 @@ button {
   margin: 0 auto;
   height: 50px;
   margin-bottom: 20px;
-  width: 50%;
+  width: 100%;
   border-radius: 15px;
   border: none;
   padding: 10px;
 }
 .questions__input-text {
   height: 200px !important; 
+}
+.questions__btn {
+  margin-right:0px !important ;
+  width: 200px !important;
+  background-color: #824292;
+  color: white;
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------contacts--*/
+
+
+.contacts {
+  padding: 30px 0;
+}
+.contacts__title {
+  width: 300px;
+  font-size: 32px;
+  font-weight: 700;
+  border-bottom: 2px solid #60326B;
+  margin-bottom: 30px;
+}
+.contacts__item {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 49px;
+  font-style: italic;
+}
+
+footer {
+  height: 60px;
+  background-color: #4F3156;
 }
