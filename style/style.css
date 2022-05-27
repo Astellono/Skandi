@@ -443,6 +443,10 @@ button {
   width: 200px !important;
   background-color: #824292;
   color: white;
+  transition: opacity 0.2s ease-in-out;
+}
+.questions__btn:hover {
+  opacity: 0.5;
 }
 
 
@@ -467,8 +471,39 @@ button {
   line-height: 49px;
   font-style: italic;
 }
+.contact__t-link {
+  text-decoration: underline;
+}
 
 footer {
   height: 60px;
   background-color: #4F3156;
+}
+
+
+
+
+
+
+
+
+
+
+.lesson {
+}
+.container {
+}
+.lesson__title {
+}
+.lesson__contant {
+}
+.lesson__party {
+}
+.lesson__party-list {
+}
+.lesson__party-item {
+}
+.lesson__img {
+}
+.lesson__solo {
 }
