@@ -1,13 +1,13 @@
-@media (max-width: 1360px) {
+@media (max-width: 1550px) {
     .team__item-3 {
         margin-left: 300px;
     }
-}
 
-@media (max-width: 1280px) {
+
+
     .adv__item {
-        width: 362px;
-        height: 300px;
+        width: 400px;
+        height: 350px;
         border-radius: 30px;
         padding-top: 10px;
     }
@@ -18,7 +18,7 @@
     }
 
     .adv__img {
-        width: 250px;
+        width: 300px;
     }
 
     .teamlead__img {
@@ -45,7 +45,7 @@
 
 }
 
-@media (max-width: 877px) {
+@media (max-width: 968px) {
     .about__title {
         width: 100%;
         text-align: center;

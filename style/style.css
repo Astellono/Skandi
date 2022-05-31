@@ -168,7 +168,7 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:800px;
+  height:600px;
   background-image: url(../img/hero/HeroT.jpg);
   background-repeat: no-repeat;
   background-size:cover;
@@ -214,7 +214,7 @@ button {
 
 .about {
   
-  padding-top: 102px;
+  padding-top: 50px;
   background-image: url(../img/about/back.jpg);
   background-repeat: no-repeat;
   background-size:cover;
@@ -247,6 +247,7 @@ button {
   font-weight: 700;
   font-size: 32px;
   line-height: 56px;
+  
   color: #60326B;
 }
 .adv__list {
@@ -261,14 +262,14 @@ button {
   padding-top: 53px;
   margin-bottom: 60px;
   border-radius: 88px;
-  width: 500px;
+  width: 450px;
   height: 500px;
   background: rgba(255, 255, 255, 0.7);
 }
 .adv__item-title {
   margin-bottom: 40px;
   text-align: center;
-  font-weight: 200;
+  font-weight: 600;
   font-size: 36px;
   line-height: 42px;
   color: #60326B;
@@ -342,7 +343,7 @@ button {
   margin: 0 auto;
   margin-bottom: 40px;
   text-align: center;
-  padding-top: 30px;
+ 
   font-size: 32px;
   color: #60326B;
 }
@@ -405,7 +406,7 @@ button {
 
 .questions {
   
-  padding: 70px 0;
+  padding: 50px 0;
   background-color: #48344E;
 }
 .questions__title {
