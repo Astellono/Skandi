@@ -497,7 +497,7 @@ footer {
 
 .lesson {
   background: rgba(236, 229, 238, 0.6);
-  padding: 50px 0;
+  padding: 15px 0;
 }
 
 .lesson__title {
@@ -549,4 +549,51 @@ footer {
   background: #60326B;
   border-radius: 10px;
   
+}
+.solo {
+  padding: 30px 0;
+}
+.lesson__solo {
+  display: flex;
+  justify-content: space-between;
+}
+.lesson__solo-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.lesson__solo-right {
+  width: 55%;
+ 
+}
+.lesson__solo-title {
+  margin: 20px 0;
+  font-size: 32px;
+}
+.lesson__solo-desc {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.lesson__solo-right-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.lesson__solo-how {
+  font-size: 24px;
+  font-style: italic;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.lesson__solo-btn {
+  
+  width: 200px;
+  display: block;
+  margin-top: 50px;
+  padding: 5px;
+  font-size:24px;
+  color: white;
+  background: #60326B;
+  border-radius: 10px;
 }
