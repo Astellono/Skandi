@@ -1,4 +1,4 @@
-@media (max-width: 1550px) {
+@media (max-width: 1280px) {
     .team__item-3 {
         margin-left: 300px;
     }
@@ -9,7 +9,7 @@
         width: 400px;
         height: 350px;
         border-radius: 30px;
-        padding-top: 10px;
+       
     }
 
     .adv__item-title {

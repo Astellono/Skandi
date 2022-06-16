@@ -251,7 +251,6 @@ button {
   font-weight: 700;
   font-size: 32px;
   line-height: 56px;
-  
   color: #60326B;
 }
 .adv__list {
@@ -263,11 +262,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 53px;
+  justify-content: center;
   margin-bottom: 60px;
   border-radius: 88px;
   width: 450px;
-  height: 500px;
+  height: 450px;
   background: rgba(255, 255, 255, 0.7);
 }
 .adv__item-title {
