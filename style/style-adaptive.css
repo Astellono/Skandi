@@ -2,47 +2,36 @@
     .team__item-3 {
         margin-left: 300px;
     }
-
-
-
     .adv__item {
         width: 400px;
         height: 350px;
         border-radius: 30px;
-       
     }
-
     .adv__item-title {
         font-size: 16px;
         margin-bottom: 30px;
     }
-
     .adv__img {
         width: 300px;
     }
-
     .teamlead__img {
         width: 400px;
     }
-
     .teamlead__desc {
         font-size: 24px;
     }
 }
 
 @media (max-width: 1060px) {
-
     .header__contant {
         align-items: center;
         flex-wrap: wrap;
     }
-
     .header__menu {
         width: 100%;
         order: 3;
         margin-top: 50px;
     }
-
 }
 
 @media (max-width: 968px) {
@@ -50,31 +39,25 @@
         width: 100%;
         text-align: center;
     }
-
     .adv__title {
         width: 100%;
         font-size: 32px;
         text-align: center;
     }
-
     .adv__list {
         width: 100%;
         justify-content: center;
     }
-
     .adv__item {
         width: 100%;
     }
-
     .teamlead__img {
         width: 300px;
     }
-
     .adv__item-title {
         font-size: 24px;
         margin-bottom: 15px;
     }
-
     .adv__img {
         width: 300px;
     }
@@ -95,44 +78,32 @@
         transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;
     }
-
     .header__burger-open {
         transform: translateX(0);
     }
-
     .header__item {
         margin-bottom: 40px;
     }
-
     .header__burger-cross {
         display: block;
         position: absolute;
         right: 60px;
         margin-bottom: 0;
     }
-
     .header__contacts {
         display: none;
     }
-
     .header__burger {
         display: block;
     }
-
     .hero__contant {
         width: 500px;
-
     }
-
     .hero__title {
-
         margin-bottom: 45px;
-
         font-size: 48px;
         line-height: 112px;
-
     }
-
     .hero__desc {
         margin-bottom: 100px;
         text-align: center;
@@ -141,11 +112,9 @@
         line-height: 38px;
         color: white;
     }
-
     .teamlead__desc {
         font-size: 24px;
     }
-
     .questions__form {
         width: 100%;
     }
@@ -155,46 +124,32 @@
     .container {
         padding: 0 10px;
     }
-
     .hero {
         height: 450px;
     }
-
     .hero__title {
         font-size: 32px;
         margin-bottom: 20px;
     }
-
     .hero__desc {
         font-size: 16px;
         margin-bottom: 30px;
     }
-
     .about__story {
         font-size: 16px;
     }
-
     .adv__item-title {
         font-size: 16px;
     }
-
     .team__list {
         flex-direction: column;
         align-items: center;
     }
-
-
-
     .contacts__title {
-
         font-size: 24px;
         font-weight: 700;
-
     }
-
     .contacts__item {
-
         font-size: 16px;
-
     }
 }
