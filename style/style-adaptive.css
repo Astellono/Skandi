@@ -152,4 +152,24 @@
     .contacts__item {
         font-size: 16px;
     }
+    .tour__list {
+        flex-direction: column;
+    }
+    .tour__item {
+        width: 100%;
+    }
+    .actual-tour__list {
+        flex-direction: column;
+    }
+    .actual-tour__item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .lesson__list {
+        flex-direction: column;
+    }
+    .lesson__item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
