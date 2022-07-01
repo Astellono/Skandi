@@ -75,7 +75,7 @@
 
         <div class="hero__contant">
             <h1 class="hero__title">Добро пожаловать</h1>
-            <p class="hero__desc">Мы ради приветствовать вас на сайте нашего проекта!</p>
+            <p class="hero__desc">Мы рады приветствовать вас на сайте нашего проекта!</p>
             <a href="#bot" class="hero__link">
                 <svg width="75px" height="75px" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -93,6 +93,10 @@
             <a name="bot"></a>
             <h2 class="about__title">О нас</h2>
             <p class="about__story">Скандинавская ходьба – это современный и эффективный вид тренировок для всего тела. Занятия подходят начинающим спортсменам и профессиональным атлетам, а также пациентам после травм и операций для восстановления здоровья.</p>
+        </div>
+    </section>
+    <section class="adv">
+        <div class="container">
             <h2 class="adv__title">
                 Преимущества
             </h2>
@@ -155,13 +159,177 @@
                                 </h3>
                                 <p class="actual-tour__date">16-23 июля 2022</p>
 
-                                <button type="button" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-rep" class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
                                             fill="#121723" />
                                     </svg>
                                 </button>
+                                <div class="modal fade" id="modal-rep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-tour">
+                                        <div class="modal-content">
+                                            <div class="modal-img-box">
+                                                <img class="modal-img" src="img/act-tour/Repino.jpg" alt="">
+                                            </div>
+                                            <div class="modal-body">
+                                                <h2>Репино. Финский залив.</h2>
+                                            </div>
+                                            <div class="modal-tour-contant">
+
+                                                <div class="modal-tour-date">Дата: 16.07.22 — 23.07.22</div>
+                                                <p class="modal-tour-story">«На недельку до второго мы уедем в Комарово». В самое комфортное время года мы отправимся на Финский залив. И с удовольствием скандинавским шагом пройдем по Балтийскому российскому побережью. Нас ждут ежедневные
+                                                    утренние занятия на побережье Финского залива, Скандинавская ходьба и увлекательные пешеходные прогулки с историями от местных экскурсоводов. А также удивительный сосново-еловый лес, песчаные пляжи и
+                                                    морской воздух. Отправляемся в путешествие...</p>
+                                                <h2 class="modal-tour-title">
+                                                    Расписание:
+                                                </h2>
+                                                <ul class="modal-tour-list">
+                                                    <li class="modal-tour-item">
+                                                        <h3 class="modal-tour-titleDate">
+                                                            16 июля
+                                                        </h3>
+                                                        <p class="modal-tour-desc">
+                                                            <ul class="modal-active-list">
+                                                                <li class="modal-active-item">Ж/Д трансфер до Санкт-Петербурга до 13.00, где нас встретит комфортабельный автобус и доставит до гостиницы «Репинкая» в поселке Репино.</li>
+                                                                <li class="modal-active-item">Мастер-класс по Скандинавской ходьбе</li>
+                                                                <li class="modal-active-item">В 17.00 Размещение в гостинице. Ужин. Свободное время</li>
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                    <li class="modal-tour-item">
+                                                        <h3 class="modal-tour-titleDate">
+                                                            17 июля
+                                                        </h3>
+                                                        <p class="modal-tour-desc">
+                                                            <ul class="modal-active-list">
+                                                                <li class="modal-active-item">Утренние занятия на побережье финского залива. Гостиница имеет свой прекрасный выход к заливу.</li>
+                                                                <li class="modal-active-item">После завтрака на общественном транспорте (авт.211 стоимость проезда 60 руб.) едем в Зеленогорск и отправляемся вместе с гидом по маршруту «Зеленогорск — финский Терийоки».</li>
+                                                                <li class="modal-active-item">Перекус в центральном парке Зеленогорска или на пляже</li>
+                                                                <li class="modal-active-item">Отдых, купание, солнечные ванны.</li>
+                                                                <li class="modal-active-item">Возвращение в гостиницу скандинавским шагом. Маршрут до гостиницы около 10 км.</li>
+
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                    <li class="modal-tour-item">
+                                                        <h3 class="modal-tour-titleDate">
+                                                            18 июля
+                                                        </h3>
+                                                        <p class="modal-tour-desc">
+                                                            <ul class="modal-active-list">
+                                                                <li class="modal-active-item">Утренние занятия на побережье финского залива.</li>
+                                                                <li class="modal-active-item">Общественным транспортом отправляемся в Сестрорецк (авт. 211) Встречаемся с гидом и отправляемся по интересному маршруту «Сестрорецк, Разлив, Дубки и Зощенко».</li>
+                                                                <li class="modal-active-item">Обеденный перекус</li>
+                                                                <li class="modal-active-item">Купание, солнечные ванны</li>
+                                                                <li class="modal-active-item">Для тех кто не находился, поход по парку скандинавским шагом</li>
+                                                                <li class="modal-active-item">Возвращение в гостиницу на автобусе</li>
+
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                    <li class="modal-tour-item">
+                                                        <h3 class="modal-tour-titleDate">
+                                                            19 июля
+                                                        </h3>
+                                                        <p class="modal-tour-desc">
+                                                            <ul class="modal-active-list">
+                                                                <li class="modal-active-item">Утренние занятия на побережье финского залива.</li>
+                                                                <li class="modal-active-item">После завтрака трансфер в Конштадт</li>
+                                                                <li class="modal-active-item">Пешеходная экскурсия по центру города: Адмиралтейство и Обводный канал, Итальянский дворец и Итальянский пруд, Панорама с Голландской кухней, Рыбными рядами и Таможней, набережная и Финский
+                                                                    залив (вид на форты), Петровский парк, Якорная пл и Морской собор. Парк «Остров фортов». Едем к началу экотропы Западный Котлин.</li>
+                                                                <li class="modal-active-item">Перекус</li>
+                                                                <li class="modal-active-item">Природа и форт Риф, военно-береговая фортификация. Можно даже успеть искупаться, там есть пляж</li>
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                    <li class="modal-tour-item">
+                                                        <h3 class="modal-tour-titleDate">
+                                                            20 июля
+                                                        </h3>
+                                                        <p class="modal-tour-desc">
+                                                            <ul class="modal-active-list">
+                                                                <li class="modal-active-item">Свободный день. Можно дружно по желанию походить по экотропе «Комаровский берег». Можно посетить сауну в гостинице или просто провести день лежа на пляже. По желанию можно заказать: вечерне-ночная
+                                                                    экскурсия по Петербурга с ночным корабликом под развод мостов.<br> Стоимость: время с 21.00 до 03.00 5500 с чел, если группа 10 чел.</li>
+
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                    <li class="modal-tour-item">
+                                                        <h3 class="modal-tour-titleDate">
+                                                            21 июля
+                                                        </h3>
+                                                        <p class="modal-tour-desc">
+                                                            <ul class="modal-active-list">
+                                                                <li class="modal-active-item">Утренние занятия на побережье финского залива</li>
+                                                                <li class="modal-active-item">Завтрак</li>
+                                                                <li class="modal-active-item">Встреча с гидом у отеля и отправляемся по маршруту «Репино — финская Куоккола»</li>
+                                                                <li class="modal-active-item">Начнем наше путешествие у дачи Вырубовой. В живописном месте на берегу залива стоит изящный дом, когда-то служивший приютом для гостей, приезжавших в гости к Вырубовым. Он отреставрирован,
+                                                                    хотя и несколько изменен. Теперь там разместился ресторан «Наша дача». И если у Вас будет желание и настроение, то здесь можно выпить чашечку ароматного чая, а заодно осмотреть дом изнутри.</li>
+                                                                <li class="modal-active-item">Немного прогуляемся вдоль моря, выйдем на пляж «Чудный» и осмотрим несколько старых дач, сохранившихся до наших времен.</li>
+                                                                <li class="modal-active-item">Экскурсия по территории усадьбы «Пенаты» с осмотром парка и могилы Репина</li>
+                                                                <li class="modal-active-item">Обеденный перекус</li>
+                                                                <li class="modal-active-item">Возвращение в гостиницу скандинавским шагом</li>
+                                                                <li class="modal-active-item">Экскурсия в доме-музее</li>
+
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                    <li class="modal-tour-item">
+                                                        <h3 class="modal-tour-titleDate">
+                                                            22 июля
+                                                        </h3>
+                                                        <p class="modal-tour-desc">
+                                                            <ul class="modal-active-list">
+                                                                <li class="modal-active-item">Утренние занятия на побережье финского залива</li>
+                                                                <li class="modal-active-item">Завтрак</li>
+                                                                <li class="modal-active-item">На общественном транспорте (авт.211) едем до ж/д станции Зеленогорск и оттуда на Ласточке (стоимость 280 рублей) в 10.02 отправляемся в Выборг (время в пути 40 мин) .</li>
+                                                                <li class="modal-active-item">С гидом идем по средневековому центру: узкие улочки, Торговая пл, Круглая Башня, Рынок, самый старый дом, крепость Панцерлакс, территория Замка, скальный парк Монрепо.</li>
+                                                                <li class="modal-active-item">Экскурсия по парку</li>
+                                                                <li class="modal-active-item">Возвращение на жд вокзал к 18.20</li>
+                                                                <li class="modal-active-item">Отправление Ласточки в 18.40.</li>
+
+
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                    <li class="modal-tour-item">
+                                                        <h3 class="modal-tour-titleDate">
+                                                            23 июля
+                                                        </h3>
+                                                        <p class="modal-tour-desc">
+                                                            <ul class="modal-active-list">
+                                                                <li class="modal-active-item">Утренние занятия на побережье финского залива</li>
+                                                                <li class="modal-active-item">Завтрак</li>
+                                                                <li class="modal-active-item">Трансфер в центр Петербурга.</li>
+                                                                <li class="modal-active-item">Автобусная экскурсия «Любви старинные туманы»</li>
+                                                                <li class="modal-active-item">Отправление домой после 16.00</li>
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                                <h2 class="modal-tour-title">
+                                                    Стоимость:
+                                                </h2>
+                                                <p class="modal-tour-money">
+                                                    При размещении в двухместном номере <strong>55 000</strong> рублей с человека.<br> При размещении в одноместном номере <strong>75 000</strong> рублей с человека.
+                                                    <br><br> В стоимость включено: все экскурсионно-спортивные мероприятия, 2-разовое питание (завтрак и ужин), размещение в соответствии с выбранным тарифом размещения, трансфер из Питера и обратно, трансфер
+                                                    до Кронштадта, вход в парк Монрепо, вход в музей «Пенаты».
+                                                    <br><br> В стоимость НЕ включено: проезд на Сапсане, проезд на общественном транспорте в Репино, проезд на Ласточке до Выборга, угощение в ресторане «Наша дача», дополнительные экскурсии по желанию группы,
+                                                    страховка путешественника.
+                                                    <br><br>До 20.04.2022 просьба внести предоплату. Предоплата составляет 50% от суммы.
+                                                    <br><br>
+                                                </p>
+
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="modal-zapis-btn">Записаться</button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="actual-tour__item">
                                 <div class="actual-tour__imgBlock">

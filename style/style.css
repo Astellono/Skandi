@@ -174,6 +174,7 @@ button {
 }
 
 .hero__contant {
+    padding: 0 10px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
@@ -218,9 +219,6 @@ button {
 
 .about {
     padding-top: 50px;
-    background-image: url(../img/about/back.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     /* background-position: center center; */
 }
 
@@ -246,6 +244,12 @@ button {
 
 
 /*---------------------------------------------------------------------------------------adv---*/
+
+.adv {
+    background-image: url(../img/about/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .adv__title {
     width: 368px;
@@ -472,6 +476,52 @@ button {
     padding: 30px;
 }
 
+.modal-tour {
+    max-width: 800px;
+}
+
+.modal-img-box {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.modal-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.modal-tour-date {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.modal-tour-story {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.modal-tour-title {
+    margin-bottom: 20px;
+}
+
+.modal-tour-item {
+    margin-bottom: 20px;
+}
+
+.modal-tour-titleDate {
+    /* margin: 0 auto;
+    text-align: center; */
+    width: 400px;
+    border-bottom: 2px solid #4F3156;
+    margin-bottom: 15px;
+}
+
+.modal-tour-desc {
+    text-align: justify;
+}
+
 .team__modal-img {
     display: block;
     width: 300px;
@@ -483,9 +533,36 @@ button {
     text-align: center;
 }
 
-.modal-desc {
+.modal-tour-desc {
     text-align: justify;
     margin-bottom: 10px;
+}
+
+.modal-active-list {
+    padding-left: 20px;
+}
+
+.modal-active-item {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+.modal-zapis-btn {
+    margin-right: 10px;
+    width: 150px;
+    height: 38px;
+    display: block;
+    font-size: 1rem;
+    color: white;
+    background: #60326B;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.modal-zapis-btn:hover {
+    color: #fff;
+    background-color: #48344E;
+    border-color: #48344E;
 }
 
 

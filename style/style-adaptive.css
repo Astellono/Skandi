@@ -35,6 +35,9 @@
 }
 
 @media (max-width: 968px) {
+    .adv {
+        background-image: none;
+    }
     .about__title {
         width: 100%;
         text-align: center;
@@ -50,6 +53,7 @@
     }
     .adv__item {
         width: 100%;
+        box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     }
     .teamlead__img {
         width: 300px;
@@ -95,9 +99,6 @@
     }
     .header__burger {
         display: block;
-    }
-    .hero__contant {
-        width: 500px;
     }
     .hero__title {
         margin-bottom: 45px;
