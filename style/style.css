@@ -501,22 +501,18 @@ button {
     margin-bottom: 10px;
     text-align: justify;
 }
-
+.modal-tour-list {
+    margin-bottom: 20px;
+}
 .modal-tour-title {
     margin-bottom: 20px;
 }
 
-.modal-tour-item {
+/* .modal-tour-item {
     margin-bottom: 20px;
-}
+} */
 
-.modal-tour-titleDate {
-    /* margin: 0 auto;
-    text-align: center; */
-    width: 400px;
-    border-bottom: 2px solid #4F3156;
-    margin-bottom: 15px;
-}
+
 
 .modal-tour-desc {
     text-align: justify;
@@ -536,14 +532,17 @@ button {
 .modal-tour-desc {
     text-align: justify;
     margin-bottom: 10px;
+    
 }
 
 .modal-active-list {
-    padding-left: 20px;
+    padding: 10px 0;
+    padding-left: 15px;
+    text-align: justify;
 }
 
 .modal-active-item {
-    list-style-type: disc;
+    list-style-type: auto;
     margin-bottom: 5px;
 }
 

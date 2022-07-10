@@ -18,8 +18,12 @@
     <header class="header">
         <div class="container">
             <div class="header__contant">
+
                 <div class="header__logo">
-                    <img src="img/header/logo.png" alt="" srcset="">
+
+                    <a href="index.html">
+                        <img src="img/header/logo.png" alt="" srcset="">
+                    </a>
                 </div>
                 <ul class="header__menu">
                     <li class="header__item header__burger-cross ">
@@ -86,58 +90,18 @@
                     <p class="tour__date">
                         16-23 июля 2022
                     </p>
-                    <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
+                    <button class="tour__btn" data-bs-toggle="modal" data-bs-target="#modal-rep">
+                        Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
 
                 </li>
-                <li class="tour__item">
-                    <div class="tour__img-box">
-                        <img class="tour__img" src="img/act-tour/seliger.jpg" alt="" srcset="">
-                    </div>
-                    <h3 class="tour__item-title">
-                        Селигер
-                    </h3>
 
-                    <p class="tour__date">
-                        27-31 июля 2022
-                    </p>
-                    <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
 
-                </li>
-                <li class="tour__item">
-                    <div class="tour__img-box">
-                        <img class="tour__img" src="img/act-tour/karelia.jpg" alt="" srcset="">
-                    </div>
-                    <h3 class="tour__item-title">
-                        Карелия
-                    </h3>
-
-                    <p class="tour__date">
-                        07-13 августа 2022
-                    </p>
-                    <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
-
-                </li>
                 <li class="tour__item">
                     <div class="tour__img-box">
                         <img class="tour__img" src="img/act-tour/osetia.jpeg" alt="" srcset="">
@@ -149,14 +113,14 @@
                     <p class="tour__date">
                         18-21 августа 2022
                     </p>
-                    <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
+                    <button class="tour__btn" data-bs-toggle="modal" data-bs-target="#modal-osetia">
+                        Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
 
                 </li>
                 <li class="tour__item">
@@ -171,13 +135,13 @@
                         27 августа - 02 сентября 2022
                     </p>
                     <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
+                        Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
 
                 </li>
                 <li class="tour__item">
@@ -192,13 +156,13 @@
                         4-10 cентября 2022
                     </p>
                     <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
+                        Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
 
                 </li>
                 <li class="tour__item">
@@ -213,13 +177,13 @@
                         14-18 сентября 2022г
                     </p>
                     <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
+                        Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
 
                 </li>
                 <li class="tour__item">
@@ -234,13 +198,13 @@
                         21-25 сентября 2022
                     </p>
                     <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
+                        Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
 
                 </li>
                 <li class="tour__item">
@@ -255,13 +219,13 @@
                         28 сентября - 4 октября 2022
                     </p>
                     <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
+                        Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
 
                 </li>
                 <li class="tour__item">
@@ -276,13 +240,13 @@
                         16−17 июля 2022
                     </p>
                     <button class="tour__btn">
-                            Подробнее
-                             <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                        </button>
+                        Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
 
                 </li>
             </ul>
@@ -311,11 +275,523 @@
                 <li class="contacts__item">Телефон:
                     <tel>+7 (933) 366-25-23</tel>
                 </li>
-                <li class="contacts__item">Телеграмм: <a class="contact__t-link" href="t.me/dorogoi_idushego">t.me/dorogoi_idushego</a></li>
-                <li class="contacts__item">VK: <a class="contact__t-link" href="https://vk.com/pomiru_spalkami">vk.com/pomiru_spalkami</a></li>
+                <li class="contacts__item">Телеграмм: <a class="contact__t-link"
+                        href="t.me/dorogoi_idushego">t.me/dorogoi_idushego</a></li>
+                <li class="contacts__item">VK: <a class="contact__t-link"
+                        href="https://vk.com/pomiru_spalkami">vk.com/pomiru_spalkami</a></li>
             </ul>
         </div>
     </section>
+
+
+
+
+    <!-- Модальные окна -->
+
+    <div class="modal fade" id="modal-rep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <div class="modal-img-box">
+                    <img class="modal-img" src="img/act-tour/Repino.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h2>Репино. Финский залив.</h2>
+                </div>
+                <div class="modal-tour-contant">
+
+                    <div class="modal-tour-date">Дата: 16.07.22 — 23.07.22</div>
+
+                    <h2 class="modal-tour-title">
+                        Расписание:
+                    </h2>
+
+                    <ul class="modal-tour-list accordion accordion-flush" id="accordionFlushExample">
+                        <li class="modal-tour-item accordion-item">
+
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <h3>
+                                        16 июля
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Ж/Д трансфер до Санкт-Петербурга до 13.00, где
+                                            нас
+                                            встретит комфортабельный автобус и доставит до гостиницы «Репинкая» в
+                                            поселке
+                                            Репино.</li>
+                                        <li class="modal-active-item">Мастер-класс по Скандинавской ходьбе</li>
+                                        <li class="modal-active-item">В 17.00 Размещение в гостинице. Ужин.
+                                            Свободное
+                                            время</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+
+                        </li>
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse2" aria-expanded="false"
+                                    aria-controls="flush-collapse2">
+                                    <h3>
+                                        17 июля
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse2" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренние занятия на побережье финского залива.
+                                            Гостиница
+                                            имеет свой прекрасный выход к заливу.</li>
+                                        <li class="modal-active-item">После завтрака на общественном транспорте (авт.211
+                                            стоимость проезда 60 руб.) едем в Зеленогорск и отправляемся вместе с гидом
+                                            по
+                                            маршруту «Зеленогорск — финский Терийоки».</li>
+                                        <li class="modal-active-item">Перекус в центральном парке Зеленогорска или на
+                                            пляже</li>
+                                        <li class="modal-active-item">Отдых, купание, солнечные ванны.</li>
+                                        <li class="modal-active-item">Возвращение в гостиницу скандинавским шагом.
+                                            Маршрут до
+                                            гостиницы около 10 км.</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+
+                            <h2 class="accordion-header" id="flush-heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse3" aria-expanded="false"
+                                    aria-controls="flush-collapse3">
+                                    <h3>
+                                        18 июля
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse3" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренние занятия на побережье финского залива.
+                                        </li>
+                                        <li class="modal-active-item">Общественным транспортом отправляемся в Сестрорецк
+                                            (авт.
+                                            211) Встречаемся с гидом и отправляемся по интересному маршруту «Сестрорецк,
+                                            Разлив,
+                                            Дубки и Зощенко».</li>
+                                        <li class="modal-active-item">Обеденный перекус</li>
+                                        <li class="modal-active-item">Купание, солнечные ванны</li>
+                                        <li class="modal-active-item">Для тех кто не находился, поход по парку
+                                            скандинавским
+                                            шагом</li>
+                                        <li class="modal-active-item">Возвращение в гостиницу на автобусе</li>
+
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </li>
+
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse4" aria-expanded="false"
+                                    aria-controls="flush-collapse4">
+                                    <h3>
+                                        19 июля
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse4" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренние занятия на побережье финского залива.
+                                        </li>
+                                        <li class="modal-active-item">После завтрака трансфер в Конштадт</li>
+                                        <li class="modal-active-item">Пешеходная экскурсия по центру города:
+                                            Адмиралтейство и
+                                            Обводный канал, Итальянский дворец и Итальянский пруд, Панорама с
+                                            Голландской
+                                            кухней, Рыбными рядами и Таможней, набережная и Финский залив (вид на
+                                            форты),
+                                            Петровский
+                                            парк, Якорная пл и Морской собор. Парк «Остров фортов». Едем к началу
+                                            экотропы
+                                            Западный Котлин.</li>
+                                        <li class="modal-active-item">Перекус</li>
+                                        <li class="modal-active-item">Природа и форт Риф, военно-береговая фортификация.
+                                            Можно
+                                            даже успеть искупаться, там есть пляж</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse5" aria-expanded="false"
+                                    aria-controls="flush-collapse5">
+                                    <h3>
+                                        20 июля
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse5" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Свободный день. Можно дружно по желанию походить
+                                            по
+                                            экотропе «Комаровский берег». Можно посетить сауну в гостинице или просто
+                                            провести
+                                            день лежа на пляже. По желанию можно заказать: вечерне-ночная экскурсия по
+                                            Петербурга
+                                            с ночным корабликом под развод мостов.<br> Стоимость: время с 21.00 до 03.00
+                                            5500 с
+                                            чел, если группа 10 чел.</li>
+
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse6" aria-expanded="false"
+                                    aria-controls="flush-collapse6">
+                                    <h3>
+                                        21 июля
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse6" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренние занятия на побережье финского залива</li>
+                                        <li class="modal-active-item">Завтрак</li>
+                                        <li class="modal-active-item">Встреча с гидом у отеля и отправляемся по маршруту
+                                            «Репино
+                                            — финская Куоккола»</li>
+                                        <li class="modal-active-item">Начнем наше путешествие у дачи Вырубовой. В
+                                            живописном
+                                            месте на берегу залива стоит изящный дом, когда-то служивший приютом для
+                                            гостей,
+                                            приезжавших в гости к Вырубовым. Он отреставрирован, хотя и несколько
+                                            изменен.
+                                            Теперь там разместился ресторан «Наша дача». И если у Вас будет желание и
+                                            настроение, то здесь можно выпить чашечку ароматного чая, а заодно осмотреть
+                                            дом
+                                            изнутри.</li>
+                                        <li class="modal-active-item">Немного прогуляемся вдоль моря, выйдем на пляж
+                                            «Чудный» и
+                                            осмотрим несколько старых дач, сохранившихся до наших времен.</li>
+                                        <li class="modal-active-item">Экскурсия по территории усадьбы «Пенаты» с
+                                            осмотром парка
+                                            и могилы Репина</li>
+                                        <li class="modal-active-item">Обеденный перекус</li>
+                                        <li class="modal-active-item">Возвращение в гостиницу скандинавским шагом</li>
+                                        <li class="modal-active-item">Экскурсия в доме-музее</li>
+
+                                    </ol>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse7" aria-expanded="false"
+                                    aria-controls="flush-collapse7">
+                                    <h3>
+                                        22 июля
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse7" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренние занятия на побережье финского залива</li>
+                                        <li class="modal-active-item">Завтрак</li>
+                                        <li class="modal-active-item">На общественном транспорте (авт.211) едем до ж/д
+                                            станции
+                                            Зеленогорск и оттуда на Ласточке (стоимость 280 рублей) в 10.02 отправляемся
+                                            в
+                                            Выборг (время в пути 40 мин) .</li>
+                                        <li class="modal-active-item">С гидом идем по средневековому центру: узкие
+                                            улочки,
+                                            Торговая пл, Круглая Башня, Рынок, самый старый дом, крепость Панцерлакс,
+                                            территория
+                                            Замка, скальный парк Монрепо.</li>
+                                        <li class="modal-active-item">Экскурсия по парку</li>
+                                        <li class="modal-active-item">Возвращение на жд вокзал к 18.20</li>
+                                        <li class="modal-active-item">Отправление Ласточки в 18.40.</li>
+
+
+                                    </ol>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse8" aria-expanded="false"
+                                    aria-controls="flush-collapse8">
+                                    <h3>
+                                        23 июля
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse8" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренние занятия на побережье финского залива</li>
+                                        <li class="modal-active-item">Завтрак</li>
+                                        <li class="modal-active-item">На общественном транспорте (авт.211) едем до ж/д
+                                            станции
+                                            Зеленогорск и оттуда на Ласточке (стоимость 280 рублей) в 10.02 отправляемся
+                                            в
+                                            Выборг (время в пути 40 мин) .</li>
+                                        <li class="modal-active-item">С гидом идем по средневековому центру: узкие
+                                            улочки,
+                                            Торговая пл, Круглая Башня, Рынок, самый старый дом, крепость Панцерлакс,
+                                            территория
+                                            Замка, скальный парк Монрепо.</li>
+                                        <li class="modal-active-item">Экскурсия по парку</li>
+                                        <li class="modal-active-item">Возвращение на жд вокзал к 18.20</li>
+                                        <li class="modal-active-item">Отправление Ласточки в 18.40.</li>
+
+
+                                    </ol>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+                    </ul>
+
+
+
+                    <h2 class="modal-tour-title">
+                        Стоимость:
+                    </h2>
+                    <p class="modal-tour-money">
+                        При размещении в двухместном номере <strong>55 000</strong> рублей с человека.<br> При
+                        размещении в одноместном номере <strong>75 000</strong> рублей с человека.
+                        <br><br> В стоимость включено: все экскурсионно-спортивные мероприятия, 2-разовое питание
+                        (завтрак и ужин), размещение в соответствии с выбранным тарифом размещения, трансфер из Питера и
+                        обратно, трансфер до Кронштадта, вход в
+                        парк Монрепо, вход в музей «Пенаты».
+                        <br><br> В стоимость НЕ включено: проезд на Сапсане, проезд на общественном транспорте в Репино,
+                        проезд на Ласточке до Выборга, угощение в ресторане «Наша дача», дополнительные экскурсии по
+                        желанию группы, страховка путешественника.
+                        <br><br>До 20.04.2022 просьба внести предоплату. Предоплата составляет 50% от суммы.
+                        <br><br>
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-osetia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <div class="modal-img-box">
+                    <img class="modal-img" src="img/act-tour/osetia.jpeg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h2>Осетия</h2>
+                </div>
+                <div class="modal-tour-contant">
+
+                    <div class="modal-tour-date">Дата: 18.08.22 — 21.08.22</div>
+
+                    <h2 class="modal-tour-title">
+                        Расписание:
+                    </h2>
+
+                    <ul class="modal-tour-list accordion accordion-flush" id="accordionFlushExample1">
+                        <li class="modal-tour-item accordion-item">
+
+                            <h2 class="accordion-header" id="flush-headingOne1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne1" aria-expanded="false"
+                                    aria-controls="flush-collapseOne1">
+                                    <h3>
+                                        18 августа
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne1" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Прилетаем во Владикавказ до 12.00. Встреча с
+                                            гидом.</li>
+                                        <li class="modal-active-item">Обед в ресторане с национальной кухней.(входит в
+                                            стоимость). По пути экскурсия в Алагирском ущелье красоты невероятной.</li>
+                                        <li class="modal-active-item">Размещение в отеле «Вертикаль» в Цейском ущелье.
+                                            Ужин (не включен в стоимость)</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+
+                        </li>
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading21">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse21" aria-expanded="false"
+                                    aria-controls="flush-collapse21">
+                                    <h3>
+                                        19 августа
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse21" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading21" data-bs-parent="#accordionFlushExample1">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренняя зарядка.</li>
+                                        <li class="modal-active-item">Завтрак.</li>
+                                        <li class="modal-active-item">Треккинг на Цейский ледник около 8 км. Обед с
+                                            собой. </li>
+                                        <li class="modal-active-item">Возвращение в отель и свободное время (настольные
+                                            игры), ужин (не включен в стоимость)</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+
+                            <h2 class="accordion-header" id="flush-heading31">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse31" aria-expanded="false"
+                                    aria-controls="flush-collapse31">
+                                    <h3>
+                                        20 августа
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse31" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading31" data-bs-parent="#accordionFlushExample1">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренняя зарядка.</li>
+                                        <li class="modal-active-item">Завтрак.</li>
+                                        <li class="modal-active-item">Прогулка на водопад Шагацикомдон 4 км.</li>
+                                        <li class="modal-active-item">Обед в гостинице (включен в стоимость).</li>
+                                        <li class="modal-active-item">После обеда подъем на канатке и прогулка к леднику
+                                            Сказскому.</li>
+                                        <li class="modal-active-item">Возвращение в гостиницу.</li>
+                                        <li class="modal-active-item">Ужин</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </li>
+
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading41">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse41" aria-expanded="false"
+                                    aria-controls="flush-collapse41">
+                                    <h3>
+                                        21 августа
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse41" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading41" data-bs-parent="#accordionFlushExample1">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренняя зарядка.</li>
+                                        <li class="modal-active-item">Завтрак.</li>
+                                        <li class="modal-active-item">Выезд.</li>
+                                        <li class="modal-active-item">Прогулка до водопада Кольцо в Карцинском ущелье
+                                            3−4 км.</li>
+                                        <li class="modal-active-item">Обед в кафе Тагардон на берегу реки Фиагдон (не
+                                            включен в стоимость).</li>
+                                        <li class="modal-active-item">Посещение каньона Кадаргаван и наскальной крепости
+                                            в селе Дзивгис, покупка сувениров в селе Дзуарикау по дороге.</li>
+                                        <li class="modal-active-item">Прибытие в аэропорт в 17.00.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+                    <h2 class="modal-tour-title">
+                        Стоимость: <strong style="font-size: 24px;">25 800р</strong>
+                    </h2>
+                    <p class="modal-tour-money">
+                        
+
+                        В стоимость включено: 2-местное проживание в отеле «Вертикаль», питание завтрак+обед,
+                        услуги гида, трансфер, все спортивные мероприятия, экосборы, канатная дорога.
+                        <br><br> В стоимость НЕ включено: авиабилеты,  ужины, обед в последний день, страховка путешественника
+                        <br><br>
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- --------------------------------- -->
+
     <footer class="footer"></footer>
     <script src="modal/bootstrap.bundle.js"></script>
     <script src="modal/Burger.js"></script>
