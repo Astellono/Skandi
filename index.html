@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">
+                        <a href="#" class="header__link disable">
                             Сканди-экскурсии
                         </a>
                     </li>
@@ -240,7 +240,7 @@
                                 </h3>
                                 <p class="actual-tour__date">21-25 сентября 2022г</p>
 
-                                <button type="button" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-adigeya" class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -258,7 +258,7 @@
                                 </h3>
                                 <p class="actual-tour__date">28 сентября - 4 октября 2022г</p>
 
-                                <button type="button" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-kirgiziya" class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -530,7 +530,7 @@
 
 
 
-    
+    <!-- Осетия -->
     <div class="modal fade" id="modal-osetia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
             <div class="modal-content">
@@ -689,6 +689,7 @@
             </div>
         </div>
     </div>
+    <!-- Алтай -->
     <div class="modal fade" id="modal-altay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
             <div class="modal-content">
@@ -929,6 +930,7 @@
             </div>
         </div>
     </div>
+    <!-- Голубино -->
     <div class="modal fade" id="modal-golubino" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
             <div class="modal-content">
@@ -1202,6 +1204,7 @@
             </div>
         </div>
     </div>
+    <!-- Архыз -->
     <div class="modal fade" id="modal-arhiz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
             <div class="modal-content">
@@ -1396,8 +1399,475 @@
             </div>
         </div>
     </div>
+     <!-- Адыгея -->
+     <div class="modal fade" id="modal-adigeya" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <div class="modal-img-box">
+                    <img class="modal-img" src="img/act-tour/adig.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h2>Адыгея</h2>
+                </div>
+                <div class="modal-tour-contant">
+
+                    <div class="modal-tour-date">Дата: 21.09.22 — 25.09.22</div>
+
+                    <h2 class="modal-tour-title">
+                        Расписание:
+                    </h2>
+
+                    <ul class="modal-tour-list accordion accordion-flush" id="accordionFlushExample5">
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading51">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse51" aria-expanded="false"
+                                    aria-controls="flush-collaps51">
+                                    <h3>
+                                        21 сентября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse51" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading51" data-bs-parent="#accordionFlushExample4">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Прилетаем в аэропорт Краснодара до 12.00</li>
+                                        <li class="modal-active-item">Трансфер ​до гостиницы «Барская усадьба» в поселке
+                                            Каменомостский</li>
+                                        <li class="modal-active-item">По пути обед кафе «СиНан» в Майкопе (не входит в
+                                            стоимость)</li>
+                                        <li class="modal-active-item">Размещение</li>
+                                        <li class="modal-active-item">Трансфер на экскурсию в Музей археологии, в
+                                            «Хаджохскую теснину»</li>
+                                        <li class="modal-active-item">Ужин в гостинице (входит в стоимость)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading52">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse52" aria-expanded="false"
+                                    aria-controls="flush-collapse52">
+                                    <h3>
+                                        22 сентября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse52" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading52" data-bs-parent="#accordionFlushExample4">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утреняя зарядка</li>
+                                        <li class="modal-active-item">Завтрак (входит в стоимость)</li>
+                                        <li class="modal-active-item">Трансфер на экскурсии к водопадам на реке Руфабго
+                                            (водопады 1-4)</li>
+                                        <li class="modal-active-item">Трансфер в поселок Гузерипль (Музей заповедника,
+                                            вольерный комплекс, «Тропа леопарда», дольмен)</li>
+                                        <li class="modal-active-item">Трансфер на канатную дорогу (смотровые точки с
+                                            хребта Уна-Коз, пещера «Желаний»)</li>
+                                        <li class="modal-active-item">Посещение экстрим-парка «Мишоко» (троллей,
+                                            виа-феррата, небесный мост)</li>
+                                        <li class="modal-active-item">Обед сухой паек (входит в стоимость)</li>
+                                        <li class="modal-active-item">Ужин в гостинице
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
 
 
+
+
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+
+                            <h2 class="accordion-header" id="flush-heading53">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse53" aria-expanded="false"
+                                    aria-controls="flush-collapse53">
+                                    <h3>
+                                        23 сентября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse53" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading53" data-bs-parent="#accordionFlushExample4">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утренняя зарядка</li>
+                                        <li class="modal-active-item">Завтрак</li>
+                                        <li class="modal-active-item">Трансфер на экскурсии в Большую Азишскую пещеру
+                                        </li>
+                                        <li class="modal-active-item">Сканди-маршрут на плато Лагонаки по маршруту: КПП
+                                            «Лагонаки» — гора Нагой-Кош — смотровые точки — КПП «Лагонаки» (16 км.)</li>
+                                        <li class="modal-active-item">Обед сухим пайком.</li>
+                                        <li class="modal-active-item">Ужин в гостинице</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </li>
+
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading54">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse54" aria-expanded="false"
+                                    aria-controls="flush-collapse54">
+                                    <h3>
+                                        24 сентября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse54" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading54" data-bs-parent="#accordionFlushExample4">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утреняя зарядка</li>
+                                        <li class="modal-active-item">Завтрак</li>
+                                        <li class="modal-active-item">Трансфер на экскурсию к Свято-Михайловскому
+                                            мужскому монастырю (гора Физиабго, звонница, купель), к скале Чёртов палец.
+                                        </li>
+                                        <li class="modal-active-item">Сканди-маршрут на хребте Уна-Коз по маршруту:
+                                            скала Чёртов палец — хребет Уна-Коз — пос. Каменномостский (12 км.)</li>
+                                        <li class="modal-active-item">Обед сухим пайком</li>
+                                        <li class="modal-active-item">Ужин в гостинице</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading55">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse55" aria-expanded="false"
+                                    aria-controls="flush-collapse55">
+                                    <h3>
+                                        25 сентября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse55" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading55" data-bs-parent="#accordionFlushExample4">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утреняя зарядка</li>
+                                        <li class="modal-active-item">Завтрак</li>
+                                        <li class="modal-active-item">Выезд из отеля</li>
+                                        <li class="modal-active-item">Трансфер в сторону Краснодара</li>
+                                        <li class="modal-active-item">Экскурсия к водопаду на реке Майкопка (4 км.)</li>
+                                        <li class="modal-active-item">Заезд на термальные источкники. (не входит в
+                                            стоимость)</li>
+                                        <li class="modal-active-item">Обед в кафе по пути (не входит в стоимость)</li>
+                                        <li class="modal-active-item">Вылет после 19.00</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+
+                    <h2 class="modal-tour-title">
+                        Стоимость: <strong style="font-size: 24px;">32 000р</strong>
+                    </h2>
+                    <p class="modal-tour-money">
+
+
+                        В стоимость входит: весь трансфер, сопровождение гида, все спортивные мероприятия, проживание в
+                        двухместном номере в гостинице Барская усадьба @barskaya.usadba_, завтраки, сухие пайки, ужины,
+                        посещение заповедных мест и музея археологии.
+                        <br><br> В стоимость НЕ входит: авиа или ж/д билеты до Краснодара, обед в первый и последний
+                        день, вход в экстрим-парк «Мишоко», канатная дорога, термальные источники, страховка
+                        путешественника.
+                        <br><br>
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Киргизия -->
+    <div class="modal fade" id="modal-kirgiziya" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <div class="modal-img-box">
+                    <img class="modal-img" src="img/act-tour/adig.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h2>Киргизия</h2>
+                </div>
+                <div class="modal-tour-contant">
+
+                    <div class="modal-tour-date">Дата: 28.09.22 — 04.10.22</div>
+
+                    <h2 class="modal-tour-title">
+                        Расписание:
+                    </h2>
+
+                    <ul class="modal-tour-list accordion accordion-flush" id="accordionFlushExample6">
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading61">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse61" aria-expanded="false"
+                                    aria-controls="flush-collaps61">
+                                    <h3>
+                                        28 сентября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse61" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading61" data-bs-parent="#accordionFlushExample6">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Прибытие в Бишкек</li>
+                                        <li class="modal-active-item">Размещение в отеле</li>
+                                        <li class="modal-active-item">Небольшой отдых, обед</li>
+                                        <li class="modal-active-item">После обеда мы отправимся на холмы расположенные
+                                            на южной окраине города Бишкек</li>
+                                        <li class="modal-active-item">Небольшая акклиматизация, знакомство с пригорками
+                                            Киргизии</li>
+                                        <li class="modal-active-item">По пути заедем на ужин в уютную чайхану, кафе или
+                                            ресторан, выбор блюд по меню</li>
+                                        <li class="modal-active-item">Ночь в отеле 3* в Бишкеке</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading62">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse62" aria-expanded="false"
+                                    aria-controls="flush-collapse62">
+                                    <h3>
+                                        29 сентября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse62" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading62" data-bs-parent="#accordionFlushExample6">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Бишкек — ущелье Аламедин (30 км / 40 минут)</li>
+                                        <li class="modal-active-item">Скандинавская ходьба до одноименного водопада.
+                                            Путь до водопада от автомобильной стоянки займет примерно 1,5-2 часа в одну
+                                            сторону. В начале пути необходимо совершить переход через реку по навесному
+                                            мосту. Далее тропа идет по широкому склону, покрытому разнотравьем и
+                                            кустарниками. Из долины открывается вид на вершины выше 4000
+                                            метров.<br>Дойдя до слияния ручья Салык с рекой Аламедин, вы увидите
+                                            удивительное по красоте место под названием «тихая заводь». Здесь
+                                            расположена небольшая роща, где можно отдохнуть в тени деревьев и
+                                            пофотографироваться. Тропа к водопаду резко уходит вправо. Начинается
+                                            небольшой подъем в гору. Совсем скоро из тенистой щели откроется вид на
+                                            красивый Аламединский водопад.</li>
+                                        <li class="modal-active-item">Вечером возвращение в Бишкек.</li>
+                                        <li class="modal-active-item">Размещение в отеле Горы Азии</li>
+
+                                    </ol>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+
+                            <h2 class="accordion-header" id="flush-heading63">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse63" aria-expanded="false"
+                                    aria-controls="flush-collapse63">
+                                    <h3>
+                                        30 сентября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse63" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading63" data-bs-parent="#accordionFlushExample6">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">После вкусного завтрака, мы отправимся в село
+                                            Боконбаево, которое расположено на Южном берегу озера.</li>
+                                        <li class="modal-active-item">По пути: Башня Бурана, Город Баласагун, Каньоны
+                                            Коморчек. Ходьба по каньонам (4 — 5 ч., набор высоты около 100 — 150
+                                            метров),пикник</li>
+                                        <li class="modal-active-item">После этого мы продолжим наш путь и вскоре
+                                            достигнем озеро, далее наш путь будет проходить вдоль Южного берега озеро
+                                            Иссык — Куль!
+                                        </li>
+                                        <li class="modal-active-item">По приезду в Боконбаево посещение войлочной
+                                            фабрики и дома местного жителя «Беркучи»</li>
+                                        <li class="modal-active-item">На ночевку мы остановимся в юрточном лагере
+                                            «Бельтам»</li>
+                                        <li class="modal-active-item">Вечером мы насладимся видом на озера Иссык — Куль,
+                                            купание по желанию.</li>
+                                        <li class="modal-active-item"> Ночь, ужин, в юрточном лагере «Бельтам». Ужин мы
+                                            закажем заранее, это будет одно из национальных блюд с салатом и вкусными
+                                            национальными бурсаками.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </li>
+
+
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading64">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse64" aria-expanded="false"
+                                    aria-controls="flush-collapse64">
+                                    <h3>
+                                        01 октября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse64" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading64" data-bs-parent="#accordionFlushExample6">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">После завтрака мы отправимся в город Каракол</li>
+                                        <li class="modal-active-item">По пути мы посетим с вами плато Арабель в ущелье
+                                            Барскоон</li>
+                                        <li class="modal-active-item">От центральной дороге мы проедем еще + 70 км в
+                                            верховье ущелье
+                                        </li>
+                                        <li class="modal-active-item">По приезду на плато, мы совершим с вами треккинг и
+                                            полюбуемся на снежные вершины, в окружении которых мы окажемся. Вечером
+                                            небольшой сити тур по городу Каракол. А еще можно съездить на горячие
+                                            источники.</li>
+                                        <li class="modal-active-item">Размещение в гостевом доме Альтамира или подобном
+                                        </li>
+                                        <li class="modal-active-item">Горячий источник «Ак-Суу Кенч». Расположен в
+                                            живописном месте рядом с селом «Теплоключенко», примерно в 18 км от
+                                            курортного города Каракол. Имеется 3 бассейна для взрослых и 1 для детей.
+                                            Стоимость для взрослых 200 сомов (чуть меньше 3 –х долларов). Кроме
+                                            бассейнов на территории имеются кафе, удобная раздевалка с душевыми
+                                            кабинками, беседка, туалет.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading65">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse65" aria-expanded="false"
+                                    aria-controls="flush-collapse65">
+                                    <h3>
+                                        02 октября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse65" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading65" data-bs-parent="#accordionFlushExample6">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Сегодня мы посетим с Вами два ущелья, а также
+                                            сходим на первое озеро в Григорьевском ущелье (Время похода часа 2 — 2,5
+                                            часа в одну сторону).</li>
+                                        <li class="modal-active-item">Пикник на озере</li>
+                                        <li class="modal-active-item">Сначала мы заедем в Семеновское ущелье пересечем
+                                            боковой перевал Кок — Бель (2375 м) и окажемся в Григорьевском ущелье.</li>
+                                        <li class="modal-active-item">Доехав до развилки, мы возьмём наши палки и
+                                            отправимся в путь к озеру.</li>
+                                        <li class="modal-active-item">К вечеру мы приедем в город Чолпон — Ата,
+                                            размещение в уютном гостевом доме.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading66">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse66" aria-expanded="false"
+                                    aria-controls="flush-collapse66">
+                                    <h3>
+                                        03 октября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse66" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading66" data-bs-parent="#accordionFlushExample6">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Утром отдых или же можно походить по пляжу,
+                                            отработать технику.</li>
+                                        <li class="modal-active-item">После обеда выезд в Бишкек</li>
+                                        <li class="modal-active-item">Прибытие</li>
+                                        <li class="modal-active-item">Размещение в отеле и прощальный ужин в отеле</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="modal-tour-item accordion-item">
+                            <h2 class="accordion-header" id="flush-heading67">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse67" aria-expanded="false"
+                                    aria-controls="flush-collapse67">
+                                    <h3>
+                                        04 октября
+                                    </h3>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse67" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading67" data-bs-parent="#accordionFlushExample6">
+                                <div class="accordion-body">
+                                    <ol class="modal-active-list">
+                                        <li class="modal-active-item">Сити тур. Отбытие.</li>
+                                        <li class="modal-active-item">Собрав наши чемоданы мы отправляемся на сити тур
+                                            (2 часа)</li>
+                                        <li class="modal-active-item">Обед</li>
+                                        <li class="modal-active-item">После хорошего обеда переезд в аэропорт</li>
+                                        <li class="modal-active-item">Прощание с командой</li>
+                                        <li class="modal-active-item">Вылет домой</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+
+                    <h2 class="modal-tour-title">
+                        Стоимость: <strong style="font-size: 24px;">71 500р</strong>
+                    </h2>
+                    <p class="modal-tour-money">
+                        <br><br>
+                        Одноместное размещение согласно программе +10 000 рублей
+                        <br><br>
+                        В стоимость программы входит:Все спортивные мероприятия.Гид сопровождающий. Транспорт согласно программе.
+                        Размещение согласно программе:
+                        Бишкек, отель 3*, (На основе двухместного размещения) ранний заезд включен.
+                        Боконбаево, Юрточный лагерь (в одной юрте по 4 человека)
+                        Каракол, Гостевой дом Альтамира или подобный. (Двухместное размещение)
+                        Город Чолпон — Ата, Гостевой доме (Двухместное размещение)
+                        Питание: Завтрак/Обед или перекусы, а также ужин в юрточном лагере в день 3.
+                        Входные и въездные билеты в заповедники и на экскурсии, согласно программе.
+                        Вода 1 л в день на человека
+                        <br><br> Авиабилеты. Любые изменения в программе. Ужин, кроме дня 3.
+                        <br><br>
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

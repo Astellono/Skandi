@@ -156,7 +156,15 @@ button {
     display: none;
 }
 
-
+.disable {
+    color: gray;
+    cursor: default;
+    border-bottom: none;
+}
+.disable:hover {
+    color: gray;
+    border-bottom: none;
+}
 /*----------------------------------------------------------------------------------------------*/
 
 
