@@ -161,10 +161,12 @@ button {
     cursor: default;
     border-bottom: none;
 }
+
 .disable:hover {
     color: gray;
     border-bottom: none;
 }
+
 /*----------------------------------------------------------------------------------------------*/
 
 
@@ -365,11 +367,12 @@ button {
 .actual-tour__date {
     margin-bottom: auto;
 }
+
 .actual-tour__btn::after {
     content: '';
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 
@@ -495,7 +498,7 @@ button {
     padding: 30px;
 }
 
-.modal-tour {  
+.modal-tour {
     max-width: 800px;
 }
 
@@ -550,6 +553,7 @@ button {
 
 .modal-body {
     text-align: center;
+    padding: 0 1rem 0 1rem;
 }
 
 .modal-tour-desc {
@@ -587,7 +591,47 @@ button {
     border-color: #48344E;
 }
 
+.modal-form-title {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
 
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.modal__form input {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    
+    margin-bottom: 25px;
+}
+
+.modal__form input:focus {
+    outline: 0;
+}
+
+.modal__form label {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+.form-btn {
+    
+    
+    width: 100% !important;
+}
+.modal-form-btn {
+    width: 100%;
+    color: white;
+    background-color: #60326B;
+}
 /*----------------------------------------------------------------------------------------------*/
 
 
@@ -852,13 +896,13 @@ footer {
 }
 
 .tour__btn {
-    
+
     padding-left: 30px;
     color: #4F3156;
 }
 
 .tour__btn:before {
-    content:'';
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
