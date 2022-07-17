@@ -76,6 +76,7 @@
         margin-top: 0;
         top: 0;
         left: 0;
+        z-index: 1000;
         width: 100vw;
         background: white;
         height: 100vh;
@@ -118,6 +119,11 @@
     }
     .questions__form {
         width: 100%;
+    }
+    .modal-form-sumit-text {
+      
+        font-size: 16px;
+        
     }
 }
 
@@ -172,5 +178,11 @@
     .lesson__item {
         width: 100%;
         margin-bottom: 15px;
+    }
+    .modal-form-sumit-text {
+        letter-spacing: 0;
+        font-size: 14px;
+        
+        width: 87%;
     }
 }

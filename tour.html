@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" sizes="16x16" href="img/icon.svg" type="image/svg">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/style-adaptive.css">
+    <link rel="stylesheet" href="style/style.css?ver=127">
+    <link rel="stylesheet" href="style/style-adaptive.css?ver=127">
+    
 
-
-    <title>Document</title>
+    <title>Туры</title>
 </head>
 
 <body>
@@ -401,12 +403,91 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal-osetia-form"
+                        class="modal-zapis-btn">Записаться</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modal-osetia-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <h1 class="modal-form-title">Анкета сканди-путешественника</h1>
+                <hr>
+
+
+                <form action="php/osetia.php" method="POST" class="modal__form">
+                    Фамилия, имя и отчество:
+                    <input type="text" name="fio" placeholder="Ваш ответ" required>
+                    Возраст:
+                    <input type="text" name="age" placeholder="Ваш ответ" required>
+                    Ваш телефон:
+                    <input type="tel" name="tel" placeholder="Ваш ответ" required>
+                    Ваш email:
+                    <input type="email" name="email" placeholder="Ваш ответ" required>
+                    Ваш рост:
+                    <input type="text" name="rost" placeholder="Ваш ответ" required>
+                    Ваш вес (на некоторых маршрутах лишиний вес является
+                    противопоказанием):
+                    <input type="text" name="ves" placeholder="Ваш ответ" required>
+                    Стаж занятия Скандинавской ходьбой:
+                    <input type="text" name="staj" placeholder="Ваш ответ" required>
+                    Занимаетесь ли Вы активно физическими нагрузками? Какими?
+                    <input type="text" name="fizNagr" placeholder="Ваш ответ" required>
+                    Есть ли сердечно-сосудистные заболевания?
+                    <input type="text" name="zabolevaniya" placeholder="Ваш ответ" required>
+                    Бывает ли повышенное или пониженное давление? Какое именно?
+                    <input type="text" name="davlenie" placeholder="Ваш ответ" required>
+                    Хронические заболевания?
+                    <input type="text" name="chrono" placeholder="Ваш ответ" required>
+                    Заболевания опорно-двигательного аппарата?
+                    <input type="text" name="opora" placeholder="Ваш ответ" required>
+                    На какие расстояния ходите?
+                    <input type="text" name="perenosimost" placeholder="Ваш ответ" required>
+                    Как переносите сложные маршруты со спусками и подъемами?
+                    <input type="text" name="level" placeholder="Ваш ответ" required>
+                    Готовы ли проходить в среднем 15 - 20 км?
+                    <input type="text" name="prohod" placeholder="Ваш ответ" required>
+                    Как переносите нагрузки на горных маршрутах?
+                    <input type="text" name="perenosimostGori" placeholder="Ваш ответ" required>
+                    Вам подходят только равнинные маршруты?
+                    <input type="text" name="ravn" placeholder="Ваш ответ" required>
+                    <ul class="modal-form-submit">
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Договор.pdf" download>договором</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с договором!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Правила.docx" download>правилами</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с правилами!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
+                                    href="files/Cогласие на обработку персональных данных.docx" download>согласие на
+                                    обработку персональных данных</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+                    </ul>
+                    <button type="button" class="btn btn-secondary form-btn" data-bs-dismiss="modal">Закрыть</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Алтай -->
     <div class="modal fade" id="modal-altay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
@@ -648,12 +729,91 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal-altay-form"
+                        class="modal-zapis-btn">Записаться</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modal-altay-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <h1 class="modal-form-title">Анкета сканди-путешественника</h1>
+                <hr>
+
+
+                <form action="php/altay.php" method="POST" class="modal__form">
+                    Фамилия, имя и отчество:
+                    <input type="text" name="fio" placeholder="Ваш ответ" required>
+                    Возраст:
+                    <input type="text" name="age" placeholder="Ваш ответ" required>
+                    Ваш телефон:
+                    <input type="tel" name="tel" placeholder="Ваш ответ" required>
+                    Ваш email:
+                    <input type="email" name="email" placeholder="Ваш ответ" required>
+                    Ваш рост:
+                    <input type="text" name="rost" placeholder="Ваш ответ" required>
+                    Ваш вес (на некоторых маршрутах лишиний вес является
+                    противопоказанием):
+                    <input type="text" name="ves" placeholder="Ваш ответ" required>
+                    Стаж занятия Скандинавской ходьбой:
+                    <input type="text" name="staj" placeholder="Ваш ответ" required>
+                    Занимаетесь ли Вы активно физическими нагрузками? Какими?
+                    <input type="text" name="fizNagr" placeholder="Ваш ответ" required>
+                    Есть ли сердечно-сосудистные заболевания?
+                    <input type="text" name="zabolevaniya" placeholder="Ваш ответ" required>
+                    Бывает ли повышенное или пониженное давление? Какое именно?
+                    <input type="text" name="davlenie" placeholder="Ваш ответ" required>
+                    Хронические заболевания?
+                    <input type="text" name="chrono" placeholder="Ваш ответ" required>
+                    Заболевания опорно-двигательного аппарата?
+                    <input type="text" name="opora" placeholder="Ваш ответ" required>
+                    На какие расстояния ходите?
+                    <input type="text" name="perenosimost" placeholder="Ваш ответ" required>
+                    Как переносите сложные маршруты со спусками и подъемами?
+                    <input type="text" name="level" placeholder="Ваш ответ" required>
+                    Готовы ли проходить в среднем 15 - 20 км?
+                    <input type="text" name="prohod" placeholder="Ваш ответ" required>
+                    Как переносите нагрузки на горных маршрутах?
+                    <input type="text" name="perenosimostGori" placeholder="Ваш ответ" required>
+                    Вам подходят только равнинные маршруты?
+                    <input type="text" name="ravn" placeholder="Ваш ответ" required>
+                    <ul class="modal-form-submit">
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Договор.pdf" download>договором</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с договором!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Правила.docx" download>правилами</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с правилами!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
+                                    href="files/Cогласие на обработку персональных данных.docx" download>согласие на
+                                    обработку персональных данных</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+                    </ul>
+                    <button type="button" class="btn btn-secondary form-btn" data-bs-dismiss="modal">Закрыть</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Голубино -->
     <div class="modal fade" id="modal-golubino" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
@@ -922,12 +1082,92 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal-golubino-form"
+                        class="modal-zapis-btn">Записаться</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modal-golubino-form" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <h1 class="modal-form-title">Анкета сканди-путешественника</h1>
+                <hr>
+
+
+                <form action="php/golubino.php" method="POST" class="modal__form">
+                    Фамилия, имя и отчество:
+                    <input type="text" name="fio" placeholder="Ваш ответ" required>
+                    Возраст:
+                    <input type="text" name="age" placeholder="Ваш ответ" required>
+                    Ваш телефон:
+                    <input type="tel" name="tel" placeholder="Ваш ответ" required>
+                    Ваш email:
+                    <input type="email" name="email" placeholder="Ваш ответ" required>
+                    Ваш рост:
+                    <input type="text" name="rost" placeholder="Ваш ответ" required>
+                    Ваш вес (на некоторых маршрутах лишиний вес является
+                    противопоказанием):
+                    <input type="text" name="ves" placeholder="Ваш ответ" required>
+                    Стаж занятия Скандинавской ходьбой:
+                    <input type="text" name="staj" placeholder="Ваш ответ" required>
+                    Занимаетесь ли Вы активно физическими нагрузками? Какими?
+                    <input type="text" name="fizNagr" placeholder="Ваш ответ" required>
+                    Есть ли сердечно-сосудистные заболевания?
+                    <input type="text" name="zabolevaniya" placeholder="Ваш ответ" required>
+                    Бывает ли повышенное или пониженное давление? Какое именно?
+                    <input type="text" name="davlenie" placeholder="Ваш ответ" required>
+                    Хронические заболевания?
+                    <input type="text" name="chrono" placeholder="Ваш ответ" required>
+                    Заболевания опорно-двигательного аппарата?
+                    <input type="text" name="opora" placeholder="Ваш ответ" required>
+                    На какие расстояния ходите?
+                    <input type="text" name="perenosimost" placeholder="Ваш ответ" required>
+                    Как переносите сложные маршруты со спусками и подъемами?
+                    <input type="text" name="level" placeholder="Ваш ответ" required>
+                    Готовы ли проходить в среднем 15 - 20 км?
+                    <input type="text" name="prohod" placeholder="Ваш ответ" required>
+                    Как переносите нагрузки на горных маршрутах?
+                    <input type="text" name="perenosimostGori" placeholder="Ваш ответ" required>
+                    Вам подходят только равнинные маршруты?
+                    <input type="text" name="ravn" placeholder="Ваш ответ" required>
+                    <ul class="modal-form-submit">
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Договор.pdf" download>договором</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с договором!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Правила.docx" download>правилами</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с правилами!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
+                                    href="files/Cогласие на обработку персональных данных.docx" download>согласие на
+                                    обработку персональных данных</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+                    </ul>
+                    <button type="button" class="btn btn-secondary form-btn" data-bs-dismiss="modal">Закрыть</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Архыз -->
     <div class="modal fade" id="modal-arhiz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
@@ -1131,51 +1371,79 @@
             <div class="modal-content">
                 <h1 class="modal-form-title">Анкета сканди-путешественника</h1>
                 <hr>
-                <div class="modal-body">
 
-                </div>
 
                 <form action="php/arhiz.php" method="POST" class="modal__form">
-                    <label for="fio">Фамилия, имя и отчество:</label>
-                    <input id="fio" type="text" name="fio" placeholder="Ваш ответ" required>
-                    <label for="age">Возраст:</label>
-                    <input id="age" type="text" name="age" placeholder="Ваш ответ" required>
-                    <label for="tel">Ваш телефон:</label>
-                    <input id="tel" type="text" name="tel" placeholder="Ваш ответ" required>
-                    <label for="email">Ваш email:</label>
-                    <input id="email" type="text" name="email" placeholder="Ваш ответ" required>
-                    <label for="rost">Ваш рост:</label>
-                    <input id="rost" type="text" name="rost" placeholder="Ваш ответ" required>
-                    <label for="ves">Ваш вес (на некоторых маршрутах лишиний вес является противопоказанием):</label>
-                    <input id="ves" type="text" name="ves" placeholder="Ваш ответ" required>
-                    <label for="staj">Стаж занятия Скандинавской ходьбой:</label>
-                    <input id="staj" type="text" name="staj" placeholder="Ваш ответ" required>
-                    <label for="fizNagr">Занимаетесь ли Вы активно физическими нагрузками? Какими?</label>
-                    <input id="fizNagr" type="text" name="fizNagr" placeholder="Ваш ответ" required>
-                    <label for="zabolevaniya">Есть ли сердечно-сосудистные заболевания?</label>
-                    <input id="zabolevaniya" type="text" name="zabolevaniya" placeholder="Ваш ответ" required>
-                    <label for="davlenie">Бывает ли повышенное или пониженное давление? Какое именно?</label>
-                    <input id="davlenie" type="text" name="davlenie" placeholder="Ваш ответ" required>
-                    <label for="chrono">Хронические заболевания?</label>
-                    <input id="chrono" type="text" name="chrono" placeholder="Ваш ответ" required>
-                    <label for="opora">Заболевания опорно-двигательного аппарата?</label>
-                    <input id="opora" type="text" name="opora" placeholder="Ваш ответ" required>
-                    <label for="perenosimost">На какие расстояния ходите?</label>
-                    <input id="perenosimost" type="text" name="perenosimost" placeholder="Ваш ответ" required>
-                    <label for="level">Как переносите сложные маршруты со спусками и подъемами?</label>
-                    <input id="level" type="text" name="level" placeholder="Ваш ответ" required>
-                    <label for="prohod">Готовы ли проходить в среднем 15 - 20 км?</label>
-                    <input id="prohod" type="text" name="prohod" placeholder="Ваш ответ" required>
-                    <label for="perenosimostGori">Как переносите нагрузки на горных маршрутах?</label>
-                    <input id="perenosimostGori" type="text" name="perenosimostGori" placeholder="Ваш ответ" required>
-                    <label for="ravn">Вам подходят только равнинные маршруты?</label>
-                    <input id="ravn" type="text" name="ravn" placeholder="Ваш ответ" required>
-                    <input type="submit" class="modal-form-btn">
+                    Фамилия, имя и отчество:
+                    <input type="text" name="fio" placeholder="Ваш ответ" required>
+                    Возраст:
+                    <input type="text" name="age" placeholder="Ваш ответ" required>
+                    Ваш телефон:
+                    <input type="tel" name="tel" placeholder="Ваш ответ" required>
+                    Ваш email:
+                    <input type="email" name="email" placeholder="Ваш ответ" required>
+                    Ваш рост:
+                    <input type="text" name="rost" placeholder="Ваш ответ" required>
+                    Ваш вес (на некоторых маршрутах лишиний вес является
+                    противопоказанием):
+                    <input type="text" name="ves" placeholder="Ваш ответ" required>
+                    Стаж занятия Скандинавской ходьбой:
+                    <input type="text" name="staj" placeholder="Ваш ответ" required>
+                    Занимаетесь ли Вы активно физическими нагрузками? Какими?
+                    <input type="text" name="fizNagr" placeholder="Ваш ответ" required>
+                    Есть ли сердечно-сосудистные заболевания?
+                    <input type="text" name="zabolevaniya" placeholder="Ваш ответ" required>
+                    Бывает ли повышенное или пониженное давление? Какое именно?
+                    <input type="text" name="davlenie" placeholder="Ваш ответ" required>
+                    Хронические заболевания?
+                    <input type="text" name="chrono" placeholder="Ваш ответ" required>
+                    Заболевания опорно-двигательного аппарата?
+                    <input type="text" name="opora" placeholder="Ваш ответ" required>
+                    На какие расстояния ходите?
+                    <input type="text" name="perenosimost" placeholder="Ваш ответ" required>
+                    Как переносите сложные маршруты со спусками и подъемами?
+                    <input type="text" name="level" placeholder="Ваш ответ" required>
+                    Готовы ли проходить в среднем 15 - 20 км?
+                    <input type="text" name="prohod" placeholder="Ваш ответ" required>
+                    Как переносите нагрузки на горных маршрутах?
+                    <input type="text" name="perenosimostGori" placeholder="Ваш ответ" required>
+                    Вам подходят только равнинные маршруты?
+                    <input type="text" name="ravn" placeholder="Ваш ответ" required>
+                    <ul class="modal-form-submit">
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Договор.pdf" download>договором</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с договором!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Правила.docx" download>правилами</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с правилами!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
+                                    href="files/Cогласие на обработку персональных данных.docx" download>согласие на
+                                    обработку персональных данных</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+                    </ul>
                     <button type="button" class="btn btn-secondary form-btn" data-bs-dismiss="modal">Закрыть</button>
                 </form>
             </div>
         </div>
     </div>
+
     <!-- Адыгея -->
     <div class="modal fade" id="modal-adigeya" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
@@ -1366,12 +1634,93 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal-adigeya-form"
+                        class="modal-zapis-btn">Записаться</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modal-adigeya-form" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <h1 class="modal-form-title">Анкета сканди-путешественника</h1>
+                <hr>
+
+
+                <form action="php/adigea.php" method="POST" class="modal__form">
+                    Фамилия, имя и отчество:
+                    <input type="text" name="fio" placeholder="Ваш ответ" required>
+                    Возраст:
+                    <input type="text" name="age" placeholder="Ваш ответ" required>
+                    Ваш телефон:
+                    <input type="tel" name="tel" placeholder="Ваш ответ" required>
+                    Ваш email:
+                    <input type="email" name="email" placeholder="Ваш ответ" required>
+                    Ваш рост:
+                    <input type="text" name="rost" placeholder="Ваш ответ" required>
+                    Ваш вес (на некоторых маршрутах лишиний вес является
+                    противопоказанием):
+                    <input type="text" name="ves" placeholder="Ваш ответ" required>
+                    Стаж занятия Скандинавской ходьбой:
+                    <input type="text" name="staj" placeholder="Ваш ответ" required>
+                    Занимаетесь ли Вы активно физическими нагрузками? Какими?
+                    <input type="text" name="fizNagr" placeholder="Ваш ответ" required>
+                    Есть ли сердечно-сосудистные заболевания?
+                    <input type="text" name="zabolevaniya" placeholder="Ваш ответ" required>
+                    Бывает ли повышенное или пониженное давление? Какое именно?
+                    <input type="text" name="davlenie" placeholder="Ваш ответ" required>
+                    Хронические заболевания?
+                    <input type="text" name="chrono" placeholder="Ваш ответ" required>
+                    Заболевания опорно-двигательного аппарата?
+                    <input type="text" name="opora" placeholder="Ваш ответ" required>
+                    На какие расстояния ходите?
+                    <input type="text" name="perenosimost" placeholder="Ваш ответ" required>
+                    Как переносите сложные маршруты со спусками и подъемами?
+                    <input type="text" name="level" placeholder="Ваш ответ" required>
+                    Готовы ли проходить в среднем 15 - 20 км?
+                    <input type="text" name="prohod" placeholder="Ваш ответ" required>
+                    Как переносите нагрузки на горных маршрутах?
+                    <input type="text" name="perenosimostGori" placeholder="Ваш ответ" required>
+                    Вам подходят только равнинные маршруты?
+                    <input type="text" name="ravn" placeholder="Ваш ответ" required>
+                    <ul class="modal-form-submit">
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Договор.pdf" download>договором</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с договором!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Правила.docx" download>правилами</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с правилами!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
+                                    href="files/Cогласие на обработку персональных данных.docx" download>согласие на
+                                    обработку персональных данных</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+                    </ul>
+                    <button type="button" class="btn btn-secondary form-btn" data-bs-dismiss="modal">Закрыть</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Киргизия -->
     <div class="modal fade" id="modal-kirgiziya" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-tour">
@@ -1650,9 +1999,88 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="modal-zapis-btn">Записаться</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal-kirgizia-form"
+                        class="modal-zapis-btn">Записаться</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-kirgizia-form" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-tour">
+            <div class="modal-content">
+                <h1 class="modal-form-title">Анкета сканди-путешественника</h1>
+                <hr>
+
+
+                <form action="php/Kirgizia.php" method="POST" class="modal__form">
+                    Фамилия, имя и отчество:
+                    <input type="text" name="fio" placeholder="Ваш ответ" required>
+                    Возраст:
+                    <input type="text" name="age" placeholder="Ваш ответ" required>
+                    Ваш телефон:
+                    <input type="tel" name="tel" placeholder="Ваш ответ" required>
+                    Ваш email:
+                    <input type="email" name="email" placeholder="Ваш ответ" required>
+                    Ваш рост:
+                    <input type="text" name="rost" placeholder="Ваш ответ" required>
+                    Ваш вес (на некоторых маршрутах лишиний вес является
+                    противопоказанием):
+                    <input type="text" name="ves" placeholder="Ваш ответ" required>
+                    Стаж занятия Скандинавской ходьбой:
+                    <input type="text" name="staj" placeholder="Ваш ответ" required>
+                    Занимаетесь ли Вы активно физическими нагрузками? Какими?
+                    <input type="text" name="fizNagr" placeholder="Ваш ответ" required>
+                    Есть ли сердечно-сосудистные заболевания?
+                    <input type="text" name="zabolevaniya" placeholder="Ваш ответ" required>
+                    Бывает ли повышенное или пониженное давление? Какое именно?
+                    <input type="text" name="davlenie" placeholder="Ваш ответ" required>
+                    Хронические заболевания?
+                    <input type="text" name="chrono" placeholder="Ваш ответ" required>
+                    Заболевания опорно-двигательного аппарата?
+                    <input type="text" name="opora" placeholder="Ваш ответ" required>
+                    На какие расстояния ходите?
+                    <input type="text" name="perenosimost" placeholder="Ваш ответ" required>
+                    Как переносите сложные маршруты со спусками и подъемами?
+                    <input type="text" name="level" placeholder="Ваш ответ" required>
+                    Готовы ли проходить в среднем 15 - 20 км?
+                    <input type="text" name="prohod" placeholder="Ваш ответ" required>
+                    Как переносите нагрузки на горных маршрутах?
+                    <input type="text" name="perenosimostGori" placeholder="Ваш ответ" required>
+                    Вам подходят только равнинные маршруты?
+                    <input type="text" name="ravn" placeholder="Ваш ответ" required>
+                    <ul class="modal-form-submit">
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Договор.pdf" download>договором</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с договором!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
+                                    class="modal-form-dogovor" href="files/Правила.docx" download>правилами</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с правилами!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+                        <li class="modal-form-item">
+                            <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
+                                    href="files/Cогласие на обработку персональных данных.docx" download>согласие на
+                                    обработку персональных данных</a></p>
+                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
+                                oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"
+                                oninput="setCustomValidity('')">
+                        </li>
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+                    </ul>
+                    <button type="button" class="btn btn-secondary form-btn" data-bs-dismiss="modal">Закрыть</button>
+                </form>
             </div>
         </div>
     </div>
