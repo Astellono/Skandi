@@ -8,10 +8,10 @@
     <meta name="yandex-verification" content="783babf1459e4598" />
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="style/style.css?ver=127">
+    <link rel="stylesheet" href="style/style.css?ver=129">
     <link rel="stylesheet" href="style/style-adaptive.css?ver=127">
     <link rel="shortcut icon" sizes="16x16" href="img/icon.svg" type="image/svg">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>По миру с палками</title>
 </head>
 
@@ -155,7 +155,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <ul class="actual-tour__list">
-            
+
                             <li class="actual-tour__item">
                                 <div class="actual-tour__imgBlock">
                                     <img class="actual-tour__img" src="img/act-tour/osetia.jpeg" alt="" srcset="">
@@ -165,7 +165,8 @@
                                 </h3>
                                 <p class="actual-tour__date">18-21 августа 2022</p>
 
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-osetia" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-osetia"
+                                    class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -183,7 +184,8 @@
                                 </h3>
                                 <p class="actual-tour__date">27.08-02.09 2022</p>
 
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-altay" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-altay"
+                                    class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -201,7 +203,8 @@
                                 </h3>
                                 <p class="actual-tour__date">4-10 cентября 2022</p>
 
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-golubino" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-golubino"
+                                    class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -213,7 +216,7 @@
                         </ul>
                     </div>
                     <div class="carousel-item">
-                        <ul class="actual-tour__list">                         
+                        <ul class="actual-tour__list">
                             <li class="actual-tour__item">
                                 <div class="actual-tour__imgBlock">
                                     <img class="actual-tour__img" src="img/act-tour/arhyz.jpg" alt="" srcset="">
@@ -223,7 +226,8 @@
                                 </h3>
                                 <p class="actual-tour__date">14-18 сентября 2022г</p>
 
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-arhiz" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-arhiz"
+                                    class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -241,7 +245,8 @@
                                 </h3>
                                 <p class="actual-tour__date">21-25 сентября 2022г</p>
 
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-adigeya" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-adigeya"
+                                    class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -255,11 +260,12 @@
                                     <img class="actual-tour__img" src="img/act-tour/kirg.jpg" alt="" srcset="">
                                 </div>
                                 <h3 class="actual-tour__title-block">
-                                   Киргизия
+                                    Киргизия
                                 </h3>
                                 <p class="actual-tour__date">28 сентября - 4 октября 2022г</p>
 
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-kirgiziya" class="actual-tour__btn">Подробнее
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-kirgiziya"
+                                    class="actual-tour__btn">Подробнее
                                     <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -360,10 +366,36 @@
             </ul>
         </div>
     </section>
+    <!-- <section class="feedback">
+        <div class="container">
+            <h2 class="feedback__title">Были на занятиях или в туре?<br>Оставьте отзыв!</h2>
+            <form action="php/feedback.php" method="POST" class="feedback__form" enctype="multipart/form-data">
+                <div class="feedback__input-contact">
+                    <p class="input__name">Ваше имя:</p>
+                    <p class="input__name">Ваш email:</p>
+                    <input type="text" name="name" placeholder="Введите имя" required>
+                    <input type="text" name="email" placeholder="Введите email" required>
+                </div>
+                <input required type="text" class="feedback__input-text" name="message" placeholder="Ваш отзыв">
+                <p class="input__name-foto">Загрузите вашу фотографию:</p>
+                <div class="field__wrapper">
+                    <input name="file" type="file" id="field__file-2" class="field field__file" multiple>
+
+                    <label class="field__file-wrapper" for="field__file-2">
+                        <div class="field__file-fake">Файл не выбран</div>
+                        <div class="field__file-button">Выбрать</div>
+                    </label>
+
+                </div>
+                <input type="submit" style="height: 40px; border: none; border-radius: 10px;" class="modal-form-btn">
+
+            </form>
+        </div>
+    </section> -->
     <section class="questions">
         <div class="container">
             <h2 class="questions__title">Задать вопрос</h2>
-            <form action="send.php" method="POST" class="questions__form">
+            <form action="php/send.php" method="POST" class="questions__form">
 
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="text" name="email" placeholder="email" required>
@@ -531,7 +563,7 @@
 
 
 
-   <!-- Модальные окна -->
+    <!-- Модальные окна -->
 
     <!-- Осетия -->
     <div class="modal fade" id="modal-osetia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -2382,7 +2414,7 @@
 
     <!-- ------------------------------------------------------------------------------------------------------>
     <footer class="footer"></footer>
-    
+
     <!-- <script>
         var myCarousel = document.querySelector('#carousel')
         var carousel = new bootstrap.Carousel(myCarousel, {
@@ -2390,6 +2422,25 @@
 
         })
     </script> -->
+    <script>
+        let fields = document.querySelectorAll('.field__file');
+        Array.prototype.forEach.call(fields, function (input) {
+            let label = input.nextElementSibling,
+                labelVal = label.querySelector('.field__file-fake').innerText;
+
+            input.addEventListener('change', function (e) {
+                let countFiles = '';
+                if (this.files && this.files.length >= 1)
+                    countFiles = this.files.length;
+
+                if (countFiles)
+                    label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;
+                else
+                    label.querySelector('.field__file-fake').innerText = labelVal;
+            });
+        });
+    </script>
+    <script src="js/fileinput.js"></script>
     <script src="modal/bootstrap.bundle.js"></script>
     <script src="modal/Burger.js"></script>
     <script src="modal/modal.js"></script>

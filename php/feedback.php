@@ -3,16 +3,17 @@
 if (isset($_POST['name'])) {$name = $_POST['name'];}
 if (isset($_POST['email'])) {$email = $_POST['email'];}
 if (isset($_POST['message'])) {$message = $_POST['message'];}
+if (isset($_FILES['file'])) {$file = $_FILES['file'];}
  
 /* Сюда впишите свою эл. почту */
 $myaddres  = "pomiruspalkami@yandex.ru"; // кому отправляем
  
 /* А здесь прописывается текст сообщения, \n - перенос строки */
-$mes = "Имя: $name \nemail: $email\nВопрос: $message";
+$mes = "Имя: $name \nemail: $email\nВопрос: $message\nФото: $file";
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub=$name; //сабж
-$email='Вопрос'; // от кого
+$email='Фидбэк'; // от кого
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email <pomiruspalkami@website.ru>");
  
 ini_set('short_open_tag', 'On');
