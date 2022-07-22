@@ -8,7 +8,7 @@
     <meta name="yandex-verification" content="783babf1459e4598" />
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="style/style.css?ver=131">
+    <link rel="stylesheet" href="style/style.css?ver=133 ">
     <link rel="stylesheet" href="style/style-adaptive.css?ver=127">
     <link rel="shortcut icon" sizes="16x16" href="img/icon.svg" type="image/svg">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -369,25 +369,25 @@
     <!-- <section class="feedback">
         <div class="container">
             <h2 class="feedback__title">Были на занятиях или в туре?<br>Оставьте отзыв!</h2>
-            <form action="php/feedback.php" method="POST" class="feedback__form" enctype="multipart/form-data">
+            <form  enctype="multipart/form-data" method="post" id="feedback-form" class="feedback__form">
                 <div class="feedback__input-contact">
                     <p class="input__name">Ваше имя:</p>
                     <p class="input__name">Ваш email:</p>
-                    <input type="text" name="name" placeholder="Введите имя" required>
-                    <input type="text" name="email" placeholder="Введите email" required>
+                    <input type="text" name="nameFF" id="nameFF" placeholder="Введите имя" required>
+                    <input type="text" name="contactFF" id="contactFF" placeholder="Введите email" required>
                 </div>
                 <input required type="text" class="feedback__input-text" name="message" placeholder="Ваш отзыв">
                 <p class="input__name-foto">Загрузите вашу фотографию:</p>
                 <div class="field__wrapper">
-                    <input name="file" type="file" id="field__file-2" class="field field__file" multiple>
+                    <input  name="fileFF[]" multiple id="fileFF" type="file"  class="field field__file">
 
-                    <label class="field__file-wrapper" for="field__file-2">
+                    <label class="field__file-wrapper" for="fileFF">
                         <div class="field__file-fake">Файл не выбран</div>
                         <div class="field__file-button">Выбрать</div>
                     </label>
 
                 </div>
-                <input type="submit" style="height: 40px; border: none; border-radius: 10px;" class="modal-form-btn">
+                <input value="Отправить" type="submit" id="submitFF" style="height: 40px; border: none; border-radius: 10px;" class="modal-form-btn">
 
             </form>
         </div>
