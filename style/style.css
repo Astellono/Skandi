@@ -131,9 +131,10 @@ button {
 }
 
 .header__number {
-    font-family: 'Aguafina Script';
-    font-weight: 400;
+    margin-bottom: 10px;
+    
     font-size: 24px;
+    font-style: italic;
 }
 
 .header__soc-list {
@@ -146,6 +147,7 @@ button {
 
 .header__soc-icon {
     width: 30px;
+    
 }
 
 .header__burger {
@@ -988,7 +990,7 @@ footer {
     text-align: center;
     margin-bottom: 30px;
     font-size: 24px;
-    width: 500px;
+    max-width: 500px;
     border-bottom: 3px solid #60326B;
     padding-bottom: 6px;
 }
@@ -1044,12 +1046,18 @@ footer {
     position: relative;
     margin: 0 0 10px 0;
     text-align: center;
+    cursor: pointer;
   }
    
   .field__file {
     opacity: 0;
     visibility: hidden;
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
   }
    
   .field__file-wrapper {
@@ -1057,6 +1065,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    cursor: pointer;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

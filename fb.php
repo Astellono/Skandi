@@ -7,7 +7,7 @@ if (isset ($_POST['contactFF'])) {
   $boundary = md5(date('r', time()));
   $filesize = '';
   $headers = "MIME-Version: 1.0\r\n";
-  $headers .= "From: " . $from . "\r\n";
+  $headers .= "From: " ."Фидбек". "\r\n";
   $headers .= "Reply-To: " . $from . "\r\n";
   $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
   $message="
