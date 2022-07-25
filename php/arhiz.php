@@ -65,6 +65,7 @@ setTimeout('location.replace("/index.html")', 3000);
 </script> 
 </head>
 <body>
+<img src="https://www.pomiru-spalkami.ru/img/lesson/solo.png" alt="" srcset="">
 <h1>Спасибо! Мы свяжемся с вами!</h1>
 </body>
 </html>

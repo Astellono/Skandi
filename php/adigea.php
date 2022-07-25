@@ -62,9 +62,13 @@ header('Refresh: 3; URL=index.html');
 <script type="text/javascript">
 setTimeout('location.replace("/index.html")', 3000);
 /*Изменить текущий адрес страницы через 3 секунды (3000 миллисекунд)*/
-</script> 
+</script>
+<link rel="stylesheet" href="https://www.pomiru-spalkami.ru/style/style.css">
 </head>
-<body>
+<body class="body__form">
+
+<img src="https://www.pomiru-spalkami.ru/img/lesson/solo.png" alt="" srcset="">
 <h1>Спасибо! Мы свяжемся с вами!</h1>
+
 </body>
 </html>

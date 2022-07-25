@@ -64,7 +64,13 @@ a {
     list-style-type: none;
     color: black;
 }
-
+.body__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
 .header {
     background-color: white;
 
