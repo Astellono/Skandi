@@ -61,13 +61,21 @@
                     <p class="header__number">+7 (933) 366-25-23</p>
                     <ul class="header__soc-list">
                         <li class="header__soc-item">
-                            <img class="header__soc-icon" src="img/header/vk.svg" alt="">
+                            <a href="https://vk.com/pomiru_spalkami" class="header__soc-link" target="_blank">
+                                <img class="header__soc-icon" src="img/header/vk.svg" alt="">
+                            </a>
+
                         </li>
+                        <!-- <li class="header__soc-item">
+                            <a href="" class="header__soc-link" target="_blank">
+                                <img class="header__soc-icon" src="img/header/insta.svg" alt="">
+                            </a>
+
+                        </li> -->
                         <li class="header__soc-item">
-                            <img class="header__soc-icon" src="img/header/insta.svg" alt="">
-                        </li>
-                        <li class="header__soc-item">
-                            <img class="header__soc-icon" src="img/header/telega.svg" alt="">
+                            <a href="https://t.me/dorogoi_idushego" class="header__soc-link" target="_blank">
+                                <img class="header__soc-icon" src="img/header/telega.svg" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -370,17 +378,17 @@
     <section class="feedback">
         <div class="container">
             <h2 class="feedback__title">Были на занятиях или в туре?<br>Оставьте отзыв!</h2>
-            <form  enctype="multipart/form-data" method="post" id="feedback-form" class="feedback__form">
+            <form enctype="multipart/form-data" method="post" id="feedback-form" class="feedback__form">
                 <div class="feedback__input-contact">
                     <p class="input__name">Ваше имя:</p>
                     <p class="input__name">Ваш email:</p>
                     <input type="text" name="nameFF" id="nameFF" placeholder="Введите имя" required>
                     <input type="text" name="contactFF" id="contactFF" placeholder="Введите email" required>
                 </div>
-                <input required type="text" class="feedback__input-text" name="message" placeholder="Ваш отзыв">
+                <input required type="text" class="feedback__input-text" name="messageFF" placeholder="Ваш отзыв">
                 <p class="input__name-foto">Загрузите вашу фотографию:</p>
                 <div class="field__wrapper">
-                    <input  name="fileFF[]" multiple id="fileFF" type="file"  class="field field__file">
+                    <input name="fileFF[]" multiple id="fileFF" type="file" class="field field__file">
 
                     <label class="field__file-wrapper" for="fileFF">
                         <div class="field__file-fake">Файл не выбран</div>
@@ -388,7 +396,8 @@
                     </label>
 
                 </div>
-                <input value="Отправить" type="submit" id="submitFF" style="height: 40px; border: none; border-radius: 10px;" class="modal-form-btn">
+                <input value="Отправить" type="submit" id="submitFF"
+                    style="height: 40px; border: none; border-radius: 10px;" class="modal-form-btn">
 
             </form>
         </div>
