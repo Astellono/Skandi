@@ -2,12 +2,30 @@
 <html lang="en">
 
 <head>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(89691443, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/89691443" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Скандинавская ходьба – это современный и эффективный вид тренировок для всего тела.
-    Занятия подходят начинающим спортсменам и профессиональным атлетам, а также пациентам после травм и
-    операций для восстановления здоровья.">
+    <meta name="description"
+        content="Scandi-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
@@ -1772,7 +1790,7 @@
         <div class="modal-dialog modal-tour">
             <div class="modal-content">
                 <div class="modal-img-box">
-                    <img class="modal-img" src="img/act-tour/adig.jpg" alt="">
+                    <img class="modal-img" src="img/act-tour/kirg.jpg" alt="">
                 </div>
                 <div class="modal-body">
                     <h2>Киргизия</h2>
@@ -2357,13 +2375,14 @@
 
 
                     <h2 class="modal-tour-title">
-                        Стоимость: <strong style="font-size: 24px;">70 000р </strong>(цена зависит от курса валют на момент
+                        Стоимость: <strong style="font-size: 24px;">70 000р </strong>(цена зависит от курса валют на
+                        момент
                         поездки)
                     </h2>
                     <p class="modal-tour-money">
 
-                        
-                        
+
+
                         В стоимость входит: услуги сопровождающего гида, экскурсионное обслуживание, трансфер по
                         маршрутам (кроме первого дня), занятия скандинавской ходьбой, входы в заповедники, завтраки,
                         проживание 2-местное в гостинице Annabella Boutique Hotel 4**, KASA guesthouse Gyumri, Royal
@@ -2371,8 +2390,9 @@
 
 
 
-                        
-                        <br><br> В стоимость НЕ входит: авиабилеты, трансфер в первый день, обеды и ужины, страховка путешественника.
+
+                        <br><br> В стоимость НЕ входит: авиабилеты, трансфер в первый день, обеды и ужины, страховка
+                        путешественника.
                         <br><br>
                     </p>
 
@@ -2478,10 +2498,44 @@
     <!-- --------------------------------- -->
 
     <footer class="footer"></footer>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="modal/bootstrap.bundle.js"></script>
     <script src="modal/Burger.js"></script>
     <script src="modal/modal.js"></script>
+    <script>
+        $(document).ready(function () {
 
+            if (window.location.href.indexOf('#modal-osetia') != -1) {
+                $('#modal-osetia').modal('show');
+                console.log('Done')
+            }
+            if (window.location.href.indexOf('#modal-altay') != -1) {
+                $('#modal-altay').modal('show');
+                console.log('Done')
+            }
+            if (window.location.href.indexOf('#modal-golubino') != -1) {
+                $('#modal-golubino').modal('show');
+                console.log('Done')
+            }
+            if (window.location.href.indexOf('#modal-arhiz') != -1) {
+                $('#modal-arhiz').modal('show');
+                console.log('Done')
+            }
+            if (window.location.href.indexOf('#modal-adigeya') != -1) {
+                $('#modal-adigeya').modal('show');
+                console.log('Done')
+            }
+            if (window.location.href.indexOf('#modal-kirgiziya') != -1) {
+                $('#modal-kirgiziya').modal('show');
+                console.log('Done')
+            }
+            if (window.location.href.indexOf('#modal-armenia') != -1) {
+                $('#modal-armenia').modal('show');
+                console.log('Done')
+            }
+
+        });
+    </script>
 </body>
 
 </html>
