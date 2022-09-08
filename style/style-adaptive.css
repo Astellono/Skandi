@@ -2,62 +2,75 @@
     .team__item-3 {
         margin-left: 300px;
     }
+
     .adv__item {
         width: 400px;
         height: 350px;
         border-radius: 30px;
     }
+
     .adv__item-title {
         font-size: 16px;
         margin-bottom: 30px;
     }
+
     .adv__img {
         width: 300px;
     }
+
     .teamlead__img {
         width: 400px;
     }
+
     .teamlead__desc {
         font-size: 24px;
     }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1205px) {
     .header__contant {
         align-items: center;
         flex-wrap: wrap;
     }
+
     .header__menu {
         width: 100%;
         order: 3;
         margin-top: 50px;
     }
+
     .tour__page__header {
         flex-direction: column;
     }
+
     .tour__page__imgBox {
         height: 400px;
         max-width: 100%;
         margin-right: 0;
         margin-bottom: 30px;
     }
+
     .tour__page__infoBlock {
         max-width: 100%;
-        
+
     }
+
     .tour__page__title {
         text-align: center;
     }
+
     .tour__page__date {
         text-align: center;
     }
+
     .tour__page__pricePart {
         margin-bottom: 40px;
     }
-   
+
     .diary {
         margin-top: 20px;
     }
+
     .tour__page__price {
         margin-bottom: 20px;
     }
@@ -67,36 +80,47 @@
     .adv {
         background-image: none;
     }
+
     .about__title {
         width: 100%;
         text-align: center;
     }
+
     .adv__title {
         width: 100%;
         font-size: 32px;
         text-align: center;
     }
+
     .adv__list {
         width: 100%;
         justify-content: center;
     }
+
     .adv__item {
         width: 100%;
         box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     }
+
     .teamlead__img {
         width: 300px;
     }
+
     .adv__item-title {
         font-size: 24px;
         margin-bottom: 15px;
     }
+
     .adv__img {
         width: 300px;
     }
 }
 
 @media (max-width: 877px) {
+    .header__logo img {
+        width: 190px;
+    }
+
     .header__menu {
         position: fixed;
         display: block;
@@ -112,29 +136,36 @@
         transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;
     }
+
     .header__burger-open {
         transform: translateX(0);
     }
+
     .header__item {
         margin-bottom: 40px;
     }
+
     .header__burger-cross {
         display: block;
         position: absolute;
         right: 60px;
         margin-bottom: 0;
     }
+
     .header__contacts {
         display: none;
     }
+
     .header__burger {
         display: block;
     }
+
     .hero__title {
         margin-bottom: 45px;
         font-size: 48px;
         line-height: 112px;
     }
+
     .hero__desc {
         margin-bottom: 100px;
         text-align: center;
@@ -143,89 +174,115 @@
         line-height: 38px;
         color: white;
     }
+
     .teamlead__desc {
         font-size: 24px;
     }
+
     .questions__form {
         width: 100%;
     }
+
     .modal-form-sumit-text {
-      
+
         font-size: 16px;
-        
+
     }
-    .tour__page__title{
+
+    .tour__page__title {
         font-size: 48px;
     }
-    .tour__page__date{
+
+    .tour__page__date {
         font-size: 24px;
     }
+
     .tour__page__desc {
         margin-bottom: 10px;
     }
+
     .tour__page__rate {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 }
-
+@media (max-width: 803px) {
+    .container {
+        padding: 0 20px;
+    }
+}
 @media (max-width: 600px) {
     .container {
         padding: 0 10px;
     }
+
     .hero {
         height: 450px;
     }
+
     .hero__title {
         font-size: 32px;
         margin-bottom: 20px;
     }
+
     .hero__desc {
         font-size: 16px;
         margin-bottom: 30px;
     }
+
     .about__story {
         font-size: 16px;
     }
+
     .adv__item-title {
         font-size: 16px;
     }
+
     .team__list {
         flex-direction: column;
         align-items: center;
     }
+
     .contacts__title {
         font-size: 24px;
         font-weight: 700;
     }
+
     .contacts__item {
         font-size: 16px;
     }
+
     .tour__list {
         flex-direction: column;
     }
+
     .tour__item {
         width: 100%;
     }
+
     .actual-tour__list {
         flex-direction: column;
     }
+
     .actual-tour__item {
         width: 100%;
         margin-bottom: 20px;
     }
+
     .lesson__list {
         flex-direction: column;
     }
+
     .lesson__item {
         width: 100%;
         margin-bottom: 15px;
     }
+
     .modal-form-sumit-text {
         letter-spacing: 0;
         font-size: 14px;
-        
+
         width: 87%;
     }
 }
