@@ -32,6 +32,35 @@
         order: 3;
         margin-top: 50px;
     }
+    .tour__page__header {
+        flex-direction: column;
+    }
+    .tour__page__imgBox {
+        height: 400px;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .tour__page__infoBlock {
+        max-width: 100%;
+        
+    }
+    .tour__page__title {
+        text-align: center;
+    }
+    .tour__page__date {
+        text-align: center;
+    }
+    .tour__page__pricePart {
+        margin-bottom: 40px;
+    }
+   
+    .diary {
+        margin-top: 20px;
+    }
+    .tour__page__price {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 968px) {
@@ -124,6 +153,20 @@
       
         font-size: 16px;
         
+    }
+    .tour__page__title{
+        font-size: 48px;
+    }
+    .tour__page__date{
+        font-size: 24px;
+    }
+    .tour__page__desc {
+        margin-bottom: 10px;
+    }
+    .tour__page__rate {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
