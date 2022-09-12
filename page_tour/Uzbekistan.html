@@ -29,8 +29,8 @@
     <link rel="icon" sizes="120x120" href="/img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/style/clear.css">
     <link rel="stylesheet" href="/style/bootstrap.css">
-    <link rel="stylesheet" href="/style/style.css?ver=206">
-    <link rel="stylesheet" href="/style/style-adaptive.css?ver=200">
+    <link rel="stylesheet" href="/style/style.css?ver=400">
+    <link rel="stylesheet" href="/style/style-adaptive.css?ver=400">
 
 
     <title>Туры</title>
@@ -151,7 +151,7 @@
                                     <a href="#close" title="Close" class="close">×</a>
                                 </div>
                                 <div class="modal-b">
-                                    <form action="/php/armenia.php" method="POST" class="modal__form">
+                                    <form action="/php/uzbekistan.php" method="POST" class="modal__form">
 
                                         Фамилия, имя и отчество:
                                         <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>
@@ -238,11 +238,69 @@
 
         </div>
     </section>
-    <section class="diary">
+    <section class="gid">
         <div class="container">
-            <h2 class="diary-title">
-                Расписание
-            </h2>
+            <h2 class="gid__title">Гид</h2>
+            <ul class="team__list gid__list">
+
+                <li class="team__item">
+                    <img class="team__img" src="/img/team/Lider.png" alt="">
+                    <h3 class="team__title-member">Волосюк Маргарита</h3>
+                    <p class="team__desc">Инструктор</p>
+                    <button type="button" class="team__btn" data-bs-toggle="modal" data-bs-target="#modal">Подробнее
+                        <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                                fill="#121723" />
+                        </svg>
+                    </button>
+                    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <img class="team__img team__modal-img" src="/img/team/Lider.png" alt="">
+                                <div class="modal-body">
+                                    Маргарита Волосюк
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="modal-desc">
+                                        <p>
+                                            Я, Волосюк Маргарита, руководитель проекта "По миру с палками". Дважды сертифицированый
+                                            инструктор Nordic Walking. Организатор туров и экскурсий в направлении scandi-trip.
+                                        </p>
+                                        <p>
+                                            Мне 54 года. И считаю этот возраст самым прекрасным для воплощения именно своих планов в
+                                            жизнь. Тот самый возраст, когда торопиться опасно, нервничать вредно, доверять глупо, а
+                                            бояться поздно. Остается только жить. Жить в свое удовольствие.</p>
+                                        <p>
+                                            Вот я и не побоялась в 50+ изменить очень круто свою жизнь. И остановить этот процесс
+                                            невозможно. Можно только поддержать. Готова поддержать всех, кто что-то хочет поменять в
+                                            своей жизни, но боится слелать первый шаг. Готова пообщаться на эту тему. Говорят
+                                            я сильная, но чтобы к чему-то сремиться и постараться достичь того чего хочешь именно ты,
+                                            надо быть сильным.</p>
+                                        <p>
+                                            Спорт моя любовь с детства, но в детстве скорее всего не хватило достаточной мотивации,
+                                            чтобы достичь каких-то сверхествественных результатов. И поэтому всего лишь 1й взрослый
+                                            разряд по баскетболу. За то сейчас мотивации хоть отбавляй. Веду занятия, лезу
+                                            в горы, учусь плавать (плавала всегда, но задалась целью освоить спортивное плавание). Стоит
+                                            задача взять репитирора по английскому.</p>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+    </section>
+    
+    <section class="diary">
+        <h2 class="diary-title">
+            Расписание
+        </h2>
+        <div class="container">
+            
             <ul class="modal-tour-list accordion accordion-flush" id="accordionFlushExample">
 
                 <li class="modal-tour-item accordion-item">
@@ -274,9 +332,9 @@
                             </ul>
                             <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day1/erevan.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day1/hotel.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day1/taverna.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day1/hasti.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day1/ploshad.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day1/tash.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -298,7 +356,8 @@
                                 <li class="modal-active-item">Утренняя зарядка</li>
                                 <li class="modal-active-item">Завтрак в гостинице</li>
                                 <li class="modal-active-item">Завтрак в отеле </li>
-                                <li class="modal-active-item">Выезд в Чимганские горы – излюбленное место отдыха жителей Ташкента</li>
+                                <li class="modal-active-item">Выезд в Чимганские горы – излюбленное место отдыха жителей
+                                    Ташкента</li>
                                 <li class="modal-active-item">Тренировка в горах (треккинг) </li>
                                 <li class="modal-active-item">Обед в ресторане города</li>
                                 <li class="modal-active-item">Ужин свободный</li>
@@ -306,9 +365,9 @@
                             </ul>
                             <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day2/vodopad.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day2/vodopad1.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day2/vodopad2.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day2/gora1.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day2/gora2.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day2/gora3.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -335,8 +394,11 @@
                                 <li class="modal-active-item">Завтрак в отеле</li>
                                 <li class="modal-active-item">Переезд в Самарканд на машине</li>
                                 <li class="modal-active-item">Прибытие, Заселение в 14:00</li>
-                                <li class="modal-active-item">Экскурсия по городу Мавзолей Гури Эмир –- гробница Тамерлана, где он и его потомки нашли последний приют</li>
-                                <li class="modal-active-item">Площадь Регистан - сердце Самарканда. Регистан с трех сторон окружен величественными зданиями: Медресе Улугбека (1417 — 1420), Медресе Шер-Дор (1619 — 1636), Медресе ТилляКари (1647 — 1660)</li>
+                                <li class="modal-active-item">Экскурсия по городу Мавзолей Гури Эмир –- гробница
+                                    Тамерлана, где он и его потомки нашли последний приют</li>
+                                <li class="modal-active-item">Площадь Регистан - сердце Самарканда. Регистан с трех
+                                    сторон окружен величественными зданиями: Медресе Улугбека (1417 — 1420), Медресе
+                                    Шер-Дор (1619 — 1636), Медресе ТилляКари (1647 — 1660)</li>
                                 <li class="modal-active-item">Мечеть Биби Ханум</li>
                                 <li class="modal-active-item">Прогулка по знаменитому базару Сиаб</li>
                                 <li class="modal-active-item">Свободное время на покупку сувениров</li>
@@ -346,9 +408,9 @@
                             </ul>
                             <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day3/ahpad.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day3/kayan.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day3/sanain.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day3/grob.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day3/mech.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day3/ploshadUzbek.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -371,8 +433,9 @@
                             <ul class="modal-active-list">
                                 <li class="modal-active-item">Утренняя зарядка</li>
                                 <li class="modal-active-item">Завтрак в отеле</li>
-                               
-                                <li class="modal-active-item">Переезд в урочище Аманкутан, который поражает своим живописным пейзажем и хранит очень
+
+                                <li class="modal-active-item">Переезд в урочище Аманкутан, который поражает своим
+                                    живописным пейзажем и хранит очень
                                     много легенд</li>
                                 <li class="modal-active-item">Тренировка (треккинг)</li>
                                 <li class="modal-active-item">Возвращение в Самарканд</li>
@@ -383,9 +446,9 @@
                             </ul>
                             <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/Gumri.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/Gumri1.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/marmashen.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day4/uroch1.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day4/uroch2.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day4/uroch3.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -404,8 +467,9 @@
                         <div class="accordion-body">
                             <ul class="modal-active-list">
                                 <li class="modal-active-item">Утренняя зарядка</li>
-                                <li class="modal-active-item">Завтрак в гостинице</li>                            
-                                <li class="modal-active-item">Выезд в окрестности Самарканда в деревню Конигиль для посещения бумажной фабрики Мерос</li>
+                                <li class="modal-active-item">Завтрак в гостинице</li>
+                                <li class="modal-active-item">Выезд в окрестности Самарканда в деревню Конигиль для
+                                    посещения бумажной фабрики Мерос</li>
                                 <li class="modal-active-item">Посещение мавзолея святого Даниила</li>
                                 <li class="modal-active-item">Посещение мазара Ходжи Данияра</li>
                                 <li class="modal-active-item">Посещение комплекса Шахи - Зинда (11-15 век)</li>
@@ -414,13 +478,13 @@
                                 <li class="modal-active-item">Обед в ресторане города</li>
                                 <li class="modal-active-item">Ужин свободный</li>
                                 <li class="modal-active-item">Ночь в отеле</li>
-                                
+
                             </ul>
                             <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/Gumri.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/Gumri1.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/marmashen.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day5/mavDal.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day5/shaha.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day5/shaha2.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -439,19 +503,14 @@
                         <div class="accordion-body">
                             <ul class="modal-active-list">
                                 <li class="modal-active-item">Утренняя зарядка</li>
-                                <li class="modal-active-item">Завтрак в гостинице</li>                            
+                                <li class="modal-active-item">Завтрак в гостинице</li>
                                 <li class="modal-active-item">Свободное время</li>
                                 <li class="modal-active-item">Обед( не входит в стоимость)</li>
                                 <li class="modal-active-item">Вылет после 15.00</li>
-                                
-                                
-                            </ul>
-                            <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/Gumri.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/Gumri1.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/Armenia/day4/marmashen.jpg" alt="">
-                            </div>
+
+                            </ul>
+
                         </div>
                     </div>
                 </li>

@@ -3,24 +3,29 @@
 
 <head>
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
-    ym(89691443, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true,
-         webvisor:true
-    });
- </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/89691443" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- <!-- /Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(89691443, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/89691443" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
+    <meta name="description"
+        content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/style.css?ver=139">
@@ -80,7 +85,7 @@
                             </a>
 
                         </li>
-                        
+
                         <li class="header__soc-item">
                             <a href="https://t.me/dorogoi_idushego" class="header__soc-link" target="_blank">
                                 <img class="header__soc-icon" src="img/header/telega.svg" alt="">
@@ -95,7 +100,7 @@
         <div class="container">
 
 
-            <div class="lesson__party">
+            <!-- <div class="lesson__party">
                 <h2 class="lesson__title">Групповые занятия</h2>
                 <ul class="lesson__list">
                     <li class="lesson__item">
@@ -119,8 +124,80 @@
                     </li>
 
                 </ul>
-            </div>
+            </div> -->
+            <table class="lesson__table table">
+                <tr>
+                    <th>ПАРК</th>
+                    <th>ПН</th>
+                    <th>ВТ</th>
+                    <th>СР</th>
+                    <th>ЧТ</th>
+                    <th>ПТ</th>
+                    <th>СБ</th>
+                    <th>ВС</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td class="td__img">
+                        <img class="lesson__img" src="img/lesson/colom.jpg" alt="" srcset="">
+                        <p class="lesson__img-text">Коломенский</p>
+                    </td>
+                    <td class="td-item">-</td>
+                    <td class="td-item">9.00</td>
+                    <td class="td-item">-</td>
+                    <td class="td-item">-</td>
+                    <td class="td-item">-</td>
+                    <td class="td-item">-</td>
+                    <td class="td-item">-</td>
+                    <td class="td__btn"> <button class="lesson__btn">Записаться</button></td>
 
+                </tr>
+                <tr>
+                    <td class="td__img">
+                        <img class="lesson__img" src="img/lesson/luzh.jpg" alt="" srcset="">
+                        <p class="lesson__img-text">Лужники</p>
+                    </td>
+                    <td>-</td>
+                    <td>19:00</td>
+                    <td>-</td>
+                    <td>19:00</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="td__btn"> <button class="lesson__btn">Записаться</button></td>
+
+                </tr>
+                <tr>
+                    <td class="td__img">
+                        <img class="lesson__img" src="img/lesson/king.jpg" alt="" srcset="">
+                        <p class="lesson__img-text">Царицино</p>
+                    </td>
+                    <td>-</td>
+                    <td></td>
+                    <td>19:00</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="td__btn"> <button class="lesson__btn">Записаться</button></td>
+
+                </tr>
+                <tr>
+                    <td class="td__img">
+                        <img class="lesson__img" src="img/lesson/voron.jpg" alt="" srcset="">
+                        <p class="lesson__img-text">Воронцовский</p>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>9.00</td>
+                    <td class="td__btn"> <button class="lesson__btn">Записаться</button></td>
+
+                </tr>
+            </table>
 
         </div>
 
@@ -206,11 +283,11 @@
         </div>
     </section>
     <footer class="footer"></footer>
-    
+
     <script src="modal/bootstrap.bundle.js"></script>
     <script src="modal/Burger.js"></script>
     <script src="modal/modal.js"></script>
-    
+
 </body>
 
 </html>

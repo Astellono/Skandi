@@ -18,11 +18,11 @@ function sumVector(vec1, vec2) {
         let tmp = vec1.length - vec2.length
 
         if (tmp > 0) {
-            vec2.push(0)
-        } else vec1.push(0)
+            vec2.unshift(0)
+        } else vec1.unshift(0)
     }
     for (let i = 0; i < vec1.length; i++) {
-        console.log(vec2);
+        
         finalVec.push(vec1[i] + vec2[i])
     }
 
