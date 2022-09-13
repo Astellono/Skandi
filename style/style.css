@@ -893,11 +893,8 @@ table * {
 }
 
 .lesson__btn {
-    width: 150px;
-    
-   
+    width: 150px;   
     padding: 5px;
-
     margin-left: 35px;
     font-size: 20px;
     color: white;
@@ -958,7 +955,18 @@ table * {
     border-radius: 10px;
 }
 
-
+.lesson__smart__table {
+    display: none;
+}
+.lesson__abik-list {
+    display: flex;
+    justify-content: space-between;
+}
+.lesson__abik-item {
+    width: 30%;
+    height: 300px;
+    outline: 1px solid red;
+}
 /*----------------------------------------------------------------------------------------------*/
 
 

@@ -74,6 +74,47 @@
     .tour__page__price {
         margin-bottom: 20px;
     }
+
+    .big__table {
+        display: none;
+    }
+
+    .lesson__table-imgBlock {
+        position: relative;
+        max-width: 450px;
+        height: 200px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .lesson__img-smart {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .lesson__img-text-smart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        width: 100%;
+        height: 100%; 
+        background-color: rgba(0, 0, 0, 0.3);
+        font-size: 28px;
+    }
+    .lesson__btn {
+        width: 450px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .lesson__smart__table {
+        display: block;
+    }
 }
 
 @media (max-width: 968px) {
@@ -207,11 +248,13 @@
         align-items: center;
     }
 }
+
 @media (max-width: 803px) {
     .container {
         padding: 0 20px;
     }
 }
+
 @media (max-width: 600px) {
     .container {
         padding: 0 10px;
@@ -284,5 +327,8 @@
         font-size: 14px;
 
         width: 87%;
+    }
+    .lesson__btn {
+        width: 100%;
     }
 }
