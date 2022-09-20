@@ -16,11 +16,11 @@ function sumVector(vec1, vec2) {
 
     while (vec1.length != vec2.length) {
         let tmp = vec1.length - vec2.length
-
         if (tmp > 0) {
             vec2.unshift(0)
         } else vec1.unshift(0)
     }
+    
     for (let i = 0; i < vec1.length; i++) {
         
         finalVec.push(vec1[i] + vec2[i])
