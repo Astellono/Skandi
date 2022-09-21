@@ -28,8 +28,8 @@
         content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="style/style.css?ver=300">
-    <link rel="stylesheet" href="style/style-adaptive.css?ver=300">
+    <link rel="stylesheet" href="style/style.css?ver=301">
+    <link rel="stylesheet" href="style/style-adaptive.css?ver=301">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
 
     <title>Занятия</title>
@@ -130,7 +130,14 @@
                     <td class="td-item">-</td>
                     <td class="td-item">-</td>
                     <td class="td-item">-</td>
-                    <td class="td__btn"> <button class="lesson__btn">Записаться</button></td>
+                    <td class="td__btn"> <a href="#modal-kolom" class="lesson__btn">Записаться</a></td>
+
+
+
+
+
+
+
 
                 </tr>
                 <tr>
@@ -156,7 +163,7 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
-                    <td class="td__btn"> <button class="lesson__btn">Записаться</button></td>
+                    <td class="td__btn"> <a class="lesson__btn">Записаться</a></td>
 
                 </tr>
                 <tr>
@@ -182,7 +189,7 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
-                    <td class="td__btn"> <button class="lesson__btn">Записаться</button></td>
+                    <td class="td__btn"> <a class="lesson__btn">Записаться</a></td>
 
                 </tr>
                 <tr>
@@ -211,11 +218,11 @@
                         10:00<br>
                         11:00
                     </td>
-                    <td class="td__btn"> <button class="lesson__btn">Записаться</button></td>
+                    <td class="td__btn"> <a class="lesson__btn">Записаться</a></td>
 
                 </tr>
             </table>
-            
+
 
             <div class="lesson__smart__table">
                 <hr>
@@ -243,7 +250,7 @@
                         <td class="td-item">-</td>
                     </tr>
                 </table>
-                <button class="lesson__btn">Записаться</button>
+                <a class="lesson__btn">Записаться</a>
                 <hr>
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/luzh.jpg" alt="" srcset="">
@@ -269,7 +276,7 @@
                         <td>-</td>
                     </tr>
                 </table>
-                <button class="lesson__btn">Записаться</button>
+                <a class="lesson__btn">Записаться</a>
                 <hr>
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/king.jpg" alt="" srcset="">
@@ -295,7 +302,7 @@
                         <td>-</td>
                     </tr>
                 </table>
-                <button class="lesson__btn">Записаться</button>
+                <a class="lesson__btn">Записаться</a>
                 <hr>
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/voron.jpg" alt="" srcset="">
@@ -324,7 +331,7 @@
                         </td>
                     </tr>
                 </table>
-                <button class="lesson__btn">Записаться</button>
+                <a class="lesson__btn">Записаться</a>
                 <hr>
             </div>
             <div class="lesson__abik">
@@ -450,6 +457,35 @@
             </ul>
         </div>
     </section>
+    <div id="modal-kolom" class="mod">
+        <div class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на груповое занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+                    <form action="php/lesson/kolomenskaya.php" method="POST" class="modal__form">
+                        Фамилия, имя и отчество:
+                        <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>
+                        Дата рождения:
+                        <input type="text" name="age" placeholder="Дата рождения 31.12.2000" required>
+                        Ваш телефон:
+                        <input type="tel" name="tel" placeholder="Ваш ответ" required>
+
+                        Ваш email:
+                        <input type="email" name="email" placeholder="Ваш ответ" required>
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer"></footer>
 
     <script src="modal/bootstrap.bundle.js"></script>

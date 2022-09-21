@@ -894,12 +894,13 @@ table * {
 
 .lesson__btn {
     width: 150px;   
-    padding: 5px;
+    padding: 7px;
     margin-left: 35px;
     font-size: 20px;
     color: white;
     background: #60326B;
     border-radius: 10px;
+    text-align: center;
 }
 
 .solo {
