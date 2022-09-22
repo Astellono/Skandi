@@ -130,7 +130,7 @@
                     <td class="td-item">-</td>
                     <td class="td-item">-</td>
                     <td class="td-item">-</td>
-                    <td class="td__btn"> <a href="#modal-kolom" class="lesson__btn">Записаться</a></td>
+                    <td class="td__btn"> <a href="#modal-kolom" id="btn" class="lesson__btn">Записаться</a></td>
 
 
 
@@ -163,7 +163,7 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
-                    <td class="td__btn"> <a class="lesson__btn">Записаться</a></td>
+                    <td class="td__btn"> <a href="#modal-luzh" class="lesson__btn">Записаться</a></td>
 
                 </tr>
                 <tr>
@@ -189,7 +189,7 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
-                    <td class="td__btn"> <a class="lesson__btn">Записаться</a></td>
+                    <td class="td__btn"> <a href="#modal-caricino" class="lesson__btn">Записаться</a></td>
 
                 </tr>
                 <tr>
@@ -218,7 +218,7 @@
                         10:00<br>
                         11:00
                     </td>
-                    <td class="td__btn"> <a class="lesson__btn">Записаться</a></td>
+                    <td class="td__btn"> <a href="#modal-vorona" class="lesson__btn">Записаться</a></td>
 
                 </tr>
             </table>
@@ -250,7 +250,7 @@
                         <td class="td-item">-</td>
                     </tr>
                 </table>
-                <a class="lesson__btn">Записаться</a>
+                <a href="#modal-kolom" class="lesson__btn">Записаться</a>
                 <hr>
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/luzh.jpg" alt="" srcset="">
@@ -276,7 +276,7 @@
                         <td>-</td>
                     </tr>
                 </table>
-                <a class="lesson__btn">Записаться</a>
+                <a href="#modal-luzh" class="lesson__btn">Записаться</a>
                 <hr>
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/king.jpg" alt="" srcset="">
@@ -302,7 +302,7 @@
                         <td>-</td>
                     </tr>
                 </table>
-                <a class="lesson__btn">Записаться</a>
+                <a href="#modal-caricino" class="lesson__btn">Записаться</a>
                 <hr>
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/voron.jpg" alt="" srcset="">
@@ -331,7 +331,7 @@
                         </td>
                     </tr>
                 </table>
-                <a class="lesson__btn">Записаться</a>
+                <a href="#modal-vorona" class="lesson__btn">Записаться</a>
                 <hr>
             </div>
             <div class="lesson__abik">
@@ -345,7 +345,7 @@
                         <h3 class="lesson__abik-title-item">4 занятия</h3>
                         <p class="lesson__abik-title-srok">2 месяца</p>
                         <p class="lesson__abik-title-price">2000р</p>
-                        <a class="lesson__abik-link">Приобрести</a>
+
                     </li>
                     <li class="lesson__abik-item">
                         <div class="lesson__abik-img-box">
@@ -354,7 +354,7 @@
                         <h3 class="lesson__abik-title-item">10 занятий</h3>
                         <p class="lesson__abik-title-srok">2 месяца</p>
                         <p class="lesson__abik-title-price">5000р</p>
-                        <a class="lesson__abik-link">Приобрести</a>
+
                     </li>
                 </ul>
             </div>
@@ -372,7 +372,7 @@
                         и с вами свяжутся и обговорят все интересующие вас вопросы.
                     </div>
                     <p class="lesson__solo-how">Цена: 2000р</p>
-                    <button class="lesson__solo-btn"> Записаться</button>
+                    <a href="#modal-solo" style="margin-left: 0;" class="lesson__btn">Записаться</a>
                 </div>
                 <div class="lesson__solo-right">
                     <img class="lesson__solo-right-img" src="img/lesson/solo.png" alt="" srcset="">
@@ -391,7 +391,7 @@
                         <h3 class="lesson__abik-title-item">4 занятия</h3>
                         <p class="lesson__abik-title-srok">1 месяц</p>
                         <p class="lesson__abik-title-price">6000р</p>
-                        <a class="lesson__abik-link">Приобрести</a>
+
                     </li>
 
                 </ul>
@@ -435,7 +435,7 @@
 
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="text" name="email" placeholder="email" required>
-                <input required type="text" class="questions__input-text" name="message" placeholder="Ваш вопрос?">
+                <input type="text" class="questions__input-text" name="message" placeholder="Ваш вопрос?">
                 <input type="submit" class="questions__btn">
 
             </form>
@@ -457,7 +457,11 @@
             </ul>
         </div>
     </section>
+
+
+    <!-- Модальные   ------------------------------------>
     <div id="modal-kolom" class="mod">
+       
         <div class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
@@ -465,16 +469,18 @@
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
                 <div class="modal-b">
-                    <form action="php/lesson/kolomenskaya.php" method="POST" class="modal__form">
-                        Фамилия, имя и отчество:
-                        <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>
-                        Дата рождения:
-                        <input type="text" name="age" placeholder="Дата рождения 31.12.2000" required>
-                        Ваш телефон:
-                        <input type="tel" name="tel" placeholder="Ваш ответ" required>
 
+                    <form action="php/lesson/kolomenskaya.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
                         Ваш email:
-                        <input type="email" name="email" placeholder="Ваш ответ" required>
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+
 
 
 
@@ -486,11 +492,154 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <div id="modal-luzh" class="mod">
+
+        <div class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на груповое занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+
+                    <form action="php/lesson/luzniki.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="modal-vorona" class="mod">
+        <div class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на груповое занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+
+                    <form action="php/lesson/Vorona.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-caricino" class="mod">
+        <div class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на груповое занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+
+                    <form action="php/lesson/caricino.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-solo" class="mod">
+        <div class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на индивидуальное занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+
+                    <form action="php/lesson/solo.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <footer class="footer"></footer>
 
     <script src="modal/bootstrap.bundle.js"></script>
     <script src="modal/Burger.js"></script>
     <script src="modal/modal.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+
 
 </body>
 

@@ -1517,14 +1517,17 @@ table * {
     margin: 0;
     padding: 0;
 }
-
+body.mod:target {
+    overflow-y: hidden;
+}
 /* при отображении модального окно */
 .mod:target {
     opacity: 1;
     /* делаем окно видимым */
     pointer-events: auto;
+    
     /* элемент видим для событий мыши */
-    overflow-y: auto;
+    overflow-y: auto; 
     /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
 
