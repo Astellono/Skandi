@@ -794,9 +794,11 @@ footer {
     height: 60px;
     background-color: #4F3156;
 }
+
 table * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
+
 .lesson {
     background: rgba(236, 229, 238, 0.6);
     padding: 15px 0;
@@ -852,24 +854,28 @@ table * {
 .td__btn {
     width: 200px;
     padding-right: auto;
-    
+
 }
+
 .lesson__table {
     border-spacing: 100px;
 }
+
 .lesson__table th,
 .lesson__table td {
     text-align: center;
     vertical-align: middle;
-    
+
 }
+
 .td-item {
     width: 110px;
 }
+
 .lesson__table tr {
     margin-bottom: 10px;
     padding-bottom: 20px;
-    
+
 }
 
 .lesson__img-box {
@@ -893,7 +899,7 @@ table * {
 }
 
 .lesson__btn {
-    width: 150px;   
+    width: 150px;
     padding: 7px;
     margin-left: 35px;
     font-size: 20px;
@@ -955,24 +961,29 @@ table * {
     background: #60326B;
     border-radius: 10px;
 }
+
 .lesson__abik-img-box {
     width: 200px;
     height: 200px;
     margin: 0 auto;
     margin-top: 15px;
-    
+
     margin-bottom: 20px;
 }
+
 .lesson__abik-img {
     width: 100%;
     height: 100%;
 }
+
 .lesson__smart__table {
     display: none;
 }
+
 .lesson__abik {
     margin-bottom: 50px;
 }
+
 .lesson__table-title {
     width: max-content;
     margin: 0 auto;
@@ -980,52 +991,61 @@ table * {
     font-size: 32px;
     color: #60326B;
 }
+
 .lesson__abik-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .lesson__abik-item {
     width: 300px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
+
 .lesson__group-desc {
     margin: 0 auto;
     text-align: center;
     width: 600px;
     margin-bottom: 20px;
 }
+
 .lesson__group-how {
     width: max-content;
     font-weight: 600;
     font-size: 28px;
     margin: 0 auto;
-} 
+}
+
 .lesson__abik-title-item {
     font-size: 24px;
     text-align: center;
 }
-.lesson__abik-link{
+
+.lesson__abik-link {
     display: block;
     width: 200px;
     text-align: center;
     background-color: #60326B;
-    padding:  6px;
+    padding: 6px;
     color: white;
     border-radius: 10px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
 .lesson__abik-title-price {
     font-size: 32px;
     text-align: center;
     margin-bottom: 10px;
 }
+
 .lesson__abik-title-srok {
     text-align: center;
 }
+
 /*----------------------------------------------------------------------------------------------*/
 
 
@@ -1517,17 +1537,19 @@ table * {
     margin: 0;
     padding: 0;
 }
+
 body.mod:target {
     overflow-y: hidden;
 }
+
 /* при отображении модального окно */
 .mod:target {
     opacity: 1;
     /* делаем окно видимым */
     pointer-events: auto;
-    
+
     /* элемент видим для событий мыши */
-    overflow-y: auto; 
+    overflow-y: auto;
     /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
 
@@ -1626,4 +1648,121 @@ body.mod:target {
     flex: 1 1 auto;
     padding: 15px;
     overflow: auto;
+}
+
+
+.excursions {
+    padding: 50px 0;
+    padding-top: 20px;
+}
+
+.excursions__title {
+    text-align: center;
+}
+
+
+
+.excursions__item {
+    display: flex;
+    margin-bottom: 80px;
+    cursor: pointer;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 340px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    border-radius: 10px 10px 0 0 ;
+    transition: height 0.2s ease;
+    background-color: white;
+   
+}
+.excursions__item.long .excursions__item-desc-hidden {
+    display: flex;
+    flex-direction: column;
+   
+}
+.excursions__item.long .excursions__arrrow {
+    transform: rotate(180deg);
+}
+
+.excursions__item-desc-hidden {
+    display: none;
+height: 100%;
+}
+
+.excursions__item-title {
+    border-bottom: 3px solid #4F3156;
+    margin-bottom: 10px;
+}
+
+.excursions__item-info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 55%;
+}
+
+.excursions__img-block {
+    width: 40%;
+   
+    transition: height 1s ease;
+    border-radius: 0 10px 0 0;
+    overflow: hidden;
+}
+
+.long {
+    height: max-content;
+}
+
+.excursions__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.excursions__item-desc {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: justify;
+    margin-bottom: auto;
+}
+
+.excursions__link {
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #4F3156;
+    color: white;
+
+    text-align: center;
+
+    width: 100%;
+    height: max-content;
+}
+.excursions__price {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.excursions__open {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    bottom: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4d4cf;
+    z-index: -100;
+    transform: rotate(0deg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    transition: all 2s ease-in-out;
+}
+
+.excursions__arrrow {
+    width: 20px;
+    height: 20px;
 }
