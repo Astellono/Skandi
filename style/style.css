@@ -516,6 +516,59 @@ button {
     height: 100%;
 }
 
+.otziv {
+    padding: 50px 0;
+    padding-bottom: 0;
+    
+}
+
+.otziv__title {
+    margin-bottom: 40px;
+    font-size: 32px;
+    text-align: center;
+    color: #4F3156;
+}
+
+
+.otziv__list {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.otziv__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 15px;
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.otziv__img-box {
+    width: 150px;
+    margin: 0 auto;
+}
+.otziv__img {
+    width: 100%;
+    object-fit: cover;
+}
+.otziv__name {
+    font-size: 24px;
+    text-align: center;
+    color: #4F3156;
+}
+.otiziv__desc {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
 
 .modal-content {
     padding: 30px;
@@ -1134,6 +1187,7 @@ table * {
 
 .feedback {
     padding: 50px 0;
+    padding-top: 0;
 }
 
 .feedback__input-contact {
@@ -1671,23 +1725,25 @@ body.mod:target {
     justify-content: space-between;
     min-height: 340px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-    border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
     transition: height 0.2s ease;
     background-color: white;
-   
+
 }
+
 .excursions__item.long .excursions__item-desc-hidden {
     display: flex;
     flex-direction: column;
-   
+
 }
+
 .excursions__item.long .excursions__arrrow {
     transform: rotate(180deg);
 }
 
 .excursions__item-desc-hidden {
     display: none;
-height: 100%;
+    height: 100%;
 }
 
 .excursions__item-title {
@@ -1704,7 +1760,7 @@ height: 100%;
 
 .excursions__img-block {
     width: 40%;
-   
+
     transition: height 1s ease;
     border-radius: 0 10px 0 0;
     overflow: hidden;
@@ -1741,10 +1797,12 @@ height: 100%;
     width: 100%;
     height: max-content;
 }
+
 .excursions__price {
     font-size: 24px;
     margin-bottom: 30px;
 }
+
 .excursions__open {
     position: absolute;
     width: 100%;
