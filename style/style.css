@@ -523,46 +523,64 @@ button {
 }
 
 .otziv__title {
+    margin: 0 auto;
     margin-bottom: 40px;
     font-size: 32px;
+    max-width: 600px;
+    
     text-align: center;
     color: #4F3156;
+    border-bottom: 3px solid #60326B;
 }
 
 
 .otziv__list {
     display: flex;
     flex-wrap: wrap ;
+    
     justify-content: space-between;
     margin-bottom: 50px;
+    
 }
 
 .otziv__item {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    margin-bottom: 20px;
     padding: 20px 15px;
     border-radius: 10px;
     width: 300px;
-    height: 500px;
+    height: 550px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
 
 .otziv__img-box {
     width: 150px;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 .otziv__img {
     width: 100%;
     object-fit: cover;
 }
 .otziv__name {
+    width: 100%;
+padding-bottom: 10px;
+    margin-bottom: 10px;
     font-size: 24px;
     text-align: center;
     color: #4F3156;
+    
 }
 .otiziv__desc {
+    border-bottom: 1px solid #4F3156;
+    border-top: 1px solid #4F3156;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* outline: auto; */
+    height: 100%;
     font-size: 14px;
     text-align: center;
 }
@@ -1726,9 +1744,9 @@ body.mod:target {
     min-height: 340px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     border-radius: 10px 10px 0 0;
-    transition: height 0.2s ease;
+    transition: all 0.2s ease;
     background-color: white;
-
+    
 }
 
 .excursions__item.long .excursions__item-desc-hidden {
@@ -1742,6 +1760,7 @@ body.mod:target {
 }
 
 .excursions__item-desc-hidden {
+    position: relative;
     display: none;
     height: 100%;
 }
@@ -1767,7 +1786,7 @@ body.mod:target {
 }
 
 .long {
-    height: max-content;
+    height: 760px;
 }
 
 .excursions__img {
@@ -1784,6 +1803,9 @@ body.mod:target {
 }
 
 .excursions__link {
+    position: absolute;
+    bottom: 0;
+    left:0;
     padding: 3px 10px;
     border-radius: 10px;
     font-weight: 400;
@@ -1791,11 +1813,10 @@ body.mod:target {
     cursor: pointer;
     background-color: #4F3156;
     color: white;
-
     text-align: center;
-
     width: 100%;
     height: max-content;
+    z-index: 1000;
 }
 
 .excursions__price {
@@ -1815,7 +1836,7 @@ body.mod:target {
     background-color: #d4d4cf;
     z-index: -100;
     transform: rotate(0deg);
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     transition: all 2s ease-in-out;
 }
