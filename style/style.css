@@ -519,7 +519,7 @@ button {
 .otziv {
     padding: 50px 0;
     padding-bottom: 0;
-    
+
 }
 
 .otziv__title {
@@ -527,7 +527,7 @@ button {
     margin-bottom: 40px;
     font-size: 32px;
     max-width: 600px;
-    
+
     text-align: center;
     color: #4F3156;
     border-bottom: 3px solid #60326B;
@@ -536,11 +536,11 @@ button {
 
 .otziv__list {
     display: flex;
-    flex-wrap: wrap ;
-    
+    flex-wrap: wrap;
+
     justify-content: space-between;
     margin-bottom: 50px;
-    
+
 }
 
 .otziv__item {
@@ -560,19 +560,22 @@ button {
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
 .otziv__img {
     width: 100%;
     object-fit: cover;
 }
+
 .otziv__name {
     width: 100%;
-padding-bottom: 10px;
+    padding-bottom: 10px;
     margin-bottom: 10px;
     font-size: 24px;
     text-align: center;
     color: #4F3156;
-    
+
 }
+
 .otiziv__desc {
     border-bottom: 1px solid #4F3156;
     border-top: 1px solid #4F3156;
@@ -942,7 +945,9 @@ table * {
 .td-item {
     width: 110px;
 }
-
+.td-link {
+    text-decoration: underline;
+}
 .lesson__table tr {
     margin-bottom: 10px;
     padding-bottom: 20px;
@@ -1741,32 +1746,93 @@ body.mod:target {
     position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 340px;
+    height: 340px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-    border-radius: 10px 10px 0 0;
-    transition: all 0.2s ease;
+    border-radius: 10px;
+    transition: all 0.7s ease;
     background-color: white;
+    border-bottom: 1px solid white;
+}
+.long {
+    height: auto;
     
+    border-bottom: none;
+}
+
+
+.excursions__item:hover {
+    box-shadow: 0 -10px 10px 5px rgba(221, 221, 221, 1);
+    border-radius: 10px 10px 0 0;
+   
+}
+
+.long:hover {
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    border-bottom: none;
+    border-radius: 10px;
+    /* border-radius: 0 0 10px 10px; */
+}
+.excursions__item:hover .exursions__podr {
+    box-shadow: 0 10px 20px 1px rgb(114, 91, 177);
+    border-bottom: none;
+    transform: translateY(0);
+}
+.excursions__item:hover .excursions__img-block {
+    border-radius: 0 10px 0 0;
 }
 
 .excursions__item.long .excursions__item-desc-hidden {
     display: flex;
     flex-direction: column;
-
+}
+.excursions__item.long .exursions__podr  {
+    transform: translateY(-100px);
+}
+.excursions__item.long .excursions__item-desc {
+    display: block;
+    height: max-content;
 }
 
-.excursions__item.long .excursions__arrrow {
-    transform: rotate(180deg);
+.excursions__item.long .excursions__img-block {
+    height: auto;
 }
 
+.exursions__podr {
+    position: absolute;
+    bottom: -27px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-decoration: underline;
+    text-align: center;
+    background-color: white;
+    transition: all 0.4s ease;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-100px);
+    z-index: -1000;
+}
+.long:hover .exursions__podr {
+    box-shadow: none;
+}
 .excursions__item-desc-hidden {
     position: relative;
     display: none;
     height: 100%;
+    text-align: justify;
 }
 
 .excursions__item-title {
     border-bottom: 3px solid #4F3156;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.excursions__date {
+    font-weight: 600;
+    border-bottom: 3px solid #4F3156;
+    padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
@@ -1775,19 +1841,18 @@ body.mod:target {
     flex-direction: column;
     padding: 15px;
     width: 55%;
+    overflow: hidden;
 }
 
 .excursions__img-block {
     width: 40%;
-
+    height: 100%;
     transition: height 1s ease;
-    border-radius: 0 10px 0 0;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.5s ease-in-out;
     overflow: hidden;
 }
 
-.long {
-    height: 760px;
-}
 
 .excursions__img {
     width: 100%;
@@ -1796,16 +1861,16 @@ body.mod:target {
 }
 
 .excursions__item-desc {
+    display: flex;
+    align-items: center;
     font-size: 16px;
-    margin-bottom: 10px;
+
     text-align: justify;
-    margin-bottom: auto;
+    height: 100%;
 }
 
 .excursions__link {
-    position: absolute;
-    bottom: 0;
-    left:0;
+
     padding: 3px 10px;
     border-radius: 10px;
     font-weight: 400;
@@ -1817,6 +1882,7 @@ body.mod:target {
     width: 100%;
     height: max-content;
     z-index: 1000;
+
 }
 
 .excursions__price {
@@ -1839,9 +1905,4 @@ body.mod:target {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     transition: all 2s ease-in-out;
-}
-
-.excursions__arrrow {
-    width: 20px;
-    height: 20px;
 }
