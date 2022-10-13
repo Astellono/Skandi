@@ -3,6 +3,8 @@
 
 <head>
     <!-- Yandex.Metrika counter -->
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=199de9b4-eaf5-45e1-95c2-3510af592354&lang=ru_RU" type="text/javascript"></script>
+    <script defer src="js/map.js"></script>
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
             m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
@@ -167,9 +169,9 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
-                    <td class="td-item"><a class="td-link" href="#mapCol"><img width="50px" height="50px"
+                    <td class="td-item"><a class="td-link" href="#mapLuzh"><img width="50px" height="50px"
                                 src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#mapLuzh" class="lesson__btn">Записаться</a></td>
+                    <td class="td__btn"> <a href="#modal-luzh" class="lesson__btn">Записаться</a></td>
 
                 </tr>
                 <tr>
@@ -187,7 +189,7 @@
                 <tr>
                     <td class="td__img">
                         <img class="lesson__img" src="img/lesson/king.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Царицино</p>
+                        <p class="lesson__img-text">Царицыно</p>
                     </td>
                     <td>-</td>
                     <td>-</td>
@@ -196,7 +198,7 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
-                    <td class="td-item"><a class="td-link" href="#mapCol"><img width="50px" height="50px"
+                    <td class="td-item"><a class="td-link" href="#mapCar"><img width="50px" height="50px"
                                 src="img/map.png"></a></td>
                     <td class="td__btn"> <a href="#modal-caricino" class="lesson__btn">Записаться</a></td>
 
@@ -229,7 +231,7 @@
                         10:00<br>
                         11:00
                     </td>
-                    <td class="td-item"><a class="td-link" href="#mapCol"><img width="50px" height="50px"
+                    <td class="td-item"><a class="td-link" href="#mapVorona"><img width="50px" height="50px"
                                 src="img/map.png"></a></td>
                     <td class="td__btn"> <a href="#modal-vorona" class="lesson__btn">Записаться</a></td>
 
@@ -291,7 +293,7 @@
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                        <td class="td-item"><a class="td-link" href="#mapluzh"><img width="50px" height="50px"
+                        <td class="td-item"><a class="td-link" href="#mapLuzh"><img width="50px" height="50px"
                                     src="img/map.png"></a></td>
                     </tr>
                 </table>
@@ -299,7 +301,7 @@
                 <hr>
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/king.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Царицино</p>
+                    <p class="lesson__img-text-smart">Царицыно</p>
                 </div>
                 <table class="lesson__table table smart__table">
                     <tr>
@@ -320,7 +322,7 @@
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                        <td class="td-item"><a class="td-link" href="#mapCol"><img width="50px" height="50px"
+                        <td class="td-item"><a class="td-link" href="#mapCar"><img width="50px" height="50px"
                                     src="img/map.png"></a></td>
                     </tr>
                 </table>
@@ -352,7 +354,7 @@
                             10:00<br>
                             11:00
                         </td>
-                        <td class="td-item"><a class="td-link" href="#mapCol"><img width="50px" height="50px"
+                        <td class="td-item"><a class="td-link" href="#mapVorona"><img width="50px" height="50px"
                                     src="img/map.png"></a></td>
                     </tr>
                 </table>
@@ -485,13 +487,13 @@
 
 
     <!-- Модальные   ------------------------------------>
-    <div id="modal-kolom" class="mod">
-
-        <div class="modal-d">
+    <div onclick="location.href='#'" id="modal-kolom" class="mod">
+       
+        <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
                     <h3 class="modal-title">Запись на груповое занятие</h3>
-                    <a href="#close" title="Close" class="close">×</a>
+                    <a href="#" title="Close" class="close">×</a>
                 </div>
                 <div class="modal-b">
 
@@ -521,9 +523,9 @@
 
 
 
-    <div id="modal-luzh" class="mod">
+    <div onclick="location.href='#'" id="modal-luzh" class="mod">
 
-        <div class="modal-d">
+        <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
                     <h3 class="modal-title">Запись на груповое занятие</h3>
@@ -556,8 +558,8 @@
 
 
 
-    <div id="modal-vorona" class="mod">
-        <div class="modal-d">
+    <div onclick="location.href='#'" id="modal-vorona" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
                     <h3 class="modal-title">Запись на груповое занятие</h3>
@@ -588,8 +590,8 @@
         </div>
     </div>
 
-    <div id="modal-caricino" class="mod">
-        <div class="modal-d">
+    <div onclick="location.href='#'" id="modal-caricino" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
                     <h3 class="modal-title">Запись на груповое занятие</h3>
@@ -620,8 +622,8 @@
         </div>
     </div>
 
-    <div id="modal-solo" class="mod">
-        <div class="modal-d">
+    <div onclick="location.href='#'" id="modal-solo" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
                     <h3 class="modal-title">Запись на индивидуальное занятие</h3>
@@ -653,65 +655,60 @@
     </div>
 
 
-    <div id="mapCol" class="mod">
-        <div class="modal-d" style="margin: 20vh auto;">
+    <div id="mapCol" onclick="location.href='#'" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
                     <h3 class="modal-title">Точка сбора</h3>
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
+
+                
+                <div id="map-2" style="height: 500px;"></div>
 
                 <!-- style="margin: 0 auto; width: 100%; -->
-                <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad696dce87eb3317121ca9b823486db39de0a84b3bb55a9bda983a5e1c78da645&amp;source=constructor"
-                    height="400" frameborder="0" style="margin: 0 auto; width: 100%;"></iframe>
+
             </div>
         </div>
     </div>
 
 
-    <div id="mapLuzh" class="mod">
-        <div class="modal-d" style="margin: 20vh auto;">
+    <div id="mapLuzh" onclick="location.href='#'" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Точка сбора</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div id="map-3" style="height: 500px;"></div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="mapVorona" onclick="location.href='#'" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Точка сбора</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div id="map-4" style="height: 500px;"></div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="mapCar" onclick="location.href='#'" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
                     <h3 class="modal-title">Точка сбора</h3>
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
 
+                <div id="map-1" style="height: 500px;"></div>
 
-                <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad696dce87eb3317121ca9b823486db39de0a84b3bb55a9bda983a5e1c78da645&amp;source=constructor"
-                    width="500" height="400" frameborder="0"></iframe>
-            </div>
-        </div>
-    </div>
-    <div id="mapVorona" class="mod">
-        <div class="modal-d" style="margin: 20vh auto;">
-            <div class="modal-c">
-                <div class="modal-h">
-                    <h3 class="modal-title">Точка сбора</h3>
-                    <a href="#close" title="Close" class="close">×</a>
-                </div>
-
-
-                <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad696dce87eb3317121ca9b823486db39de0a84b3bb55a9bda983a5e1c78da645&amp;source=constructor"
-                    height="400" frameborder="0" style="margin: 0 auto; width: 100%;"></iframe>
-            </div>
-        </div>
-    </div>
-    <div id="mapCar" class="mod">
-        <div class="modal-d" style="margin: 20vh auto;">
-            <div class="modal-c">
-                <div class="modal-h">
-                    <h3 class="modal-title">Точка сбора</h3>
-                    <a href="#close" title="Close" class="close">×</a>
-                </div>
-
-
-                <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad696dce87eb3317121ca9b823486db39de0a84b3bb55a9bda983a5e1c78da645&amp;source=constructor"
-                    height="400" frameborder="0" style="margin: 0 auto; width: 100%;"></iframe>
             </div>
         </div>
     </div>
