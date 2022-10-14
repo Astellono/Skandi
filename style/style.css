@@ -587,7 +587,37 @@ button {
     font-size: 14px;
     text-align: center;
 }
+.partner {
+    padding: 30px 0;
+    background-color: rgba(236, 229, 238, 0.6);
+}
 
+.partner__title {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    color: #60326B;
+    width: 500px;
+    border-bottom: 3px solid #60326B;
+}
+.partner__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.partner__item {
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.partner__item:hover {
+    box-shadow: 0 0 10px 5px #824292;
+}
+
+.partner__img {
+    height: 150px; 
+}
 
 
 
@@ -1129,11 +1159,17 @@ table * {
 
 .tour {
     padding: 20px 0;
+    background: rgba(236, 229, 238, 0.6);
+    
 }
-
+.tourweek {
+    padding: 20px 0;
+}
 .tour__title {
     font-size: 32px;
-    text-align: center;
+    text-align: left;
+    border-bottom: 3px solid #824292;
+    width: 400px;
     margin-bottom: 32px;
     color: #824292;
 }
@@ -1143,7 +1179,9 @@ table * {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.tour__list-week {
+    justify-content: center;
+}
 .tour__item {
     position: relative;
     width: 48%;
