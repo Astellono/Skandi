@@ -5,8 +5,6 @@ if ($_POST['fio'] == '') {
     exit(1);
     
 }
-
-
 if (isset($_POST['fio'])) {$fio = $_POST['fio'];}
 if (isset($_POST['age'])) {$age = $_POST['age'];}
 if (isset($_POST['tel'])) {$tel = $_POST['tel'];}
@@ -26,7 +24,7 @@ Email: $email";
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub="Анкета $fio"; //сабж
-$email="Звенигород"; // от кого
+$email="Бауманская"; // от кого
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email <pomiruspalkami@website.ru>");
  
 ini_set('short_open_tag', 'On');

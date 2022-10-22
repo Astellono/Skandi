@@ -1787,7 +1787,7 @@ body.mod {
     position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 340px;
+    height: 290px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     border-radius: 10px;
     transition: all 0.7s ease;
@@ -1863,6 +1863,13 @@ body.mod {
     height: 100%;
     text-align: justify;
 }
+.excursions__item-desc-hidden ul {
+    padding-left: 30px;
+}
+.excursions__item-desc-hidden ul li {
+    list-style-type: disc;
+    
+}
 
 .excursions__item-title {
     border-bottom: 3px solid #4F3156;
@@ -1928,7 +1935,7 @@ body.mod {
 
 .excursions__price {
     font-size: 24px;
-    margin-bottom: 30px;
+    margin:20px 0;
 }
 
 .excursions__open {
