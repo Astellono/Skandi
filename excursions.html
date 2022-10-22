@@ -157,6 +157,50 @@
                 <li class="excursions__item">
 
                     <div class="excursions__item-info">
+                        <h2 class="excursions__item-title">День народного единства и согласия</h2>
+                        <p class="excursions__date">4 ноября 2022
+                            ⠀Начало в 12.00</p>
+                        <p class="excursions__item-desc">Приглашаем вместе отпраздновать День народного единства, 4
+                            ноября.
+                            Приходите на открытую scandi-прогулку с проектом "По миру с палками".
+                        </p>
+                        <div class="excursions__item-desc-hidden">
+                            <br>
+                            В программе:
+                            <ul>
+                                <li>знакомство с проектом</li>
+                                <li>занятие СХ</li>
+                                <li>маршрут, протяженностью около 6 км, от стен древней обители Новодевичьего монастыря
+                                    до
+                                    Красной площади.</li>
+                            </ul>
+
+                            <br><br>
+                            Вы узнаете, как проходят наши занятия, экскурсии, туры.
+                            Узнаете, что мы предлагаем для поддержания хорошего физического и эмоционального состояния
+                            наших участников.
+                            А также узнаете, почему для scandi-прогулки в этот день был выбран именно этот маршрут.
+                            <br><br>
+                            Встречаемся: 4 ноября в 12:00
+                            у стен Новодевичьего монастыря
+                            на Смотровой площадке (55.727251, 37.557521) между монастырем и сквером 40-летия Октября.
+                            
+                            <p class="excursions__price">Стоимость: <strong>БЕСПЛАТНО</strong></p>
+
+                            
+                            <a onclick="event.stopPropagation()" class="excursions__link"
+                                href="#modal-edin">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="excursions__img-block">
+                        <img class="excursions__img" src="img/excursions/uspen.jpg" alt="" srcset="">
+                    </div>
+                    <div class="exursions__podr">Подробнее</div>
+
+                </li>
+                <li class="excursions__item">
+
+                    <div class="excursions__item-info">
                         <h2 class="excursions__item-title">Остров Балчуг: прошлое, настоящее, будущее...</h2>
                         <p class="excursions__date">12 ноября 2022
                             ⠀Начало в 10.00</p>
@@ -301,7 +345,7 @@
                             Когда: 26 ноября в 10:00 перед входом в Парк Музеон со стороны Крымского вала<br>
                             Продолжительность: 3-3,5 ч.<br>
                             Занятие 1,5 ч, экскурсия 1,5 ч + отдых и санитарная остановка<br>
-                           
+
                             <br><br>
 
 
@@ -465,6 +509,37 @@
                 <div class="modal-b">
 
                     <form action="php/excursions/kreml.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div onclick="location.href='#'" id="modal-edin" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на Сканди-экскурсию</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+
+                    <form action="php/excursions/edin.php" method="POST" class="modal__form">
 
                         Фамилия, имя и отчество:
                         <input required type="text" name="fio" placeholder="Ваш ответ">
