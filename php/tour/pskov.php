@@ -1,5 +1,10 @@
 <?php
 /* Здесь проверяется существование переменных */
+if ($_POST['fio'] == '') {
+    
+    exit(1);
+    
+}
 if (isset($_POST['fio'])) {$fio = $_POST['fio'];}
 if (isset($_POST['age'])) {$age = $_POST['age'];}
 if (isset($_POST['tel'])) {$tel = $_POST['tel'];}

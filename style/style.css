@@ -1791,9 +1791,11 @@ body.mod {
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     border-radius: 10px;
     transition: all 0.7s ease;
+    transition: 1s ease height;
     background-color: white;
     border-bottom: 1px solid white;
 }
+
 .long {
     height: auto;
     
