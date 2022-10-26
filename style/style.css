@@ -1164,7 +1164,11 @@ table * {
 }
 .tourweek {
     padding: 20px 0;
+    
+   
+    
 }
+
 .tour__title {
     font-size: 32px;
     text-align: left;
@@ -1173,7 +1177,14 @@ table * {
     margin-bottom: 32px;
     color: #824292;
 }
-
+.tour__title-week {
+    text-align: center;
+    margin: 10px auto;
+    width: 100%;
+    margin-bottom: 35px !important;
+    
+    
+}
 .tour__list {
     display: flex;
     flex-wrap: wrap;
@@ -1463,7 +1474,7 @@ table * {
 .tour__page__desc {
     font-size: 18px;
     color: #60326B;
-
+    margin-bottom: 10px;
     text-align: justify;
 }
 
@@ -1554,7 +1565,7 @@ table * {
 }
 
 .gid__list {
-    justify-content: center;
+    justify-content: space-around;
 }
 
 
