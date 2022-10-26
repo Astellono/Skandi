@@ -1,26 +1,22 @@
-var elements = document.querySelectorAll(".excursions__item");
-
-for (var i = 0; i < elements.length; i++) {
-
-    elements[i].onclick = function (event) {
-
-
-        this.classList.toggle('long');
-
+let elements = document.querySelectorAll(".excursions__item");
+let podr = document.querySelectorAll(".exursions__podr");
+elements.forEach(element => {
+    element.onclick = function (event) {
+        element.classList.toggle('long');
 
     };
-}
+    
+});
+    
 
-var elements = document.querySelectorAll('.excursions__item');
+    
 
-for (var i = 0; i < elements.length; i++) {
 
-    elements[i].addEventListener('click', function () {
 
-        
 
-    });
-}
+
+
+
 
 // function toggleDisplay() {
 

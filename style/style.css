@@ -1795,6 +1795,16 @@ body.mod {
     background-color: white;
     border-bottom: 1px solid white;
 }
+.excursions__item::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+   
+    bottom: -30px;
+    width: 100%;
+    height: 100%;
+}
 
 .long {
     height: auto;
