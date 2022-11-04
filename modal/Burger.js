@@ -10,25 +10,23 @@ if (document.location.href.indexOf('showModal') != -1) {
     $("#modal-kirgiziya").modal('show');
 }
 
+let div = document.getElementById('openModal')
+div.addEventListener('click', ()=> {
+    document.body.style.overflowY = 'visible'
+})
 
-function sumVector(vec1, vec2) {
-    let finalVec = []
 
-    while (vec1.length != vec2.length) {
-        let tmp = vec1.length - vec2.length
-        if (tmp > 0) {
-            vec2.unshift(0)
-        } else vec1.unshift(0)
-    }
-    
-    for (let i = 0; i < vec1.length; i++) {
-        
-        finalVec.push(vec1[i] + vec2[i])
-    }
+let btn = document.querySelector('.tour__page__btn') 
 
-    return finalVec
+btn.addEventListener('click', ()=>{
+    document.body.style.overflowY = 'hidden'
+})
+
+if (location.hash === '#openModal') {
+    document.body.style.overflowY = 'hidden'
 }
-
-vector1 = [1, 1, 1, 2, 5]
-vector2 = [2, 2, 2]
-console.log(sumVector(vector1, vector2));
+console.log(location.hash);
+if (location.hash === '#') {
+    console.log('hello');
+    history.pushState('', document.title, window.location.pathname);
+}

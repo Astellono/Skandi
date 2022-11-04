@@ -1,4 +1,4 @@
-let btn = document.querySelectorAll('.lesson__btn');
+// let btn = document.querySelectorAll('.lesson__btn');
 let btn_tour = document.querySelectorAll('.tour__page__btn');
 let btn_close = document.querySelectorAll('.close');
 let btn_map = document.querySelectorAll('.td-link');

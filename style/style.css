@@ -188,7 +188,7 @@ button {
     align-items: center;
     width: 100%;
     height: 600px;
-    background-image: url(../img/hero/HeroT.jpg);
+    background-image: url(../img/hero/fon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -587,6 +587,7 @@ button {
     font-size: 14px;
     text-align: center;
 }
+
 .partner {
     padding: 30px 0;
     background-color: rgba(236, 229, 238, 0.6);
@@ -601,22 +602,25 @@ button {
     width: 500px;
     border-bottom: 3px solid #60326B;
 }
+
 .partner__list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .partner__item {
     margin-bottom: 30px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+
 .partner__item:hover {
     box-shadow: 0 0 10px 5px #824292;
 }
 
 .partner__img {
-    height: 150px; 
+    height: 150px;
 }
 
 
@@ -975,9 +979,11 @@ table * {
 .td-item {
     width: 110px;
 }
+
 .td-link {
     text-decoration: underline;
 }
+
 .lesson__table tr {
     margin-bottom: 10px;
     padding-bottom: 20px;
@@ -1160,13 +1166,14 @@ table * {
 .tour {
     padding: 20px 0;
     background: rgba(236, 229, 238, 0.6);
-    
+
 }
+
 .tourweek {
     padding: 20px 0;
-    
-   
-    
+
+
+
 }
 
 .tour__title {
@@ -1177,22 +1184,26 @@ table * {
     margin-bottom: 32px;
     color: #824292;
 }
+
 .tour__title-week {
     text-align: center;
     margin: 10px auto;
     width: 100%;
     margin-bottom: 35px !important;
-    
-    
+
+
 }
+
 .tour__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .tour__list-week {
     justify-content: center;
 }
+
 .tour__item {
     position: relative;
     width: 48%;
@@ -1418,6 +1429,7 @@ table * {
 
 
 /* Страница тура */
+
 .tour__page__header {
     display: flex;
 
@@ -1429,7 +1441,7 @@ table * {
     width: 100%;
     text-align: center;
     margin-top: 0;
-    font-size: 64px;
+    font-size: 38px;
     color: #60326B;
     flex-basis: 1;
     margin-bottom: 1px;
@@ -1437,10 +1449,10 @@ table * {
 }
 
 .tour__page__date {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #60326B;
     text-align: center;
-    margin-bottom: 60px;
+
 }
 
 .tour__page__imgBox {
@@ -1514,7 +1526,7 @@ table * {
 }
 
 .tour__page__pricePart {
-    margin-bottom: 30px;
+    margin-bottom: auto;
     font-size: 12px;
     text-align: justify;
 }
@@ -1550,7 +1562,7 @@ table * {
 }
 
 .gid {
-    background-color: rgba(236, 229, 238, 0.6);
+    background-color: white;
     margin-bottom: 20px;
 }
 
@@ -1652,6 +1664,7 @@ table * {
     background: rgba(0, 0, 0, 0.5);
     /* цвет фона */
     z-index: 1050;
+    display: none;
     opacity: 0;
     /* по умолчанию модальное окно прозрачно */
     -webkit-transition: opacity 200ms ease-in;
@@ -1666,20 +1679,21 @@ table * {
 
 body.mod {
     overflow-y: hidden;
-    
+
 }
 
 /* при отображении модального окно */
 
 .mod:target {
+    display: block;
     opacity: 1;
     /* делаем окно видимым */
     pointer-events: auto;
-    
+
     /* элемент видим для событий мыши */
     overflow-y: auto;
     /* добавляем прокрутку по y, когда элемент не помещается на страницу */
-    
+
 }
 
 /* ширина модального окна и его отступы от экрана */
@@ -1806,12 +1820,13 @@ body.mod {
     background-color: white;
     border-bottom: 1px solid white;
 }
+
 .excursions__item::before {
     content: '';
     position: absolute;
     top: 30px;
     left: 0;
-   
+
     bottom: -30px;
     width: 100%;
     height: 100%;
@@ -1819,7 +1834,7 @@ body.mod {
 
 .long {
     height: auto;
-    
+
     border-bottom: none;
 }
 
@@ -1827,7 +1842,7 @@ body.mod {
 .excursions__item:hover {
     box-shadow: 0 -10px 10px 5px rgba(221, 221, 221, 1);
     border-radius: 10px 10px 0 0;
-   
+
 }
 
 .long:hover {
@@ -1836,11 +1851,13 @@ body.mod {
     border-radius: 10px;
     /* border-radius: 0 0 10px 10px; */
 }
+
 .excursions__item:hover .exursions__podr {
     box-shadow: 0 10px 20px 1px rgb(114, 91, 177);
     border-bottom: none;
     transform: translateY(0);
 }
+
 .excursions__item:hover .excursions__img-block {
     border-radius: 0 10px 0 0;
 }
@@ -1849,9 +1866,11 @@ body.mod {
     display: flex;
     flex-direction: column;
 }
-.excursions__item.long .exursions__podr  {
+
+.excursions__item.long .exursions__podr {
     transform: translateY(-100px);
 }
+
 .excursions__item.long .excursions__item-desc {
     display: block;
     height: max-content;
@@ -1877,21 +1896,25 @@ body.mod {
     transform: translateY(-100px);
     z-index: -1000;
 }
+
 .long:hover .exursions__podr {
     box-shadow: none;
 }
+
 .excursions__item-desc-hidden {
     position: relative;
     display: none;
     height: 100%;
     text-align: justify;
 }
+
 .excursions__item-desc-hidden ul {
     padding-left: 30px;
 }
+
 .excursions__item-desc-hidden ul li {
     list-style-type: disc;
-    
+
 }
 
 .excursions__item-title {
@@ -1958,7 +1981,7 @@ body.mod {
 
 .excursions__price {
     font-size: 24px;
-    margin:20px 0;
+    margin: 20px 0;
 }
 
 .excursions__open {

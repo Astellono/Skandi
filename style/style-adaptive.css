@@ -102,16 +102,18 @@
         left: 0;
         color: white;
         width: 100%;
-        height: 100%; 
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.3);
         font-size: 28px;
     }
+
     .lesson__btn {
         width: 450px;
         display: block;
         margin: 0 auto;
         margin-bottom: 20px;
     }
+
     .lesson__smart__table {
         display: block;
     }
@@ -155,43 +157,51 @@
     .adv__img {
         width: 300px;
     }
+
     .excursions__item {
         flex-direction: column;
         justify-content: flex-start;
         min-height: 560px;
         flex-wrap: nowrap;
-        border-radius: 10px 10px 0 0 ;
+        border-radius: 10px 10px 0 0;
     }
+
     .excursions__item:hover {
         box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     }
+
     .excursions__item-info {
         order: 1;
         width: 100%;
         height: 100%;
     }
+
     .long {
         height: auto;
-        
+
     }
+
     .excursions__item-title {
         text-align: center;
-        
+
     }
+
     .excursions__date {
         text-align: center;
     }
+
     .excursions__img-block {
         width: 100%;
         height: 300px;
         order: 0;
-        border-radius: 10px 10px 0 0 ;
+        border-radius: 10px 10px 0 0;
     }
+
     .exursions__podr {
         transform: translateY(0px);
         box-shadow: 0 10px 20px 1px rgb(114, 91, 177);
         border-bottom: none;
-       
+
     }
 
 }
@@ -238,6 +248,10 @@
 
     .header__burger {
         display: block;
+    }
+
+    .hero {
+        background-image: url(../img/hero/HeroT.jpg);
     }
 
     .hero__title {
@@ -293,11 +307,13 @@
         padding: 0 20px;
     }
 }
+
 @media (max-width: 700px) {
     .otziv__list {
         flex-direction: column;
         align-items: center;
     }
+
     .team__list {
         flex-direction: column;
         align-items: center;
@@ -377,6 +393,7 @@
 
         width: 87%;
     }
+
     .lesson__btn {
         width: 100%;
     }
