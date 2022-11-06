@@ -5,13 +5,11 @@ if ($_POST['fio'] == '') {
     exit(1);
     
 }
-
-
 if (isset($_POST['fio'])) {$fio = $_POST['fio'];}
 if (isset($_POST['age'])) {$age = $_POST['age'];}
 if (isset($_POST['tel'])) {$tel = $_POST['tel'];}
 if (isset($_POST['email'])) {$email = $_POST['email'];}
-
+if (isset($_POST['comment'])) {$comment = $_POST['comment'];}
 
 /* Сюда впишите свою эл. почту */
 $myaddres  = "pomiruspalkami@yandex.ru"; // кому отправляем
@@ -21,8 +19,9 @@ $mes =
 "ФИО: $fio
 Возраст: $age
 Телефон: $tel
-Email: $email";
- 
+Email: $email
+Комментарий, промокод:\nОтвет: $comment\n";
+  
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub="Анкета $fio"; //сабж

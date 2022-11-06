@@ -8,7 +8,6 @@ if ($_POST['fio'] == '') {
 if (isset($_POST['fio'])) {$fio = $_POST['fio'];}
 if (isset($_POST['age'])) {$age = $_POST['age'];}
 if (isset($_POST['tel'])) {$tel = $_POST['tel'];}
-if (isset($_POST['age'])) {$age = $_POST['age'];}
 if (isset($_POST['city'])) {$city = $_POST['city'];}
 if (isset($_POST['email'])) {$email = $_POST['email'];}
 if (isset($_POST['ves'])) {$ves = $_POST['ves'];}
@@ -24,7 +23,7 @@ if (isset($_POST['level'])) {$level = $_POST['level'];}
 if (isset($_POST['prohod'])) {$prohod = $_POST['prohod'];}
 if (isset($_POST['perenosimostGori'])) {$perenosimostGori = $_POST['perenosimostGori'];}
 if (isset($_POST['ravn'])) {$ravn = $_POST['ravn'];}
-
+if (isset($_POST['comment'])) {$comment = $_POST['comment'];}
 /* Сюда впишите свою эл. почту */
 $myaddres  = "pomiruspalkami@yandex.ru"; // кому отправляем
  
@@ -47,7 +46,8 @@ Email: $email
 Как переносите сложные маршруты со спусками и подъемами?\nОтвет: $level\n
 Готовы ли проходить в среднем 15 - 20 км?\nОтвет: $prohod\n
 Как переносите нагрузки на горных маршрутах?\nОтвет: $perenosimostGori\n
-Вам подходят только равнинные маршруты?\nОтвет: $ravn\n";
+Вам подходят только равнинные маршруты?\nОтвет: $ravn\n
+Комментарий, промокод:\nОтвет: $comment\n";
  
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
