@@ -3,7 +3,7 @@ let podr = document.querySelectorAll(".exursions__podr");
 elements.forEach(element => {
     element.onclick = function (event) {
         element.classList.toggle('long');
-
+        // window.location.hash='example';
     };
     
 });
