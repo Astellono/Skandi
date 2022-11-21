@@ -599,7 +599,7 @@ button {
     text-align: center;
     font-size: 32px;
     color: #60326B;
-    width: 500px;
+    max-width: 500px;
     border-bottom: 3px solid #60326B;
 }
 
@@ -610,6 +610,7 @@ button {
 }
 
 .partner__item {
+    
     margin-bottom: 30px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -620,10 +621,13 @@ button {
 }
 
 .partner__img {
+    display: block;
+    max-width: 400px;
     height: 150px;
 }
-
-
+.partner__link  {
+max-width: 400px;
+}
 
 .modal-content {
     padding: 30px;
