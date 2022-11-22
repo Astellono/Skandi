@@ -3,7 +3,8 @@
 
 <head>
     <!-- Yandex.Metrika counter -->
-    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=199de9b4-eaf5-45e1-95c2-3510af592354&lang=ru_RU" type="text/javascript"></script>
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=199de9b4-eaf5-45e1-95c2-3510af592354&lang=ru_RU"
+        type="text/javascript"></script>
     <script defer src="js/map.js"></script>
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -30,8 +31,8 @@
         content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="style/style.css?ver=301">
-    <link rel="stylesheet" href="style/style-adaptive.css?ver=301">
+    <link rel="stylesheet" href="style/style.css?ver=302">
+    <link rel="stylesheet" href="style/style-adaptive.css?ver=302">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
 
     <title>Занятия</title>
@@ -98,7 +99,49 @@
             </div>
         </div>
     </header>
+    <section class="openlesson">
+        <div class="container">
+            <h2 class="openlesson__title">
+                ОТКРЫТЫЕ ЗАНЯТИЯ по Северной (Скандинавской) ходьбе
+            </h2>
+            <div class="openlesson__mainblock">
+                <div class="openlesson__info">
+                    <strong style="font-size: 22px;">Стадион Лужники
+                    <br>
+                    17 декабря в 12.00</strong>
+                    <br><br>
+                    <strong>На занятии вы узнаете:</strong>
+                    <br>
+                    <ul>
+                        <li class="openlesson__item">✅О пользе Nordic Walking</li>
+                        <li class="openlesson__item">✅Как правильно подобрать палки для Nordic Walking</li>
+                        <li class="openlesson__item">✅Основные элементы техники Nordic Walking</li>
+                        <li class="openlesson__item">✅Какую одежду подобрать для занятий в разное время года.</li>
+                        <li class="openlesson__item">✅Упражнения на отработку техники скандинавского шага;
+                            общеукреляющие упражнения с палочками</li>
+                        <li class="openlesson__item">✅Основные направления работы проекта Помируспалками</li>
+                    </ul>
 
+                    Палки предоставим при необходимости (указать при записи). <br>
+                    <br>
+                    Участие бесплатное.
+                    <br>
+                    Открытое занятие проводится для всех желающих приобщиться к "НЕ бабушкиному" виду спорта.💪😍
+                    <br>
+                    Занятие проводит инструктор Nordic Walking, руководитель проекта "По миру с палками" Волосюк
+                    Маргарита.
+                    <br>
+                    Встречаемся в 11.45 у выхода из метро "Воробьевы горы" N3.
+                    <br>
+                    <a href="#modal-open" id="btn-open" class="openlesson__btn">Записаться</a>
+                </div>
+                <div class="openlesson__imgblock">
+                    <img class="openlesson__img" src="img/lesson/openlesson.jpeg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
     <section class="lesson">
         <div class="container">
 
@@ -425,7 +468,7 @@
             </div>
         </div>
     </section>
-   
+
 
     <section class="questions">
         <div class="container">
@@ -460,7 +503,7 @@
 
     <!-- Модальные   ------------------------------------>
     <div onclick="location.href='#'" id="modal-kolom" class="mod">
-       
+
         <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
@@ -630,7 +673,38 @@
             </div>
         </div>
     </div>
+    <div onclick="location.href='#'" id="modal-open" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на индивидуальное занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
 
+                    <form action="php/lesson/open.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+                        Коментарий, промокод (необязательное поле)
+                        <input type="text" name="comment" placeholder="Ваш ответ">
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="mapCol" onclick="location.href='#'" class="mod">
         <div onclick="event.stopPropagation()" class="modal-d">
@@ -640,7 +714,7 @@
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
 
-                
+
                 <div id="map-2" style="height: 500px;"></div>
 
                 <!-- style="margin: 0 auto; width: 100%; -->

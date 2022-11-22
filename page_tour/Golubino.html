@@ -32,7 +32,14 @@
     <link rel="stylesheet" href="/style/style.css?ver=500">
     <link rel="stylesheet" href="/style/style-adaptive.css?ver=500">
 
-
+    <style>
+        .lim {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #60326B;
+            margin-top: 10px;
+        }
+    </style>
     <title>Туры</title>
 </head>
 
@@ -106,44 +113,46 @@
             <div class="tour__page__header">
 
                 <div class="tour__page__imgBox">
-                    <img class="tour__page__img" src="/img/act-tour/kirg.jpg" alt="Голубино">
+                    <img class="tour__page__img" src="/img/act-tour/golubino.JPG" alt="Голубино">
                 </div>
                 <div class="tour__page__infoBlock">
-                    <h1 class="tour__page__title">
-                        Киргизия
+                    <h1 class="tour__page__title" style="font-size: 32px;">
+                        Голубино "В поисках северного сияния"
                     </h1>
-                    <h2 class="tour__page__date">Даты: 3 – 9 мая 2023г.</h2>
-                    <p class="tour__page__desc">
-                        История Кыргызстана охватывает периоды от древних петроглифов до Великого Шелкового пути, от
-                        Советского Союза до принятия страной независимости. Кыргызстан издавна являлся исторически
-                        важным пунктом в центре Азии, поскольку находился на слиянии торговых путей и империй.
-                        Расположенная прямо между китайской, персидской, арабской, индийской, тюркской и российской
-                        империями, земля, которая сегодня формирует Кыргызстан, изменила историю многих народов,
-                        религий, культур и путешественников
-                    </p>
+                    <h2 class="tour__page__date">Даты: 23 – 26 февраля 2023г.</h2>
+                    <div class="tour__page__desc">
+                        Культурно-ландшафтный Парк «Голубино» расположен в Пинежском районе Архангельской области на
+                        берегу реки Пинега в непосредственной близости от Пинежского заповедника и памятника природы
+                        «Голубинский карстовый массив».
+                        Тур позволяет увидеть сразу несколько основных природных достопримечательностей края.<br><br>
+                        Мы покажем вам:
+                        <ul>
+                            <li class="lim">карстовую пещеру с подземными входами и форумами;</li>
+                            <li class="lim">незамерзающий даже в самый сильный мороз водопад-источник, притаившийся в заповедном
+                                лесу;</li>
+                            <li class="lim"> деревню Красная Горка и одни из самых красивых панорам на окрестности.</li>
+                        </ul>
+                        <br>
+                        Поделимся научными и историческими знаниями, легендами местности.
+                        И всё это с проживанием в уютных номерах прямо на берегу реки, вкусной северной кухней и русской
+                        баней!
+                        Окунитесь в заповедную природу Пинежья!
+                    </div>
                     <div class="tour__page__rate">
                         <h2 class="tour__page__rateTitle">Сложность маршрута</h2>
-                        <img src="/img/rate/4.svg" alt="" srcset="">
+                        <img src="/img/rate/3.svg" alt="" srcset="">
 
                     </div>
                     <div class="tour__page__pricePart">
-                        <p class="tour__page__priceIn">В стоимость включено: Все спортивные мероприятия
-                            Гид сопровождающий.
-                            Транспорт согласно программе.
-                            Размещение согласно программе:
-                            Бишкек, отель 3*, (На основе двухместного размещения) ранний заезд включен.
-                            Боконбаево, Юрточный лагерь (в одной юрте по 4 человека)
-                            Каракол, Гостевой дом Альтамира или подобный. (Двухместное размещение)
-                            Город Чолпон - Ата, Гостевой доме (Двухместное размещение)
-                            Питание: Завтрак/Обед или перекусы, а также ужин в юрточном лагере в день 3.
-                            Входные и въездные билеты в заповедники и на экскурсии, согласно программе.
-                            Вода 1 л в день на человека</p>
-                        <p class="tour__page__priceOff">В стоимость НЕ входит: Авиабилеты
-                            Любые изменения в программе
-                            Ужин, кроме дня 3.</p>
+                        <p class="tour__page__priceIn">В стоимость входит: трансфер согласно программе, проживание в
+                            2-местном номере категории стандарт в парк-отеле «Голубино» (доплата за одноместное
+                            размещение 8000, указать при записи), питание согласно программе (кроме обедов в первый и
+                            последний день), вся экскурсионная и спортивная программа.</p>
+                        <p class="tour__page__priceOff">В стоимость НЕ входит: авиа и ж/д билеты, обед в первый и
+                            последний день, одноместное размещение, страховка путешественника</p>
                     </div>
 
-                    <p class="tour__page__price">Стоимость: 71 500р</p>
+                    <p class="tour__page__price">Стоимость: 40 000р</p>
 
 
 
@@ -157,7 +166,7 @@
                                     <a href="#close" title="Close" class="close">×</a>
                                 </div>
                                 <div class="modal-b">
-                                    <form action="/php/tour/Kirgizia.php" method="POST" class="modal__form">
+                                    <form action="/php/tour/Golubino.php" method="POST" class="modal__form">
 
                                         Фамилия, имя и отчество:
                                         <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>
@@ -246,7 +255,7 @@
 
         </div>
     </section>
-    <section class="gid">
+    <!-- <section class="gid">
         <div class="container">
             <h2 class="gid__title">Гид</h2>
             <ul class="team__list gid__list">
@@ -315,12 +324,14 @@
             </ul>
 
         </div>
-    </section>
+    </section> -->
+
     <section class="diary">
+        <h2 class="diary-title">
+            Расписание
+        </h2>
         <div class="container">
-            <h2 class="diary-title">
-                Расписание
-            </h2>
+
             <ul class="modal-tour-list accordion accordion-flush" id="accordionFlushExample">
 
                 <li class="modal-tour-item accordion-item">
@@ -328,7 +339,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collaps1">
                             <h3>
-                                День 1 (3 мая)
+                                День 1 (23 февраля)
                             </h3>
                         </button>
                     </h2>
@@ -336,24 +347,37 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Прибытие в Бишкек</li>
-                                <li class="modal-active-item">Размещение в отеле</li>
-                                <li class="modal-active-item">Небольшой отдых, обед</li>
-                                <li class="modal-active-item">После обеда мы отправимся на холмы расположенные
-                                    на южной окраине города Бишкек</li>
-                                <li class="modal-active-item">Небольшая акклиматизация, знакомство с пригорками
-                                    Киргизии</li>
-                                <li class="modal-active-item">По пути заедем на ужин в уютную чайхану, кафе или
-                                    ресторан, выбор блюд по меню</li>
-                                <li class="modal-active-item">Ночь в отеле 3* в Бишкеке</li>
+                                <li class="modal-active-item">Прилетаем или приезжаем на поезде в Архангельск до 12.30.
+                                    Путешествие в зимнюю сказку начнётся уже здесь. Для гостей, посещающих наш город
+                                    впервые, мы приготовили подарок: обзорную экскурсию по центру города Архангельск–
+                                    первому морскому порту России, родине российского флага. Вы узнаете об истории
+                                    города, увидите ключевые памятники и знаковые места, начнете знакомство с Русским
+                                    Севером! (~1-1,5 часа, групповая автобусная экскурсия в сопровождении гида,
+                                    предусмотрено несколько выходов из автобуса).
+                                    Обед оплачивается дополнительно.</li>
+                                <li class="modal-active-item">После 15.00 Выезд в Голубино</li>
+                                <li class="modal-active-item">Путешествие по живописной автодороге
+                                    Архангельск-Пинега-Мезень, которая идёт вдоль рек, северных деревень и карстовых гор
+                                </li>
+                                <li class="modal-active-item">Трансфер до Парка займёт 3,5-4 часа (188 км), в пути будет
+                                    1 санитарная остановка у арт-объекта «Пинега-Карпогоры», который является
+                                    своеобразными воротами в наш район. Там же можно зайти в придорожное кафе, выпить
+                                    кружку чая или взять кофе с собой, угоститься местной выпечкой.</li>
+                                <li class="modal-active-item">Ещё 1,5-2 часа, и вы на месте – в Культурно-ландшафтном
+                                    Парке «Голубино». Уединение и тишина, вокруг тайга и белоснежные просторы: ближайший
+                                    поселок в 17 км, но всё необходимое для лучшего отдыха будет у вас под рукой.</li>
+                                <li class="modal-active-item">19:00 – Праздничный ужин в ресторане отеля.
+                                    Свободное время: настольные игры в гостиной у камина или охота за северным сиянием
+                                    на берегу реки</li>
+
 
                             </ul>
-                            <div class="modal-imgBlock">
+                            <!-- <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day1/bish.png" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day1/bish1.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day1/bish2.jpg" alt="">
-                            </div>
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day1/hasti.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day1/ploshad.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day1/tash.png" alt="">
+                            </div> -->
                         </div>
                     </div>
                 </li>
@@ -363,7 +387,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
                             <h3>
-                                День 2 (4 мая)
+                                День 2 (24 февраля)
                             </h3>
                         </button>
                     </h2>
@@ -371,27 +395,38 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Бишкек — ущелье Аламедин (30 км / 40 минут)</li>
-                                <li class="modal-active-item">Скандинавская ходьба до одноименного водопада.
-                                    Путь до водопада от автомобильной стоянки займет примерно 1,5-2 часа в одну
-                                    сторону. В начале пути необходимо совершить переход через реку по навесному
-                                    мосту. Далее тропа идет по широкому склону, покрытому разнотравьем и
-                                    кустарниками. Из долины открывается вид на вершины выше 4000
-                                    метров.<br>Дойдя до слияния ручья Салык с рекой Аламедин, вы увидите
-                                    удивительное по красоте место под названием «тихая заводь». Здесь
-                                    расположена небольшая роща, где можно отдохнуть в тени деревьев и
-                                    пофотографироваться. Тропа к водопаду резко уходит вправо. Начинается
-                                    небольшой подъем в гору. Совсем скоро из тенистой щели откроется вид на
-                                    красивый Аламединский водопад.</li>
-                                <li class="modal-active-item">Вечером возвращение в Бишкек.</li>
-                                <li class="modal-active-item">Размещение в отеле Горы Азии</li>
+                                <li class="modal-active-item">8.00 Утренняя зарядка</li>
+                                <li class="modal-active-item">9.00 Завтрак</li>
+                                <li class="modal-active-item">10.00 Поход по зимнему лесу с инструктором-проводником на
+                                    камусных лыжах (лыжи оббитые шкурой лося, на таких лыжах местные охотники легко
+                                    преодолевают большие расстояния по снегу).
+                                    (Уровень сложности: средний; Длительность: ~3 часа)
+                                    Зимний лес умиротворяет и наполняет энергией. Вы отправитесь в поход, оцените
+                                    красоту таёжного леса и сделаете прекрасные снимки на память. Травяной чай из
+                                    термоса взбодрит и придаст сил, если вы устанете.</li>
+                                <li class="modal-active-item">13:00 Сытный обед в ресторане с традиционными северными
+                                    блюдами.</li>
+                                <li class="modal-active-item">15:00 Экскурсия в карстовую пещеру. На территории
+                                    Пинежского района самая протяжённая сеть пещер на всём Европейском Севере России,
+                                    аналогов которой нет в мире. Здесь можно наблюдать многолетние наледи, гипсы,
+                                    ангидриты. Мы приглашаем отправиться на познавательную прогулку по таинственному
+                                    миру уснувших на зиму летучих мышей.
+                                    Скромно отметим, что, по мнению фотографов National Geographic, наши пещеры
+                                    выделяются не только в области, а в целом одни из красивейших среди увиденных.</li>
+                                <li class="modal-active-item">17.00 Мастер-класс «Северные умения»</li>
+                                <li class="modal-active-item">18:00-19:00 В гостиной Лесного отеля можно посмотреть
+                                    мультфильмы, снятые по мотивам сказок наших северных писателей: Степана Писахова и
+                                    Бориса Шергина.
+                                    С теми, к то не находился можем устроить тренировку по Скандинавской ходьбе</li>
+                                <li class="modal-active-item">19:00 Поморский ужин (традиционные северные блюда).
+                                    Свободное время. Можно воспользоваться услугами русских бань (за доп.плату).</li>
                             </ul>
-                            <div class="modal-imgBlock">
+                            <!-- <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day2/alam-vodo.png" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day2/alam.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day2/alam1.jpg" alt="">
-                            </div>
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day2/gora1.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day2/gora2.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day2/gora3.jpg" alt="">
+                            </div> -->
                         </div>
                     </div>
 
@@ -405,7 +440,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                             <h3>
-                                День 3 (5 мая)
+                                День 3 (25 февраля)
                             </h3>
                         </button>
                     </h2>
@@ -413,32 +448,34 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">После вкусного завтрака, мы отправимся в село
-                                    Боконбаево, которое расположено на Южном берегу озера.</li>
-                                <li class="modal-active-item">По пути: Башня Бурана, Город Баласагун, Каньоны
-                                    Коморчек. Ходьба по каньонам (4 — 5 ч., набор высоты около 100 — 150
-                                    метров),пикник</li>
-                                <li class="modal-active-item">После этого мы продолжим наш путь и вскоре
-                                    достигнем озера, далее наш путь будет проходить вдоль Южного берега озера
-                                    Иссык — Куль!
-                                </li>
-                                <li class="modal-active-item">По приезду в Боконбаево посещение войлочной
-                                    фабрики и дома местного жителя «Беркучи»</li>
-                                <li class="modal-active-item">На ночевку мы остановимся в юрточном лагере
-                                    «Бельтам»</li>
-                                <li class="modal-active-item">Вечером мы насладимся видом на озера Иссык — Куль,
-                                    купание по желанию.</li>
-                                <li class="modal-active-item"> Ночь, ужин, в юрточном лагере «Бельтам». Ужин мы
-                                    закажем заранее, это будет одно из национальных блюд с салатом и вкусными
-                                    национальными бурсаками.
-                                </li>
-                            </ul>
-                            <div class="modal-imgBlock">
+                                <li class="modal-active-item">08:00 Утреняя зарядка</li>
+                                <li class="modal-active-item">09.00 Деревенский завтрак.</li>
+                                <li class="modal-active-item">10:00 – Экскурсия по экологической тропе в охранной зоне
+                                    Пинежского заповедника к незамерзающему водопаду «Святой источник». Длительность:
+                                    ~1,5 часа.</li>
+                                <li class="modal-active-item">В окрестностях «Голубино», в глубине тайги, притаился
+                                    настоящий водопад. Казалось бы, явление совсем не типичное для нашего Севера. Здесь
+                                    нет рек с бурлящими порогами. Водопад «Святой Источник» бьёт из-под земли. Напор
+                                    воды такой мощный, что струя воды не замерзает даже зимой — над ней образуется
+                                    причудливая ледяная корочка.</li>
+                                <li class="modal-active-item">12:00 –Экскурсия в бывший уездный город Пинегу (17 км, 3
+                                    часа). Знакомство с богатой историей (Пинега на 10 лет старше Москвы!): Кем были
+                                    купцы Володины? Чем жил город, некогда бывший крупным торговым и ярмарочным центром?
+                                    Какие тайны хранят каменные стены домов XIX в.? Прогулка по сердцу Пинеги —
+                                    Володинскому кварталу.</li>
+                                <li class="modal-active-item">15:00 – Поздний деревенский обед в ресторане</li>
+                                <li class="modal-active-item">17.00 – Мастер-класс «Печем пинежские шаньги». Чаепитие с
+                                    выпечкой, приготовленной своими руками</li>
+                                <li class="modal-active-item">19.00 – Ужин</li>
+                                <li class="modal-active-item">Свободное время</li>
 
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day3/buran.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day3/kanion.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day3/ozero.jpg" alt="">
-                            </div>
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day3/grob.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day3/mech.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day3/ploshadUzbek.jpg" alt="">
+                            </div> -->
                         </div>
                     </div>
 
@@ -450,7 +487,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
                             <h3>
-                                День 4 (6 мая)
+                                День 4 (26 февраля)
                             </h3>
                         </button>
                     </h2>
@@ -458,117 +495,24 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">После завтрака мы отправимся в город Каракол</li>
-                                <li class="modal-active-item">По пути мы посетим с вами плато Арабель в ущелье
-                                    Барскоон</li>
-                                <li class="modal-active-item">От центральной дороге мы проедем еще + 70 км в
-                                    верховье ущелье
-                                </li>
-                                <li class="modal-active-item">По приезду на плато, мы совершим с вами треккинг и
-                                    полюбуемся на снежные вершины, в окружении которых мы окажемся. Вечером
-                                    небольшой сити тур по городу Каракол. А еще можно съездить на горячие
-                                    источники.</li>
-                                <li class="modal-active-item">Размещение в гостевом доме Альтамира или подобном
-                                </li>
-                                <li class="modal-active-item">Горячий источник «Ак-Суу Кенч». Расположен в
-                                    живописном месте рядом с селом «Теплоключенко», примерно в 18 км от
-                                    курортного города Каракол. Имеется 3 бассейна для взрослых и 1 для детей.
-                                    Стоимость для взрослых 200 сомов (чуть меньше 3 –х долларов). Кроме
-                                    бассейнов на территории имеются кафе, удобная раздевалка с душевыми
-                                    кабинками, беседка, туалет.</li>
+                                <li class="modal-active-item">08:00–10:00 – Деревенский завтрак.</li>
+                                <li class="modal-active-item">10.00 Трансфер в г.Архангельск</li>
+                                <li class="modal-active-item">Экскурсия в музей деревянного зодчества под открытым небом
+                                    «Малые Корелы».
+                                    Обед в ресторане музейного комплекса «Малые Корелы» (оплачивается отдельно)</li>
+                                <li class="modal-active-item">Отправление домой после 18.30</li>
+                               
                             </ul>
-                            <div class="modal-imgBlock">
+                            <!-- <div class="modal-imgBlock">
 
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day4/barsk.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day4/gori.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day4/plato.png" alt="">
-                            </div>
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day4/uroch1.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day4/uroch2.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/uzbek/day4/uroch3.png" alt="">
+                            </div> -->
                         </div>
                     </div>
                 </li>
-                <li class="modal-tour-item accordion-item">
-                    <h2 class="accordion-header" id="flush-heading5">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse4">
-                            <h3>
-                                День 5 (7 мая)
-                            </h3>
-                        </button>
-                    </h2>
-                    <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="modal-active-list">
-                                <li class="modal-active-item">Сегодня мы посетим с Вами два ущелья, а также
-                                    сходим на первое озеро в Григорьевском ущелье (Время похода часа 2 — 2,5
-                                    часа в одну сторону).</li>
-                                <li class="modal-active-item">Пикник на озере</li>
-                                <li class="modal-active-item">Сначала мы заедем в Семеновское ущелье пересечем
-                                    боковой перевал Кок — Бель (2375 м) и окажемся в Григорьевском ущелье.</li>
-                                <li class="modal-active-item">Доехав до развилки, мы возьмём наши палки и
-                                    отправимся в путь к озеру.</li>
-                                <li class="modal-active-item">К вечеру мы приедем в город Чолпон — Ата,
-                                    размещение в уютном гостевом доме.</li>
-
-                            </ul>
-                            <div class="modal-imgBlock">
-
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day5/choldon2.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day5/cholpon1.png" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/kirgizia/day5/grigozero.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="modal-tour-item accordion-item">
-                    <h2 class="accordion-header" id="flush-heading6">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse4">
-                            <h3>
-                                День 6 (8 мая)
-                            </h3>
-                        </button>
-                    </h2>
-                    <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="modal-active-list">
-                                <li class="modal-active-item">Утром отдых или же можно походить по пляжу,
-                                    отработать технику.</li>
-                                <li class="modal-active-item">После обеда выезд в Бишкек</li>
-                                <li class="modal-active-item">Прибытие</li>
-                                <li class="modal-active-item">Размещение в отеле и прощальный ужин в отеле</li>
-
-                            </ul>
-
-                        </div>
-                    </div>
-                </li>
-                <li class="modal-tour-item accordion-item">
-                    <h2 class="accordion-header" id="flush-heading7">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse4">
-                            <h3>
-                                День 7 (9 мая)
-                            </h3>
-                        </button>
-                    </h2>
-                    <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="modal-active-list">
-                                <li class="modal-active-item">Собрав наши чемоданы мы отправляемся на сити тур (2 часа)
-                                </li>
-                                <li class="modal-active-item">Обед</li>
-                                <li class="modal-active-item">После хорошего обеда переезд в аэропорт. Прощание с
-                                    командой, вылет домой</li>
-
-
-                            </ul>
-
-                        </div>
-                    </div>
-                </li>
+                
 
             </ul>
         </div>
