@@ -1692,7 +1692,7 @@ table * {
 #close-popup i {
     width: 30px;
     height: 30px;
-    background: url(https://codernote.ru/files/cros.png) no-repeat center center;
+    background: url(../img/cross.svg) no-repeat center center;
     background-size: 16px 16px;
     display: block;
 }
@@ -2063,3 +2063,24 @@ body.mod {
     top:-70px;
     left: 0;
 }
+/* box-shadow: 0 0 16px #333; */
+
+.galleri__title {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 112px;
+    color: #48344E;
+}
+.galleri__title__item {
+    margin: 0;
+    height: 50px;
+    text-align: center;
+  
+    font-weight: 700;
+    font-size: 32px;
+    
+    color: aliceblue;
+}
+
