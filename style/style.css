@@ -1607,10 +1607,10 @@ table * {
     border-radius: 5px;
 }
 
-.modal-imgBlock {
+/* .modal-imgBlock {
     display: flex;
-    justify-content: space-between;
-}
+    justify-content: space-between; 
+} */
 
 .modal-img {
     width: 30%;
@@ -2075,12 +2075,13 @@ body.mod {
 }
 .galleri__title__item {
     margin: 0;
+    margin-left: 30px;
     height: 50px;
     text-align: center;
   
     font-weight: 700;
     font-size: 32px;
     
-    color: aliceblue;
+    color: rgb(22, 49, 59);
 }
 
