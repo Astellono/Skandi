@@ -445,4 +445,12 @@
     .lesson__btn {
         width: 100%;
     }
+    /* .grid-wrapper .small {
+        grid-row: span 1;
+        grid-column: span 2;
+    } */
+    .grid-wrapper div {
+        grid-row: span 1 !important;
+        grid-column: span 1 !important;
+    }
 }

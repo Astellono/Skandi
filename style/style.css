@@ -63,7 +63,7 @@ a {
     text-decoration: none;
     list-style-type: none;
     color: black;
-    
+
 }
 
 .body__form {
@@ -101,6 +101,7 @@ button {
 
 .header__logo img {
     width: 240px;
+    margin-right: 20px;
     /* height: 107px; */
 }
 
@@ -112,7 +113,8 @@ button {
 
 .header__menu {
     display: flex;
-    width: 600px;
+    width: 750px;
+    margin-right: 20px;
     justify-content: space-between;
 }
 
@@ -130,9 +132,12 @@ button {
     color: black;
     border-bottom: 2px solid black;
 }
-
+.active {
+    color: black;
+    border-bottom: 2px solid black;
+}
 .header__contacts {
-    max-width: 259px;
+    width: 259px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -611,7 +616,7 @@ button {
 }
 
 .partner__item {
-    
+
     margin-bottom: 30px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -626,8 +631,9 @@ button {
     max-width: 400px;
     height: 150px;
 }
-.partner__link  {
-max-width: 400px;
+
+.partner__link {
+    max-width: 400px;
 }
 
 .modal-content {
@@ -1162,10 +1168,12 @@ table * {
 .lesson__abik-title-srok {
     text-align: center;
 }
+
 .openlesson {
     background: rgba(236, 229, 238, 0.6);
     padding: 30px 0;
 }
+
 .openlesson__mainblock {
     padding: 10px;
     border-radius: 10px;
@@ -1173,16 +1181,19 @@ table * {
     justify-content: space-between;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
+
 .openlesson__imgblock {
-    width: 400px;   
+    width: 400px;
     border-radius: 10px;
     overflow: hidden;
 }
+
 .openlesson__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .openlesson__title {
     text-align: center;
     display: block;
@@ -1191,17 +1202,21 @@ table * {
     font-size: 32px;
     color: #60326B;
 }
+
 .openlesson__info {
     width: 60%;
     margin-right: 30px;
 }
+
 .openlesson__item {
-    
+
     margin-bottom: 10px;
 }
+
 .openlesson__item:first-child {
     margin-top: 5px;
 }
+
 .openlesson__btn {
     width: 200px;
     display: block;
@@ -1213,6 +1228,7 @@ table * {
     background: #60326B;
     border-radius: 10px;
 }
+
 /*----------------------------------------------------------------------------------------------*/
 
 
@@ -1651,16 +1667,19 @@ table * {
 /* увеличенная картинка */
 #magnify {
     display: none;
-    /* position: absolute; upd: 24.10.2016 */
+
     position: fixed;
 
-    max-width: 1200px;
-    height: auto;
+    width: 800px;
+    height: 80%;
     z-index: 9999;
 }
 
 #magnify img {
+    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* затемняющий фон */
@@ -2055,14 +2074,16 @@ body.mod {
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     transition: all 2s ease-in-out;
 }
+
 .btn-back {
-    
+
     position: absolute;
     width: 50px;
     height: 50px;
-    top:-70px;
+    top: -70px;
     left: 0;
 }
+
 /* box-shadow: 0 0 16px #333; */
 
 .galleri__title {
@@ -2073,15 +2094,56 @@ body.mod {
     line-height: 112px;
     color: #48344E;
 }
+
 .galleri__title__item {
     margin: 0;
     margin-left: 30px;
     height: 50px;
     text-align: center;
-  
+
     font-weight: 700;
     font-size: 32px;
-    
+
     color: rgb(22, 49, 59);
 }
 
+.grid-wrapper>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grid-wrapper>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 10px;
+    margin: 20px auto;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+.grid-wrapper .small {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+.grid-wrapper .wide {
+    grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+    grid-row: span 2;
+}
+
+.grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
