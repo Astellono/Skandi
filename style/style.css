@@ -132,10 +132,16 @@ button {
     color: black;
     border-bottom: 2px solid black;
 }
+
 .active {
     color: black;
     border-bottom: 2px solid black;
 }
+
+.carousel-inner .active {
+    border-bottom: none;
+}
+
 .header__contacts {
     width: 259px;
     display: flex;
@@ -533,7 +539,6 @@ button {
     margin-bottom: 40px;
     font-size: 32px;
     max-width: 600px;
-
     text-align: center;
     color: #4F3156;
     border-bottom: 3px solid #60326B;
@@ -543,7 +548,7 @@ button {
 .otziv__list {
     display: flex;
     flex-wrap: wrap;
-
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 50px;
 
@@ -551,47 +556,51 @@ button {
 
 .otziv__item {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+
+    height: max-content;
+    width: 100%;
     margin-bottom: 20px;
-    padding: 20px 15px;
+    padding: 20px 30px;
     border-radius: 10px;
-    width: 300px;
-    height: 550px;
+
+
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
-
+.otziv__img-info {
+   display: flex;
+   flex-direction: column;
+}
 .otziv__img-box {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+
+   
+    margin-right: 50px;
 }
 
 .otziv__img {
-    width: 100%;
+    width: 200px;
     object-fit: cover;
 }
 
 .otziv__name {
     width: 100%;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    
     font-size: 24px;
-    text-align: center;
+    text-align: left;
     color: #4F3156;
 
 }
 
 .otiziv__desc {
-    border-bottom: 1px solid #4F3156;
-    border-top: 1px solid #4F3156;
+
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     /* outline: auto; */
+    line-height: 30px;
     height: 100%;
     font-size: 14px;
-    text-align: center;
+    text-align: justify;
 }
 
 .partner {
@@ -2111,7 +2120,7 @@ body.mod {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .grid-wrapper>div>img {
@@ -2131,10 +2140,12 @@ body.mod {
     grid-auto-rows: 200px;
     grid-auto-flow: dense;
 }
+
 .grid-wrapper .small {
     grid-row: span 1;
     grid-column: span 1;
 }
+
 .grid-wrapper .wide {
     grid-column: span 2;
 }
