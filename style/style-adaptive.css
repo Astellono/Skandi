@@ -465,5 +465,7 @@
         grid-row: span 1 !important;
         grid-column: span 1 !important;
     }
-
+    .coop__img {
+        width: 200px;
+    }
 }

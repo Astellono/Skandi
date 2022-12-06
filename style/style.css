@@ -97,6 +97,7 @@ button {
 }
 
 
+
 /*---------------------------------------------------------------------------------------header---*/
 
 .header__logo img {
@@ -566,13 +567,15 @@ button {
 
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
+
 .otziv__img-info {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .otziv__img-box {
 
-   
+
     margin-right: 50px;
 }
 
@@ -583,7 +586,7 @@ button {
 
 .otziv__name {
     width: 100%;
-    
+
     font-size: 24px;
     text-align: left;
     color: #4F3156;
@@ -1620,6 +1623,33 @@ table * {
     color: #c44f42;
 }
 
+.coop {
+    margin-bottom: 30px;
+}
+
+.coop__wrapper {
+    margin: 0 auto;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #4F3156;
+    padding: 50px;
+
+
+}
+
+.coop__title {
+    color: #4F3156;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.coop__img {
+    width: 350px;
+}
+
 .diary-title {
     display: flex;
     margin-bottom: 20px;
@@ -2157,4 +2187,18 @@ body.mod {
 .grid-wrapper .big {
     grid-column: span 2;
     grid-row: span 2;
+}
+.dis {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    background-color: #777;
+    font-size: 16px;
+}
+.excursions__link {
+    transition: all 0.2s ease-in-out;
+}
+.excursions__link:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
 }

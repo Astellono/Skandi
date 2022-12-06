@@ -81,3 +81,29 @@ function createBtnBack(el) {
     el.append(btnBack)
 
 }
+
+
+
+
+
+let btnExLink = document.querySelectorAll('.excursions__link')
+btnExLink.forEach(element => {
+    checkDate(element)
+});
+
+
+function checkDate(btn) {
+    let dateStart = btn.dataset.date
+    let dateStartDay = Number(dateStart.slice(0, 2))
+    let dateStartMounth = Number(dateStart.slice(3, 5))
+    let dateStartYear = Number(20 + dateStart.slice(6, 10))
+    let currentDate = new Date()
+    let dd = currentDate.getDate()
+    let mm = currentDate.getMonth() + 1
+    let yyyy = currentDate.getFullYear()
+    if (((dd + 1) === dateStartDay) && dateStartMounth === mm && dateStartYear === yyyy) {
+        btn.classList.add('dis')
+        btn.innerHTML = "Истек срок подачи заявки. <P>Вопросы на номер: +79162027390 (Watsapp)"
+    }
+}
+
