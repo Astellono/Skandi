@@ -27,3 +27,10 @@ for (var i = 0; i < btn_map.length; i++) {
         document.body.style.overflow = 'hidden';
     };
 }
+
+let heightBox = document.querySelector('.tour__page__infoBlock').clientHeight
+let heightIMG = document.querySelector('.tour__page__imgBox')
+let str = String(heightBox)
+console.log(String(heightBox));
+heightIMG.style.height = String(heightBox) +'px' 
+console.log(heightIMG.clientHeight);
