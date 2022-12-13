@@ -280,6 +280,7 @@ button {
 /*---------------------------------------------------------------------------------------adv---*/
 
 .adv {
+    display: none;
     background-image: url(../img/about/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
