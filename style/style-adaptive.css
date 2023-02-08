@@ -63,17 +63,25 @@
         text-align: center;
     }
 
-    .tour__page__pricePart {
-        margin-bottom: 40px;
-    }
-
+  
     .diary {
         margin-top: 20px;
     }
-
-    .tour__page__price {
-        margin-bottom: 20px;
+    .order__contant {
+        flex-direction: column;
+        padding-left: 0;
     }
+    .tour__page__pricePart{
+        text-align: center;
+        padding: 10px;
+    }
+    .tour__page__btn{
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        height: 30px;
+        margin-top: 20px;
+    }
+ 
 
     .big__table {
         display: none;
@@ -116,6 +124,10 @@
 
     .lesson__smart__table {
         display: block;
+    }
+    .order__contant {
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -251,6 +263,7 @@
         color: white;
         margin-bottom: 10px;
     }
+  
 
 }
 
@@ -348,6 +361,7 @@
         justify-content: center;
         align-items: center;
     }
+   
 }
 
 @media (max-width: 803px) {
@@ -437,7 +451,13 @@
         width: 100%;
         margin-bottom: 20px;
     }
-
+    .tour__page__price {
+        font-size: 26px;
+        max-height: 100%;
+    }
+    .tour__page__pricePart {
+        font-size: 10px;
+    }
     .lesson__list {
         flex-direction: column;
     }

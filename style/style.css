@@ -1284,9 +1284,7 @@ table * {
     justify-content: space-between;
 }
 
-.tour__list-week {
-    
-}
+
 
 .tour__item {
     position: relative;
@@ -1570,13 +1568,13 @@ table * {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 20px;
+    
 }
 
 .tour__page__desc {
     font-size: 18px;
     color: #60326B;
-    margin-bottom: 10px;
+    margin-bottom: auto;
     text-align: justify;
 }
 
@@ -1592,7 +1590,32 @@ table * {
     color: #60326B;
 
 }
-
+.order {
+    padding: 30px 0;
+}
+.order__contant {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    border: 1px solid #60326B;
+    border-top: none;
+    border-bottom: none;
+    padding-left: 10px;
+   
+    border-radius: 22px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.order__contant:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+.order__contant:hover .tour__page__btn {
+    color: #ebf376;
+    background-color: #000;
+}
 .tour__page__price {
     font-size: 32px;
     color: #60326B;
@@ -1601,22 +1624,29 @@ table * {
     font-style: normal;
     font-family: "Roboto";
 }
-
+.tour__page__btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .tour__page__btn {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    align-items: center;
     color: white;
     background-color: #60326B;
-    height: 50px;
-    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0 20px 20px 0;
+    padding: 10px 30px;
     font-size: 24px;
 }
 
 .tour__page__pricePart {
-    margin-bottom: auto;
+    max-width: 550px;
+    padding: 10px 0;
     font-size: 12px;
     text-align: justify;
 }
