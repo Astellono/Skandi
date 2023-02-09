@@ -28,7 +28,7 @@
         content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="style/style.css?ver=307">
+    <link rel="stylesheet" href="style/style.css?ver=308">
     <link rel="stylesheet" href="style/style-adaptive.css?ver=307">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
 
@@ -109,63 +109,6 @@
 
             <ul class="excursions__list">
 
-                <li class="excursions__item" id="moscow">
-
-                    <div class="excursions__item-info">
-                        <h2 class="excursions__item-title">SCANDI-экскурсия по Замоскворечью</h2>
-                        <p class="excursions__date"> 5 февраля 2023
-                            ⠀Начало в 10.00</p>
-                        <p class="excursions__item-desc">Замоскворечье
-                            Один из немногих районов Москвы, который позволяет не просто беспредметно рассуждать о
-                            прошлом, но непосредственно увидеть слои истории нашего города. Обаятельное, тихое, милое
-                            Замоскворечье хранит в себе условно три эпохи:
-                            - Бунташный 17 век - стерльцы и слободы ремесников
-                            - Аристократичный 18 век - усадьбы, парки
-                            - Купеческий 19 век - дома с мезонинами и куры с коровами
-                            Но конечно, на этом не ограничивается. До сих пор это живая ткань города, которая
-                            подвергается изменениям и улучшениям.
-                        </p>
-                        <div class="excursions__item-desc-hidden">
-                            <br>
-                            Что будет в программе:<br><br>
-                            <ul>
-                                <li>Активная разминка с инструктором по скандинавской ходьбе Волосюк Маргаритой;</li>
-                                <li>Пешеходная экскурсия с интересным экскурсоводом Павлом Юрасовым (маршрут небольшой,
-                                    подойдёт новичкам);</li>
-                                <li>Заминка со скандинавскими палками</li>
-                                <li>По желанию задушевные посиделки в каком-нибудь уютном кафе (рекомендации
-                                    принимаются)</li>
-                            </ul>
-                            <br><br>
-                            Встречаемся в 9.45 у выхода из метро Третьяковская. Окончание там же (автомобилисты милости
-                            просим)
-
-                            <br><br>
-                            Продолжительность программы около 2,5 часов
-                            <br><br>
-                            Одежда спортивная по погоде
-                            <br><br>
-                            Для новичков возможна аренда палок 100р (сообщить при записи).
-
-
-
-                            <br><br>
-                            В стоимость входит: спортивно-экскурсионные мероприятия и использование аудиогида
-
-                            <br><br>
-                            <p class="excursions__price">Стоимость: <strong>1500р</strong></p>
-
-
-                            <a onclick="event.stopPropagation()" class="excursions__link" data-date="10.02.23"
-                                href="#modal-moscow">Записаться</a>
-                        </div>
-                    </div>
-                    <div class="excursions__img-block">
-                        <img class="excursions__img" src="img/excursions/moscow.jpg" alt="" srcset="">
-                    </div>
-                    <div class="exursions__podr">Подробнее</div>
-
-                </li>
 
 
                 <li class="excursions__item" id="lavr">
@@ -204,11 +147,12 @@
                             <br><br>
                             Встречаемся в 9.45 у нулевого километра. Заканчиваем у метро Медведково.
                             <br><br>
-                            Одежда спортивная по погоде. С собой берём термос с чаем/кофе, перекус. Скандинавские палки берем свои.
+                            Одежда спортивная по погоде. С собой берём термос с чаем/кофе, перекус. Скандинавские палки
+                            берем свои.
                             <br><br>
-                            В  стоимость входит: сопровождние гида и инструктора
+                            В стоимость входит: сопровождние гида и инструктора
                             <br><br>
-                            
+
                             <p class="excursions__price">Стоимость: <strong>2000р</strong></p>
 
 
@@ -326,38 +270,7 @@
 
 
 
-    <div onclick="location.href='#'" id="modal-moscow" class="mod">
-        <div onclick="event.stopPropagation()" class="modal-d">
-            <div class="modal-c">
-                <div class="modal-h">
-                    <h3 class="modal-title">Запись на Сканди-экскурсию</h3>
-                    <a href="#" title="Close" class="close">×</a>
-                </div>
-                <div class="modal-b">
 
-                    <form action="php/excursions/moscow.php" method="POST" class="modal__form">
-
-                        Фамилия, имя и отчество:
-                        <input required type="text" name="fio" placeholder="Ваш ответ">
-                        Дата рождения:
-                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
-                        Ваш телефон:
-                        <input required type="tel" name="tel" placeholder="Ваш ответ">
-                        Ваш email:
-                        <input required type="email" name="email" placeholder="Ваш ответ">
-                        Коментарий, промокод (необязательное поле)
-                        <input type="text" name="comment" placeholder="Ваш ответ">
-
-
-
-                        <input type="submit" value="Отправить" class="modal-form-btn">
-
-                        <a href="#" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div onclick="location.href='#'" id="modal-parnas" class="mod">
         <div onclick="event.stopPropagation()" class="modal-d">
@@ -429,8 +342,8 @@
 
 
     <footer class="footer"></footer>
-    <script src="modal/Burger.js"></script>
-    <script src="modal/modal.js"></script>
+    
+  
 
     <script src="js/ex.js"></script>
     <script src="modal/bootstrap.bundle.js"></script>

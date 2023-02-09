@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: local("Roboto-Bold"), url("/fonts/RobotoBold.woff2") format("woff2"), url("/fonts/RobotoBold.woff") format("woff");
+    src: local("Roboto-Bold"), url("/fonts/Robotobold.woff2") format("woff2"), url("/fonts/Robotobold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
