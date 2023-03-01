@@ -263,8 +263,13 @@
         color: white;
         margin-bottom: 10px;
     }
-  
-
+    .excursions__item.long .excursions__img-block {
+        height: 300px;
+        overflow: hidden;
+    }
+    .excursions__img-block {
+        border-radius: 10px 10px 0 0 !important; 
+    }
 }
 
 @media (max-width: 877px) {
