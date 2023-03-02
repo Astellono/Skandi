@@ -1538,19 +1538,19 @@ table * {
 }
 
 .tour__page__imgBox {
-   
+
     width: 100%;
-   
-    
+
+
     max-width: 854px;
     border-radius: 10px;
     overflow: hidden;
-    
+
     margin-right: 10px;
 }
 
 .tour__page__img {
-    
+
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1568,7 +1568,7 @@ table * {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    
+
 }
 
 .tour__page__desc {
@@ -1590,9 +1590,11 @@ table * {
     color: #60326B;
 
 }
+
 .order {
     padding: 30px 0;
 }
+
 .order__contant {
     position: relative;
     display: flex;
@@ -1604,18 +1606,21 @@ table * {
     border-top: none;
     border-bottom: none;
     padding-left: 10px;
-   
+
     border-radius: 22px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
+
 .order__contant:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
 }
+
 .order__contant:hover .tour__page__btn {
     color: #ebf376;
     background-color: #000;
 }
+
 .tour__page__price {
     font-size: 32px;
     color: #60326B;
@@ -1624,7 +1629,8 @@ table * {
     font-style: normal;
     font-family: "Roboto";
 }
-.tour__page__btn::before{
+
+.tour__page__btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1632,6 +1638,7 @@ table * {
     width: 100%;
     height: 100%;
 }
+
 .tour__page__btn {
     display: flex;
     align-items: center;
@@ -2225,6 +2232,7 @@ body.mod {
     grid-column: span 2;
     grid-row: span 2;
 }
+
 .dis {
     pointer-events: none;
     cursor: default;
@@ -2232,10 +2240,43 @@ body.mod {
     background-color: #777;
     font-size: 16px;
 }
+
 .excursions__link {
     transition: all 0.2s ease-in-out;
 }
+
 .excursions__link:hover {
     background-color: #000000;
     color: rgb(255, 255, 255);
+}
+.menu {
+    padding: 50px 0;
+    padding-top: 0;
+}
+.menu__title {
+    text-align: center;
+    color: #60326B;  
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 200px;
+    outline: 1px solid #4F3156;
+    font-size: 24px;
+    color: #4F3156;
+    border-radius: 10px;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.menu__item:last-child {
+    width: 40%;
+    margin: 0 auto;
 }

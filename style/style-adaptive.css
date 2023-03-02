@@ -272,7 +272,7 @@
     }
 }
 
-@media (max-width: 877px) {
+@media (max-width: 887px) {
     .header__logo img {
         width: 190px;
     }
@@ -366,7 +366,12 @@
         justify-content: center;
         align-items: center;
     }
-   
+    .menu__list {
+        flex-direction: column;
+    }
+    .menu__item {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 803px) {
