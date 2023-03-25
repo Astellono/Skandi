@@ -25,7 +25,11 @@ Email: $email
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub="Анкета $fio"; //сабж
+<<<<<<<< HEAD:php/excursions/vdnh.php
 $email="ВДНХ"; // от кого
+========
+$email="Лужники+Бассейн"; // от кого
+>>>>>>>> 42be6b0515478eba1fe758339924562052b4723e:php/excursions/luzh.php
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email <pomiruspalkami@website.ru>");
  
 ini_set('short_open_tag', 'On');
