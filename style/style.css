@@ -95,8 +95,12 @@ button {
     border: none;
     cursor: pointer;
 }
-
-
+.wait {
+    opacity: 0.8;
+}
+.wait:hover {
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1) !important;
+}
 
 /*---------------------------------------------------------------------------------------header---*/
 
