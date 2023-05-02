@@ -8,12 +8,12 @@ if ($_POST['name'] == '') {
 if (isset($_POST['name'])) {$name = $_POST['name'];}
 if (isset($_POST['email'])) {$email = $_POST['email'];}
 if (isset($_POST['message'])) {$message = $_POST['message'];}
- 
+if (isset($_POST['tel'])) {$tel = $_POST['tel'];}
 /* Сюда впишите свою эл. почту */
 $myaddres  = "pomiruspalkami@yandex.ru"; // кому отправляем
  
 /* А здесь прописывается текст сообщения, \n - перенос строки */
-$mes = "Имя: $name \nemail: $email\nВопрос: $message";
+$mes = "Имя: $name\nТелефон: $tel \nemail: $email\nВопрос: $message";
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub=$name; //сабж
