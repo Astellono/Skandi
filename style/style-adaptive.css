@@ -130,12 +130,21 @@
         align-items: center;
     }
 }
+@media (max-width: 1024px) { 
+    .actual-tour__list {
+        flex-direction: column;
+    }
 
+    .actual-tour__item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
 @media (max-width: 968px) {
     .adv {
         background-image: none;
     }
-
+    
     .about__title {
         width: 100%;
         text-align: center;
@@ -460,14 +469,7 @@
         width: 100%;
     }
 
-    .actual-tour__list {
-        flex-direction: column;
-    }
-
-    .actual-tour__item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+    
     .tour__page__price {
         font-size: 26px;
         max-height: 100%;

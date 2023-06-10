@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(89691443, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/89691443" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Scandi-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
+    <link rel="icon" sizes="120x120" href="/img/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/style/clear.css">
+    <link rel="stylesheet" href="/style/bootstrap.css">
+    <!-- <link rel="stylesheet" href="/style/style.css?ver=505">
+    <link rel="stylesheet" href="/style/style-adaptive.css?ver=505"> -->
+    <script src="/modal/verCss.js"></script>
+    <script src="/js/reg.js" defer></script>
+    
+    <style>
+        .lim {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #60326B;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Туры</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <script src="/parts/header.js"></script>
+    </header>
+
+
+
+    <h1 class="video__title">Видеогалерея</h1>
+    
+
+    <section class="video">
+        <div class="container">
+
+            <div class="video__main">
+                <ul class="video__list">
+                    <li class="video__item" data-video="d1">
+                        <div class="video__item__imgBlock">
+                            <img class="video__item__img" src="img/video/test.jpeg">
+                        </div>
+                        <div class="video__item__desc">
+                            <h2 class="video__item__title">Дьбло 1</h2>
+                            <p class="video__item__date">12 января 2013г.</p>
+                        </div>
+                    </li>
+                    <li class="video__item" data-video="d2">
+                        <div class="video__item__imgBlock">
+                            <img class="video__item__img" src="img/video/test.jpeg">
+                        </div>
+                        <div class="video__item__desc">
+                            <h2 class="video__item__title">Дьбло 2</h2>
+                            <p class="video__item__date">12 января 2013г.</p>
+                        </div>
+                    </li>
+                    <li class="video__item" data-video="d3">
+                        <div class="video__item__imgBlock">
+                            <img class="video__item__img" src="img/video/test.jpeg">
+                        </div>
+                        <div class="video__item__desc">
+                            <h2 class="video__item__title">Дьбло 3</h2>
+                            <p class="video__item__date">12 января 2013г.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="video__display" id="display">
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="questions" id="questions">
+        <script src="/parts/questions.js"></script>
+    </section>
+    
+    <section class="contacts">
+        <div class="container">
+            <h2 class="contacts__title">
+                Контакты
+            </h2>
+            <ul class="contacts__list">
+                <li class="contacts__item">Телефон:
+                    <tel>+7 (916) 202-73-90</tel>
+                </li>
+                <li class="contacts__item">Телеграмм: <a class="contact__t-link"
+                        href="t.me/dorogoi_idushego">t.me/dorogoi_idushego</a></li>
+                <li class="contacts__item">VK: <a class="contact__t-link"
+                        href="https://vk.com/pomiru_spalkami">vk.com/pomiru_spalkami</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $('.minimized').click(function (event) {
+                var i_path = $(this).attr('src');
+                $('body').append('<div id="overlay"></div><div id="magnify"><img src="' + i_path + '"><div id="close-popup"><i></i></div></div>');
+                $('#magnify').css({
+                    left: ($(document).width() - $('#magnify').outerWidth()) / 2,
+                    // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
+                    top: ($(window).height() - $('#magnify').outerHeight()) / 2
+                });
+                $('#overlay, #magnify').fadeIn('fast');
+            });
+
+            $('body').on('click', '#close-popup, #overlay', function (event) {
+                event.preventDefault();
+                $('#overlay, #magnify').fadeOut('fast', function () {
+                    $('#close-popup, #magnify, #overlay').remove();
+                });
+            });
+        });
+    </script>
+
+    <footer class="footer"></footer>
+
+    <script src="/js/video.js" defer></script>
+    <script src="/modal/bootstrap.bundle.js"></script>
+    
+    <script defer src="/modal/modal.js"></script>
+
+</body>
+
+</html>
