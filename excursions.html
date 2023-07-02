@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="style/style-adaptive.css?ver=310"> -->
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <script src="/modal/verCss.js"></script>
+    
     <title>Сканди-экскурсии</title>
 </head>
 
@@ -46,12 +47,7 @@
             <h1 class="excursions__title">Сканди-мероприятия</h1>
 
             <ul class="excursions__list">
-
-
-
-
                 <li class="excursions__item" id="tushino">
-
                     <div class="excursions__item-info">
                         <h2 class="excursions__item-title">SCANDI-прогулка "Парк Северное Тушино"</h2>
                         <p class="excursions__date">1 июля 2023г. Начало в 17:00</p>
@@ -84,8 +80,8 @@
 
                             <br>
 
-                            <a onclick="event.stopPropagation()" class="excursions__link" data-date="10.02.23"
-                                href="#modal-tushino">Записаться</a>
+                            <a onclick="event.stopPropagation()" class="excursions__link" data-name="tushino"
+                                href="#modal">Записаться</a>
                         </div>
                     </div>
                     <div class="excursions__img-block">
@@ -134,14 +130,14 @@
                             <br><br>
 
                             <p class="excursions__price" style="margin: 0;">Стоимость: <strong>1500</strong> при
-                                регистрации до 3 июня 2023г.</p>
+                                регистрации до 3 июля 2023г.</p>
                             <p class="excursions__price" style="margin: 0;">Стоимость: <strong>1800</strong> при
-                                регистрации в течение 3-50 июня 2023г.</p>
+                                регистрации в течение 3-5 июля 2023г.</p>
 
                             <br>
 
-                            <a onclick="event.stopPropagation()" class="excursions__link" data-date="10.02.23"
-                                href="#modal-patr">Записаться</a>
+                            <a onclick="event.stopPropagation()" class="excursions__link" data-name="patr"
+                                href="#modal">Записаться</a>
                         </div>
                     </div>
                     <div class="excursions__img-block">
@@ -149,7 +145,7 @@
                     </div>
                     <div class="exursions__podr">Подробнее</div>
 
-                </li>
+                </li> 
                 <li class="excursions__item" id="lavra">
 
                     <div class="excursions__item-info">
@@ -210,8 +206,8 @@
 
                             <br>
 
-                            <a onclick="event.stopPropagation()" class="excursions__link" data-date="10.02.23"
-                                href="#modal-lavra">Записаться</a>
+                            <a onclick="event.stopPropagation()" class="excursions__link" data-name="lavra"
+                                href="#modal">Записаться</a>
                         </div>
                     </div>
                     <div class="excursions__img-block">
@@ -247,31 +243,32 @@
 
 
     <!-- Модальные   ------------------------------------>
-    <div onclick="location.href='#'" id="modal-lavra" class="mod">
+    <div onclick="location.href='#'" id="modal" class="mod">
         <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
                 <div class="modal-h">
                     <h3 class="modal-title">Запись на Сканди-мерориятие</h3>
+                    <button class="modal-form-btn btn-auto" id="btnAuto">Автозаполнение</button>
                     <a href="#" title="Close" class="close">×</a>
                 </div>
                 <div class="modal-b">
 
-                    <form action="php/excursion/lavra.php" method="POST" class="modal__form">
+                    <form action="" method="POST" id="exForm" class="modal__form">
 
                         Фамилия, имя и отчество:
-                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        <input required type="text" id="fio" name="fio" placeholder="Ваш ответ">
                         Дата рождения:
-                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        <input required type="text" id="age" name="age" placeholder="Дата рождения 31.12.2000">
                         Ваш телефон:
-                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        <input required type="tel" id="tel" name="tel" placeholder="Ваш ответ">
                         Ваш email:
-                        <input required type="email" name="email" placeholder="Ваш ответ">
+                        <input required type="email" id="email" name="email" placeholder="Ваш ответ">
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
 
 
-                        <input type="submit" value="Отправить" class="modal-form-btn">
+                        <input type="submit" value="Отправить" id="btn" class="modal-form-btn">
 
                         <a href="#" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
                     </form>
@@ -279,81 +276,12 @@
             </div>
         </div>
     </div>
-    <div onclick="location.href='#'" id="modal-patr" class="mod">
-        <div onclick="event.stopPropagation()" class="modal-d">
-            <div class="modal-c">
-                <div class="modal-h">
-                    <h3 class="modal-title">Запись на Сканди-мерориятие</h3>
-                    <a href="#" title="Close" class="close">×</a>
-                </div>
-                <div class="modal-b">
-
-                    <form action="php/excursion/patr.php" method="POST" class="modal__form">
-
-                        Фамилия, имя и отчество:
-                        <input required type="text" name="fio" placeholder="Ваш ответ">
-                        Дата рождения:
-                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
-                        Ваш телефон:
-                        <input required type="tel" name="tel" placeholder="Ваш ответ">
-                        Ваш email:
-                        <input required type="email" name="email" placeholder="Ваш ответ">
-                        Коментарий, промокод (необязательное поле)
-                        <input type="text" name="comment" placeholder="Ваш ответ">
-
-
-
-                        <input type="submit" value="Отправить" class="modal-form-btn">
-
-                        <a href="#" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div onclick="location.href='#'" id="modal-tushino" class="mod">
-        <div onclick="event.stopPropagation()" class="modal-d">
-            <div class="modal-c">
-                <div class="modal-h">
-                    <h3 class="modal-title">Запись на Сканди-мерориятие</h3>
-                    <a href="#" title="Close" class="close">×</a>
-                </div>
-                <div class="modal-b">
-
-                    <form action="php/excursion/tushino.php" method="POST" class="modal__form">
-
-                        Фамилия, имя и отчество:
-                        <input required type="text" name="fio" placeholder="Ваш ответ">
-                        Дата рождения:
-                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
-                        Ваш телефон:
-                        <input required type="tel" name="tel" placeholder="Ваш ответ">
-                        Ваш email:
-                        <input required type="email" name="email" placeholder="Ваш ответ">
-                        Коментарий, промокод (необязательное поле)
-                        <input type="text" name="comment" placeholder="Ваш ответ">
-
-
-
-                        <input type="submit" value="Отправить" class="modal-form-btn">
-
-                        <a href="#" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
+   
 
     <footer class="footer"></footer>
 
-
-
+    <script src="js/regEx.js"></script>
+    <script defer src="/parts/exForm.js"></script>
     <script src="js/ex.js"></script>
     <script src="modal/bootstrap.bundle.js"></script>
 
