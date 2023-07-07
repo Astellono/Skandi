@@ -1,17 +1,30 @@
 <?php
 /* Здесь проверяется существование переменных */
+if ($_POST['fio'] == '') {
+    
+    exit(1);
+    
+}
+if (isset($_POST['fio'])) {$fio = $_POST['fio'];}
+if (isset($_POST['age'])) {$age = $_POST['age'];}
+if (isset($_POST['tel'])) {$tel = $_POST['tel'];}
+if (isset($_POST['email'])) {$email = $_POST['email'];}
+if (isset($_POST['comment'])) {$comment = $_POST['comment'];}
 
 /* Сюда впишите свою эл. почту */
 $myaddres  = "pomiruspalkami@yandex.ru"; // кому отправляем
  
 /* А здесь прописывается текст сообщения, \n - перенос строки */
-$mes = 'Привет';
-
- 
+$mes = 
+"ФИО: $fio
+Возраст: $age
+Телефон: $tel
+Email: $email
+Комментарий, промокод:\nОтвет: $comment\n";
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
-$sub="Анкета"; //сабж
-$email="Лавра"; // от кого
+$sub="Анкета $fio"; //сабж
+$email="Ланьшинские"; // от кого
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email <pomiruspalkami@website.ru>");
  
 ini_set('short_open_tag', 'On');
