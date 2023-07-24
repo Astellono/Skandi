@@ -2,28 +2,14 @@
 let videos = [
     {
         id: 0,
-        title: 'Lorem',
-        desc: 'asfsfsfafsasffasfsafafas',
-        date: '02.03.2002',
-        imgUrl: 'img/video/test.jpeg',
-        url: '<iframe src="https://www.youtube.com/embed/OvUmsc44nWE" title="Stand Up: Иван Абрамов - кумиры" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+        title: 'Подготовка к поездкам',
+        desc: 'Краткое описание необходимых вещей в однодневных походах в формате scandi-trip',
+        date: '02.03.2022',
+        imgUrl: 'https://i.ytimg.com/vi/PZSgaWQ1heQ/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBtgiAAoAPigIMCAAQARhbIGUoRzAP&rs=AOn4CLCp6rWOakyJFllt8GuLHAP6G2iVxQ',
+        url: '<iframe src="https://www.youtube.com/embed/PZSgaWQ1heQ" title="Как подготовиться к поездкам" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
     },
-    {
-        id: 1,
-        title: 'Lorem1',
-        desc: 'asfsfsfafsasffasfsafafas',
-        date: '02.03.2003',
-        imgUrl: 'img/video/test.jpeg',
-        url: '<iframe src="https://www.youtube.com/embed/OvUmsc44nWE" title="Stand Up: Иван Абрамов - кумиры" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-    },
-    {
-        id: 2,
-        title: 'Lorem',
-        desc: 'asfsfsfafsasffasfsafafas',
-        date: '02.03.2002',
-        imgUrl: 'img/video/test.jpeg',
-        url: 'url'
-    },
+    
+    
 ]
 
 let list = document.getElementById('videoList');

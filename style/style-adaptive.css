@@ -514,13 +514,16 @@
         display: flex;
         width: 100%;
         height: max-content;
-        overflow-x: scroll;
+        overflow-x: auto;
+        overflow-y: hidden;
         flex-direction: row;
         border: none;
         order: 1;
     }
     .video__item {
         margin-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 20px;
         border-bottom: none;
     }
     .video__display {

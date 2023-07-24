@@ -2327,7 +2327,7 @@ body.mod {
 }
 .video {
     background-color: #ffffff;
-    
+   
     border-top: 1px solid black;
 }
 .video__title {
@@ -2348,6 +2348,7 @@ body.mod {
     border-right: 1px solid black;
     border-left: 1px solid black;
     overflow: auto;
+    
     /* outline: 1px solid #black; */
 }
 .video__display {
@@ -2372,9 +2373,9 @@ body.mod {
     border-bottom: none;
 }
 .video__item__imgBlock {
-    height: 70px;
+    height: 100%;
     width: 120px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .video__item__img {
@@ -2384,13 +2385,18 @@ body.mod {
 }
 .video__item__title {
     color: #60326B;
+    margin-bottom: auto;
     font-size: 14px;
 }
 .video__item__date {
     font-size: 9px;
+    text-align: end;
 }
 
 .video__item__desc {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     color: #60326B;
     align-self: flex-start;
 }
