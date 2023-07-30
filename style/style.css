@@ -2327,7 +2327,7 @@ body.mod {
 }
 .video {
     background-color: #242323;
-    margin-bottom: 50px;
+    
     border-top: 1px solid rgb(194, 194, 194);
 }
 .video__title {
@@ -2345,7 +2345,10 @@ body.mod {
 .video__list {
     width: 300px;
     height: 100%;
-    outline: 1px solid rgb(194, 194, 194);
+    border: 1px solid rgb(194, 194, 194);
+    border-top: none;
+    border-bottom: none;
+    overflow: auto;
     /* outline: 1px solid #rgb(194, 194, 194); */
 }
 .video__display {
@@ -2358,8 +2361,11 @@ body.mod {
     padding: 15px 5px;
     align-items: center;
     height: 100px;
-    outline: 1px solid rgb(194, 194, 194);
+    border-bottom: 1px solid rgb(194, 194, 194);
     transition: all 0.3s ease-in-out;
+}
+.video__item:last-child {
+    border-bottom: none;
 }
 .video__item__imgBlock {
     height: 70px;
