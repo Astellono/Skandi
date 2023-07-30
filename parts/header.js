@@ -31,8 +31,8 @@ document.getElementById("header").innerHTML = '\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/galleria.html" class="header__link">\
-                        Галерея\
+                    <a href="/video.html" class="header__link">\
+                        Медиа\
                     </a>\
                 </li>\
             </ul>\

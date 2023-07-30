@@ -2327,15 +2327,15 @@ body.mod {
 }
 .video {
     background-color: #242323;
-    
+    margin-bottom: 50px;
     border-top: 1px solid rgb(194, 194, 194);
 }
 .video__title {
     margin: 0;
-    color: rgb(194, 194, 194);
+    color: #60326B;
     text-align: center;
     padding: 15px 0;
-    background-color: #242323;
+    background-color: #D4C1CF;
 }
 .video__main {
     display: flex;
@@ -2345,14 +2345,16 @@ body.mod {
 .video__list {
     width: 300px;
     height: 100%;
-    border: 1px solid rgb(194, 194, 194);
-    border-top: none;
-    border-bottom: none;
-    overflow: auto;
+    outline: 1px solid rgb(194, 194, 194);
     /* outline: 1px solid #rgb(194, 194, 194); */
 }
 .video__display {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
     width: 80%;
+    padding: 0 20px 20px 20px;
+    padding-bottom: 40px;
     /* outline: 1px solid #42c47d; */
 }
 .video__item {
@@ -2361,16 +2363,16 @@ body.mod {
     padding: 15px 5px;
     align-items: center;
     height: 100px;
-    border-bottom: 1px solid rgb(194, 194, 194);
+    outline: 1px solid rgb(194, 194, 194);
     transition: all 0.3s ease-in-out;
 }
 .video__item:last-child {
     border-bottom: none;
 }
 .video__item__imgBlock {
-    height: 70px;
+    height: 100%;
     width: 120px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .video__item__img {
@@ -2379,18 +2381,47 @@ body.mod {
     object-fit: cover;
 }
 .video__item__title {
-    color: rgb(194, 194, 194);
+    color: #60326B;
+    margin-bottom: auto;
     font-size: 14px;
 }
 .video__item__date {
     font-size: 9px;
+    text-align: end;
 }
 
 .video__item__desc {
-    color: rgb(194, 194, 194);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #60326B;
     align-self: flex-start;
 }
 .video__item:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+.video__frame {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
+}
+.video__mainTitle {
+    width: max-content;
+    
+    margin: 10px auto;
+    margin-bottom: 20px;
+    color: #60326B;
+}
+.video__frame>iframe {
+    width: 100% !important;
+    height: 100% !important;
+   
+}
+.video__mainDesc {
+    margin: 20px 0 auto 0px;
+}
+.video__dateMain {
+    margin-left: 0px;
 }
