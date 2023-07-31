@@ -32,8 +32,13 @@
     <!-- <link rel="stylesheet" href="/style/style.css?ver=505">
     <link rel="stylesheet" href="/style/style-adaptive.css?ver=505"> -->
     <script src="/modal/verCss.js"></script>
+<<<<<<< Updated upstream
     <script src="/js/reg.js" defer></script>
     
+=======
+
+
+>>>>>>> Stashed changes
     <style>
         .lim {
             list-style-type: disc;
@@ -43,6 +48,8 @@
         }
     </style>
     <title>Туры</title>
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 
 <body>
@@ -53,12 +60,13 @@
 
 
     <h1 class="video__title">Видеогалерея</h1>
-    
+
 
     <section class="video">
         <div class="container">
 
             <div class="video__main">
+<<<<<<< Updated upstream
                 <ul class="video__list">
                     <li class="video__item" data-video="d1">
                         <div class="video__item__imgBlock">
@@ -87,20 +95,31 @@
                             <p class="video__item__date">12 января 2013г.</p>
                         </div>
                     </li>
+=======
+                <ul class="video__list" id="videoList">
+
+
+>>>>>>> Stashed changes
                 </ul>
                 <div class="video__display" id="display">
-                    
+
                 </div>
             </div>
 
         </div>
     </section>
-
+    <script>window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-2540972-1",
+                "type": "floorAd"
+            })
+        })
+    </script>
 
     <section class="questions" id="questions">
         <script src="/parts/questions.js"></script>
     </section>
-    
+
     <section class="contacts">
         <div class="container">
             <h2 class="contacts__title">
@@ -142,11 +161,18 @@
     </script>
 
     <footer class="footer"></footer>
-
+    <div id="yandex_rtb_R-A-2540972-2"></div>
+    <script>window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+            "blockId": "R-A-2540972-2",
+            "renderTo": "yandex_rtb_R-A-2540972-2"
+        })
+    })
+    </script>
     <script src="/js/video.js" defer></script>
     <script src="/modal/bootstrap.bundle.js"></script>
-    
-    
+
+
 
 </body>
 
