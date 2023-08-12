@@ -8,7 +8,14 @@ let videos = [
         imgUrl: 'https://i.ytimg.com/vi/PZSgaWQ1heQ/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBtgiAAoAPigIMCAAQARhbIGUoRzAP&rs=AOn4CLCp6rWOakyJFllt8GuLHAP6G2iVxQ',
         url: '<iframe src="https://www.youtube.com/embed/PZSgaWQ1heQ" title="Как подготовиться к поездкам" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
     },
-    
+    {
+        id: 1,
+        title: 'Что такое сканди-туризм?',
+        desc: 'Любите пешеходные маршруты? Хотите путешествовать не просто с интересом, но и с пользой для тела? Тогда скандинавская ходьба - это то, что вам нужно! Разнообразие вариантов путешествий для любителей скандинавской ходьбы становится всё шире.',
+        date: '19.01.2023',
+        imgUrl: 'https://i.ytimg.com/vi/TMK2FNfnwXI/maxresdefault.jpg',
+        url: '<iframe src="https://www.youtube.com/embed/TMK2FNfnwXI" title="Что такое сканди-туризм?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+    },
     
 ]
 

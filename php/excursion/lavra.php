@@ -1,4 +1,4 @@
-@@ -0,0 +1,49 @@
+
 <?php
 /* Здесь проверяется существование переменных */
 if ($_POST['fio'] == '') {
@@ -25,7 +25,7 @@ Email: $email
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub="Анкета $fio"; //сабж
-$email="Таруса"; // от кого
+$email="Лавра"; // от кого
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email <pomiruspalkami@website.ru>");
  
 ini_set('short_open_tag', 'On');
