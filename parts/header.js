@@ -11,7 +11,7 @@ document.getElementById("header").innerHTML = '\
                     <img class="header__cross-img" src="/img/header/cross.png" alt="">\
                 </li>\
                 <li class="header__item">\
-                    <a href="/index.html" class="header__link active">\
+                    <a href="/index.html" class="header__link">\
                         О нас\
                     </a>\
                 </li>\
