@@ -130,6 +130,15 @@
         align-items: center;
     }
 }
+@media (max-width: 1130px) {
+    .tour__foto__list {
+        justify-content: space-around;
+        margin-left: 0;
+    }
+    .tour__foto__item {
+        width: 150px;
+    }
+}
 @media (max-width: 1024px) { 
     .actual-tour__list {
         flex-direction: column;
@@ -141,6 +150,13 @@
     }
 }
 @media (max-width: 968px) {
+    .tour__foto__list {
+        justify-content: space-around;
+        
+    }
+    .tour__foto__item {
+        width: 100%;
+    }
     .adv {
         background-image: none;
     }
@@ -406,6 +422,37 @@
 }
 
 @media (max-width: 600px) {
+    .tour__foto__display {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .tour__foto__block {
+        width: 100%;
+        height: 110px;
+        
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+    .container__foto {
+        flex-direction: column;
+        height: max-content;
+    }
+    .tour__foto__list {
+        width: max-content;
+        justify-content: left;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .tour__foto__container {
+        height: 300px;
+    }
+    .tour__foto__item {
+        margin-right: 5px;
+        width: 150px;
+        height: 80px;
+        margin-bottom: 0;
+    }
     .container {
         padding: 0 10px;
     }
@@ -547,11 +594,13 @@
 }
   /* !important is needed sometimes */
   ::-webkit-scrollbar {
+    margin-top: 10px !important;
     width: 12px !important;
  }
 
  /* Track */
 ::-webkit-scrollbar-track {
+    
    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
    -webkit-border-radius: 10px !important;
    border-radius: 10px !important;

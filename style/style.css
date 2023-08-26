@@ -1433,7 +1433,99 @@ table * {
     width: 100%;
     height: 100%;
 }
+.container__foto {
+    margin-top: 10px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.tour__foto__display {
+
+    height: 100%;
+    width: 60%;
+
+
+}
+
+.tour__foto__block {
+    width: 38%;
+    box-shadow: 0px 0px 23px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow-y: auto;
+}
+.tour__foto__title {
+    margin-top: 20px;
+    text-align: center;
+    color: #60326B;
+}
+.tour__foto__list { 
+    
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px;
+
+}
+
+.tour__foto__item {
+    cursor: pointer;
+    width: 180px;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.tour__foto__item:hover {
+    transform: scale(0.95);
+}
+
+.tour__foto__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+.tour__foto__imgMain {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    transition: all 0.3s ease-in-out;
+}
+.tour__foto__container {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 23px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+
+.tour__foto__block::-webkit-scrollbar {
+    width: 10px;
+}
+
+.tour__foto__block::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+
+.tour__foto__block::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+.go-open {
+    opacity: 1;
+}
+.hiddden-foto {
+    opacity: 0;
+}
 .feedback {
     padding: 50px 0;
     padding-top: 0;
