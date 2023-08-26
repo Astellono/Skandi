@@ -2,7 +2,7 @@
 let btn_tour = document.querySelectorAll('.tour__page__btn');
 let btn_close = document.querySelectorAll('.close');
 let btn_map = document.querySelectorAll('.td-link');
-console.log(btn);
+
 for (var i = 0; i < btn.length; i++) {    
     btn[i].onclick = function () {
         document.body.style.overflow = 'hidden';

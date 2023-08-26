@@ -17,6 +17,9 @@
             webvisor: true
         });
     </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/89691443" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
@@ -28,7 +31,7 @@
         content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
     <meta name="yandex-verification" content="783babf1459e4598" />
     <link rel="stylesheet" href="style/clear.css">
-    <link rel="stylesheet" href="style/bootstrap.css">
+
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="/modal/verCss.js"></script>
@@ -118,107 +121,56 @@
             <h2 class="actual-tour__title">
                 Ближайшие путешестивия
             </h2>
-            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <ul class="actual-tour__list">
-
-                            <li class="actual-tour__item">
-                                <div class="actual-tour__imgBlock">
-                                    <img class="actual-tour__img" src="img/act-tour/altay1.jpg" alt="" srcset="">
-                                </div>
-                                <h3 class="actual-tour__title-block">
-                                    Алтай + Монголия. 1 группа
-                                </h3>
-                                <p class="actual-tour__date">24 августа - 2 сентября 2023г</p>
-
-                                <a href="page_tour/altay1.html" class="actual-tour__btn">Подробнее
-                                    <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                                </a>
-                            </li>
-
-                            <li class="actual-tour__item">
-                                <div class="actual-tour__imgBlock">
-                                    <img class="actual-tour__img" src="img/act-tour/altay2.jpg" alt="" srcset="">
-                                </div>
-                                <h3 class="actual-tour__title-block">
-                                    Алтай + Монголия. 2 группа
-                                </h3>
-                                <p class="actual-tour__date">3-12 сентября 2023г</p>
-
-                                <a href="page_tour/altay2.html" class="actual-tour__btn">Подробнее
-                                    <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="actual-tour__item">
-                                <div class="actual-tour__imgBlock">
-                                    <img class="actual-tour__img" src="img/act-tour/gruzia.jpg" alt="" srcset="">
-                                </div>
-                                <h3 class="actual-tour__title-block">
-                                    Грузия
-                                </h3>
-                                <p class="actual-tour__date">8-14 октября 2023г</p>
-
-                                <a href="page_tour/gruzia.html" class="actual-tour__btn">Подробнее
-                                    <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="img/act-tour/altay2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Алтай + Монголия. 2 группа (лайт)</h5>
+                            <p>3 сентября - 12 сентября 2023г</p>
+                            <a class="actual-tour__link" href="page_tour/altay2.html">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="img/act-tour/erino.JPG" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ерино</h5>
+                            <p>22 сентября - 24 сентября 2023г</p>
+                            <a class="actual-tour__link" href="page_tour/erino.html">Подробнее</a>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <ul class="actual-tour__list">
-
-
-                            
-                            <li class="actual-tour__item">
-                                <div class="actual-tour__imgBlock">
-                                    <img class="actual-tour__img" src="img/act-tour/dag.jpg" alt="" srcset="">
-                                </div>
-                                <h3 class="actual-tour__title-block">
-                                    Дагестан
-                                </h3>
-                                <p class="actual-tour__date">25-29 октября 2023г</p>
-
-                                <a href="page_tour/dagestan.html" class="actual-tour__btn">Подробнее
-                                    <svg width="30" height="24" viewbox="0 0 28 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                                            fill="#121723" />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-
+                        <img src="img/act-tour/gruzia.jpg" style="width: 100%; height: 100%;" class="d-block w-100"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Грузия</h5>
+                            <p>24 августа - 2 сентября 2023г</p>
+                            <a class="actual-tour__link" href="page_tour/gruzia.html">Подробнее</a>
+                        </div>
                     </div>
-
-
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Предыдущий</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Следующий</span>
                 </button>
             </div>
+
+
 
         </div>
     </section>
@@ -226,7 +178,8 @@
         <div class="container">
             <h2 class="teamlead__title">Руководитель</h2>
             <img class="teamlead__img" src="img/team/Lider.png" alt="">
-            <p class="teamlead__desc"><strong>Волосюк Маргарита</strong><br> Инструктор Nordic Walking (скандинавская ходьба) организатор
+            <p class="teamlead__desc"><strong>Волосюк Маргарита</strong><br> Инструктор Nordic Walking (скандинавская
+                ходьба) организатор
                 туров и экскурсий ‌в формате Scandi-trip</p>
             <button type="button" class="teamlead__btn" data-bs-toggle="modal" data-bs-target="#modal1">Подробнее
 
@@ -654,12 +607,24 @@
             });
         });
     </script>
-    <script src="js/fb.js"></script>
-    <script src="js/fileinput.js"></script>
-    <script src="modal/bootstrap.bundle.js"></script>
-    <script src="modal/Burger.js"></script>
-    <script src="modal/modal.js"></script>
 
+
+
+    <script src="js/fb.js"></script>
+
+
+
+    <script src="modal/Burger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var myCarousel = document.querySelector('.carousel')
+        var carousel = new bootstrap.Carousel(myCarousel)
+
+    </script>
+    <!-- <script src="modal/modal.js"></script> -->
 </body>
 
 </html>
