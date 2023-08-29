@@ -1876,8 +1876,7 @@ table * {
 }
 
 
-.tour__page__gid {
-}
+
 .tour__page__gid__title {
     color: #60326B;
     font-size: 24px;
@@ -1904,8 +1903,7 @@ table * {
     font-size: 18px;
     margin-bottom: 7px;
 }
-.tour__page__gid__desc {
-}
+
 .tour__page__bottom {
     display: flex;
     align-items: center;
