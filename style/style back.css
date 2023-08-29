@@ -1433,7 +1433,6 @@ table * {
     width: 100%;
     height: 100%;
 }
-
 .container__foto {
     margin-top: 10px;
     height: 400px;
@@ -1455,15 +1454,13 @@ table * {
     border-radius: 10px;
     overflow-y: auto;
 }
-
 .tour__foto__title {
     margin-top: 20px;
     text-align: center;
     color: #60326B;
 }
-
-.tour__foto__list {
-
+.tour__foto__list { 
+    
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -1481,7 +1478,6 @@ table * {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
-
 .tour__foto__item:hover {
     transform: scale(0.95);
 }
@@ -1492,16 +1488,14 @@ table * {
     object-fit: cover;
     transition: all 0.4s ease-in-out;
 }
-
 .tour__foto__imgMain {
     opacity: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+    
     transition: all 0.3s ease-in-out;
 }
-
 .tour__foto__container {
     overflow: hidden;
     border-radius: 10px;
@@ -1526,15 +1520,12 @@ table * {
     background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
     box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
 }
-
 .go-open {
     opacity: 1;
 }
-
 .hiddden-foto {
     opacity: 0;
 }
-
 .feedback {
     padding: 50px 0;
     padding-top: 0;
@@ -1699,69 +1690,50 @@ table * {
 
 .tour__page__header {
     display: flex;
-    flex-direction: column;
+
     justify-content: space-between;
 }
 
 .tour__page__title {
     display: block;
-    margin-bottom: 15px;
     width: 100%;
     text-align: center;
     margin-top: 0;
-    font-size: 24px;
-    color: white;
+    font-size: 38px;
+    color: #60326B;
     flex-basis: 1;
-   
+    margin-bottom: 1px;
     height: max-content;
 }
 
 .tour__page__date {
     margin-bottom: 10px;
-    color: white;
+    color: #60326B;
     text-align: center;
-    font-size: 18px;
 
 }
 
 .tour__page__imgBox {
-    position: relative;
-    margin-bottom: 15px;
+
     width: 100%;
-    height: 200px;
-    border-radius: 10px 10px 0 0;
+
+
+    max-width: 854px;
+    border-radius: 10px;
     overflow: hidden;
+
     margin-right: 10px;
-
-
-}
-
-.tour__page__titleBox {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-
 }
 
 .tour__page__img {
-    filter: brightness(0.7);
+
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .tour__page__infoBlock {
-    width: 100%;
+    max-width: 630px;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -1769,8 +1741,9 @@ table * {
 
 .tour__page__rate {
 
-    margin: 20px 0;
-    
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 
 }
 
@@ -1790,11 +1763,6 @@ table * {
 }
 
 .tour__page__rateTitle {
-    font-size: 24px;
-    width: 300px;
-    margin-bottom: 15px;
-    text-align: center;
-    
     color: #60326B;
 
 }
@@ -1875,54 +1843,6 @@ table * {
     color: #c44f42;
 }
 
-
-.tour__page__gid {
-}
-.tour__page__gid__title {
-    color: #60326B;
-    font-size: 24px;
-    width: 300px;
-    
-    margin-bottom: 20px;
-}
-.tour__page__gid__list {
-    display: flex;
-}
-.tour__page__gid__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    
-}
-.tour__page__gid__img {
-    width: 180px;
-    margin-bottom: 5px;
-}
-.tour__page__gid__title-member {
-    color: #60326B;
-    font-size: 18px;
-    margin-bottom: 7px;
-}
-.tour__page__gid__desc {
-}
-.tour__page__bottom {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-}
-
-
-
-
-
-
-
-
-
-
-
 .coop {
     margin-bottom: 30px;
 }
@@ -1971,7 +1891,24 @@ table * {
     width: 30%;
 }
 
+.gid {
+    background-color: white;
+    margin-bottom: 20px;
+}
 
+.gid__title {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 112px;
+    color: #48344E;
+
+}
+
+.gid__list {
+    justify-content: space-around;
+}
 
 
 
