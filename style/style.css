@@ -2624,7 +2624,7 @@ body.mod {
 
 .video__item__imgBlock {
     height: 100%;
-    width: 120px;
+    min-width: 120px;
     margin-right: 10px;
 }
 

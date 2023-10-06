@@ -1,22 +1,35 @@
 
 let videos = [
     {
-        id: 0,
-        title: 'Подготовка к поездкам',
-        desc: 'Краткое описание необходимых вещей в однодневных походах в формате scandi-trip',
-        date: '02.03.2022',
-        imgUrl: 'https://i.ytimg.com/vi/PZSgaWQ1heQ/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBtgiAAoAPigIMCAAQARhbIGUoRzAP&rs=AOn4CLCp6rWOakyJFllt8GuLHAP6G2iVxQ',
-        url: '<iframe src="https://www.youtube.com/embed/PZSgaWQ1heQ" title="Как подготовиться к поездкам" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+        id: 2,
+        title: 'Скандинавская ходьба как способ реабилитации',
+        desc: `На лекции мы узнали о преимуществах скандинавской ходьбы, её пользе для здоровья и способах применения в «домашних» условиях.'
+        Поговорили о причинах возникновения травм и способах реабилитации с помощью упражнений со скандинавскими палками, а также получили советы по выбору инвентаря для занятий.
+        
+        Лекцию провёл опытный инструктор по скандинавской ходьбе Анна Ефимова, инструктор проекта «По миру с палками», которая поделилась своими знаниями и опытом в этой области.
+        Анна рассказала о различных техниках ходьбы, которые помогут вам достичь лучших результатов.`,
+        date: '19.01.2023',
+        imgUrl: '//img.youtube.com/vi/kc45eI8rAqo/mqdefault.jpg',
+        url: '<iframe src="https://www.youtube.com/embed/kc45eI8rAqo" title="Скандинавская ходьба как способ реабилитации" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
     },
+    
     {
         id: 1,
         title: 'Что такое сканди-туризм?',
         desc: 'Любите пешеходные маршруты? Хотите путешествовать не просто с интересом, но и с пользой для тела? Тогда скандинавская ходьба - это то, что вам нужно! Разнообразие вариантов путешествий для любителей скандинавской ходьбы становится всё шире.',
         date: '19.01.2023',
-        imgUrl: 'https://i.ytimg.com/vi/TMK2FNfnwXI/maxresdefault.jpg',
+        imgUrl: '//img.youtube.com/vi/TMK2FNfnwXI/mqdefault.jpg',
         url: '<iframe src="https://www.youtube.com/embed/TMK2FNfnwXI" title="Что такое сканди-туризм?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
     },
     
+    {
+        id: 0,
+        title: 'Подготовка к поездкам',
+        desc: 'Краткое описание необходимых вещей в однодневных походах в формате scandi-trip',
+        date: '02.03.2022',
+        imgUrl: '//img.youtube.com/vi/PZSgaWQ1heQ/mqdefault.jpg',
+        url: '<iframe src="https://www.youtube.com/embed/PZSgaWQ1heQ" title="Как подготовиться к поездкам" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+    },
 ]
 
 let list = document.getElementById('videoList');
