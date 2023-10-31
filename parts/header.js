@@ -42,7 +42,7 @@ document.getElementById("header").innerHTML = '\
                 </svg>\
             </div>\
             <div class="header__contacts">\
-                <p class="header__number">+7 (916) 202-73-90</p>\
+                <p class="header__number"><a href="tel: +79162027390">+7 (916) 202-73-90</a></p>\
                 <ul class="header__soc-list">\
                     <li class="header__soc-item">\
                         <a href="https://vk.com/pomiru_spalkami" class="header__soc-link" target="_blank">\

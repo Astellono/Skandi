@@ -25,7 +25,7 @@ Email: $email
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub="Анкета $fio"; //сабж
-$email="Кашира"; // от кого
+$email="Лужники Экскурсия"; // от кого
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email <pomiruspalkami@website.ru>");
  
 ini_set('short_open_tag', 'On');
@@ -39,7 +39,7 @@ header('Refresh: 3; URL=index.html');
 <title>Спасибо! Мы свяжемся с вами!</title>
 <meta name="generator">
 <script type="text/javascript">
-setTimeout('location.replace("/index.html")', 3000);
+setTimeout('location.replace("../../index.html")', 3000);
 /*Изменить текущий адрес страницы через 3 секунды (3000 миллисекунд)*/
 </script> 
 </head>
