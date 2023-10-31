@@ -59,7 +59,7 @@
             <div class="tour__page__header">
 
                 <div class="tour__page__imgBox">
-                    <img class="tour__page__img" src="/img/act-tour/dag.jpg" alt="">
+                    <img class="tour__page__img" src="/img/act-tour/uzb.jpg" alt="">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
                             НОВОГОДНИЙ СКАНДИ-ТУР «СОКРОВИЩА УЗБЕКИСТАНА»
@@ -178,7 +178,8 @@
                                     самым грандиозным творением Самарканда<br>
                                     Прогулка по знаменитому базару Сиаб
                                 </li>
-
+                                <li class="modal-active-item">Обед в ресторане города (входит в стоимость)</li>
+                                <li class="modal-active-item">Ужин свободный (не входит в стоимость). Ночевка в отеле</li>
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -206,9 +207,8 @@
                                 <li class="modal-active-item">Утренняя зарядка (возможно на крыше полюбившегося нам
                                     отеля с прекрасными видами)</li>
                                 <li class="modal-active-item">Завтрак в отеле (входит в стоимость)</li>
-                                <li class="modal-active-item">Выезд с вещами</li>
-                                <li class="modal-active-item">Трансфер на экскурсию на Бархан Сарыкум, Сулакский каньон
-                                </li>
+                               
+                               
                                 <li class="modal-active-item">Продолжение экскурсии:<br>
                                     Архитектурный комплекс Шахи - Зинда (11-15 век) - место захоронения царственных особ
                                     и знати. Но основным мавзолеем, откуда и начинается некрополь, считается мнимая
@@ -364,7 +364,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
                             <h3>
-                                День 7 (8 января)
+                                День 6 (8 января)
                             </h3>
                         </button>
                     </h2>
@@ -400,6 +400,7 @@
                         Проживание в указанных гостиницах (или одинаковых по уровню) c двухместным размещением
                         (регистрация проживания).
                         Питание: завтраки в отелях + обеды ( 6 ).
+                        жд билеты на поезд Бухара-Хива.
                         Комфортабельный кондиционированный транспорт на весь маршрут
                         10-15 человек – автобус до 30 мест.
                         Встречи / проводы в аэропорту.
@@ -520,7 +521,16 @@
         </div>
     </section>
     <section class="questions" id="questions">
-        <script src="/parts/questions.js"></script>
+        <div class="container">
+            <h2 class="questions__title">Задать вопрос</h2>
+            <form action="/php/qTour/qUzb.php" method="POST" class="questions__form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="tel" placeholder="Телефон" required>
+                <input type="text" name="email" placeholder="email" required>
+                <input required type="text" class="questions__input-text" name="message" placeholder="Ваш вопрос?">
+                <input type="submit" value="Отправить" class="questions__btn">
+            </form>
+        </div>
     </section>
 
     <section class="contacts" id="contacts">
