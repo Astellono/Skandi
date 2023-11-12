@@ -17,7 +17,7 @@ $mes = "Имя: $name\nТелефон: $tel \nemail: $email\nВопрос: $mess
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub=$name; //сабж
-$email='Вопрос Ломоносова'; // от кого
+$email='Вопрос Мурманск'; // от кого
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email <pomiruspalkami@website.ru>");
  
 ini_set('short_open_tag', 'On');
