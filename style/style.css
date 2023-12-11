@@ -2493,6 +2493,7 @@ body.mod {
 }
 
 .menu__title {
+    margin-top: 20px;
     text-align: center;
     color: #60326B;
 }
@@ -2512,17 +2513,25 @@ body.mod {
     height: 200px;
     outline: 1px solid #4F3156;
     font-size: 24px;
-    color: #4F3156;
     border-radius: 10px;
     font-style: italic;
     margin-bottom: 50px;
+    
 }
 
 .menu__item:last-child {
     width: 40%;
     margin: 0 auto;
 }
-
+.menu__link {
+    color: white;
+}
+.menu__link:hover{
+    color: #d3dd74;
+}
+.menu__item:hover {
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
 .menu__link:before {
     content: '';
     position: absolute;
@@ -2531,6 +2540,50 @@ body.mod {
     width: 100%;
     height: 100%;
 }
+
+
+
+.menu__tour {
+    background: rgba(0, 0, 0, .40) url('/img/menu/tourMenu.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-blend-mode: darken;
+}
+.menu__ex {
+    background: rgba(0, 0, 0, .40) url('/img/menu/menuEx.jpg');
+    background-size: cover;
+    
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+}
+.menu__lesson {
+    background: rgba(0, 0, 0, .40) url('/img/menu/menuLesson.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-blend-mode: darken;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .promo {
     padding: 50px 0;

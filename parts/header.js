@@ -16,18 +16,13 @@ document.getElementById("header").innerHTML = '\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/lesson.html" class="header__link">\
-                        Занятия\
+                    <a href="/menu.html" class="header__link">\
+                        Сканди-активности\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/tour.html" class="header__link">\
-                        Туры\
-                    </a>\
-                </li>\
-                <li class="header__item">\
-                    <a href="/excursions.html" class="header__link">\
-                        Сканди-мероприятия\
+                    <a href="" class="header__link disable">\
+                        Товары\
                     </a>\
                 </li>\
                 <li class="header__item">\
