@@ -1,0 +1,22 @@
+let linkForm = document.querySelectorAll('.cart');
+let exForm = document.getElementById('exForm')
+let modal = document.querySelector('.mod')
+
+linkForm.forEach(e => {
+
+
+    e.addEventListener('click', () => {
+        console.log(e.dataset.name);
+        let nameHash = '#form' + e.dataset.name
+        // console.log(window.location.hash);
+        modal.id = nameHash.slice(1)
+        e.setAttribute('href', nameHash)
+
+
+        exForm.setAttribute('action', 'php/shop/' + e.dataset.name + '.php')
+
+
+    })
+});
+exForm.setAttribute('action', 'php/shop/' + window.location.hash.slice(5) + '.php')
+modal.id = window.location.hash.slice(1)

@@ -21,7 +21,7 @@ document.getElementById("header").innerHTML = '\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="" class="header__link disable">\
+                    <a href="/shop.html" class="header__link">\
                         Товары\
                     </a>\
                 </li>\
