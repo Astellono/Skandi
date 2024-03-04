@@ -844,13 +844,24 @@ button {
     margin-bottom: 10px;
     text-align: justify;
 }
-
+.modal-diplome-title {
+    margin: 6px 0;
+    color: #4F3156;
+}
 .modal-tour-list {
     margin-bottom: 20px;
 }
 
 .modal-tour-title {
     margin-bottom: 20px;
+}
+.modal-diplome-img {
+    width: 100%;
+}
+.modal-list-diplome {
+    display: flex;
+    gap: 10px;
+    
 }
 
 /* .modal-tour-item {
@@ -871,8 +882,11 @@ button {
 }
 
 .modal-body {
+    font-size: 24px;
+    font-weight: 700;
     text-align: center;
     padding: 0 1rem 0 1rem;
+    margin: 10px 0;
 }
 
 .modal-tour-desc {
