@@ -3,21 +3,7 @@
         margin-left: 300px;
     }
 
-    .adv__item {
-        width: 400px;
-        height: 350px;
-        border-radius: 30px;
-    }
-
-    .adv__item-title {
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-
-    .adv__img {
-        width: 300px;
-    }
-
+   
     .teamlead__img {
         width: 400px;
     }
@@ -162,43 +148,22 @@
         width: 100%;
     }
 
-    .adv {
-        background-image: none;
-    }
+  
 
     .about__title {
         width: 100%;
         text-align: center;
     }
 
-    .adv__title {
-        width: 100%;
-        font-size: 32px;
-        text-align: center;
-    }
-
-    .adv__list {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .adv__item {
-        width: 100%;
-        box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-    }
+   
 
     .teamlead__img {
         width: 300px;
     }
 
-    .adv__item-title {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
+  
 
-    .adv__img {
-        width: 300px;
-    }
+   
 
     .excursions__item {
         flex-direction: column;
@@ -430,6 +395,36 @@
 }
 
 @media (max-width: 600px) {
+    .adv__item {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .adv__img__box {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+    .adv__img  {
+        width: 
+        150px;
+    }
+    .adv__item:nth-child(2n) {
+        flex-direction: column;
+        padding: 10px;
+       
+    }
+    .adv__item-title {
+        width: 100%;
+        border-top:1px solid black ;
+        border-bottom:1px solid black ;
+    }
+    .adv__item:nth-child(2n) > .adv__img__box {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .adv__contant__box {
+        width: 100%;
+    }
     .tour__foto__display {
         width: 100%;
         height: 300px;
@@ -530,9 +525,7 @@
         font-size: 16px;
     }
 
-    .adv__item-title {
-        font-size: 16px;
-    }
+  
 
     .otziv__item {
         flex-direction: column;
