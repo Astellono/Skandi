@@ -168,7 +168,7 @@
     .excursions__item {
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 560px;
+      
         flex-wrap: nowrap;
         border-radius: 10px 10px 0 0;
     }
@@ -190,7 +190,7 @@
 
     .excursions__item-title {
         text-align: center;
-
+        font-size: 12px;
     }
 
     .excursions__date {
