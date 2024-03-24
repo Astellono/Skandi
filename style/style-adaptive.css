@@ -199,7 +199,7 @@
 
     .excursions__img-block {
         width: 100%;
-        height: 300px;
+       
         order: 0;
         border-radius: 10px 10px 0 0;
     }
@@ -648,10 +648,45 @@
         border: none;
         border-bottom: 1px solid black;
     }
-
+    .excursions__titleBox {
+       
+        position: static;
+        overflow: visible;
+        height: max-content;
+        
+    
+    }
+    .excursions__img-block {
+        height: 200px;
+        width: 100%;
+    }
+    .excursions__item-title {
+        position: static;
+        color: black;
+        display:block;
+        height: max-content;
+        font-size: 14px;
+        padding: 0;
+    }
+    .excursions__img {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        align-items: center;
+        object-fit: cover;
+        object-position: 50% 50%; 
+        filter: none;
+    }
+    .excursions__item {
+        height: max-content;
+    }
     /* .partner__link {
         width: 300px;
     } */
+    .long {
+        height: auto;
+
+    }
 }
 
 /* !important is needed sometimes */
