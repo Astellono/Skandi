@@ -2447,9 +2447,9 @@ body.mod {
     height: max-content;
 }
 
-.excursions__item.long .excursions__img-block {
+/* .excursions__item.long .excursions__img-block {
     height: auto;
-}
+} */
 
 .exursions__podr {
     position: absolute;
