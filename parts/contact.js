@@ -8,7 +8,7 @@ document.getElementById("contacts").innerHTML = '\
                 <a href="tel: +79162027390">+7 (916) 202-73-90</a>\
                 </li>\
                 <li class="contacts__item">Телеграмм: <a class="contact__t-link"\
-                        href="https://t.me/+gH_EZn6OVsczNTJi">https://t.me/+gH_EZn6OVsczNTJi</a></li>\
+                        href="https://t.me/pomiruspalkami">https://t.me/pomiruspalkami</a></li>\
                 <li class="contacts__item">VK: <a class="contact__t-link"\
                         href="https://vk.com/pomiru_spalkami">vk.com/pomiru_spalkami</a></li>\
             </ul>\

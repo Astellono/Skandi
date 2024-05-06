@@ -1,6 +1,6 @@
 let cssId = 'myCss';  // you could encode the css path itself to generate id..
 let cssId2 = 'myCssAdd';
-let ver = '533'
+let ver = '534'
 if (!document.getElementById(cssId)) {
     var head = document.getElementsByTagName('head')[0];
     var link = document.createElement('link');

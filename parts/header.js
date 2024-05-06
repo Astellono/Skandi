@@ -44,7 +44,7 @@ document.getElementById("header").innerHTML = '\
                             <img class="header__soc-icon" src="/img/header/vk.svg" alt="">\
                         </a>\
                     </li>\
-                        <a href="https://t.me/+gH_EZn6OVsczNTJi" class="header__soc-link" target="_blank">\
+                        <a href="https://t.me/pomiruspalkami" class="header__soc-link" target="_blank">\
                             <img class="header__soc-icon" src="/img/header/telega.svg" alt="">\
                         </a>\
                     </li>\
