@@ -1,6 +1,8 @@
 let textAbout = document.getElementById('textAbout')
 let textBot = document.getElementById('storyBot')
-let cnt =0;
+let cnt = 0;
+
+
 textAbout.addEventListener('click',()=> {
     cnt++;
     textAbout.classList.toggle("about__storyFull")
@@ -10,6 +12,8 @@ textAbout.addEventListener('click',()=> {
         console.log("Второй клик");
     } else textBot.innerHTML = "<p>▲</p>"
 })
+
+
 textBot.addEventListener('click',()=> {
     cnt++;
     textAbout.classList.toggle("about__storyFull")

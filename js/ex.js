@@ -25,7 +25,8 @@ function render() {
                 e.remove()
             })
         }
-
+        d=1
+        console.log(d*24*60*60);
         element.onclick = function () {
             let flag = 0;
 
