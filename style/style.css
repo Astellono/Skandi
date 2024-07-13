@@ -295,15 +295,23 @@ button {
     line-height: 38px;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    /* -webkit-line-clamp: 5; */
     overflow: hidden;
     display: -webkit-box;
 
     text-align: justify;
-    -webkit-transition: max-height .2s ease-in-out;
-    transition: max-height .2s ease-in-out;
+    -webkit-transition: max-height .4s ease-in-out;
+    transition: max-height .4s ease-in-out;
     max-height: 200px;
     border-bottom: 1px solid black;
+}
+.about__storySmall {
+    -webkit-line-clamp: 5;
+    max-height: 200px;
+}
+.about__storyFull {
+    -webkit-line-clamp: 1000;
+    max-height: 1000px;
 }
 
 .about__storyBot {
@@ -338,10 +346,7 @@ button {
     color: #6c5fb8;
 }
 
-.about__storyFull {
-    -webkit-line-clamp: 1000;
-    max-height: 1000px;
-}
+
 
 /*----------------------------------------------------------------------------------------------*/
 
