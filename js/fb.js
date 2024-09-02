@@ -5,7 +5,7 @@ document.getElementById('feedback-form').addEventListener('submit', function(evt
     http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
         alert(http.responseText);
-        if (http.responseText.indexOf(f.nameFF.value) == 0) { // очистить поле сообщения, если в ответе первым словом будет имя отправителя
+        if (http.responseText.indexOf(f.nameFF.value) == 0) { 
           f.messageFF.removeAttribute('value');
           f.messageFF.value='';
         }
