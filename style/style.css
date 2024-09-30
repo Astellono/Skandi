@@ -584,6 +584,7 @@ button {
 
 .calendar__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     overflow: hidden;
     padding: 20px;
@@ -652,10 +653,10 @@ button {
 .calendar__dayLink {
     font-family: "Pacifico", cursive;
     display: flex;
-    flex-direction: center;
+    justify-content: center;
     align-items: center;
     height: 40px;
-    
+    width: 80%;
 
 }
 

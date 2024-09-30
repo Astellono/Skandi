@@ -687,6 +687,12 @@
         height: auto;
 
     }
+    .calendar__list {
+        flex-direction: column;
+    }
+    .calendar__item {
+        margin-bottom: 10px;
+    }
 }
 
 /* !important is needed sometimes */
