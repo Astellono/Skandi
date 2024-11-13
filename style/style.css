@@ -586,7 +586,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    overflow: hidden;
+    
     padding: 20px;
     
 }
@@ -659,16 +659,59 @@ button {
     width: 80%;
 
 }
-
 .calendar__day__active {
-    background: rgb(112, 30, 101);
-    border-radius: 100px;
-
+    position: relative;
+    
+  }
+  
+  /* Текст подсказки */
+  .calendar__day__active .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    /* Расположите текст подсказки */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Исчезают в подсказке */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Подсказка стрелка */
+  .calendar__day__active .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Отображение текста подсказки при наведении курсора мыши на контейнер подсказки */
+  .calendar__day__active:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+.calendar__day__active {
+    /* background: rgb(112, 30, 101); */
+    
+    position: relative;
     transition: all 0.2s ease-in-out;
 }
 
-.calendar__day__active:hover {
-    opacity: 0.5;
+.calendar__day__active:hover  {
+    outline: auto;
 }
 
 .calendar__day__active>.calendar__dayLink {

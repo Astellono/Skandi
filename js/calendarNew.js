@@ -1,55 +1,12 @@
-
-let response = await fetch("https://calendar-json-app.adaptable.app/fullyear/2025");
+import { mounthData } from './calendar2025.js'
 import { tourList } from "./tourList.js";
-console.log(tourList);
-let data = []
-if (response.ok) { // если HTTP-статус в диапазоне 200-299
-    // получаем тело ответа (см. про этот метод ниже)
-    data = await response.json();
 
-} else {
-    alert("Ошибка HTTP: " + response.status);
-}
-
-
-let mounthArr = Object.keys(data)
-
-let firstElement = mounthArr.shift();
-
-
-let mounth = [];
-
-mounthArr.forEach(element => {
-    let arrFix = [].concat(...data[element])
-    let del = arrFix.shift()
-    if (arrFix[0] === 2) {
-        let newArr = []
-        arrFix.forEach(element => {
-            if (element != 0)
-
-                newArr.push(element - 1)
-        });
-        newArr.unshift(0, 0, 0, 0, 0, 0)
-        newArr.push(newArr[newArr.length - 1] + 1)
-        mounth.push({
-            name: element,
-            date: newArr
-        }
-        )
-    } else {
-        mounth.push({
-            name: element,
-            date: arrFix
-        }
-
-        )
-    }
-});
-
-console.log(mounth);
+let data = mounthData
+console.log(data);
 
 
 
+let tmpColor = 'green';
 
 
 
@@ -102,35 +59,46 @@ let mounthList = document.querySelectorAll(".caledar__dayList")
 
 for (let i = 0; i < mounthList.length; i++) {
 
-    mounth[i].date.forEach(e => {
+    data[i].days.forEach(e => {
         if (e > 0) {
+
             let dateItem = document.createElement("li")
             let dateLink = document.createElement('a')
-
+            let toolTip = document.createElement('span')
             dateItem.classList.add("calendar__day")
             dateLink.classList.add("calendar__dayLink")
+            let curDate = e + '.' + Number(i + 1)
 
-            for (let j = 0; j < tourList.length; j++) {
 
-                let mounthT = tourList[j].date.substring(3, 5)
-                let dayT = tourList[j].date.substring(0, 2)
+            tourList.forEach(tour => {
 
-                console.log(mounthT);
 
-                if ((e == dayT || '0' + e == dayT) && (i + 1 == mounthT) || ('0' + i + 1 == mounthT)) {
+                for (let k = 0; k < tour.date.length; k++) {
 
-                    dateLink.setAttribute('href', tourList[j].link)
-                    dateLink.setAttribute('target', "_blank")
-                    dateLink.classList.add("calendar__day__active")
+                    if (tour.date[k] == curDate) {
+                        dateItem.classList.add("calendar__day__active")
+
+                        toolTip.textContent = tour.nameT
+                        toolTip.classList.add('tooltiptext')
+                        dateItem.style.backgroundColor = tour.color
+                        tmpColor = tour.color
+
+                        // } else {
+                        //     dateItem.style.backgroundImage = 'linear-gradient(45deg, green 50%, red 50%)'
+                        //     tmpColor = tour.color
+                        // }
+
+                        dateLink.setAttribute('href', tour.link)
+                    }
                 }
+            });
 
-            }
 
             dateLink.append(e);
-
-
             mounthList[i].append(dateItem)
+
             dateItem.append(dateLink)
+            dateItem.append(toolTip)
 
         }
         else {
@@ -146,6 +114,11 @@ for (let i = 0; i < mounthList.length; i++) {
         }
     });
 }
+
+
+
+
+
 
 let slideRight = document.getElementById("slideRight")
 let slideLeft = document.getElementById("slideLeft")

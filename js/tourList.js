@@ -1,32 +1,55 @@
+
+const getDatesArray = (start, end) => {
+    const arr = [];
+    while (start <= end) {
+        arr.push(new Date(start));
+        start.setDate(start.getDate() + 1);
+    }
+    let arrNew = []
+    arr.forEach(e => {
+        let getDate = e.getDate()
+        let getMounth = e.getMonth()+1
+        arrNew.push(getDate + '.' +  getMounth)
+    });
+    return arrNew;
+};
+
 export let tourList = [
     {
         nameT: "Карелия",
-        date: "02.01",
-        link: "https://www.pomiru-spalkami.ru/page_tour/karelia.html"
+        date: getDatesArray(new Date('2025-01-02'), new Date('2025-01-07')),
+        link: "https://www.pomiru-spalkami.ru/page_tour/karelia.html",
+        color: 'green'
+
     },
     {
         nameT: "Кахетия",
-        date: "01.05",
-        link: "https://www.pomiru-spalkami.ru/page_tour/kahetia.html"
+        date: getDatesArray(new Date('2025-05-01'), new Date('2025-05-07')),
+        link: "https://www.pomiru-spalkami.ru/page_tour/kahetia.html",
+        color: "red"
     },
     {
         nameT: "Азербайджан",
-        date: "18.05",
-        link: "https://www.pomiru-spalkami.ru/page_tour/azer.html"
+        date: getDatesArray(new Date('2025-05-18'), new Date('2025-05-24')),
+        link: "https://www.pomiru-spalkami.ru/page_tour/azer.html",
+        color: "#59bd9f"
     },
     {
         nameT: "Киргизия",
-        date: "12.06",
-        link: "https://www.pomiru-spalkami.ru/page_tour/kirg.html"
+        date: getDatesArray(new Date('2025-06-12'), new Date('2025-06-22')),
+        link: "https://www.pomiru-spalkami.ru/page_tour/kirg.html",
+        color: "#3f708c"
     },
     {
         nameT: "Монголия",
-        date: "14.08",
-        link: "https://www.pomiru-spalkami.ru/page_tour/mongol.html"
+        date: getDatesArray(new Date('2025-08-14'), new Date('2025-08-24')),
+        link: "https://www.pomiru-spalkami.ru/page_tour/mongol.html",
+        color: "#c9ab5f"
     },
     {
         nameT: "Узбекистан",
-        date: "06.09",
-        link: "https://www.pomiru-spalkami.ru/page_tour/uz.html"
+        date: getDatesArray(new Date('2025-09-06'), new Date('2025-09-16')),
+        link: "https://www.pomiru-spalkami.ru/page_tour/uz.html",
+        color: "#bd1e73"
     },
 ]

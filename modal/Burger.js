@@ -18,6 +18,7 @@ if (document.location.href.indexOf('showModal') != -1) {
 }
 
 let div = document.getElementById('openModal')
+
 div.addEventListener('click', () => {
     document.body.style.overflowY = 'visible'
 })
