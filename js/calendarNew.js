@@ -76,6 +76,12 @@ for (let i = 0; i < mounthList.length; i++) {
                 for (let k = 0; k < tour.date.length; k++) {
 
                     if (tour.date[k] == curDate) {
+                        if (k==0) {
+                            dateItem.style.borderRadius = "20px 0 0 20px"
+                        }
+                        if (k == tour.date.length - 1) {
+                            dateItem.style.borderRadius = "0 20px 20px 0"
+                        }
                         dateItem.classList.add("calendar__day__active")
 
                         toolTip.textContent = tour.nameT
@@ -83,10 +89,7 @@ for (let i = 0; i < mounthList.length; i++) {
                         dateItem.style.backgroundColor = tour.color
                         tmpColor = tour.color
 
-                        // } else {
-                        //     dateItem.style.backgroundImage = 'linear-gradient(45deg, green 50%, red 50%)'
-                        //     tmpColor = tour.color
-                        // }
+                     
 
                         dateLink.setAttribute('href', tour.link)
                     }
