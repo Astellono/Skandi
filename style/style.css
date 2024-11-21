@@ -2159,10 +2159,14 @@ table * {
 .tour__page__priceIn {
     color: #42c454;
     margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .tour__page__priceOff {
     color: #c44f42;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 
