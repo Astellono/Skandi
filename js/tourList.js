@@ -48,7 +48,7 @@ export let tourList = [
         date: getDatesArray(new Date('2025-06-12'), new Date('2025-06-22')),
         link: "page_tour/kirg.html",
         color: "#3f708c",
-        srcImg:'img/act-tour/kirg.jpg' ,
+        srcImg:'img/act-tour/kirg.JPG' ,
     },
     {
         nameT: "Монголия",
