@@ -15,12 +15,20 @@ const getDatesArray = (start, end) => {
 };
 
 export let tourList = [
+    
     {
         nameT: "Карелия",
         date: getDatesArray(new Date('2025-01-02'), new Date('2025-01-07')),
         link: "page_tour/karelia.html",
         color: 'green',
         srcImg:'img/act-tour/karelia.jpg' ,
+    },
+    {
+        nameT: "Осетия",
+        date: getDatesArray(new Date('2025-02-21'), new Date('2025-02-24')),
+        link: "page_tour/osetia.html",
+        color: '#add',
+        srcImg:'img/act-tour/osetia.jpg' ,
     },
     {
         nameT: "Мурманск",
