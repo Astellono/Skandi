@@ -38,6 +38,13 @@ export let tourList = [
         srcImg:'img/act-tour/murm.jpg' ,
     },
     {
+        nameT: "Армения",
+        date: getDatesArray(new Date('2025-04-16'), new Date('2025-04-20')),
+        link: "page_tour/arm.html",
+        color: '#59bd21',
+        srcImg:'img/act-tour/arm.jpg' ,
+    },
+    {
         nameT: "Кахетия",
         date: getDatesArray(new Date('2025-05-01'), new Date('2025-05-07')),
         link: "page_tour/kahetia.html",
@@ -57,6 +64,13 @@ export let tourList = [
         link: "page_tour/kirg.html",
         color: "#3f708c",
         srcImg:'img/act-tour/kirg.JPG' ,
+    },
+    {
+        nameT: "Башкирия",
+        date: getDatesArray(new Date('2025-08-06'), new Date('2025-08-10')),
+        link: "page_tour/bash.html",
+        color: "#42d",
+        srcImg:'img/act-tour/bash.jpg' ,
     },
     {
         nameT: "Монголия",
