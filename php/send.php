@@ -18,6 +18,8 @@ $mes = "Имя: $name\nТелефон: $tel \nemail: $email\nВопрос: $mess
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub=$name; //сабж
 $email='Вопрос'; // от кого
+$sub = '=?UTF-8?B?'.base64_encode($sub).'?=';
+$email = '=?UTF-8?B?'.base64_encode($email).'?=';
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email <pomiruspalkami@website.ru>");
  
 ini_set('short_open_tag', 'On');

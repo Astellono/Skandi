@@ -15,27 +15,21 @@ const getDatesArray = (start, end) => {
 };
 
 export let tourList = [
+
     
-    {
-        nameT: "Карелия",
-        date: getDatesArray(new Date('2025-01-02'), new Date('2025-01-07')),
-        link: "page_tour/karelia.html",
-        color: 'green',
-        srcImg:'img/act-tour/karelia.jpg' ,
-    },
-    {
-        nameT: "Осетия",
-        date: getDatesArray(new Date('2025-02-21'), new Date('2025-02-24')),
-        link: "page_tour/osetia.html",
-        color: '#add',
-        srcImg:'img/act-tour/osetia.jpg' ,
-    },
     {
         nameT: "Мурманск",
         date: getDatesArray(new Date('2025-03-06'), new Date('2025-03-10')),
         link: "page_tour/murm.html",
         color: '#AD66D5',
         srcImg:'img/act-tour/murm.jpg' ,
+    },
+    {
+        nameT: "Суздаль",
+        date: getDatesArray(new Date('2025-03-29'), new Date('2025-03-30')),
+        link: "page_tour/suz.html",
+        color: '#AD6612',
+        srcImg:'img/act-tour/suz.jpg' ,
     },
     {
         nameT: "Армения",
@@ -86,4 +80,11 @@ export let tourList = [
         color: "#bd1e73",
         srcImg:'img/act-tour/uz.jpeg' ,
     },
+    {
+        nameT: "Осетия",
+        date: getDatesArray(new Date('2025-11-20'), new Date('2025-11-23')),
+        link: "page_tour/osetia.html",
+        color: '#add',
+        srcImg:'img/act-tour/osetia.jpg' ,
+    }
 ]
