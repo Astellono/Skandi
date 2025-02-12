@@ -586,9 +586,9 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     padding: 20px;
-    
+
 }
 
 .calendar {
@@ -601,7 +601,7 @@ button {
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
-    
+
     flex: 0 0 30%;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
@@ -638,7 +638,7 @@ button {
 .caledar__dayList {
     display: grid;
     height: 75%;
-    
+
 }
 
 .calendar__day {
@@ -659,13 +659,14 @@ button {
     width: 80%;
 
 }
+
 .calendar__day__active {
     position: relative;
-    
-  }
-  
-  /* Текст подсказки */
-  .calendar__day__active .tooltiptext {
+
+}
+
+/* Текст подсказки */
+.calendar__day__active .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #555;
@@ -673,21 +674,21 @@ button {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-  
+
     /* Расположите текст подсказки */
     position: absolute;
     z-index: 1;
     bottom: 125%;
     left: 50%;
     margin-left: -60px;
-  
+
     /* Исчезают в подсказке */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Подсказка стрелка */
-  .calendar__day__active .tooltiptext::after {
+}
+
+/* Подсказка стрелка */
+.calendar__day__active .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -696,21 +697,22 @@ button {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Отображение текста подсказки при наведении курсора мыши на контейнер подсказки */
-  .calendar__day__active:hover .tooltiptext {
+}
+
+/* Отображение текста подсказки при наведении курсора мыши на контейнер подсказки */
+.calendar__day__active:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
+}
+
 .calendar__day__active {
     /* background: rgb(112, 30, 101); */
-    
+
     position: relative;
     transition: all 0.2s ease-in-out;
 }
 
-.calendar__day__active:hover  {
+.calendar__day__active:hover {
     outline: auto;
 }
 
@@ -745,6 +747,7 @@ button {
     font-size: 14px;
     font-family: "Pacifico", cursive;
 }
+
 .calendar__buttonList {
     display: flex;
     justify-content: space-between;
@@ -752,11 +755,13 @@ button {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .calendar__button {
     border: 1px solid black;
     font-size: 20px;
     width: 100px;
 }
+
 /*----------------------------------------------------------------------------------------------*/
 
 
@@ -2489,6 +2494,7 @@ body.mod {
 .excursions {
     padding: 50px 0;
     padding-top: 20px;
+    
 }
 
 .excursions__title {
@@ -2498,238 +2504,110 @@ body.mod {
 }
 
 
-.excursions__item {
+.excursions__list {
     display: flex;
-    margin-bottom: 80px;
-    cursor: pointer;
     position: relative;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 350px;
-    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    gap: 20px;
+}
+
+.excursions__item {
+    background-color: #fff;
     border-radius: 10px;
-    transition: all 0.7s ease;
-    /* transition: 1s ease height; */
-    background-color: white;
-    border-bottom: 1px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    height: 400px;
+    transition: all 0.5s ease;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
 }
-
-.excursions__item::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: 0;
-
-    bottom: -30px;
-    width: 100%;
-    height: 100%;
-}
-
-.long {
-    height: auto;
-
-    border-bottom: none;
-}
-
 
 .excursions__item:hover {
-    box-shadow: 0 -10px 10px 5px rgba(221, 221, 221, 1);
-    border-radius: 10px 10px 0 0;
-
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
-.long:hover {
-    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-    border-bottom: none;
-    border-radius: 10px;
-    /* border-radius: 0 0 10px 10px; */
-}
-
-.excursions__item:hover .exursions__podr {
-    box-shadow: 0 10px 20px 1px rgb(114, 91, 177);
-    border-bottom: none;
-    transform: translateY(0);
-}
-
-.excursions__item:hover .excursions__img-block {
-    border-radius: 0 10px 0 0;
-}
-
-.excursions__item.long .excursions__item-desc-hidden {
-    display: flex;
-    flex-direction: column;
-}
-
-.excursions__item.long .exursions__podr {
-    transform: translateY(-100px);
-}
-
-.excursions__item.long .excursions__item-desc {
-    display: block;
-    height: max-content;
-}
-
-/* .excursions__item.long .excursions__img-block {
-    height: auto;
-} */
-
-.exursions__podr {
-    position: absolute;
-    bottom: -27px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-decoration: underline;
-    text-align: center;
-    background-color: white;
-    transition: all 0.4s ease;
-    border-radius: 0 0 10px 10px;
-    transform: translateY(-100px);
-    z-index: -1000;
-}
-
-.long:hover .exursions__podr {
-    box-shadow: none;
-}
-
-.excursions__item-desc-hidden {
-    position: relative;
-    display: none;
-
-    text-align: justify;
-}
-
-.excursions__item-desc-hidden ul {
-    padding-left: 30px;
-}
-
-.excursions__item-desc-hidden ul li {
-    list-style-type: disc;
-
-}
-
-.excursions__titleBox {
-    position: relative;
-    height: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 10px;
-
-}
-
-.excursions__item-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    border-bottom: 3px solid #4F3156;
-    padding: 10px;
-    color: white;
-}
-
-.excursions__date {
-
-    margin-top: 10px;
-    font-weight: 600;
-    font-size: 18px;
-    /* border-bottom: 3px solid #4F3156; */
-
-}
-
-.excursions__item-info {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-}
-
-.excursions__img-block {
-    width: 100%;
-    height: 100%;
-    transition: height 1s ease;
-    border-radius: 0 10px 10px 0;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-}
-
 
 .excursions__img {
+    display: block;
+    border-radius: 20px;
     width: 100%;
-    height: 100%;
-    background-position: center;
-    align-items: center;
+    height: 200px;
     object-fit: cover;
-    object-position: 0 40%;
-    filter: brightness(0.7);
 }
 
-.excursions__item-desc {
-    margin: auto 0;
+.excursions__info {
+    padding: 15px;
+}
 
+.excursions__info__title {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.excursions__info__date {
+    color: #777;
+    font-size: 0.9em;
+    margin: 0 0 10px;
+}
+
+.excursions__info__description {
+    color: #555;
+    font-size: 0.9em;
+    margin: 0 0 10px;
+}
+
+.excursions__info .excursions__details {
+    display: none;
+    margin-top: 10px;
+    color: #444;
+}
+
+.excursions__info .excursions__details ul {
+    padding-left: 20px;
+}
+
+.excursions__item.expanded {
+    
+    width: 100%;
+    max-width: 100%;
     height: max-content;
-
-    font-size: 16px;
-    text-align: justify;
-    width: 100%;
+    
+    background-color: white;
+    pointer-events: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all 0.5s ease;
 }
 
-.excursions__link {
-
-    padding: 3px 10px;
-    border-radius: 10px;
-    font-weight: 400;
-    font-size: 24px;
-    cursor: pointer;
-    background-color: #4F3156;
-    color: white;
-    text-align: center;
-    width: 100%;
-    height: max-content;
-    z-index: 1000;
-
+.excursions__item.expanded img {
+    height: 300px;
+    object-fit: cover;
 }
 
-.excursions__price {
-    font-size: 24px;
-    margin: 20px 0;
+.excursions__item.expanded .excursions__info {
+    padding: 20px;
 }
 
-.excursions__open {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    left: 0;
-    bottom: -40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d4d4cf;
-    z-index: -100;
-    transform: rotate(0deg);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-    transition: all 2s ease-in-out;
+.excursions__item.expanded .excursions__details {
+    display: block;
 }
 
-.btn-back {
-
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: -70px;
-    left: 0;
+@media (max-width: 768px) {
+    .excursions__item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
 }
 
-/* box-shadow: 0 0 16px #333; */
+@media (max-width: 480px) {
+    .excursions__item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
 
 .galleri__title {
     text-align: center;
