@@ -1,10 +1,15 @@
 function expandCard(card) {
-    
+  window.location.hash = card.id
+  card.querySelector('.excursions__info__title').style.textAlign = 'center'
+    card.querySelector('.excursions__info__title').style.fontSize = '26px'
+ 
+
     const allCards = document.querySelectorAll('.excursions__item');
     allCards.forEach((c) => {
       if (c !== card) {
         console.log('sadas');
-        c.style.display = 'none'; // Скрываем остальные карточки
+        c.style.display = 'none';
+         // Скрываем остальные карточки
       }
     });
   
@@ -26,6 +31,10 @@ function expandCard(card) {
       backButton.style.cursor = 'pointer';
       backButton.style.zIndex = '1001';
       backButton.onclick = () => {
+        card.querySelector('.excursions__info__title').style.fontSize = '20px'
+        card.querySelector('.excursions__info__title').style.textAlign = 'left'
+        
+        window.location.hash = ''
         allCards.forEach((c) => (c.style.display = 'block')); // Показываем все карточки
         card.classList.remove('expanded'); // Скрываем подробную информацию
         backButton.remove(); // Удаляем кнопку

@@ -6,9 +6,9 @@ linkForm.forEach(e => {
 
 
     e.addEventListener('click', () => {
-        console.log(e.dataset.name);
-        let nameHash = '#form' + e.dataset.name
-        // console.log(window.location.hash);
+        let hash = window.location.hash
+        let nameHash = '#form' + window.location.hash.slice(1)
+  
         modal.id = nameHash.slice(1)
         e.setAttribute('href', nameHash)
 

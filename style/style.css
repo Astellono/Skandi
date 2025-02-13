@@ -2494,7 +2494,12 @@ body.mod {
 .excursions {
     padding: 50px 0;
     padding-top: 20px;
-    
+
+}
+
+.excursions hr {
+
+    margin: 1px 0;
 }
 
 .excursions__title {
@@ -2506,6 +2511,7 @@ body.mod {
 
 .excursions__list {
     display: flex;
+
     position: relative;
     flex-wrap: wrap;
     gap: 20px;
@@ -2517,10 +2523,14 @@ body.mod {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
-    height: 400px;
+    margin-right: auto;
     transition: all 0.5s ease;
-    flex: 1 1 calc(33.333% - 40px);
-    max-width: calc(33.333% - 40px);
+    flex: 1 1 calc(52% - 40px);
+    max-width: calc(52% - 40px);
+}
+
+.excursions__item:nth-child(2n) {
+    margin-right: 0;
 }
 
 .excursions__item:hover {
@@ -2530,32 +2540,51 @@ body.mod {
 
 .excursions__img {
     display: block;
-    border-radius: 20px;
+    border-radius: 10px 10px 0 0;
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
 .excursions__info {
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+
 }
 
 .excursions__info__title {
-    margin: 0 0 10px;
-    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+
+    font-size: 20px;
     color: #333;
+    margin-bottom: 8px;
 }
 
 .excursions__info__date {
-    color: #777;
-    font-size: 0.9em;
-    margin: 0 0 10px;
+
+    text-align: center;
+    margin: 5px 0;
 }
 
 .excursions__info__description {
-    color: #555;
-    font-size: 0.9em;
-    margin: 0 0 10px;
+    display: flex;
+    margin-top: 10px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: justify;
+    width: 100%;
+
 }
 
 .excursions__info .excursions__details {
@@ -2569,16 +2598,22 @@ body.mod {
 }
 
 .excursions__item.expanded {
-    
+
     width: 100%;
     max-width: 100%;
     height: max-content;
-    
+
     background-color: white;
     pointer-events: none;
     border-radius: 0;
     box-shadow: none;
     transition: all 0.5s ease;
+}
+
+.excursions__item.expanded:hover {
+
+    transform: translateY(0px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
 }
 
 .excursions__item.expanded img {
@@ -2592,6 +2627,26 @@ body.mod {
 
 .excursions__item.expanded .excursions__details {
     display: block;
+}
+
+.excursions__link {
+    pointer-events: fill;
+    display: block;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #4F3156;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: max-content;
+    z-index: 1000;
+}
+
+.excursions__price {
+    font-size: 25px;
 }
 
 @media (max-width: 768px) {
