@@ -2520,7 +2520,7 @@ body.mod {
 .excursions__item {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     cursor: pointer;
     margin-right: auto;
@@ -2544,12 +2544,13 @@ body.mod {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    margin-bottom: 8px;
 }
 
 .excursions__info {
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 5px 25px 25px 25px;
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -2561,7 +2562,7 @@ body.mod {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 60px;
+    height: 80px;
 
     font-size: 20px;
     color: #333;
@@ -2656,7 +2657,7 @@ body.mod {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
     .excursions__item {
         flex: 1 1 100%;
         max-width: 100%;

@@ -32,8 +32,8 @@ function expandCard(card) {
       backButton.style.zIndex = '1001';
       backButton.onclick = () => {
         card.querySelector('.excursions__info__title').style.fontSize = '20px'
-        card.querySelector('.excursions__info__title').style.textAlign = 'left'
-        
+        card.querySelector('.excursions__info__title').style.textAlign = 'center'
+        card.querySelector('.excursions__info__title').style.height = 'max-content'
         window.location.hash = ''
         allCards.forEach((c) => (c.style.display = 'block')); // Показываем все карточки
         card.classList.remove('expanded'); // Скрываем подробную информацию
