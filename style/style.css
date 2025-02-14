@@ -2607,7 +2607,7 @@ body.mod {
     background-color: white;
     pointer-events: none;
     border-radius: 0;
-    box-shadow: none;
+    
     transition: all 0.5s ease;
 }
 
