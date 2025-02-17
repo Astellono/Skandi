@@ -2578,9 +2578,9 @@ body.mod {
 .excursions__info__description {
     display: flex;
     margin-top: 10px;
-    min-height: 150px;
+   
     display: flex;
-    justify-content: center;
+    padding-top: 15px;
     align-items: center;
     font-size: 16px;
     text-align: justify;
@@ -2591,9 +2591,12 @@ body.mod {
 .excursions__info .excursions__details {
     display: none;
     margin-top: 10px;
-    color: #444;
+    
+    text-align: justify;
 }
-
+.excursions__details__desc {
+    padding-bottom: 15px;
+}
 .excursions__info .excursions__details ul {
     padding-left: 20px;
 }
@@ -2661,6 +2664,9 @@ body.mod {
     .excursions__item {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+    .excursions__info__title {
+        height: max-content;
     }
 }
 
