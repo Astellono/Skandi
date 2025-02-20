@@ -43,3 +43,11 @@ function expandCard(card) {
       list.append(backButton);
     }
   }
+
+
+  let listEx = document.querySelectorAll('.excursions__item')
+  listEx.forEach(ex => {
+    if (ex.id === window.location.hash.slice(1)) {
+      expandCard(ex)
+    }
+  });
