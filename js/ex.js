@@ -43,10 +43,10 @@ function expandCard(card) {
       list.append(backButton);
     }
   }
-
-
+  console.log(window.location.hash.slice(1));
   let listEx = document.querySelectorAll('.excursions__item')
   listEx.forEach(ex => {
+    console.log(ex.id);
     if (ex.id === window.location.hash.slice(1)) {
       expandCard(ex)
     }
