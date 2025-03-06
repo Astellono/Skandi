@@ -47,6 +47,7 @@
 }
 
 * {
+    
     margin: 0;
     padding: 0;
     font-family: "Roboto";
@@ -75,7 +76,17 @@ a {
     color: black;
 
 }
+section {
+    
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s;
+}
 
+section.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
 .body__form {
     display: flex;
     flex-direction: column;
@@ -592,6 +603,7 @@ button {
 }
 
 .calendar {
+    overflow: hidden;
     padding-top: 20px;
 }
 
@@ -1008,7 +1020,159 @@ button {
     max-width: 250px;
     height: 150px;
 }
+.card {
+    padding: 30px 0;
+    background: #4F3156;
+    color:white;
 
+}
+.club-text {
+    font-size: 20px;
+}
+.club-card {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.club-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.percentages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.percent-bubble {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.discount-section {
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.discount-badge {
+    background: #f3f3f2;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: -40px auto 20px;
+    transform: rotate(-3deg);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: #000;
+}
+
+.platforms {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.platform img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.platform:hover {
+    transform: translateY(-5px);
+}
+
+.conditions {
+    display: grid;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.condition {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discount-prices {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.price-card {
+    background: white;
+    color: #48344E;
+    padding: 20px 10px;
+    border-radius: 15px;
+    
+    text-align: center;
+    min-width: 150px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.price-card h3,
+.price-card div {
+    font-size: 20px;
+}
+
+.discount-amount {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.note {
+    font-size: 1.2em;
+    opacity: 0.9;
+    text-align: left;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
 .modal-content {
     padding: 30px;
 }
@@ -2518,10 +2682,11 @@ body.mod {
 }
 
 .excursions__item {
+    position: relative;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+    margin-bottom: 10px;
     cursor: pointer;
     margin-right: auto;
     transition: all 0.5s ease;
@@ -2652,7 +2817,16 @@ body.mod {
 .excursions__price {
     font-size: 25px;
 }
+.excursions__podr {
+    position: absolute;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    left: 0;
+    text-align: center;
+    bottom: -10px;
+    background-color: #e7e7e7;
 
+}
 @media (max-width: 768px) {
     .excursions__item {
         flex: 1 1 calc(50% - 20px);

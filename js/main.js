@@ -3,7 +3,7 @@ let textBot = document.getElementById('storyBot')
 let cnt = 0;
 
 function switchState(block, arrow) {
-    
+
     cnt++;
     console.log(cnt);
     block.classList.toggle("about__storyFull")
@@ -16,3 +16,11 @@ function switchState(block, arrow) {
 
 textBot.addEventListener('click', () => switchState(textAbout, textBot));
 textAbout.addEventListener('click', () => switchState(textAbout, textBot));
+
+
+
+
+
+
+
+

@@ -694,7 +694,11 @@
         margin-bottom: 10px;
     }
 }
-
+@media (max-width: 350px) {
+    .discount-prices {
+        flex-direction: column;
+    }
+}
 /* !important is needed sometimes */
 ::-webkit-scrollbar {
     margin-top: 10px !important;

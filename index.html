@@ -48,7 +48,7 @@
         <script src="parts/header.js"></script>
 
     </header>
-    <section class="hero">
+    <section class="section hero">
 
 
         <div class="hero__contant">
@@ -66,7 +66,7 @@
 
 
     </section>
-    <section class="about">
+    <section class="section about">
         <div class="container">
             <a name="bot"></a>
             <h2 class="about__title">О нас</h2>
@@ -100,7 +100,7 @@
             </div>
         </div>
     </section>
-    <section class="adv" style="display: none;">
+    <section class="section adv" style="display: none;">
         <div class="container">
             <h2 class="adv__title">
                 Преимущества
@@ -288,7 +288,7 @@
         </div>
     </section>
 
-    <section class="actual-tour">
+    <section class="section actual-tour">
         <div class="container">
             <h2 class="actual-tour__title">
                 Ближайшие путешестивия
@@ -350,7 +350,55 @@
 
         </div>
     </section>
-    <section class="calendar">
+    <section class="section card">
+        <div class="container">
+            <div class="club-header">
+                <h2>🎉 КЛУБНАЯ КАРТА!</h2>
+                <div class="percentages">
+                    <div class="percent-bubble">3%</div>
+                    <div class="percent-bubble">5%</div>
+                    <div class="percent-bubble">7%</div>
+                </div>
+            </div>
+            <p class="club-text">Каждый участник автоматически становится членом клуба "По Миру с Палками"
+                и получает виртуальную клубную карту с накопительной системой скидок!</p>
+
+            <div class="discount-section">
+                <div class="discount-badge">
+                    <h3>+ ДОПОЛНИТЕЛЬНАЯ СКИДКА!</h3>
+                </div>
+                <div class="discount-content">
+                    <p>Разместите отзыв на двух площадках:</p>
+                    <div class="platforms">
+                        <a href="https://www.pomiru-spalkami.ru/" class="platform">
+                            <img src="img/icon.svg" alt="VK">
+                            <span>Наш сайт</span>
+                        </a>
+                        <a href="https://vk.com/pomiru_spalkami" class="platform">
+                            <img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" alt="VK">
+                            <span>ВКонтакте</span>
+                        </a>
+                        <a href="https://yandex.ru/maps/org/po_miru_s_palkami/27242906463/reviews/?ll=37.380031%2C55.815892&z=8" class="platform">
+                            <img src="https://avatars.mds.yandex.net/get-lpc/1520633/ef2a27b6-800c-4a83-a864-192193c41b38/orig" alt="Яндекс">
+                            <span>Яндекс</span>
+                        </a>
+                    </div>
+                    <div class="discount-prices">
+                        <div class="price-card">
+                            <h3>Экскурсия</h3>
+                            <div class="discount-amount">300₽</div>
+                        </div>
+                        <div class="price-card">
+                            <h3>Тур</h3>
+                            <div class="discount-amount">1000₽</div>
+                        </div>
+                    </div>
+                    <p class="note">*Скидка суммируется с клубной</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section calendar">
         <div class="container">
             <h2 class="actual-tour__title">
                 Путешествия в 2025 году
@@ -368,7 +416,7 @@
 
 
     </section>
-    <section class="teamlead">
+    <section class="section teamlead">
         <div class="container">
             <h2 class="teamlead__title">Руководитель</h2>
             <img class="teamlead__img" src="img/team/Lider.png" alt="">
@@ -381,7 +429,7 @@
 
         </div>
     </section>
-    <section class="team">
+    <section class="section team">
         <div class="container">
             <h2 class="team__title">Наша команда</h2>
             <ul class="team__list">
@@ -444,7 +492,7 @@
             </ul>
         </div>
     </section>
-    <section class="otziv">
+    <section class="section otziv">
         <div class="container">
             <h2 class="otziv__title">Что говорят наши клиенты</h2>
             <ul class="otziv__list">
@@ -533,7 +581,7 @@
         </div>
         <hr>
     </section>
-    <section class="feedback">
+    <section class="section feedback">
         <div class="container">
             <h2 class="feedback__title">Были на занятиях или в туре?<br>Оставьте отзыв!</h2>
             <form enctype="multipart/form-data" method="post" id="feedback-form" class="feedback__form">
@@ -560,7 +608,7 @@
             </form>
         </div>
     </section>
-    <!-- <section class="feedback">
+    <!-- <section class="section feedback">
         <div class="container">
             <form enctype="multipart/form-data" method="post" id="feedback-form">
                 <label for="nameFF">Имя:</label>
@@ -580,11 +628,11 @@
         </div>
     </section> -->
 
-    <section class="questions" id="questions">
+    <section class="section questions" id="questions">
         <script src="parts/questions.js"></script>
     </section>
 
-    <section class="partner">
+    <section class="section partner">
         <div class="container">
             <h2 class="partner__title">Наши партнеры</h2>
             <ul class="partner__list">
@@ -611,7 +659,7 @@
             </ul>
         </div>
     </section>
-    <section class="contacts" id="contacts">
+    <section class="section contacts" id="contacts">
         <script src="/parts/contact.js"></script>
     </section>
     <!-- МОДАЛЬНЫЕ ОКНА ------------------------------------------------------------------------------------->
@@ -907,7 +955,7 @@
     <script src="js/fb.js"></script>
 
     <script src="js/main.js"></script>
-    
+    <script defer src="js/scroll.js"></script>
     <script src="modal/Burger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
