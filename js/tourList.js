@@ -60,6 +60,13 @@ export let tourList = [
         srcImg:'img/act-tour/kirg.JPG' ,
     },
     {
+        nameT: "Соловецкие острова",
+        date: getDatesArray(new Date('2025-06-28'), new Date('2025-07-05')),
+        link: "page_tour/solov.html",
+        color: "#3f708c",
+        srcImg:'img/act-tour/solov.jpg' ,
+    },
+    {
         nameT: "Башкирия",
         date: getDatesArray(new Date('2025-08-06'), new Date('2025-08-10')),
         link: "page_tour/bash.html",
@@ -79,6 +86,20 @@ export let tourList = [
         link: "page_tour/uz.html",
         color: "#bd1e73",
         srcImg:'img/act-tour/uz.jpeg' ,
+    },
+    {
+        nameT: "Байкал",
+        date: getDatesArray(new Date('2025-09-20'), new Date('2025-09-29')),
+        link: "page_tour/baykal.html",
+        color: "#bd1e73",
+        srcImg:'img/act-tour/baykal.jpg' ,
+    },
+    {
+        nameT: "Грузия (Аджария)",
+        date: getDatesArray(new Date('2025-10-04'), new Date('2025-10-11')),
+        link: "page_tour/adj.html",
+        color: "#bd5e73",
+        srcImg:'img/act-tour/adj.jpg' ,
     },
     {
         nameT: "Осетия",
