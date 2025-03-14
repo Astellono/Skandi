@@ -90,9 +90,9 @@ export let tourList = [
     {
         nameT: "Байкал",
         date: getDatesArray(new Date('2025-09-20'), new Date('2025-09-29')),
-        link: "page_tour/baykal.html",
+        link: "page_tour/baikal.html",
         color: "#bd1e73",
-        srcImg:'img/act-tour/baykal.jpg' ,
+        srcImg:'img/act-tour/baikal.jpg' ,
     },
     {
         nameT: "Грузия (Аджария)",
