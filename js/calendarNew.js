@@ -2,7 +2,7 @@ import { mounthData } from './calendar2025.js'
 import { tourList } from "./tourList.js";
 
 let data = mounthData
-
+console.log(data);
 
 
 
@@ -55,10 +55,8 @@ for (let i = 0; i < 12; i++) {
 let mounthList = document.querySelectorAll(".caledar__dayList")
 
 
-let currentMounth = new Date().getMonth()+1
-let currentDay = new Date().getDate()
-console.log(currentDay);
-console.log(currentMounth);
+
+
 for (let i = 0; i < mounthList.length; i++) {
 
     data[i].days.forEach(e => {
@@ -69,19 +67,16 @@ for (let i = 0; i < mounthList.length; i++) {
             let toolTip = document.createElement('span')
             dateItem.classList.add("calendar__day")
             dateLink.classList.add("calendar__dayLink")
-            let massDate = e + '.' + Number(i + 1)
-            let currentDate = currentDay + '.' + currentMounth
-            console.log(currentDate === massDate);
-            if (currentDate === massDate) {
-                dateItem.style.border = "1px solid red"
-            }
+            let curDate = e + '.' + Number(i + 1)
+
+
             tourList.forEach(tour => {
 
 
                 for (let k = 0; k < tour.date.length; k++) {
 
-                    if (tour.date[k] == massDate) {
-                        if (k == 0) {
+                    if (tour.date[k] == curDate) {
+                        if (k==0) {
                             dateItem.style.borderRadius = "20px 0 0 20px"
                         }
                         if (k == tour.date.length - 1) {
@@ -94,7 +89,7 @@ for (let i = 0; i < mounthList.length; i++) {
                         dateItem.style.backgroundColor = tour.color
                         tmpColor = tour.color
 
-
+                     
 
                         dateLink.setAttribute('href', tour.link)
                     }
