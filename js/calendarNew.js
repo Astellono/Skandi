@@ -4,7 +4,31 @@ import { tourList } from "./tourList.js";
 let data = mounthData
 console.log(data);
 
+function switchVisionMounth(numDec, check, el) {
+    switch (numDec) {
+        case 1:
+            if (check > 2) {
+                el.classList.add("calendar__mounthHide")
+            }
+            break;
+        case 2:
+            if ((check < 3) || (check > 5)) {
+                el.classList.add("calendar__mounthHide")
+            }
+            break;
+        case 3:
+            if ((check < 6) || (check > 8)) {
+                el.classList.add("calendar__mounthHide")
+            }
+            break;
+        case 4:
+            if ((check < 9) || (check > 11)) {
+                el.classList.add("calendar__mounthHide")
+            }
+            break;
+    }
 
+}
 
 let tmpColor = 'green';
 
@@ -19,9 +43,8 @@ for (let i = 0; i < 12; i++) {
 
     let itemM = document.createElement("li")
     itemM.classList.add("calendar__item")
-    if (i > 2) {
-        itemM.classList.add("calendar__mounthHide")
-    }
+
+    switchVisionMounth(1, i, itemM)
 
     listM.append(itemM)
 
