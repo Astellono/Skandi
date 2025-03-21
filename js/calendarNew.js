@@ -76,7 +76,7 @@ for (let i = 0; i < mounthList.length; i++) {
                 for (let k = 0; k < tour.date.length; k++) {
 
                     if (tour.date[k] == curDate) {
-                        if (k==0) {
+                        if (k == 0) {
                             dateItem.style.borderRadius = "20px 0 0 20px"
                         }
                         if (k == tour.date.length - 1) {
@@ -89,7 +89,7 @@ for (let i = 0; i < mounthList.length; i++) {
                         dateItem.style.backgroundColor = tour.color
                         tmpColor = tour.color
 
-                     
+
 
                         dateLink.setAttribute('href', tour.link)
                     }

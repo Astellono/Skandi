@@ -17,13 +17,7 @@ const getDatesArray = (start, end) => {
 export let tourList = [
 
     
-    {
-        nameT: "Мурманск",
-        date: getDatesArray(new Date('2025-03-06'), new Date('2025-03-10')),
-        link: "page_tour/murm.html",
-        color: '#AD66D5',
-        srcImg:'img/act-tour/murm.jpg' ,
-    },
+   
     {
         nameT: "Суздаль",
         date: getDatesArray(new Date('2025-03-29'), new Date('2025-03-30')),
