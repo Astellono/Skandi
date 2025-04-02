@@ -584,19 +584,19 @@
     <section class="section feedback">
         <div class="container">
             <h2 class="feedback__title">Были на занятиях или в туре?<br>Оставьте отзыв!</h2>
-            <form enctype="multipart/form-data" method="post" id="feedback-form" class="feedback__form">
+            <form enctype="multipart/form-data" method="post" class="feedback__form" action="fb.php">
                 <div class="feedback__input-contact">
                     <p class="input__name">Ваше имя:</p>
                     <p class="input__name">Ваш email:</p>
                     <input type="text" name="nameFF" id="nameFF" placeholder="Введите имя" required>
                     <input type="text" name="contactFF" id="contactFF" placeholder="Введите email" required>
                 </div>
-                <input required type="text" class="feedback__input-text" name="messageFF" placeholder="Ваш отзыв">
+                <textarea required type="text" class="feedback__input-text" name="messageFF" placeholder="Ваш отзыв"></textarea>
                 <p class="input__name-foto">Загрузите вашу фотографию:</p>
                 <div class="field__wrapper">
-                    <input name="fileFF[]" multiple id="fileFF" type="file" class="field field__file">
+                    <input type="file" id="image" name="image" accept="image/*" class="field field__file">
 
-                    <label class="field__file-wrapper" for="fileFF">
+                    <label class="field__file-wrapper" for="image">
                         <div class="field__file-fake">Файл не выбран</div>
                         <div class="field__file-button">Выбрать</div>
                     </label>
@@ -952,7 +952,7 @@
 
 
 
-    <script src="js/fb.js"></script>
+
 
     <script src="js/main.js"></script>
     <script defer src="js/scroll.js"></script>
