@@ -48,7 +48,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="/parts/header.js"></script>
+        <script src="/parts/header.js?ver=<?echo time();?>"></script>
 
     </header>
 
@@ -59,12 +59,12 @@
             <div class="tour__page__header">
 
                 <div class="tour__page__imgBox">
-                    <img class="tour__page__img" src="/img/act-tour/kahetia.jpg" alt="">
+                    <img class="tour__page__img" src="/img/act-tour/osetia.jpg" alt="">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            SCANDI-ТУР В КАХЕТИЮ (Кахетия Сигнаги, Бодбе, Телави, Тбилиси)
+                            SCANDI-ТУР «СОЛНЕЧНАЯ ОСЕТИЯ»
                         </h1>
-                        <h2 class="tour__page__date">Даты: 1 мая – 7 мая 2025г.</h2>
+                        <h2 class="tour__page__date">Даты: 20 ноября – 23 ноября 2025г.</h2>
                     </div>
 
                 </div>
@@ -75,21 +75,19 @@
 
 
                 <p class="tour__page__desc">
-                    Кахетия – это некогда самостоятельное царство, сейчас входящее в состав Грузии. Царство бесконечных
-                    виноградников и живописных тушинских гор, старинных традиций и загадочных мертвых городов. Царство
-                    самых вкусных грузинских вин и спокойной печали древних монастырей.
-                    <br>
-                    <br>
-                    Еще пять-шесть лет назад Кахетия была малопривлекательным местом. И навещали ее в основном
-                    самодеятельные туристы, ценящие простоту, природу и спокойствие. Но с 2011 года регион начал
-                    стремительно популяризироваться и приводиться в порядок: наводится лоск в городах, сфера
-                    туристических услуг растет и выходит практически на европейский уровень.
-                    <br>
-                    <br>
-                    В программе удачно совмещается активная и экскурсионная составляющая. Путешествуем на минивене, а
-                    значит мы максимально мобильны и готовы творческим изменениям в программе.
-                    <br><br>
-                    <strong>ВНИМАНИЕ!!! При посещении Грузии обязательно оформление страховки путешественника. Она оформляется самостоятельно</strong>
+                    Северная Осетия – это край гор, древних крепостей и гостеприимных людей. Здесь вас ждут
+                    захватывающие дух виды Кавказских гор, исторические памятники, вкусная национальная кухня и
+                    уникальная культура. Идеальное место для любителей активного отдыха трекинга и знакомства с
+                    историей.<br><br>
+                    И снова мы отправляемся в Северную Осетию. Мы были здесь не единожды, но только не зимой. Зимний
+                    вариант путешествия тоже прекрасен. Мы будем путешествовать по солнечным котловинам, где почти не
+                    выпадают осадки. Сопровождать нас будет наш веселый и постоянный гид в Северной Осетии Роберт
+                    Баскаев, а значит, шутки, юмор, осетинские стихи и танцы нам гарантированы. Проживание в арт-отеле
+                    «Фиагдон», в уютных видовых однокомнатных домиках, гарантирует нам зарядки с красивыми видами,
+                    плавание в бассейне, а вечерами, при желании, нас ждут сауна или хаммам. Это хорошая возможность
+                    расслабиться после насыщенного дня.
+
+
 
                 </p>
                 <hr>
@@ -103,12 +101,6 @@
                                 <img class="tour__page__gid__img" src="/img/team/Lider.png" alt="">
                                 <h3 class="tour__page__gid__title-member">Маргарита Волосюк</h3>
                                 <p class="tour__page__gid__desc">Инструктор</p>
-
-                            </li>
-                            <li class="tour__page__gid__item">
-                                <img class="tour__page__gid__img" src="/img/partner/gid.jpg" alt="">
-                                <h3 class="tour__page__gid__title-member">Николоз Бочоришвили</h3>
-                                <p class="tour__page__gid__desc">Гид</p>
 
                             </li>
                         </ul>
@@ -170,7 +162,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collaps1">
                             <h3>
-                                День 1 (1 мая)
+                                День 1 (20 ноября)
                             </h3>
                         </button>
                     </h2>
@@ -178,13 +170,19 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Прилетаем в Тбилиси до 13.00 </li>
-                                <li class="modal-active-item">Встреча в аэропорту Тбилиси. Размещение в гостинице.</li>
-                                <li class="modal-active-item">В зависимости от времени прибытия решаем на месте что
-                                    сначала обед или экскурсия по Тбилиси</li>
-                                <li class="modal-active-item">Так как наши программы всегда носят индивидуальный формат,
-                                    будем ориентироваться что видели наши участники в Тбилиси, а что еще не успели</li>
-                                <li class="modal-active-item">Ужин в ресторане города (не входит в стоимость)</li>
+                                <li class="modal-active-item">Прилетаем во Владикавказ ориентировочно в 11:20. Встреча в
+                                    аэропорту с гидом. Трансфер.
+                                </li>
+                                <li class="modal-active-item">Приветственный бранч в кафе с местной кухней (входит в
+                                    стоимость).
+                                </li>
+                                <li class="modal-active-item">После обеда отправляемся на прогулку по солнечной
+                                    котловине с видом на Главный Кавказский хребет, идем от скальной крепости в селе
+                                    Дзивгис до аула Гули, затем спускаемся в поселок Фиагдон. </li>
+                                <li class="modal-active-item">Заселение в арт-отель «Фиагдон».</li>
+                                <li class="modal-active-item">Ужин в ресторане гостиницы (не входит в стоимость).
+                                    Свободное время: настольные игры, бассейн, сауна и т.д.</li>
+
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -201,7 +199,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
                             <h3>
-                                День 2 (2 мая)
+                                День 2 (21 ноября)
                             </h3>
                         </button>
                     </h2>
@@ -209,20 +207,24 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Утренняя зарядка</li>
-                                <li class="modal-active-item">Завтрак (входит в стоимость)</li>
-                                <li class="modal-active-item">Трансфер Кахети, посещаем дегустационный зал винзавода и
-                                    далее для контраста женский монастырь Бодбе</li>
-                                <li class="modal-active-item">Возможно совершить небольшой пеший трек и спустится к
-                                    купели Святой Нино по живописному ущелью</li>
-                                <li class="modal-active-item">В дороге не меньше двух часов. Далее едем и через полчаса
-                                    мы в Сигнаги
+                                <li class="modal-active-item">Утренняя сканди-зарядка. Бассейн для желающих (входит в
+                                    стоимость). Завтрак в гостинице (входит в стоимость)</li>
+                                <li class="modal-active-item">В 10:30 выезд на трек. </li>
+                                <li class="modal-active-item">Идем к лавочке счастья, расположенную на вершине одной из
+                                    гор Архонского перевала. Сначала поднимемся к ретранслятору на высоте 2000 м. Оттуда
+                                    часа полтора будем идти на панорамную точку, где нас ждёт лавочка с прекрасным видом
+                                    на горы. Устроим фотосессию и полюбуемся видами. После чего спускаемся вниз.
+                                    Трансфер на обед в ресторан, где будет заказан комплексный обед (входит в
+                                    стоимость).
                                 </li>
-                                <li class="modal-active-item">Проводим день в пешей прогулки по городку
+                                <li class="modal-active-item">После обеда посетим башенный комплекс Цмити - развалины
+                                    старого средневекового горного селения в Куртатинском ущелье. </li>
+                                <li class="modal-active-item">Возвращение в гостиницу. Ужин ресторане гостиницы (не
+                                    входит в стоимость). Свободное время. Возможно совместные настольные игры, сауна и
+                                    т.д.
                                 </li>
-                                <li class="modal-active-item">Там же и обедаем и ,по окончанию прогулки и обеда едем к
-                                    вечеру в соседний городок Дедоплис Цкаро, где и останемся на ночлег</li>
-                                <li class="modal-active-item">Ужин (не входит стоимость).</li>
+
+
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -238,7 +240,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                             <h3>
-                                День 3 (3 мая)
+                                День 3 (22 ноября)
                             </h3>
                         </button>
                     </h2>
@@ -246,16 +248,18 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Утренняя зарядка. Завтрак (входит в стоимость)</li>
-                                <li class="modal-active-item">Далее выдвигаемся на трек. Туристы должны обязательно
-                                    зарегистрироваться в центре приема посетителей. Это связано исключительно с
-                                    безопасностью проведения трека, заповедник очень большой.</li>
-                                <li class="modal-active-item">Трек к Орлиному ущелью. 7–8 км, на машине едем до
-                                    стартовой точки далее пешеходная прогулка, сложность средняя.
+                                <li class="modal-active-item">Утренняя сканди-зарядка. Бассейн для желающих (входит в
+                                    стоимость). Завтрак в гостинице (входит в стоимость).</li>
+                                <li class="modal-active-item">В 10:30 выезд на трек в сосновый лес близ села Бад. Длина
+                                    маршрута около 8 км. Мы будем принимать лесные ванны, любуясь горными панорамами.
+                                    Обед возьмём с собой (входит в стоимость).</li>
+                                <li class="modal-active-item"> На обратном пути мастер-класс по приготовлению осетинских
+                                    пирогов в ресторане «Хохаг».
                                 </li>
-                                <li class="modal-active-item">Если еще не находились переезжаем ко второй стартовой
-                                    точке и идем к развалинам средневековой крепости Хорнабуджи.После треков
-                                    возвращаемся и организуем обед</li>
+                                <li class="modal-active-item">Возвращение в гостиницу. Ужин ресторане гостиницы (не
+                                    входит в стоимость), если не наедимся осетинскими пирогами. Свободное время.</li>
+
+
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -271,7 +275,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
                             <h3>
-                                День 4 (4 мая)
+                                День 4 (23 ноября)
                             </h3>
                         </button>
                     </h2>
@@ -279,20 +283,15 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Утренняя зарядка. Завтрак (входит в стоимость)
+                                <li class="modal-active-item">Утренняя сканди-зарядка. Бассейн для желающих (входит в
+                                    стоимость). Завтрак в гостинице (входит в стоимость). </li>
+                                <li class="modal-active-item">Ориентировочно в 10:30 выезд из гостиницы с вещами. В этот
+                                    день нас ждет экскурсия по Владикавказу с возможным посещением музеев. Прогулка в
+                                    городском дендрарии.</li>
+                                <li class="modal-active-item">Обед в ресторане около дендрария (не входит в стоимость).
+                                    Покупка сувениров и вкусностей.
                                 </li>
-                                <li class="modal-active-item">Выезд, городок называется Лагодехи
-                                </li>
-                                <li class="modal-active-item">По размещению в гест гостевом доме состоится трек по
-                                    Национальному парку заповеднику, получившему в 2010 году статус национального парка.
-                                    Основан парк в 1912.
-                                    Трек порядка 8 км, (два маршрута есть и к дальнему водопаду до 14 км дальность).
-                                    Берем с собой ланчбоксы
-                                </li>
-                                <li class="modal-active-item">По окончанию трека возвращаемся в Лагодехи, организуем
-                                    ужин (не входит в стоимость). У нас очень милый гостевой дом с прекрасной хозяйкой.
-                                    Остаемся на ночлег.</li>
-
+                                <li class="modal-active-item">Трансфер в аэропорт. Вылет после 19:00.</li>
 
 
                             </ul>
@@ -305,112 +304,6 @@
                         </div>
                     </div>
                 </li>
-                <li class="modal-tour-item accordion-item">
-                    <h2 class="accordion-header" id="flush-heading5">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-                            <h3>
-                                День 5 (5 мая)
-                            </h3>
-                        </button>
-                    </h2>
-                    <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="modal-active-list">
-                                <li class="modal-active-item">Утренняя зарядка. Завтрак входит в стоимость.
-                                </li>
-                                <li class="modal-active-item">Трек к Крепости Мачи. Едем к стартовой точке , оттуда
-                                    направляемся по реке «Бнели Хеоба». Попадем в реальную сказку, в буковую рощу и
-                                    покрытые мхом гигантские камни. Пересекаем реку «Бнели Хеоба», оттуда узкой тропой
-                                    проходим по склону горы и продвигаемся к замку, который был построен несколько веков
-                                    назад.
-                                    Замечательная крепость со времён кахетинского царского феодализма. Трек 11 км,
-                                    сложность легкая.
-                                </li>
-                                <li class="modal-active-item">После трека возвращаемся в Лагодехи, обедаем (не входит в
-                                    стоимсоть), далее экскурсионная программа. Ужин (не входит в стоимость).
-                                </li>
-
-
-
-
-                            </ul>
-                            <!-- <div class="modal-imgBlock">
-
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
-                            </div> -->
-                        </div>
-                    </div>
-                </li>
-                <li class="modal-tour-item accordion-item">
-                    <h2 class="accordion-header" id="flush-heading6">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
-                            <h3>
-                                День 6 (6 мая)
-                            </h3>
-                        </button>
-                    </h2>
-                    <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="modal-active-list">
-                                <li class="modal-active-item">Утренняя зарядка. Завтрак (входит в стоимость)
-                                </li>
-                                <li class="modal-active-item">. Трансфер в Тбилиси. Проезжаем и делаем остановки на
-                                    экскурсии в Телави, Гомборский перевал и Уджарма.
-                                </li>
-                                <li class="modal-active-item"> Приезд в Тбилиси.Размещение в гостинице Тато. Организуем
-                                    питание и пешею прогулку по Тбилиси.
-                                </li>
-
-
-
-                            </ul>
-                            <!-- <div class="modal-imgBlock">
-
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
-                            </div> -->
-                        </div>
-                    </div>
-                </li>
-                <li class="modal-tour-item accordion-item">
-                    <h2 class="accordion-header" id="flush-heading7">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
-                            <h3>
-                                День 7 (7 мая)
-                            </h3>
-                        </button>
-                    </h2>
-                    <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="modal-active-list">
-                                <li class="modal-active-item">Завтрак (входит в стоимость)
-                                </li>
-                                <li class="modal-active-item">Свободное время
-                                </li>
-                                <li class="modal-active-item">Трансфер в аэропорт</li>
-                                <li class="modal-active-item">Вылет после 13.00.</li>
-
-
-                            </ul>
-                            <!-- <div class="modal-imgBlock">
-
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
-                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
-                            </div> -->
-                        </div>
-                    </div>
-                </li>
-
             </ul>
         </div>
     </section>
@@ -418,22 +311,16 @@
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 800$ + 10 000 руб <br> Группа 6 человек </p>
-                    <p class="tour__page__priceIn">В стоимость входит: Весь необходимый транспорт на территории Грузии
-                        по программе,
-                        Проживание по программе двухместное размещение,
-                        Питание: завтраки в отеле и ланчбоксы на маршруте,
-                        Сопровождение опытными гидами на протяжении всего маршрута,
-                        Экскурсионная программа,
-                        Сопровождение инструктора по скандинавской ходьбе
+                    <p class="tour__page__price">Стоимость: 73 800 руб </p>
+                    <p class="tour__page__priceIn">В стоимость входит двухместное проживание в отдельных домиках в
+                        арт-отеле «Фиагдон» (доплата за одноместное размещение 24750 р.), завтраки, обеды (кроме
+                        последнего дня), услуги местного гида, трансфер по программе, услуги инструктора по
+                        скандинавской ходьбе, мастер-класс по осетинским пирогам.
 
                     </p>
-                    <p class="tour__page__priceOff">В стоимость НЕ входит: Авиаперелет до Тбилиси, 
-                        Медицинская страховка, 
-                        Личные расходы, алкоголь, 
-                        Обеды и ужины, 
-                        Билеты в дегустационные центры; музеи, исторические комплексы, городской парк, билеты на
-                        канатку, серные бани, СПА процедуры
+                    <p class="tour__page__priceOff">
+                        В стоимость НЕ входит авиабилеты, доплата за одноместное проживание 24750 р., ужины, обед в
+                        последний день, страховка путешественника.
 
                     </p>
                 </div>
@@ -464,7 +351,7 @@
     </section>
 
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="/parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
     <script src="/node_modules/jquery/dist/jquery.js"></script>
@@ -500,7 +387,7 @@
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
                 <div class="modal-b">
-                    <form action="/php/tour/sendTour.php?name=Кахетия" method="POST" class="modal__form">
+                    <form action="/php/tour/sendTour.php?name=Осетия" method="POST" class="modal__form">
 
                         Фамилия, имя и отчество:
                         <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>

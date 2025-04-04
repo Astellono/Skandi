@@ -48,7 +48,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="/parts/header.js"></script>
+        <script src="/parts/header.js?ver=<?echo time();?>"></script>
 
     </header>
 
@@ -59,12 +59,12 @@
             <div class="tour__page__header">
 
                 <div class="tour__page__imgBox">
-                    <img class="tour__page__img" src="/img/act-tour/bash.jpg" alt="">
+                    <img class="tour__page__img" src="/img/act-tour/shuk.jpg" alt="">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            Scandi-тур "Знакомство с Башкирией" (с участием на фестивале Малидак)
+                            SCANDI-ТУР «В ГОСТИ К ШУКШИНУ И НЕ ТОЛЬКО». Алтай
                         </h1>
-                        <h2 class="tour__page__date">Даты: 6 августа – 10 августа 2025г.</h2>
+                        <h2 class="tour__page__date">Даты: 25 августа – 4 сентября 2024г</h2>
                     </div>
 
                 </div>
@@ -75,22 +75,35 @@
 
 
                 <p class="tour__page__desc">
-                    Тур в поисках птицы счастья на озере Банное представляет собой уникальное путешествие, где каждый
-                    шаг пронизан духом природы и уголками сказки. Утром, когда первые лучи солнца касаются поверхности
-                    воды, туристы отправляются в путь, наполняясь ожиданием. <br><br>
-                    Озеро Банное, с его прозрачной водой и живописными берегами, зовет к себе искателей приключений.
-                    Прохлада утреннего воздуха пробуждает чувства, а звуки природы создают мелодию, которая сопровождает
-                    нашу группу. Мы идем по тропам, затененным могучими деревьями, и спускаемся к берегу, где ласковые
-                    волны шепчут о древних тайнах.
+                    Многие достопримечательности села Сростки связаны с именем нашего знаменитого земляка Василия
+                    Шукшина: это музейный комплекс, скульптурная композиция, посвященная героям его произведений, и
+                    памятник на горе Пикет, где ежегодно проходит фестиваль "Шукшинские дни на Алтае". <br><br>
+                    Но кроме мест, связанных с Василием Макаровичем, здесь есть много других, которые стоит посетить.
+                    Интересна сама по себе гора Пикет — это одно из самых прекрасных мест Алтайского края, с 1976 года
+                    здесь проводятся "Шукшинские чтения". На отроге этой горы находится одна из самых важных<br><br>
+                    достопримечательностей Сросток — городище эпохи палеолита, состоящее из 40 обжитых пещерных впадин.
+                    Мы же с вами полюбуемся еще и на многие природные красоты Горного Алтая. Побываем в музее Рериха и
+                    Старообрядчества.<br><br>
+                    Так как некоторые члены группы уже бывали на Алтае, мы максимально постарались учесть, чтобы не было
+                    повторений.
                     <br><br>
-                    Нас ждёт знакомство не только с живописной природой и спортивными состязаниями,, но и со столицей
-                    Башкирии - городом Уфа. Здесь мы окунемся в купеческую историю, попробуем национальную кухню и
-                    увидим самый зелёный город России.
-                    <br><br>
-                    <strong>ВНИМАНИЕ!!! На фестиваль на Малидаке регистрация самостоятельная. Вся информация будет в
-                        оргчате.
-                        Слот оплачивается отдельно.</strong>
-
+                    Рекомендации что взять с собой:
+                <ul>
+                    <li class="lim">Вещи привозим в больших рюкзаках или спортивных сумках (они компактнее войдут в
+                        транспортные средства). Чемоданы не берем ;</li>
+                    <li class="lim"> С собой берем все только самое необходимое (фены и прочее не пригодятся);</li>
+                    <li class="lim">Пауэр-банк (в некоторых местах не будет электричества) </li>
+                    <li class="lim">Купальники, личные полотенца и средства личной гигиены. Помним, мы будем в
+                        труднодоступных местах, где нет гостиниц и магазинов.</li>
+                    <li class="lim">Тёплые куртки, носки, штаны, 2 пары хорошей обуви, термобелье.</li>
+                    <li class="lim">Спальник на -10 или ниже (так не будет, но спать комфортно) </li>
+                    <li class="lim">Фонарик</li>
+                    <li class="lim">Дождевик</li>
+                </ul>
+                <br><br>
+                Дополнительные рекомендации будут в групповом чате. <br><br>
+                ПОМНИМ! На всем протяжении тура у нас будет полуспартанский образ жизни. Довольно часто не будет рядом
+                магазинов и средств цивилизации. Одежда должна быть максимально удобная
 
 
                 </p>
@@ -107,7 +120,12 @@
                                 <p class="tour__page__gid__desc">Инструктор</p>
 
                             </li>
+                            <li class="tour__page__gid__item">
+                                <img class="tour__page__gid__img" src="/img/partner/miha.png" alt="">
+                                <h3 class="tour__page__gid__title-member">Михаил Механошин</h3>
+                                <p class="tour__page__gid__desc">Гид</p>
 
+                            </li>
                         </ul>
 
 
@@ -167,7 +185,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collaps1">
                             <h3>
-                                День 1 (6 августа)
+                                День 1 (25 августа)
                             </h3>
                         </button>
                     </h2>
@@ -175,14 +193,12 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Прилетаем в Уфу до 11.00. Встреча в аэропорту. Трансфер.
-                                </li>
-                                <li class="modal-active-item">Пешеходная экскурсия по центру города с посещением
-                                    ресторана национальной кухни (ресторан не входит в стоимость)</li>
-                                <li class="modal-active-item">14:00 Размещение в санатории Зеленая Роща</li>
-                                <li class="modal-active-item">15:00 Прогулка по маршруту Лысая Гора и в Уфимское
-                                    ожерелье «Жемчужина Авроры» с обзорным видом на реку Уфа</li>
-                                <li class="modal-active-item">18:00 Ужин (входит в стоимость), ранний отбой </li>
+                                <li class="modal-active-item">Прилетаем в Горно-Алтайск до 9.00 по местному времени</li>
+                                <li class="modal-active-item">Встреча с гидом Михаилом Механошиным</li>
+                                <li class="modal-active-item">Одеваемся сразу удобно, так как нас ждёт активный день.
+                                    Экскурсия в село Сростки по шукшинским местам, переезд до г. Белокуриха</li>
+                                <li class="modal-active-item">Питание по пути в кафе. Размещение гостиница «Ковчег»</li>
+
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -199,7 +215,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
                             <h3>
-                                День 2 (7 августа)
+                                День 2 (26 августа)
                             </h3>
                         </button>
                     </h2>
@@ -207,21 +223,11 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Утренняя зарядка.</li>
-                                <li class="modal-active-item">7:00 Ранний завтрак в гостинице (входит в стоимость)</li>
-                                <li class="modal-active-item">8:00 Выезд</li>
-                                <li class="modal-active-item">10:00 Остановка в этно кафе</li>
-                                <li class="modal-active-item">12:00 Прибытие на точку начала сплава
-                                </li>
-                                <li class="modal-active-item">Инструктаж
-                                </li>
-                                <li class="modal-active-item">Сплав по реке Агидель</li>
-                                <li class="modal-active-item">Мы увидим скалу Арский камень, Семь братьев</li>
-                                <li class="modal-active-item">16:00 Поздний обед на природе (входит в стоимость)</li>
-                                <li class="modal-active-item">17:30 Заселение в дом отдыха Березки</li>
-                                <li class="modal-active-item">18:00 Ужин (входит в стоимость).</li>
-                                <li class="modal-active-item">19:00 Свободное время. Прогулки на озере, настольные игры.
-                                </li>
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак.</li>
+                                <li class="modal-active-item">Радиальные экскурсии по городу Белокуриха, посещение
+                                    музея, теренкур</li>
+                                <li class="modal-active-item">Питание по пути в кафе. Ночуем в гостинице.</li>
+
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -237,7 +243,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                             <h3>
-                                День 3 (8 августа)
+                                День 3 (27 августа)
                             </h3>
                         </button>
                     </h2>
@@ -245,24 +251,12 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Утренняя зарядка</li>
-                                <li class="modal-active-item">9:00 Завтрак в доме отдыха Березки </li>
-                                <li class="modal-active-item">10:00 Пеший маршрут В поисках птицы счастья
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак.</li>
+                                <li class="modal-active-item">Экскурсия на гору Церковка на подъёмнике. Переезд до базы
+                                    Кедровая роща.</li>
+                                <li class="modal-active-item">Обед по пути
                                 </li>
-                                <li class="modal-active-item">Мы отправимся на хребет Крыкты-тау, с которого открывается
-                                    вид на 7 озёр, пройдемся по горному ущелью, увидим скалу Слоник и отыщем ту самую
-                                    птицу счастья.
-                                    Протяженность маршрута 8 км .
-                                </li>
-                                <li class="modal-active-item">14:00 Обед в доме отдыха Березки
-                                </li>
-                                <li class="modal-active-item">16:00 Экскурсия В гости к пасечнику</li>
-                                <li class="modal-active-item">Здесь мы узнаем о полезных свойствах мёда,
-                                    познакомимся с пчелами, почувствуем их вибрацию и, конечно, отведаем настоящий
-                                    башкирский мед.
-                                </li>
-                                <li class="modal-active-item">18:00 Ужин в доме отдыха Березки</li>
-                                <li class="modal-active-item">19:00 Свободное время. Прогулки, настольные игры.</li>
+                                <li class="modal-active-item">Ужин готовим самостоятельно на турбазе</li>
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -278,7 +272,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
                             <h3>
-                                День 4 (9 августа)
+                                День 4 (28 августа)
                             </h3>
                         </button>
                     </h2>
@@ -286,16 +280,21 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">8:00 Завтрак в доме отдыха Березки
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак готовим самостоятельно на
+                                    турбазе. Экскурсия на Девичьи плёсы.
                                 </li>
-                                <li class="modal-active-item">9:30 Фестиваль Малидак. Регистрация.
+                                <li class="modal-active-item">Девичьи плёсы - это изюминка реки Кумир. После
+                                    стремительного бега в узком каньоне, река Кумир разливается спокойным, почти
+                                    застывшим зеленоватым зеркалом. В это зеркало глядятся прибрежные скалы и
+                                    спускающиеся к самой воде березы. Вода Кумира в районе Девичьих плесов имеет
+                                    изумительный цвет - от стального до очень темно-изумрудного и светло-изумрудного.
+                                    Интересен контраст между бурлящим порогом Девичьи плесы и этой гладью.
                                 </li>
-                                <li class="modal-active-item">Участие в соревнованиях Развлекательная программа.
+                                <li class="modal-active-item">Далее переезд до село Мульта. Размещение на турбазе. Обед
+                                    по пути. Ужин на турбазе
                                 </li>
-                                <li class="modal-active-item">Горячий обед предоставляется всем участникам соревнований (входит в слот участника)</li>
-                                <li class="modal-active-item">Восхождение на Гору Малиновая (по желанию)</li>
-                                <li class="modal-active-item">Возвращение в дом отдыха Березки. Ужин (входит в стоимость) </li>
-                               
+
+
 
                             </ul>
                             <!-- <div class="modal-imgBlock">
@@ -312,7 +311,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
                             <h3>
-                                День 5 (10 августа)
+                                День 5 (29 августа)
                             </h3>
                         </button>
                     </h2>
@@ -320,18 +319,11 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">9:00 Завтрак в доме отдыха Березки.
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак на турбазе.
                                 </li>
-                                <li class="modal-active-item">Свободное время. Купание в озере, сапы, велосипеды. 
+                                <li class="modal-active-item">Радиальная экскурсия на Башталакские озёра. Ужин на
+                                    турбазе. Обед по пути
                                 </li>
-                                <li class="modal-active-item">13:00 Обед в доме отдыха Березки
-                                </li>
-                                <li class="modal-active-item">14:00 Выезд с вещами </li>
-                                <li class="modal-active-item">15:00 Пеший маршрут на Синие скалы </li>
-                                <li class="modal-active-item">Выезд в аэропорт.</li>
-                                <li class="modal-active-item">Вылет после 19.00 по местному времени</li>
-
-
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -342,7 +334,178 @@
                         </div>
                     </div>
                 </li>
-               
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                            <h3>
+                                День 6 (30 августа)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак на турбазе.
+                                </li>
+                                <li class="modal-active-item">Экскурсия на Красную гору. Ужин на турбазе.
+                                </li>
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+                            <h3>
+                                День 7 (31 августа)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак на турбазе.
+                                </li>
+                                <li class="modal-active-item">Переезд до Чибита. По пути экскурсии в музее
+                                    Старообрядчества, Рериха и камня. Обед по пути. Ужин на турбазе.
+                                </li>
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+                            <h3>
+                                День 8 (1 сентября)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак на турбазе.
+                                </li>
+                                <li class="modal-active-item">. Радиальные экскурсии на Уларские водопады и порог Малыш.
+                                    Обед по пути. Ужин на турбазе.
+                                </li>
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+                            <h3>
+                                День 9 (2 сентября)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак на турбазе.
+                                </li>
+                                <li class="modal-active-item">Радиальные экскурсии на Марс-1 и Марс-2. Ужин на турбазе.
+                                </li>
+                                <li class="modal-active-item">Алтайским Марсом называют урочище Кызыл Чин – ведь оно
+                                    одновременно напоминает и прерии Дикого Запада, и совершенно внеземные пейзажи
+                                    «красной планеты». Более редкая разновидность названия этого места – Радужные горы,
+                                    но оно используется намного реже. Но цвета гор здесь действительно самые разные –
+                                    есть не только красный, но и желтый, оранжевый, зеленый, коричневый и даже
+                                    синевато-фиолетовый цвета.
+                                </li>
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading10">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
+                            <h3>
+                                День 10 (3 сентября)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак.
+                                </li>
+                                <li class="modal-active-item">Переезд до Черги. По пути экскурсии на пороги Турбинный и Ильгуменский.
+                                </li>
+                                <li class="modal-active-item">Размещение на зообазе Черга. Обед по пути. Ужин на турбазе.
+                                </li>
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading11">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
+                            <h3>
+                                День 11 (4 сентября)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse11" class="accordion-collapse collapse" aria-labelledby="flush-heading11"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Отъезд домой. Трансфер до аэропорта. Вылет из Горно-Алтайска после 9.00.
+                                </li>
+                            
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -350,27 +513,10 @@
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 77 000р</p>
-                    <p class="tour__page__priceIn">В программу входит:
-                        ,	Двухместное проживание в Уфе -  Санаторий Зеленая Роща (первая ночь), возможно одноместное размещение 
-                        <br>Питание по программе : <br>
-                        1. день Ужин<br>
-                        2. день Завтрак, обед, ужин<br>
-                        3. день Завтрак, обед, ужин<br>
-                        4. день Завтрак, обед, ужин<br>
-                        5. день Завтрак обед<br>
-                        Сопровождение инструктором-проводником
-                        ,	Транспортное сопровождение
-                        ,	Двухместное проживание в доме отдыха  Березки
-                        ,	Экскурсионная программа
-                        ,	Входные билеты на канатную дорогу, В гости к пасечнику
-                        ,   Работа инструктора по скандинавской ходьбе
-                        
+                    <p class="tour__page__price">Стоимость: 110 000 руб <br> Группа 6 человек </p>
+                    <p class="tour__page__priceIn">В стоимость входит: сопровождение гида, трансфер на минивене , работа инструктора по с/х, проживание в указанных турбазах, использование радиогидов при необходимости.
                     </p>
-                    <p class="tour__page__priceOff">В стоимость НЕ входит: Обед в ресторане в первый день,
-                        перекусы в пути в дороге,
-                        участие в фестивале Малидак, авиаперелет и страховка путешественника.
-                        
+                    <p class="tour__page__priceOff">В стоимость НЕ входит: авиаперелет, питание (оно на Алтае недорогое), страховка путешественника. 
                     </p>
                 </div>
 
@@ -400,7 +546,7 @@
     </section>
 
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="/parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
     <script src="/node_modules/jquery/dist/jquery.js"></script>
@@ -436,7 +582,7 @@
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
                 <div class="modal-b">
-                    <form action="/php/tour/sendTour.php?name=Башкирия" method="POST" class="modal__form">
+                    <form action="/php/tour/sendTour.php?name=Рязанская область" method="POST" class="modal__form">
 
                         Фамилия, имя и отчество:
                         <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>

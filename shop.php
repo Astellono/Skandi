@@ -38,7 +38,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js"></script>
+        <script src="parts/header.js?ver=<?echo time();?>"></script>
     </header>
 
     
@@ -140,10 +140,10 @@
 
 
     <section class="questions" style="margin-top: 30px;" id="questions">
-        <script src="/parts/questions.js"></script>
+        <script src="parts/questions.js"></script>
     </section>
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="parts/contact.js"></script>
     </section>
 
 
@@ -189,7 +189,7 @@
 
 
     <script src="js/regEx.js"></script>
-    <script defer src="/parts/exShop.js"></script>
+    <script defer src="parts/exShop.js"></script>
     <script src="js/ex.js"></script>
     <script src="modal/bootstrap.bundle.js"></script>
     <script src="modal/Burger.js"></script>

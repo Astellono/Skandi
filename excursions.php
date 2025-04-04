@@ -31,7 +31,7 @@
     <!-- <link rel="stylesheet" href="style/style.css?ver=310">
     <link rel="stylesheet" href="style/style-adaptive.css?ver=310"> -->
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
-    <script src="/modal/verCss.js"></script>
+    <script src="modal/verCss.js"></script>
     <script defer src="js/scroll.js"></script>
     <title>Сканди-экскурсии</title>
 </head>
@@ -248,10 +248,10 @@
     </section>
 
     <section class="questions" id="questions">
-        <script src="/parts/questions.js"></script>
+        <script src="parts/questions.js"></script>
     </section>
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="parts/contact.js"></script>
     </section>
 
 
@@ -293,9 +293,9 @@
 
     <footer class="footer"></footer>
 
-    <script src="js/regEx.js?ver=1"></script>
-    <script defer src="/parts/exForm.js?ver=1"></script>
-    <script defer src="js/ex.js?ver=1"></script>
+    <script src="js/regEx.js?ver=<?echo time();?>"></script>
+    <script defer src="parts/exForm.js?ver=<?echo time();?>"></script>
+    <script defer src="js/ex.js?ver=<?echo time();?>"></script>
     <script src="modal/bootstrap.bundle.js"></script>
 
     <!-- <script src="modal/modal.js"></script> -->

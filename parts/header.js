@@ -2,7 +2,7 @@ document.getElementById("header").innerHTML = '\
     <div class="container">\
         <div class="header__contant">\
             <div class="header__logo">\
-                <a href="/index.html">\
+                <a href="index.php">\
                     <img src="/img/header/logo.svg" alt="" srcset="">\
                 </a>\
             </div>\
@@ -11,22 +11,22 @@ document.getElementById("header").innerHTML = '\
                     <img class="header__cross-img" src="/img/header/cross.png" alt="">\
                 </li>\
                 <li class="header__item">\
-                    <a href="/index.html" class="header__link">\
+                    <a href="/index.php" class="header__link">\
                         О нас\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/menu.html" class="header__link">\
+                    <a href="/menu.php" class="header__link">\
                         Сканди-активности\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/shop.html" class="header__link">\
+                    <a href="/shop.php" class="header__link">\
                         Товары\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/video.html" class="header__link">\
+                    <a href="/video.php" class="header__link">\
                         Медиа\
                     </a>\
                 </li>\
@@ -41,11 +41,11 @@ document.getElementById("header").innerHTML = '\
                 <ul class="header__soc-list">\
                     <li class="header__soc-item">\
                         <a href="https://vk.com/pomiru_spalkami" class="header__soc-link" target="_blank">\
-                            <img class="header__soc-icon" src="/img/header/vk.svg" alt="">\
+                            <img class="header__soc-icon" src="img/header/vk.svg" alt="">\
                         </a>\
                     </li>\
                         <a href="https://t.me/pomiruspalkami" class="header__soc-link" target="_blank">\
-                            <img class="header__soc-icon" src="/img/header/telega.svg" alt="">\
+                            <img class="header__soc-icon" src="img/header/telega.svg" alt="">\
                         </a>\
                     </li>\
                 </ul>\

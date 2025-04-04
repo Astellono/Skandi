@@ -37,7 +37,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script src="/modal/verCss.js"></script>
+    <script src="modal/verCss.js"></script>
     <script type="module" defer src="js/calendarNew.js"></script>
     <script type="module" src="js/sliderGen.js" defer></script>
     <title>По миру с палками</title>
@@ -45,7 +45,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js"></script>
+        <script src="parts/header.js?ver=<?echo time();?>"></script>
 
     </header>
     <section class="section hero">
@@ -608,28 +608,10 @@
             </form>
         </div>
     </section>
-    <!-- <section class="section feedback">
-        <div class="container">
-            <form enctype="multipart/form-data" method="post" id="feedback-form">
-                <label for="nameFF">Имя:</label>
-                <input type="text" name="nameFF" id="nameFF" required placeholder="например, Иван Иванович Иванов"
-                    x-autocompletetype="name" class="w100 border">
-                <label for="contactFF">Email:</label>
-                <input type="email" name="contactFF" id="contactFF" required placeholder="например, ivan@yandex.ru"
-                    x-autocompletetype="email" class="w100 border">
-                <label for="fileFF">Прикрепить файл:</label>
-                <input type="file" name="fileFF[]" multiple id="fileFF" class="w100">
-                <label for="messageFF">Сообщение:</label>
-                <textarea name="messageFF" id="messageFF" required rows="5" placeholder="Детали заявки…"
-                    class="w100 border"></textarea>
-                <br>
-                <input value="Отправить" type="submit" id="submitFF">
-            </form>
-        </div>
-    </section> -->
+    
 
     <section class="section questions" id="questions">
-        <script src="parts/questions.js"></script>
+        <script src="parts/questions.js?ver=<?echo time();?>"></script>
     </section>
 
     <section class="section partner">
@@ -660,7 +642,7 @@
         </div>
     </section>
     <section class="section contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="parts/contact.js?ver=<?echo time();?>"></script>
     </section>
     <!-- МОДАЛЬНЫЕ ОКНА ------------------------------------------------------------------------------------->
     <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

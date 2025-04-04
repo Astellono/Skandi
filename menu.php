@@ -37,7 +37,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js"></script>
+        <script src="parts/header.js?ver=<?echo time();?>"></script>
     </header>
 
 
@@ -50,10 +50,10 @@
                     <a href="tour.php" class="menu__link">ТУРЫ</a>
                 </li>
                 <li class="menu__item menu__ex">
-                    <a href="excursions.html" class="menu__link">СКАНДИ-МЕРОПРИЯТИЯ</a>
+                    <a href="excursions.php" class="menu__link">СКАНДИ-МЕРОПРИЯТИЯ</a>
                 </li>
                 <li class="menu__item menu__lesson">
-                    <a href="lesson.html" class="menu__link">ТРЕНИРОВКИ</a>
+                    <a href="lesson.php" class="menu__link">ТРЕНИРОВКИ</a>
                 </li>
             </ul>
             <div class="hell"></div>
@@ -62,10 +62,10 @@
 
     </section>
     <section class="questions" id="questions">
-        <script src="/parts/questions.js"></script>
+        <script src="parts/questions.js?ver=<?echo time();?>"></script>
     </section>
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
 

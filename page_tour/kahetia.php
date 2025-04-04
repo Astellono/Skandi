@@ -48,7 +48,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="/parts/header.js"></script>
+        <script src="/parts/header.js?ver=<?echo time();?>"></script>
 
     </header>
 
@@ -59,12 +59,12 @@
             <div class="tour__page__header">
 
                 <div class="tour__page__imgBox">
-                    <img class="tour__page__img" src="/img/act-tour/arm.jpg" alt="">
+                    <img class="tour__page__img" src="/img/act-tour/kahetia.jpg" alt="">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            ЭКСКУРСИОННО-СПОРТИВНЫЙ ТУР «ВЕСЕННЯЯ АРМЕНИЯ»
+                            SCANDI-ТУР В КАХЕТИЮ (Кахетия Сигнаги, Бодбе, Телави, Тбилиси)
                         </h1>
-                        <h2 class="tour__page__date">Даты: 16 апреля – 20 апреля 2024г.</h2>
+                        <h2 class="tour__page__date">Даты: 1 мая – 7 мая 2025г.</h2>
                     </div>
 
                 </div>
@@ -75,17 +75,21 @@
 
 
                 <p class="tour__page__desc">
-                    Армения – страна загадочной красоты и богатой истории с древними храмами и утопающими в зелени
-                    горами. Ее столица, Ереван, встретит вас свежим ароматом кофе и живописными улочками, а города Гюмри
-                    и Дилижан удивят своей уютной атмосферой и множеством мастерских ремесленников. Мы посетим города
-                    Ереван, Дилижан, Гюмри, Эчмиадзин, полюбуемся на гору Арагац и храм Тегер, где окунемся в мир
-                    архитектурных шедевров и душевного гостеприимства. <br><br>
-                    В этот раз наша программа будет полностью экскурсионно-прогулочной в режиме «без тайминга». Трансфер
-                    на комфортном микроавтобусе. В путешествии нас будет сопровождать наш прекрасный гид Ашхен Варданян.
-                    На утренних зарядках мы с вами выгуляем наши скандинавские палки, а потом будем выгуливать удобную и
-                    красивую одежду для экскурсий.<br><br>
-                    Последовательность экскурсий может меняться.
-
+                    Кахетия – это некогда самостоятельное царство, сейчас входящее в состав Грузии. Царство бесконечных
+                    виноградников и живописных тушинских гор, старинных традиций и загадочных мертвых городов. Царство
+                    самых вкусных грузинских вин и спокойной печали древних монастырей.
+                    <br>
+                    <br>
+                    Еще пять-шесть лет назад Кахетия была малопривлекательным местом. И навещали ее в основном
+                    самодеятельные туристы, ценящие простоту, природу и спокойствие. Но с 2011 года регион начал
+                    стремительно популяризироваться и приводиться в порядок: наводится лоск в городах, сфера
+                    туристических услуг растет и выходит практически на европейский уровень.
+                    <br>
+                    <br>
+                    В программе удачно совмещается активная и экскурсионная составляющая. Путешествуем на минивене, а
+                    значит мы максимально мобильны и готовы творческим изменениям в программе.
+                    <br><br>
+                    <strong>ВНИМАНИЕ!!! При посещении Грузии обязательно оформление страховки путешественника. Она оформляется самостоятельно</strong>
 
                 </p>
                 <hr>
@@ -101,14 +105,19 @@
                                 <p class="tour__page__gid__desc">Инструктор</p>
 
                             </li>
+                            <li class="tour__page__gid__item">
+                                <img class="tour__page__gid__img" src="/img/partner/gid.jpg" alt="">
+                                <h3 class="tour__page__gid__title-member">Николоз Бочоришвили</h3>
+                                <p class="tour__page__gid__desc">Гид</p>
 
+                            </li>
                         </ul>
 
 
                     </div>
                     <div class="tour__page__rate">
                         <h2 class="tour__page__rateTitle">Сложность маршрута</h2>
-                        <img src="/img/rate/1.svg" alt="" srcset="">
+                        <img src="/img/rate/3.svg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -161,7 +170,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collaps1">
                             <h3>
-                                День 1 (16 апреля)
+                                День 1 (1 мая)
                             </h3>
                         </button>
                     </h2>
@@ -169,14 +178,13 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Прилетаем в Ереван по местному времени до 13:00. Встреча с
-                                    гидом, трансфер. </li>
-                                <li class="modal-active-item">В этот день мы совершим с вами путешествие в сторону гор
-                                    Арагац. Полюбуемся на четрехтысячные вершины. Нас ждет вкусный национальный обед в
-                                    гастродворике (включен в стоимость). Посещение монастыря Тегер. </li>
-                                <li class="modal-active-item">Вечером возвращение в Ереван. Заселение в «Annabella
-                                    Hotel». Ужин в кафе (не входит в стоимость).</li>
-
+                                <li class="modal-active-item">Прилетаем в Тбилиси до 13.00 </li>
+                                <li class="modal-active-item">Встреча в аэропорту Тбилиси. Размещение в гостинице.</li>
+                                <li class="modal-active-item">В зависимости от времени прибытия решаем на месте что
+                                    сначала обед или экскурсия по Тбилиси</li>
+                                <li class="modal-active-item">Так как наши программы всегда носят индивидуальный формат,
+                                    будем ориентироваться что видели наши участники в Тбилиси, а что еще не успели</li>
+                                <li class="modal-active-item">Ужин в ресторане города (не входит в стоимость)</li>
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -193,7 +201,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
                             <h3>
-                                День 2 (17 апреля)
+                                День 2 (2 мая)
                             </h3>
                         </button>
                     </h2>
@@ -201,15 +209,20 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Мы поедем на север Армении, в культурную столицу, которую
-                                    называют городом-отцом. На месте расскажем почему.</li>
-                                <li class="modal-active-item">Утренняя сканди-зарядка. Завтрак в гостинице (входит в
-                                    стоимость). Автобусно-пешеходная экскурсия в Гюмри. </li>
-                                <li class="modal-active-item">Обед в центре города в ресторане (не входит в стоимость).
+                                <li class="modal-active-item">Утренняя зарядка</li>
+                                <li class="modal-active-item">Завтрак (входит в стоимость)</li>
+                                <li class="modal-active-item">Трансфер Кахети, посещаем дегустационный зал винзавода и
+                                    далее для контраста женский монастырь Бодбе</li>
+                                <li class="modal-active-item">Возможно совершить небольшой пеший трек и спустится к
+                                    купели Святой Нино по живописному ущелью</li>
+                                <li class="modal-active-item">В дороге не меньше двух часов. Далее едем и через полчаса
+                                    мы в Сигнаги
                                 </li>
-                                <li class="modal-active-item">Вечером возращение в Ереван. Ужин в городе (не входит в
-                                    стоимость)</li>
-
+                                <li class="modal-active-item">Проводим день в пешей прогулки по городку
+                                </li>
+                                <li class="modal-active-item">Там же и обедаем и ,по окончанию прогулки и обеда едем к
+                                    вечеру в соседний городок Дедоплис Цкаро, где и останемся на ночлег</li>
+                                <li class="modal-active-item">Ужин (не входит стоимость).</li>
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -225,7 +238,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                             <h3>
-                                День 3 (18 апреля)
+                                День 3 (3 мая)
                             </h3>
                         </button>
                     </h2>
@@ -233,19 +246,16 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Армянская Швейцария, которая покорит ваши сердца.
-                                    Неприступные монастыри, красивейший город и леса.</li>
-                                <li class="modal-active-item">Утренняя сканди-зарядка. Завтрак в гостинице (входит в
-                                    стоимость). Автобусно-пешеходная экскурсия в Дилижан. </li>
-                                <li class="modal-active-item">Предварительно закажем национальный обед по-домашнему (не
-                                    входит в стоимость).
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак (входит в стоимость)</li>
+                                <li class="modal-active-item">Далее выдвигаемся на трек. Туристы должны обязательно
+                                    зарегистрироваться в центре приема посетителей. Это связано исключительно с
+                                    безопасностью проведения трека, заповедник очень большой.</li>
+                                <li class="modal-active-item">Трек к Орлиному ущелью. 7–8 км, на машине едем до
+                                    стартовой точки далее пешеходная прогулка, сложность средняя.
                                 </li>
-                                <li class="modal-active-item">По дороге по любуемся на озеро Севан.</li>
-                                <li class="modal-active-item">Вечером возращение в Ереван. Ужин в городе (не входит в
-                                    стоимость).
-                                </li>
-
-
+                                <li class="modal-active-item">Если еще не находились переезжаем ко второй стартовой
+                                    точке и идем к развалинам средневековой крепости Хорнабуджи.После треков
+                                    возвращаемся и организуем обед</li>
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -261,7 +271,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
                             <h3>
-                                День 4 (19 апреля)
+                                День 4 (4 мая)
                             </h3>
                         </button>
                     </h2>
@@ -269,17 +279,19 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Святая святых, святой город Эчмиадзин, где находится
-                                    первый христианский храм, который наконец открыт после восьми лет ремонта.
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак (входит в стоимость)
                                 </li>
-                                <li class="modal-active-item">Утренняя сканди-зарядка. Завтрак в гостинице (входит в
-                                    стоимость). Автобусно-пешеходная экскурсия в Эчмиадзин.
+                                <li class="modal-active-item">Выезд, городок называется Лагодехи
                                 </li>
-                                <li class="modal-active-item">Обед в ресторане на территории кафедрального собора в
-                                    трапезной монахов (не входит в стоимость).
+                                <li class="modal-active-item">По размещению в гест гостевом доме состоится трек по
+                                    Национальному парку заповеднику, получившему в 2010 году статус национального парка.
+                                    Основан парк в 1912.
+                                    Трек порядка 8 км, (два маршрута есть и к дальнему водопаду до 14 км дальность).
+                                    Берем с собой ланчбоксы
                                 </li>
-                                <li class="modal-active-item">Вечером возвращение в Ереван. Ужин в городе (не входит в
-                                    стоимость).</li>
+                                <li class="modal-active-item">По окончанию трека возвращаемся в Лагодехи, организуем
+                                    ужин (не входит в стоимость). У нас очень милый гостевой дом с прекрасной хозяйкой.
+                                    Остаемся на ночлег.</li>
 
 
 
@@ -298,7 +310,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
                             <h3>
-                                День 5 (20 апреля)
+                                День 5 (5 мая)
                             </h3>
                         </button>
                     </h2>
@@ -306,13 +318,18 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Мы увидим столицу Армении.
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак входит в стоимость.
                                 </li>
-                                <li class="modal-active-item">Для желающих небольшая зарядка на территории отеля.
-                                    Завтрак в гостинице (входит в стоимость).
+                                <li class="modal-active-item">Трек к Крепости Мачи. Едем к стартовой точке , оттуда
+                                    направляемся по реке «Бнели Хеоба». Попадем в реальную сказку, в буковую рощу и
+                                    покрытые мхом гигантские камни. Пересекаем реку «Бнели Хеоба», оттуда узкой тропой
+                                    проходим по склону горы и продвигаемся к замку, который был построен несколько веков
+                                    назад.
+                                    Замечательная крепость со времён кахетинского царского феодализма. Трек 11 км,
+                                    сложность легкая.
                                 </li>
-                                <li class="modal-active-item">Экскурсия по Еревану. Покупка сувениров. Трансфер в
-                                    аэропорт. Вылет после 15:00.
+                                <li class="modal-active-item">После трека возвращаемся в Лагодехи, обедаем (не входит в
+                                    стоимсоть), далее экскурсионная программа. Ужин (не входит в стоимость).
                                 </li>
 
 
@@ -328,7 +345,71 @@
                         </div>
                     </div>
                 </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                            <h3>
+                                День 6 (6 мая)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак (входит в стоимость)
+                                </li>
+                                <li class="modal-active-item">. Трансфер в Тбилиси. Проезжаем и делаем остановки на
+                                    экскурсии в Телави, Гомборский перевал и Уджарма.
+                                </li>
+                                <li class="modal-active-item"> Приезд в Тбилиси.Размещение в гостинице Тато. Организуем
+                                    питание и пешею прогулку по Тбилиси.
+                                </li>
 
+
+
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+                            <h3>
+                                День 7 (7 мая)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Завтрак (входит в стоимость)
+                                </li>
+                                <li class="modal-active-item">Свободное время
+                                </li>
+                                <li class="modal-active-item">Трансфер в аэропорт</li>
+                                <li class="modal-active-item">Вылет после 13.00.</li>
+
+
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
 
             </ul>
         </div>
@@ -337,13 +418,23 @@
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 520 долларов + 10000 рублей</p>
-                    <p class="tour__page__priceIn">двухместное проживание в Annabella Hotel (доплата за одноместное
-                        размещение 95 долларов), завтраки, трансфер по программе, работа местного гида, работа
-                        инструктора, групповая аптечка, использование радиогидов.
+                    <p class="tour__page__price">Стоимость: 800$ + 10 000 руб <br> Группа 6 человек </p>
+                    <p class="tour__page__priceIn">В стоимость входит: Весь необходимый транспорт на территории Грузии
+                        по программе,
+                        Проживание по программе двухместное размещение,
+                        Питание: завтраки в отеле и ланчбоксы на маршруте,
+                        Сопровождение опытными гидами на протяжении всего маршрута,
+                        Экскурсионная программа,
+                        Сопровождение инструктора по скандинавской ходьбе
+
                     </p>
-                    <p class="tour__page__priceOff">В стоимость НЕ входит: авиа билеты, обеды и ужины, входные билеты на
-                        достопримечательности, страховка путешественника.
+                    <p class="tour__page__priceOff">В стоимость НЕ входит: Авиаперелет до Тбилиси, 
+                        Медицинская страховка, 
+                        Личные расходы, алкоголь, 
+                        Обеды и ужины, 
+                        Билеты в дегустационные центры; музеи, исторические комплексы, городской парк, билеты на
+                        канатку, серные бани, СПА процедуры
+
                     </p>
                 </div>
 
@@ -373,7 +464,7 @@
     </section>
 
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="/parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
     <script src="/node_modules/jquery/dist/jquery.js"></script>
@@ -409,7 +500,7 @@
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
                 <div class="modal-b">
-                    <form action="/php/tour/sendTour.php?name=Армения" method="POST" class="modal__form">
+                    <form action="/php/tour/sendTour.php?name=Кахетия" method="POST" class="modal__form">
 
                         Фамилия, имя и отчество:
                         <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>

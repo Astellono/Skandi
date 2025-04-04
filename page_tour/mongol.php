@@ -48,7 +48,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="/parts/header.js"></script>
+        <script src="/parts/header.js?ver=<?echo time();?>"></script>
 
     </header>
 
@@ -59,12 +59,12 @@
             <div class="tour__page__header">
 
                 <div class="tour__page__imgBox">
-                    <img class="tour__page__img" src="/img/act-tour/adj.jpg" alt="">
+                    <img class="tour__page__img" src="/img/act-tour/mongol.jpg" alt="">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            SCANDI-Тур «Бархатный сезон в Аджарии» (Грузия)
+                            SCANDI-ТУР В МОНГОЛИЮ. Национальный парк Таван богд
                         </h1>
-                        <h2 class="tour__page__date">Даты: 4 октября – 11 октября 2025г.</h2>
+                        <h2 class="tour__page__date">Даты: 14 августа – 24 августа 2025г.</h2>
                     </div>
 
                 </div>
@@ -75,16 +75,35 @@
 
 
                 <p class="tour__page__desc">
-
-                    У подножия кавказских гор раскинулась удивительно красивая земля Аджария (Грузия). Сюда приезжает
-                    немало туристов из разных уголков мира понежиться на морских пляжах, познакомиться с памятниками
-                    старины, увидеть таинственные ущелья и могучие водопады. А уезжают гости под впечатлением от
-                    гостеприимства местных жителей, вкуснейших блюд аджарской кухни и традиционного наследия этого
-                    народа. <br><br>
-                    Программа рассчитана на любителей пешеходных экскурсий и треков.<br><br>
-                    Нас ждет максимально природная красота и море в бархатный сезон.<br><br>
-                    Путешествуем на минивене с нашим гидом.<br><br>
-                    Группа 6 человек
+                    Национальный парк Алтай Таван Богд (монг. Алтай Таван богд байгалийн цогцолбор газар, Природный
+                    комплекс пяти святыней Алтая) расположен на территории аймака Баян-Улгий в западной части Монголии.
+                    Имеет общие границы с Россией и Китаем.<br><br>
+                    Территория национального парка включает в себя хребты Монгольского Алтая с обширными массивами
+                    курумов, высокогорными лесами, лугами и полупустынями, озёрами и речными долинами. К северу от парка
+                    возвышается пик Куйтэн-Уул — самая высокая точка Монголии (4374 м). Вблизи от неё находится ледник
+                    Потанина площадью 19 км2, который вместе с другими ледниками питает реки, уходящие в Котловину
+                    Больших Озёр. В самом парке расположены крупные озёра Хотон нуур, Хургон нуур - эти озера в этом
+                    путешествии посчастливится увидеть.<br><br>
+                    Готовясь к туру вы должны оставить все ожидания дома. Тур-детокс, так как во время поездки у нас
+                    несколько дней не будет ни только интернета, но и электричества. Пауэр-банки берем с собой. Говорить
+                    по телефону мы не сможем, но вот фотографировать обязаны. А еще будем учиться комуницировать между
+                    собой, так как в этих условиях нам придется научиться делить обязанности и практически весь тур
+                    готовить еду самостоятельно. Так же надо быть готовым к тому , что практически все
+                    санитарно-гигиенические процедуры будут в природных условиях. Но домой вы точно вернетесь с другим
+                    ощущением себя.
+                    Рекомендации что взять с собой:
+                <ul>
+                    <li class="lim">Вещи привозим в больших рюкзаках или спортивных сумках (они компактнее войдут в
+                        транспортные средства). Чемоданы не берем ;</li>
+                    <li class="lim"> С собой берем все только самое необходимое (фены и прочее не пригодятся);</li>
+                    <li class="lim">Пауэр-банк (в некоторых местах не будет электричества) </li>
+                    <li class="lim">Купальники, личные полотенца и средства личной гигиены. Помним, мы будем в
+                        труднодоступных местах, где нет гостиниц и магазинов.</li>
+                    <li class="lim">Тёплые куртки, носки, штаны, 2 пары хорошей обуви, термобелье.</li>
+                    <li class="lim">Спальник на -10 или ниже (так не будет, но спать комфортно) </li>
+                    <li class="lim">Фонарик</li>
+                    <li class="lim">Дождевик</li>
+                </ul>
 
                 </p>
                 <hr>
@@ -101,8 +120,8 @@
 
                             </li>
                             <li class="tour__page__gid__item">
-                                <img class="tour__page__gid__img" src="/img/partner/gid.jpg" alt="">
-                                <h3 class="tour__page__gid__title-member">Николоз Бочоришвили</h3>
+                                <img class="tour__page__gid__img" src="/img/partner/mihail.png" alt="">
+                                <h3 class="tour__page__gid__title-member">Михаил Механошин</h3>
                                 <p class="tour__page__gid__desc">Гид</p>
 
                             </li>
@@ -112,7 +131,7 @@
                     </div>
                     <div class="tour__page__rate">
                         <h2 class="tour__page__rateTitle">Сложность маршрута</h2>
-                        <img src="/img/rate/3.svg" alt="" srcset="">
+                        <img src="/img/rate/4.svg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -165,7 +184,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collaps1">
                             <h3>
-                                День 1 (4 октября)
+                                День 1 (14 августа)
                             </h3>
                         </button>
                     </h2>
@@ -173,13 +192,12 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-                                <li class="modal-active-item">Прилетаем в Батуми до 13.00 по местному времени</li>
-                                <li class="modal-active-item">Встреча в аэропорту с гидом, трансфер</li>
-                                <li class="modal-active-item">Размещение в гостевом доме в горах.</li>
-                                <li class="modal-active-item">Обед в ресторане города (не входит в стоимость)</li>
-                                <li class="modal-active-item">Вечером свободное время (гуляем, наслаждаемся морем).
-                                </li>
-                                <li class="modal-active-item">Ужин в городе (не входит в стоимость).</li>
+                                <li class="modal-active-item">Прилетаем в Горно-Алтайск в 9. 00 по местному времени</li>
+                                <li class="modal-active-item">Встреча с гидом Михаилом Механошиным</li>
+                                <li class="modal-active-item">Одеваемся сразу удобно, так как нас ждёт активный день и
+                                    экскурсии по Чемалу, Камышлинский водопад и т.д. по выбору, так как многие из вас
+                                    уже были на Алтае, а повторяться не хочется.</li>
+                                <li class="modal-active-item">Питание в этот день в кафе по пути. Вечером Заселение в доме у гида. Ужин там же. </li>
 
                             </ul>
                             <!-- <div class="modal-imgBlock">
@@ -197,7 +215,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
                             <h3>
-                                День 2 (5 октября)
+                                День 2 (15 августа)
                             </h3>
                         </button>
                     </h2>
@@ -205,15 +223,12 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-
-                                <li class="modal-active-item">Утренняя зарядка.</li>
-                                <li class="modal-active-item">Завтрак (не входит в стоимость). </li>
-                                <li class="modal-active-item">Выход на трек к кресту Андрея Первозванного.</li>
-                                <li class="modal-active-item">Набор высоты 200 м, протяженность – 8 км. </li>
-                                <li class="modal-active-item">Возвращение в гостевой дом. </li>
-                                <li class="modal-active-item">Обед в кафе города (не входит в стоимость). </li>
-                                <li class="modal-active-item">Свободное время (пляжный отдых никто не отменял)</li>
-                                <li class="modal-active-item">Ужин в городе (не входит в стоимость).</li>
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак на базе.</li>
+                                <li class="modal-active-item">Переезжаем в село Кош-Агач по Чуйскому тракту</li>
+                                <li class="modal-active-item">По пути экскурсии по выбору</li>
+                                <li class="modal-active-item">Обед по пути в кафе</li>
+                                <li class="modal-active-item">Размещение на турбазе в селе Кош-Агач
+                                </li>
 
                             </ul>
                             <!-- <div class="modal-imgBlock">
@@ -230,7 +245,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                             <h3>
-                                День 3 (6 октября)
+                                День 3 (16 августа)
                             </h3>
                         </button>
                     </h2>
@@ -238,23 +253,14 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-
-
-
-
-
-                                <li class="modal-active-item"> Утренняя зарядка. Завтрак (не входит в стоимость).
+                                <li class="modal-active-item">Завтрак по пути</li>
+                                <li class="modal-active-item">Переезд в Монголию до города Баян-Ульгий</li>
+                                <li class="modal-active-item">Обед в ресторане города
                                 </li>
-                                <li class="modal-active-item">Трансфер в Национальный парк Мтирала (40 км.), где можно
-                                    насладиться нетронутой природой «грузинских джунглей». Трековая тропа ведет через
-                                    лес вдоль реки Чаквицкали. В конце тропы можно полюбоватся прекрасным водопадом и
-                                    озером, разрешено купание (купальники берем с собой). Перерыв на ланч (не входит в
-                                    стоимость). Протяженность трека примерно - 10 км, набор высоты от 500-800 м. </li>
-                                <li class="modal-active-item"> Возвращение в гостиницу. Ужин в гостинице (не входит в
-                                    стоимость).
+                                <li class="modal-active-item">Экскурсия на озеро Толбо-нуур</li>
+                                <li class="modal-active-item">Ужин в ресторане города
                                 </li>
-                                <i>Примечание: зависит от погодных условий, в дождливую погоду посещение не
-                                    рекомендуется</i>
+                                <li class="modal-active-item">Размещение в гостинице Максум</li>
 
 
                             </ul>
@@ -272,7 +278,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
                             <h3>
-                                День 4 (7 октября)
+                                День 4 (17 августа)
                             </h3>
                         </button>
                     </h2>
@@ -280,17 +286,14 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-
-                                <li class="modal-active-item">Утренняя зарядка. Завтрак (не входит в стоимость).</li>
-                                <li class="modal-active-item">Трек в ущелье Мачахела. Эскурсия к водопаду Махунцети.
-                                    Одному из популярных мест Аджарии. Это самый высокий водопад региона – 30 метров.
-                                    Трансфер к стартовой точке трека. Самшитовый лес, водопад, арочные мосты 12 века,
-                                    великолепные виды горной Аджарии. Обед в гостеприимной семье (не входит в
-                                    стоимость). По желанию на водопадах можно организовать баню .
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак.
                                 </li>
-                                <li class="modal-active-item"> Возвращение в гостевой дом. Ужин в кафе (не входит в
-                                    стоимость).
+                                <li class="modal-active-item">Пересаживаемся на уазик. Переезд (170 км) в национальный
+                                    парк Табын богдо ол (Таван богд).
                                 </li>
+                                <li class="modal-active-item">Закупка провизии. Готовим самостоятельно.
+                                </li>
+                                <li class="modal-active-item">Ночуем в юрте все вместе. </li>
 
 
 
@@ -309,7 +312,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
                             <h3>
-                                День 5 (8 октября)
+                                День 5 (18 августа)
                             </h3>
                         </button>
                     </h2>
@@ -317,19 +320,12 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-
-                                <li class="modal-active-item">Утренняя зарядка. Завтрак (не входит в стоимость).
+                                <li class="modal-active-item">Утренняя зарядка
                                 </li>
-                                <li class="modal-active-item">Трансфер в Ботанический сад – одна из ярких
-                                    достопримечательностей Аджарии. Трек по Ботаническому саду (порядка 9 км) Экскурсия
-                                    в Батуми – столица региона Аджария, знаменитый курортный город на черноморском
-                                    побережье Грузии.
+                                <li class="modal-active-item">Экскурсия на ледник Табын богдо ол
                                 </li>
-                                <li class="modal-active-item">Возвращение в гостевой дом. Ужин в кафе (не входит в
-                                    стоимость).
+                                <li class="modal-active-item">Готовим самостоятельно. Ночуем там же.
                                 </li>
-
-
 
                             </ul>
                             <!-- <div class="modal-imgBlock">
@@ -346,7 +342,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
                             <h3>
-                                День 6 (9 октября)
+                                День 6 (19 августа)
                             </h3>
                         </button>
                     </h2>
@@ -354,20 +350,14 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
-
-
-
-
-                                <li class="modal-active-item">Утренняя зарядка. Завтрак (не входит в стоимость).
+                                <li class="modal-active-item">Утренняя зарядка
                                 </li>
-                                <li class="modal-active-item">Трек начинается от поселка Гонио. Протяженность 10 км.
-                                    Набор высоты 600-700 метров. Проходит по живописной тропе в горной Аджарии, по
-                                    дороге мы посетим два монастыря, в которых можно познакомиться с современным
-                                    монастырским укладом Грузии, на конечной точке маршрута полюбуемся на водопад.
+                                <li class="modal-active-item">Переезд на озера Хотон-нуур и Хургон-нуур
                                 </li>
-                                <li class="modal-active-item">Возвращение в гостиницу. Обед по пути (не входит в
-                                    стоимость). Ужин в кафе (не входит в стоимость).
+                                <li class="modal-active-item">Готовим самостоятельно. Ночуем в юрте у беркучи.
                                 </li>
+
+
 
 
                             </ul>
@@ -385,7 +375,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
                             <h3>
-                                День 7 (10 октября)
+                                День 7 (20 августа)
                             </h3>
                         </button>
                     </h2>
@@ -393,18 +383,12 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка
+                                </li>
+                                <li class="modal-active-item">Радиальная экскурсия по озерам и экскурсия на водопад 4 км
+                                </li>
+                                <li class="modal-active-item">Ночуем там же в юрте. Готовим самостоятельно. </li>
 
-                                <li class="modal-active-item">Утренняя зарядка. Завтрак (не входит в стоимость)
-                                </li>
-                                <li class="modal-active-item"> Затем посещаем крепость римского периода Апсарос и едем в
-                                    Батуми, где и проведем целый день. Экскурсия по старому Батуми, порт, организуем
-                                    обед и вечером прогуляемся по парку увидим поющие фонтаны.
-                                </li>
-                                <li class="modal-active-item"> Обед по пути (не входит в стоимость). 
-                                </li>
-                                <li class="modal-active-item">Возвращение в гостевой дом.  Ужин в кофе (не входит в стоимость)
-                                </li>
-                                
 
                             </ul>
                             <!-- <div class="modal-imgBlock">
@@ -421,7 +405,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
                             <h3>
-                                День 8 (11 октября)
+                                День 8 (21 августа)
                             </h3>
                         </button>
                     </h2>
@@ -429,15 +413,14 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка
+                                </li>
+                                <li class="modal-active-item">Переезд с озер до г. Баян-Ульгий, ночуем в гостинице
+                                    Максум
+                                </li>
+                                <li class="modal-active-item">Ужин в городе в ресторане. По возможности шоппинг
+                                    (кашемир, кожанные перчатки и т.д. никто не отменял).</li>
 
-
-                                <li class="modal-active-item">Завтрак (не входит в стоимость). 
-                                </li>
-                                <li class="modal-active-item">Трансфер в аэропорт. 
-                                </li>
-                                <li class="modal-active-item">Вылет после 12.00 по местному времени.
-                                </li>
-                                
                             </ul>
                             <!-- <div class="modal-imgBlock">
 
@@ -448,8 +431,94 @@
                         </div>
                     </div>
                 </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+                            <h3>
+                                День 9 (22 августа)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка (по обстоятельствам)
+                                </li>
+                                <li class="modal-active-item">Завтрак (по обстоятельствам)
+                                </li>
+                                <li class="modal-active-item">Переезд в Россию до села Акташ. Обед и ужин по пути.
+                                    Размещение в гостинице.</li>
 
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
 
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading10">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
+                            <h3>
+                                День 10 (23 августа)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Утренняя зарядка. Завтрак.
+                                </li>
+                                <li class="modal-active-item">Переезд по Чуйскому тракту до села Черга.
+                                </li>
+                                <li class="modal-active-item">Остановки в самых красивых местах. Обед по пути. </li>
+                                <li class="modal-active-item">Размещение в гостевом доме у гида. Ужин там же</li>
+                               
+
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="modal-tour-item accordion-item">
+                    <h2 class="accordion-header" id="flush-heading11">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
+                            <h3>
+                                День 11 (24 августа)
+                            </h3>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse11" class="accordion-collapse collapse" aria-labelledby="flush-heading11"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="modal-active-list">
+                                <li class="modal-active-item">Отъезд домой
+                                </li>
+                                <li class="modal-active-item">Трансфер до аэропорта. Вылет из Горно-Алтайска после 9.00.
+                                </li>
+                            </ul>
+                            <!-- <div class="modal-imgBlock">
+
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/Guarap.jpg" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga.png" alt="">
+                                <img class="minimized modal-img" src="/img/img-day/abhazia/day2/luga2.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -457,24 +526,13 @@
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 970 долларов + 10000 рублей  <br> Группа 6 человек </p>
-                    <p class="tour__page__priceIn">В стоимость входят:
-                        Весь необходимый транспорт по программе; 
-                        Проживание по программе – 2-местное  размещение в гостевом доме в Гонио; 
-                        Сопровождение опытными гидами на протяжении всего маршрута; 
-                        Билеты в Ботанический сад; 
-                        Билеты в крепость  Гонио Апсарес; 
-                        Пешие экскурсии по программе; 
-                        Сопровождение инструктора по скандинавской ходьбе;
-                        
+                    <div class="tour__page__price">Стоимость: 128 800 руб <p style="font-size: 18px;"> Цена зависит от курса валют на момент поездки </p> Группа 6 человек </div>
+                    <p class="tour__page__priceIn">В стоимость входит: сопровождение гида, трансфер на минивене и
+                        уазике, работа инструктора по с/х, проживание в указанных турбазах, проживание в юртах ,
+                        использование радиогидов при необходимости.
                     </p>
-                    <p class="tour__page__priceOff">В стоимость НЕ входят:
-                        Перелет в Грузию и обратно; 
-                        Питание; 
-                        Страховка путешественника; 
-                        Личные расходы, алкоголь; 
-                        Билеты в музеи, исторические комплексы;
-                        
+                    <p class="tour__page__priceOff">В стоимость НЕ входит: авиаперелет, питание (оно на Алтае
+                        недорогое), страховка путешественника.
                     </p>
                 </div>
 
@@ -486,7 +544,7 @@
 
 
                 <a class="tour__page__btn" href="#openModal">Записаться</a>
-
+                
             </div>
         </div>
     </section>
@@ -504,7 +562,7 @@
     </section>
 
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="/parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
     <script src="/node_modules/jquery/dist/jquery.js"></script>
@@ -540,12 +598,13 @@
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
                 <div class="modal-b">
-                    <form action="/php/tour/sendTour.php?name=Аджария" method="POST" class="modal__form">
+                    <form action="/php/tour/sendTour.php?name=Монголия" method="POST" class="modal__form">
 
                         Фамилия, имя и отчество:
                         <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>
                         Дата рождения:
-                        <input type="text" id="age" name="age" placeholder="Дата рождения 31.12.2000" required>
+                        <input type="text" id="age" name="age" placeholder="Дата рождения 31.12.2000"
+                            required>
                         Ваш телефон:
                         <input type="tel" id="tel" name="tel" placeholder="Ваш ответ" required>
                         Город в котором вы проживаете:
@@ -562,7 +621,8 @@
                         Занимаетесь ли Вы активно физическими нагрузками? Какими?
                         <input type="text" id="fizNagr" name="fizNagr" placeholder="Ваш ответ" required>
                         Есть ли сердечно-сосудистные заболевания?
-                        <input type="text" id="zabolevania" name="zabolevaniya" placeholder="Ваш ответ" required>
+                        <input type="text" id="zabolevania" name="zabolevaniya" placeholder="Ваш ответ"
+                            required>
                         Бывает ли повышенное или пониженное давление? Какое именно?
                         <input type="text" id="davlenie" name="davlenie" placeholder="Ваш ответ" required>
                         Хронические заболевания? Аллергия?
@@ -570,14 +630,15 @@
                         Заболевания опорно-двигательного аппарата?
                         <input type="text" id="opora" name="opora" placeholder="Ваш ответ" required>
                         На какие расстояния ходите?
-                        <input type="text" id="perenosimost" name="perenosimost" placeholder="Ваш ответ" required>
+                        <input type="text" id="perenosimost" name="perenosimost" placeholder="Ваш ответ"
+                            required>
                         Как переносите сложные маршруты со спусками и подъемами?
                         <input type="text" id="level" name="level" placeholder="Ваш ответ" required>
                         Готовы ли проходить в среднем 15 - 20 км?
                         <input type="text" id="prohod" name="prohod" placeholder="Ваш ответ" required>
                         Как переносите нагрузки на горных маршрутах?
-                        <input type="text" id="perenosimostGori" name="perenosimostGori" placeholder="Ваш ответ"
-                            required>
+                        <input type="text" id="perenosimostGori" name="perenosimostGori"
+                            placeholder="Ваш ответ" required>
                         Вам подходят только равнинные маршруты?
                         <input type="text" id="ravn" name="ravn" placeholder="Ваш ответ" required>
                         Коментарий, промокод (необязательное поле)
@@ -585,7 +646,8 @@
                         <ul class="modal-form-submit">
                             <li class="modal-form-item">
                                 <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
-                                        class="modal-form-dogovor" href="/files/Договор.pdf" download>договором</a>
+                                        class="modal-form-dogovor" href="/files/Договор.pdf"
+                                        download>договором</a>
                                 </p>
                                 <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
                                     oninvalid="this.setCustomValidity('Подтвердите если ознакомились с договором!')"
@@ -593,7 +655,8 @@
                             </li>
                             <li class="modal-form-item">
                                 <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
-                                        class="modal-form-dogovor" href="/files/Правила.docx" download>правилами</a>
+                                        class="modal-form-dogovor" href="/files/Правила.docx"
+                                        download>правилами</a>
                                 </p>
                                 <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
                                     oninvalid="this.setCustomValidity('Подтвердите если ознакомились с правилами!')"
@@ -601,8 +664,8 @@
                             </li>
                             <li class="modal-form-item">
                                 <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
-                                        href="/files/Cогласие на обработку персональных данных.docx" download>согласие
-                                        на
+                                        href="/files/Cогласие на обработку персональных данных.docx"
+                                        download>согласие на
                                         обработку персональных данных</a></p>
                                 <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
                                     oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"

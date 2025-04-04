@@ -41,7 +41,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js"></script>
+        <script src="parts/header.js?ver=<?echo time();?>"></script>
         
     </header>
     <!-- <section class="openlesson">

@@ -26,13 +26,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description"
         content="Scandi-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
-    <link rel="icon" sizes="120x120" href="/img/icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/style/clear.css">
-    <link rel="stylesheet" href="/style/bootstrap.css">
+    <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style/clear.css">
+    <link rel="stylesheet" href="style/bootstrap.css">
     <script defer src="js/scroll.js"></script>
     <!-- <link rel="stylesheet" href="/style/style.css?ver=505">
     <link rel="stylesheet" href="/style/style-adaptive.css?ver=505"> -->
-    <script src="/modal/verCss.js"></script>
+    <script src="modal/verCss.js"></script>
 
 
     <style>
@@ -48,9 +48,9 @@
     <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 
-<body>
+<body>      
     <header class="header" id="header">
-        <script src="/parts/header.js"></script>
+        <script src="parts/header.js"></script>
     </header>
 
 
@@ -82,14 +82,14 @@
     </script>
 
     <section class="questions" id="questions">
-        <script src="/parts/questions.js"></script>
+        <script src="parts/questions.js"></script>
     </section>
 
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="parts/contact.js"></script>
     </section>
 
-    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script>
         $(function () {
             $('.minimized').click(function (event) {
@@ -114,8 +114,8 @@
 
     <footer class="footer"></footer>
     
-    <script src="/js/video.js" defer></script>
-    <script src="/modal/bootstrap.bundle.js"></script>
+    <script src="js/video.js" defer></script>
+    <script src="modal/bootstrap.bundle.js"></script>
 
 
 

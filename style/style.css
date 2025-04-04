@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Aguafina Script';
     src: url('AguafinaScript-Regular.eot');
-    src: local('Aguafina Script Regular'), local('AguafinaScript-Regular'), url('/fonts/AguafinaScript-Regular.woff2') format('woff2'), url('/fonts/AguafinaScript-Regular.woff') format('woff');
+    src: local('Aguafina Script Regular'), local('AguafinaScript-Regular'), url('../fonts/AguafinaScript-Regular.woff2') format('woff2'), url('../fonts/AguafinaScript-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: local("Roboto-Regular"), url("/fonts/Roboto.woff2") format("woff2"), url("/fonts/Roboto.woff") format("woff");
+    src: local("Roboto-Regular"), url("../fonts/Roboto.woff2") format("woff2"), url("../fonts/Roboto.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: local("Roboto-Bold"), url("/fonts/Robotobold.woff2") format("woff2"), url("/fonts/Robotobold.woff") format("woff");
+    src: local("Roboto-Bold"), url("../fonts/Robotobold.woff2") format("woff2"), url("../fonts/Robotobold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: local("Roboto-Light"), url("/fonts/RobotoLight.woff2") format("woff2"), url("/fonts/RobotoLight.woff") format("woff");
+    src: local("Roboto-Light"), url("../fonts/RobotoLight.woff2") format("woff2"), url("../fonts/RobotoLight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: local("Roboto-Medium"), url("/fonts/RobotoMedium.woff2") format("woff2"), url("/fonts/RobotoMedium.woff") format("woff");
+    src: local("Roboto-Medium"), url("../fonts/RobotoMedium.woff2") format("woff2"), url("../fonts/RobotoMedium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: local("Roboto-italic"), url("/fonts/Robotobolditalic.woff2") format("woff2"), url("/fonts/Robotobolditalic.woff") format("woff");
+    src: local("Roboto-italic"), url("../fonts/Robotobolditalic.woff2") format("woff2"), url("../fonts/Robotobolditalic.woff") format("woff");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -2988,14 +2988,14 @@ body.mod {
 
 
 .menu__tour {
-    background: rgba(0, 0, 0, .40) url('/img/menu/tourMenu.jpg');
+    background: rgba(0, 0, 0, .40) url('../img/menu/tourMenu.jpg');
     background-size: cover;
     background-position-y: center;
     background-blend-mode: darken;
 }
 
 .menu__ex {
-    background: rgba(0, 0, 0, .40) url('/img/menu/menuEx.jpg');
+    background: rgba(0, 0, 0, .40) url('../img/menu/menuEx.jpg');
     background-size: cover;
 
     background-blend-mode: darken;
@@ -3003,7 +3003,7 @@ body.mod {
 }
 
 .menu__lesson {
-    background: rgba(0, 0, 0, .40) url('/img/menu/menuLesson.jpg');
+    background: rgba(0, 0, 0, .40) url('../img/menu/menuLesson.jpg');
     background-size: cover;
     background-position-y: center;
     background-blend-mode: darken;

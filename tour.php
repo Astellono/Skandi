@@ -32,7 +32,7 @@
     <!-- <link rel="stylesheet" href="style/style.css?ver=204">
     <link rel="stylesheet" href="style/style-adaptive.css?ver=204"> -->
     <script defer src="js/scroll.js"></script>
-    <script src="/modal/verCss.js"></script>
+    <script src="modal/verCss.js"></script>
 
     <script src="js/tourGen.js?ver=<?echo time();?>" type="module" defer></script>
     <title>Туры</title>
@@ -161,10 +161,10 @@
         </div>
     </section> -->
     <section class="questions" id="questions">
-        <script src="/parts/questions.js"></script>
+        <script src="parts/questions.js?ver=<?echo time();?>"></script>
     </section>
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
 

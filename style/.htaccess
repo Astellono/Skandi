@@ -1,8 +1,0 @@
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html
-
-Cache-Control: no-cache, no-store, must-revalidate
-Pragma: no-cache
-Expires: 0
