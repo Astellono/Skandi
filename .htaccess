@@ -1,3 +1,4 @@
+
 RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_URI} ^\/$
@@ -39,3 +40,4 @@ RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
 RewriteRule ^index\.html$ https://pomiru-spalkami.ru/ [R=301,L]
 
 Redirect 301 /index https://pomiru-spalkami.ru
+

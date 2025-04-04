@@ -17,7 +17,7 @@ function switchState(block, arrow) {
 textBot.addEventListener('click', () => switchState(textAbout, textBot));
 textAbout.addEventListener('click', () => switchState(textAbout, textBot));
 
-
+console.log('Привет кэш');
 
 
 

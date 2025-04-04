@@ -17,14 +17,7 @@ const getDatesArray = (start, end) => {
 export let tourList = [
 
     
-   
-    {
-        nameT: "Суздаль",
-        date: getDatesArray(new Date('2025-03-29'), new Date('2025-03-30')),
-        link: "page_tour/suz.html",
-        color: '#AD6612',
-        srcImg:'img/act-tour/suz.jpg' ,
-    },
+ 
     {
         nameT: "Армения",
         date: getDatesArray(new Date('2025-04-16'), new Date('2025-04-20')),
@@ -59,6 +52,13 @@ export let tourList = [
         link: "page_tour/solov.html",
         color: "#3f708c",
         srcImg:'img/act-tour/solov.jpg' ,
+    },
+    {
+        nameT: "Селигер",
+        date: getDatesArray(new Date('2025-07-13'), new Date('2025-07-19')),
+        link: "page_tour/seliger.html",
+        color: "#6a118c",
+        srcImg:'img/act-tour/seliger.jpg' ,
     },
     {
         nameT: "Башкирия",
@@ -101,5 +101,6 @@ export let tourList = [
         link: "page_tour/osetia.html",
         color: '#add',
         srcImg:'img/act-tour/osetia.jpg' ,
-    }
+    },
+  
 ]

@@ -44,7 +44,7 @@ for (let i = 0; i < 12; i++) {
     let itemM = document.createElement("li")
     itemM.classList.add("calendar__item")
 
-    switchVisionMounth(1, i, itemM)
+    switchVisionMounth(2, i, itemM)
 
     listM.append(itemM)
 
