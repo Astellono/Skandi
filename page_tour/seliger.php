@@ -120,7 +120,7 @@
 
                             </li>
                             <li class="tour__page__gid__item">
-                                <img class="tour__page__gid__img" src="/img/otziv/zagl1.png" alt="">
+                                <img class="tour__page__gid__img" src="/img/partner/sel.png" alt="">
                                 <h3 class="tour__page__gid__title-member">Светлана Чеснокова</h3>
                                 <p class="tour__page__gid__desc">Гид</p>
 

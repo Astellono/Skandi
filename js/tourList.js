@@ -101,6 +101,7 @@ export let tourList = [
         link: "page_tour/osetia.php",
         color: '#add',
         srcImg:'img/act-tour/osetia.jpg' ,
-    },
+    }
+   
   
 ]
