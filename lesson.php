@@ -41,8 +41,8 @@
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js?ver=<?echo time();?>"></script>
-        
+        <script src="parts/header.js?ver=<? echo time(); ?>"></script>
+
     </header>
     <!-- <section class="openlesson">
         <div class="container">
@@ -97,7 +97,7 @@
             <table class="lesson__table table big__table">
                 <h2 class="lesson__table-title">Расписание</h2>
 
-            
+
                 <tr>
                     <th>ПАРК</th>
                     <th>ПН</th>
@@ -117,7 +117,7 @@
                     </td>
                     <td>-</td>
                     <td>07:00</td>
-                    <td>19:30</td>
+                    <td>-</td>
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
@@ -173,17 +173,13 @@
                         <img class="lesson__img" src="img/lesson/voron.jpg" alt="" srcset="">
                         <p class="lesson__img-text">Воронцовский</p>
                     </td>
+                    <td>19:00 ОФП <br> 20:00 С/Х </td>
+                    <td>-</td>
+                    <td>19:30</td>
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
-                    <td>19.30</td>
-                    <td>-</td>
-                    <td>-</td>
-
-                    <td>9.00 С/Х<br>
-                        10:00 ОФП<br>
-                        11:00 С/Х PRO
-                    </td>
+                    <td></td>
                     <td class="td-item"><a class="td-link" href="#mapVorona"><img width="50px" height="50px"
                                 src="img/map.png"></a></td>
                     <td class="td__btn"> <a href="#modal-vorona" class="lesson__btn">Записаться</a></td>
@@ -201,35 +197,8 @@
                     <th>Точка сбора</th>
                     <th></th>
                 </tr>
-                <tr>
-                    <td class="td__img">
-                        <img class="lesson__img" src="img/lesson/hodin.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Ходынское поле</p>
-                    </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>11:30</td>
-                    <td>-</td>
-                    <td class="td-item"><a class="td-link" href="#mapHodin"><img width="50px" height="50px"
-                                src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#modal-hodin" class="lesson__btn">Записаться</a></td>
 
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>ПН</th>
-                    <th>ВТ</th>
-                    <th>СР</th>
-                    <th>ЧТ</th>
-                    <th>ПТ</th>
-                    <th>СБ</th>
-                    <th>ВС</th>
-                    <th>Точка сбора</th>
-                    <th></th>
-                </tr>
+
                 <tr>
                     <td class="td__img">
                         <img class="lesson__img" src="img/lesson/pio.jpg" alt="" srcset="">
@@ -247,13 +216,13 @@
                     <td class="td__btn"> <a href="#modal-Pio" class="lesson__btn">Записаться</a></td>
 
                 </tr>
-                
+
             </table>
 
 
             <div class="lesson__smart__table">
                 <hr>
-                
+
                 <hr>
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/luzh.jpg" alt="" srcset="">
@@ -273,7 +242,7 @@
                     <tr>
                         <td>-</td>
                         <td>7:00</td>
-                        <td>19.30</td>
+                        <td>-</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
@@ -329,51 +298,20 @@
                         <th>Точка сбора</th>
                     </tr>
                     <tr>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>19:00 ОФП <br> 20:00 С/Х </td>
                         <td>-</td>
                         <td>19:30</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>9.00 С/Х<br>
-                            10:00 ОФП<br>
-                            11:00 С/Х PRO
-                        </td>
+                        <td>-</td>
+                        <td></td>
                         <td class="td-item"><a class="td-link" href="#mapVorona"><img width="50px" height="50px"
                                     src="img/map.png"></a></td>
                     </tr>
                 </table>
                 <a href="#modal-vorona" class="lesson__btn">Записаться</a>
                 <hr>
-                <div class="lesson__table-imgBlock">
-                    <img class="lesson__img-smart" src="img/lesson/hodin.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Ходынское поле</p>
-                </div>
-                <table class="lesson__table table smart__table">
-                    <tr>
-                        <th>ПН</th>
-                        <th>ВТ</th>
-                        <th>СР</th>
-                        <th>ЧТ</th>
-                        <th>ПТ</th>
-                        <th>СБ</th>
-                        <th>ВС</th>
-                        <th>Точка сбора</th>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>11:30</td>
-                        <td>-</td>
-                        <td class="td-item"><a class="td-link" href="#mapHodin"><img width="50px" height="50px"
-                                    src="img/map.png"></a></td>
-                    </tr>
-                </table>
-                <a href="#modal-hodin" class="lesson__btn">Записаться</a>
-                <hr>
+
                 <div class="lesson__table-imgBlock">
                     <img class="lesson__img-smart" src="img/lesson/pio.jpg" alt="" srcset="">
                     <p class="lesson__img-text-smart">Дворец пионеров</p>

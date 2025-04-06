@@ -602,6 +602,7 @@
                     </label>
 
                 </div>
+                <input type="checkbox" name="fax_only" id="fax_only" value="1" style="display:none;" autocomplete="off" />
                 <input value="Отправить" type="submit" id="submitFF"
                     style="height: 40px; border: none; border-radius: 10px;" class="modal-form-btn">
 
