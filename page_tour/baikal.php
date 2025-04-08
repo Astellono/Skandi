@@ -48,7 +48,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="/parts/header.js"></script>
+        <script src="/parts/header.js?ver=<?echo time();?>"></script>
 
     </header>
 
@@ -629,7 +629,7 @@
     </section>
 
     <section class="contacts" id="contacts">
-        <script src="/parts/contact.js"></script>
+        <script src="/parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
     <script src="/node_modules/jquery/dist/jquery.js"></script>
