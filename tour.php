@@ -90,7 +90,7 @@
                     <p class="tour__date">
                         4 апреля - 6 апреля 2025г
                     </p>
-                    <a class="tour__link" href="page_tour/ryaz.html">
+                    <a class="tour__link" href="page_tour/ryaz.php">
                         Подробнее
                         <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path

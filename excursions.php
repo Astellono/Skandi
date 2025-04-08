@@ -38,7 +38,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js"></script>
+        <script src="parts/header.js?ver=<?echo time();?>"></script>
 
     </header>
 
@@ -248,10 +248,10 @@
     </section>
 
     <section class="questions" id="questions">
-        <script src="parts/questions.js"></script>
+        <script src="parts/questions.js?ver=<?echo time();?>"></script>
     </section>
     <section class="contacts" id="contacts">
-        <script src="parts/contact.js"></script>
+        <script src="parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
 
