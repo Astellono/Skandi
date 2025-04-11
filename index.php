@@ -32,12 +32,14 @@
     <meta name="yandex-verification" content="783babf1459e4598" />
 
     <link rel="stylesheet" href="style/clear.css">
+    <link rel="stylesheet" href="style/style.css?ver=<? echo time(); ?>">
+    <link rel="stylesheet" href="style/style-adaptive.css?ver=<? echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script src="modal/verCss.js"></script>
+
     <script type="module" defer src="js/calendarNew.js"></script>
     <script type="module" src="js/sliderGen.js" defer></script>
     <title>По миру с палками</title>
@@ -45,7 +47,7 @@
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js?ver=<?echo time();?>"></script>
+        <script src="parts/header.js?ver=<? echo time(); ?>"></script>
 
     </header>
     <section class="section hero">
@@ -378,8 +380,10 @@
                             <img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" alt="VK">
                             <span>ВКонтакте</span>
                         </a>
-                        <a href="https://yandex.ru/maps/org/po_miru_s_palkami/27242906463/reviews/?ll=37.380031%2C55.815892&z=8" class="platform">
-                            <img src="https://avatars.mds.yandex.net/get-lpc/1520633/ef2a27b6-800c-4a83-a864-192193c41b38/orig" alt="Яндекс">
+                        <a href="https://yandex.ru/maps/org/po_miru_s_palkami/27242906463/reviews/?ll=37.380031%2C55.815892&z=8"
+                            class="platform">
+                            <img src="https://avatars.mds.yandex.net/get-lpc/1520633/ef2a27b6-800c-4a83-a864-192193c41b38/orig"
+                                alt="Яндекс">
                             <span>Яндекс</span>
                         </a>
                     </div>
@@ -495,7 +499,83 @@
     <section class="section otziv">
         <div class="container">
             <h2 class="otziv__title">Что говорят наши клиенты</h2>
-            <ul class="otziv__list">
+
+            <div class="review-card">
+                <div class="review-card__user">
+                    <img src="img/otziv/angel.jpg" alt="" class="review-card__avatar">
+                    <div class="review-card__user-info">
+                        <h3 class="review-card__name">Ангелина</h3>
+                        <p class="review-card__trip">Солотча, Рязанская область</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="review-card__content">
+                    <p class="review-card__text">4-6 апреля 2025 посетила супер место, Солотчу, Рязанской области.
+                        Маргарита Волосюк сделала этот тур незабываемым!!! Экскурсии, зарядка, прекрасное питание,
+                        ходьба, релакс, потрясающая природа, вековые сосны, реки, тишина и душевное общение с
+                        нашей девичьей группой! Центральное место тура было покорение Тропы Паустовского, это было 15
+                        км.
+                        в сосновом лесу, с ароматом смолы, пением птиц, красотой озёр ледникового периода, погода была
+                        великолепна,нам здорово повезло! Маргарита наш маяк,пример для подражания, замечательный
+                        организатор, професионал своего дела! Большая благодарность ей за все, что она
+                        делает! Присоединяйтесь к "По миру с
+                        палками!!!"</p>
+
+                </div>
+            </div>
+
+            <!-- Отзыв 2 -->
+            <div class="review-card">
+                <div class="review-card__user">
+                    <img src="img/otziv/zagl.png" alt="" class="review-card__avatar">
+                    <div class="review-card__user-info">
+                        <h3 class="review-card__name">Раиса</h3>
+                        <p class="review-card__trip">Коломенское</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="review-card__content">
+                    <p class="review-card__text">9 октября, состоялась вторая сканди-экскурсия из цикла Коломенское и
+                        мой первый опыт тренировки-экскурсии в команде "По миру с палками". Незабываемый день! Даже если
+                        бы нам не повезло с погодой, то наш прекрасный экскурсовод Анна и тренер Маргарита сделали бы
+                        этот день таким же захватывающим, интересным, ярким и познавательным. Мы прошли по всем
+                        закоулкам царского подворья, узнали, как был организован быт людей, как выглядели постройки
+                        разных времен и назначений, увидели таинственные древности. Из липовой аллеи, посаженной
+                        200 лет назад, перешли во фруктовый сад, заложенный Екатериной Великой. А еще успели сделать
+                        разминку и заминку, потренировать технику спуска и подъема, прошли 17 тыс.шагов. Закончили
+                        прогулку в трапезной дворца Алексея Михайловича, где можно найти угощение в духе его времени.
+                        Спасибо за добрый, спокойный, душевный день всем, дорогие друзья!</p>
+
+                </div>
+            </div>
+
+            <!-- Отзыв 3 -->
+            <div class="review-card">
+                <div class="review-card__user">
+                    <img src="img/otziv/marta.png" alt="" class="review-card__avatar">
+                    <div class="review-card__user-info">
+                        <h3 class="review-card__name">Марта</h3>
+                        <p class="review-card__trip">Репино</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="review-card__content">
+                    <p class="review-card__text">Была в скандитрипе в Репино в середине июля. Я получила абсолютно все ,
+                        на что рассчитывала: умеренную нагрузку, чистый воздух Финского залива, зарядку для мозга ввиде
+                        историко-экскурсионной части, ненавязчивую компанию, крепкий сон и обычную еду. Как будто к
+                        бабушке в деревню съездила, но приехала подтянутой и похудевшей. Отличный вариант отдыха, без
+                        суеты! Рекомендую!!!</p>
+                    <!-- <div class="review-card__gallery">
+                        <img src="paris-trip1.jpg" alt="Фото из поездки" class="review-card__photo">
+                        <img src="paris-trip2.jpg" alt="Фото из поездки" class="review-card__photo">
+                        <img src="paris-trip3.jpg" alt="Фото из поездки" class="review-card__photo">
+                        <img src="paris-trip4.jpg" alt="Фото из поездки" class="review-card__photo">
+                    </div> -->
+                </div>
+            </div>
+
+
+            <!-- <ul class="otziv__list">
                 <li class="otziv__item">
                     <div class="otziv__img-box">
                         <img class="otziv__img" src="img/otziv/marta.png" alt="" srcset="">
@@ -577,7 +657,7 @@
                     </div>
                 </li>
             </ul>
-
+ -->
         </div>
         <hr>
     </section>
@@ -591,7 +671,8 @@
                     <input type="text" name="nameFF" id="nameFF" placeholder="Введите имя" required>
                     <input type="text" name="contactFF" id="contactFF" placeholder="Введите email" required>
                 </div>
-                <textarea required type="text" class="feedback__input-text" name="messageFF" placeholder="Ваш отзыв"></textarea>
+                <textarea required type="text" class="feedback__input-text" name="messageFF"
+                    placeholder="Ваш отзыв"></textarea>
                 <p class="input__name-foto">Загрузите вашу фотографию:</p>
                 <div class="field__wrapper">
                     <input type="file" id="image" name="image" accept="image/*" class="field field__file">
@@ -602,17 +683,18 @@
                     </label>
 
                 </div>
-                <input type="checkbox" name="fax_only" id="fax_only" value="1" style="display:none;" autocomplete="off" />
+                <input type="checkbox" name="fax_only" id="fax_only" value="1" style="display:none;"
+                    autocomplete="off" />
                 <input value="Отправить" type="submit" id="submitFF"
                     style="height: 40px; border: none; border-radius: 10px;" class="modal-form-btn">
 
             </form>
         </div>
     </section>
-    
+
 
     <section class="section questions" id="questions">
-        <script src="parts/questions.js?ver=<?echo time();?>"></script>
+        <script src="parts/questions.js?ver=<? echo time(); ?>"></script>
     </section>
 
     <section class="section partner">
@@ -643,7 +725,7 @@
         </div>
     </section>
     <section class="section contacts" id="contacts">
-        <script src="parts/contact.js?ver=<?echo time();?>"></script>
+        <script src="parts/contact.js?ver=<? echo time(); ?>"></script>
     </section>
     <!-- МОДАЛЬНЫЕ ОКНА ------------------------------------------------------------------------------------->
     <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
