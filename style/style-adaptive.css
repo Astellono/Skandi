@@ -670,7 +670,7 @@
     }
     .excursions__img {
         width: 100%;
-        height: 100%;
+        height: 350px;
         background-position: center;
         align-items: center;
         object-fit: cover;
