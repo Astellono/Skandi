@@ -1,3 +1,7 @@
+<?php 
+require_once 'phpLogin/connect.php'; 
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -46,10 +50,10 @@
 </head>
 
 <body>
-<button class="login-btn" id="loginBtn">Войти в аккаунт</button>
+    <button class="login-btn" id="loginBtn">Войти в аккаунт</button>
     <header class="header" id="header">
         <script src="parts/header.js?ver=<? echo time(); ?>"></script>
-        
+
     </header>
     <section class="section hero">
 
@@ -1009,7 +1013,7 @@
             </div>
 
             <!-- Форма входа -->
-            <div id="loginForm" class="form-login active-login">
+            <form action="/phpLogin/register.php" id="loginForm" class="form-login active-login" method="POST">
                 <div class="form-container">
                     <div class="form-group">
                         <label for="loginEmail">Email</label>
@@ -1020,33 +1024,33 @@
                         <input type="password" id="loginPassword" required>
                         <div id="loginError" class="error-message"></div>
                     </div>
-                    <button type="button" class="submit-btn" id="loginSubmit">Войти</button>
+                    <button type="submit" class="submit-btn" id="loginSubmit">Войти</button>
                 </div>
-            </div>
+            </form>
 
             <!-- Форма регистрации -->
-            <div id="registerForm" class="form-login">
+            <form action="/phpLogin/register.php" id="registerForm" class="form-login" method="POST">
                 <div class="form-container">
                     <div class="form-group">
                         <label for="regName">Имя</label>
-                        <input type="text" id="regName" required>
+                        <input type="text" id="regName" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="regEmail">Email</label>
-                        <input type="email" id="regEmail" required>
+                        <input type="email" id="regEmail" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="regPassword">Пароль</label>
-                        <input type="password" id="regPassword" required>
+                        <input type="password" id="regPassword" name="password" required>
                     </div>
                     <div class="form-group">
                         <label for="regConfirmPassword">Подтвердите пароль</label>
                         <input type="password" id="regConfirmPassword" required>
                         <div id="registerError" class="error-message"></div>
                     </div>
-                    <button type="button" class="submit-btn" id="registerSubmit">Зарегистрироваться</button>
+                    <button type="submit" class="submit-btn" id="registerSubmit">Зарегистрироваться</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <script>

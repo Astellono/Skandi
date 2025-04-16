@@ -1,14 +1,16 @@
 <?php
 session_start();
 header('Content-Type: application/json');
-$data = json_decode(file_get_contents('php://input'), true);
-
-
 require_once 'connect.php';
 
-$name = htmlspecialchars(trim($data['name'] ?? ''));
-$email = filter_var(trim($data['email'] ?? ''), FILTER_VALIDATE_EMAIL);
-$password = $data['password'] ?? '';
+// $data = json_decode(file_get_contents('php://input'), true);
+// $name = htmlspecialchars(trim($data['name'] ?? ''));
+// $email = filter_var(trim($data['email'] ?? ''), FILTER_VALIDATE_EMAIL);
+// $password = $data['password'] ?? '';
+
+$name = isset($_POST['name']);
+$email = isset($_POST['email']);
+$password = isset($_POST['password']);
 
 if (!$name || !$email || !$password) {
     echo json_encode(['success' => false, 'message' => 'Все поля обязательны']);
