@@ -39,16 +39,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    <script defer src="js/login.js"></script>
     <script type="module" defer src="js/calendarNew.js"></script>
     <script type="module" src="js/sliderGen.js" defer></script>
     <title>По миру с палками</title>
 </head>
 
 <body>
+<button class="login-btn" id="loginBtn">Войти в аккаунт</button>
     <header class="header" id="header">
         <script src="parts/header.js?ver=<? echo time(); ?>"></script>
-
+        
     </header>
     <section class="section hero">
 
@@ -996,6 +997,58 @@
 
         })
     </script> -->
+
+    <!-- Модальное окно -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content-login">
+            <span class="close-login">&times;</span>
+
+            <div class="form-switcher">
+                <button class="active-login" id="switchToLogin">Вход</button>
+                <button id="switchToRegister">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <div id="loginForm" class="form-login active-login">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" required>
+                        <div id="loginError" class="error-message"></div>
+                    </div>
+                    <button type="button" class="submit-btn" id="loginSubmit">Войти</button>
+                </div>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div id="registerForm" class="form-login">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="regName">Имя</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Пароль</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Подтвердите пароль</label>
+                        <input type="password" id="regConfirmPassword" required>
+                        <div id="registerError" class="error-message"></div>
+                    </div>
+                    <button type="button" class="submit-btn" id="registerSubmit">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         let fields = document.querySelectorAll('.field__file');
         Array.prototype.forEach.call(fields, function (input) {
