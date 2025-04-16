@@ -10,7 +10,8 @@
  const registerSubmit = document.getElementById('registerSubmit');
  const loginError = document.getElementById('loginError');
  const registerError = document.getElementById('registerError');
-
+ 
+ 
  // Открываем модальное окно при клике на кнопку
  loginBtn.addEventListener('click', function() {
      modal.style.display = 'block';
@@ -48,60 +49,125 @@
      registerError.textContent = '';
  });
 
- // Обработка отправки формы входа
- loginSubmit.addEventListener('click', function() {
-     const email = document.getElementById('loginEmail').value;
-     const password = document.getElementById('loginPassword').value;
+//  // Обработка отправки формы входа
+//  loginSubmit.addEventListener('click', function() {
+//      const email = document.getElementById('loginEmail').value;
+//      const password = document.getElementById('loginPassword').value;
      
-     // Простая валидация
-     if (!email || !password) {
-         loginError.textContent = 'Пожалуйста, заполните все поля';
-         return;
-     }
+//      // Простая валидация
+//      if (!email || !password) {
+//          loginError.textContent = 'Пожалуйста, заполните все поля';
+//          return;
+//      }
      
-     // Здесь должна быть логика аутентификации
-     console.log('Вход с:', email, password);
+//      // Здесь должна быть логика аутентификации
+//      console.log('Вход с:', email, password);
      
-     // В реальном приложении здесь был бы AJAX-запрос к серверу
-     // После успешного входа можно закрыть модальное окно
-     // modal.style.display = 'none';
+//      // В реальном приложении здесь был бы AJAX-запрос к серверу
+//      // После успешного входа можно закрыть модальное окно
+//      // modal.style.display = 'none';
      
-     // Для примера просто показываем сообщение
-     loginError.textContent = '';
-     alert('Вход выполнен! (это демо)');
- });
+//      // Для примера просто показываем сообщение
+//      loginError.textContent = '';
+//      alert('Вход выполнен! (это демо)');
+//  });
 
- // Обработка отправки формы регистрации
- registerSubmit.addEventListener('click', function() {
-     const name = document.getElementById('regName').value;
-     const email = document.getElementById('regEmail').value;
-     const password = document.getElementById('regPassword').value;
-     const confirmPassword = document.getElementById('regConfirmPassword').value;
+
+// обработка входа
+loginSubmit.addEventListener('click', async function () {
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    if (!email || !password) {
+        loginError.textContent = 'Пожалуйста, заполните все поля';
+        return;
+    }
+
+    const response = await fetch('../phpLogin/login.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+    });
+    const result = await response.json();
+
+    if (result.success) {
+        loginError.textContent = '';
+        alert('Добро пожаловать, ' + result.name);
+        modal.style.display = 'none';
+    } else {
+        loginError.textContent = result.message;
+    }
+});
+
+
+//  // Обработка отправки формы регистрации
+//  registerSubmit.addEventListener('click', function() {
+//      const name = document.getElementById('regName').value;
+//      const email = document.getElementById('regEmail').value;
+//      const password = document.getElementById('regPassword').value;
+//      const confirmPassword = document.getElementById('regConfirmPassword').value;
      
-     // Простая валидация
-     if (!name || !email || !password || !confirmPassword) {
-         registerError.textContent = 'Пожалуйста, заполните все поля';
-         return;
-     }
+//      // Простая валидация
+//      if (!name || !email || !password || !confirmPassword) {
+//          registerError.textContent = 'Пожалуйста, заполните все поля';
+//          return;
+//      }
      
-     if (password !== confirmPassword) {
-         registerError.textContent = 'Пароли не совпадают';
-         return;
-     }
+//      if (password !== confirmPassword) {
+//          registerError.textContent = 'Пароли не совпадают';
+//          return;
+//      }
      
-     if (password.length < 6) {
-         registerError.textContent = 'Пароль должен содержать минимум 6 символов';
-         return;
-     }
+//      if (password.length < 6) {
+//          registerError.textContent = 'Пароль должен содержать минимум 6 символов';
+//          return;
+//      }
      
-     // Здесь должна быть логика регистрации
-     console.log('Регистрация:', name, email, password);
+//      // Здесь должна быть логика регистрации
+//      console.log('Регистрация:', name, email, password);
      
-     // В реальном приложении здесь был бы AJAX-запрос к серверу
-     // После успешной регистрации можно переключиться на форму входа
-     // switchToLogin.click();
+//      // В реальном приложении здесь был бы AJAX-запрос к серверу
+//      // После успешной регистрации можно переключиться на форму входа
+//      // switchToLogin.click();
      
-     // Для примера просто показываем сообщение
-     registerError.textContent = '';
-     alert('Регистрация успешна! (это демо)');
- });
+//      // Для примера просто показываем сообщение
+//      registerError.textContent = '';
+//      alert('Регистрация успешна! (это демо)');
+//  });
+
+
+ // обработка регистрации
+registerSubmit.addEventListener('click', async function () {
+    const name = document.getElementById('regName').value;
+    const email = document.getElementById('regEmail').value;
+    const password = document.getElementById('regPassword').value;
+    const confirmPassword = document.getElementById('regConfirmPassword').value;
+
+    if (!name || !email || !password || !confirmPassword) {
+        registerError.textContent = 'Пожалуйста, заполните все поля';
+        return;
+    }
+    if (password !== confirmPassword) {
+        registerError.textContent = 'Пароли не совпадают';
+        return;
+    }
+    if (password.length < 6) {
+        registerError.textContent = 'Пароль должен содержать минимум 6 символов';
+        return;
+    }
+
+    const response = await fetch('../phpLogin/register.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+    });
+    const result = await response.json();
+
+    if (result.success) {
+        registerError.textContent = '';
+        alert('Регистрация прошла успешно');
+        switchToLogin.click();
+    } else {
+        registerError.textContent = result.message;
+    }
+});
