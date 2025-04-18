@@ -70,15 +70,15 @@ function expandCard(card) {
 let listEx = document.querySelectorAll('.excursions__item')
 listEx.forEach(ex => {
 
-  if (ex.id === window.location.hash.slice(1)) {
-    expandCard(ex)
-  }
+  
   let divExpandText = document.createElement('div')
   divExpandText.classList.add('excursions__podr')
   divExpandText.textContent = 'Подробнее...'
 
   ex.append(divExpandText)
 
-
+  if (ex.id === window.location.hash.slice(1)) {
+    expandCard(ex)
+  }
 });
 
