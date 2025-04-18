@@ -1,5 +1,5 @@
 <?php
-    $connect = new mysqli('localhost', 'root', 'root', 'skandi' , '8889');
+    $connect = new mysqli('localhost', 'root', 'root', 'skandi');
     if (!$connect) {
         die('Error');
     }
