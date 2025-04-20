@@ -1,0 +1,56 @@
+Array
+(
+    [user_id] => 5
+    [POST] => Array
+        (
+            [fio] => Смирнов Владимир Андреевич
+            [age] => кцуй
+            [tel] => цук
+            [city] => кцук
+            [email] => smirn0v.v0va2005@mail.ru
+            [rost] => кцйу
+            [ves] => кцйук
+            [staj] => кцуйк
+            [fizNagr] => кой
+            [zabolevaniya] => кцйук
+            [davlenie] => цук
+            [chrono] => цкцй
+            [opora] => йцк
+            [perenosimost] => куц
+            [level] => кой
+            [prohod] => цуйкк
+            [perenosimostGori] => куц
+            [ravn] => куц
+            [comment] => цйук
+            [dogovor] => on
+        )
+
+)
+Array
+(
+    [user_id] => 5
+    [POST] => Array
+        (
+            [fio] => Смирнов Владимир Андреевич
+            [age] => qw
+            [tel] => e3qe
+            [city] => rweqr
+            [email] => smirn0v.v0va2005@mail.ru
+            [rost] => werrwerw
+            [ves] => erweqrw
+            [staj] => erwerw
+            [fizNagr] => rwwerw
+            [zabolevaniya] => rwrwer
+            [davlenie] => qrwerwe
+            [chrono] => rwe
+            [opora] => wer
+            [perenosimost] => rwerw
+            [level] => wrqr
+            [prohod] => rwe
+            [perenosimostGori] => awe
+            [ravn] => err
+            [comment] => 111
+            [dogovor] => on
+        )
+
+)

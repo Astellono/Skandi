@@ -1002,8 +1002,8 @@ require_once 'phpLogin/connect.php';
         })
     </script> -->
 
-    <!-- Модальное окно -->
-    <div id="loginModal" class="modal">
+     <!-- Модальное окно -->
+     <div id="loginModal" class="modal">
         <div class="modal-content-login">
             <span class="close-login">&times;</span>
 
@@ -1013,7 +1013,7 @@ require_once 'phpLogin/connect.php';
             </div>
 
             <!-- Форма входа -->
-            <form action="/phpLogin/register.php" id="loginForm" class="form-login active-login" method="POST">
+            <div id="loginForm" class="form-login active-login">
                 <div class="form-container">
                     <div class="form-group">
                         <label for="loginEmail">Email</label>
@@ -1024,33 +1024,33 @@ require_once 'phpLogin/connect.php';
                         <input type="password" id="loginPassword" required>
                         <div id="loginError" class="error-message"></div>
                     </div>
-                    <button type="submit" class="submit-btn" id="loginSubmit">Войти</button>
+                    <button type="button" class="submit-btn" id="loginSubmit">Войти</button>
                 </div>
-            </form>
+            </div>
 
             <!-- Форма регистрации -->
-            <form action="/phpLogin/register.php" id="registerForm" class="form-login" method="POST">
+            <div id="registerForm" class="form-login">
                 <div class="form-container">
                     <div class="form-group">
                         <label for="regName">Имя</label>
-                        <input type="text" id="regName" name="name" required>
+                        <input type="text" id="regName" required>
                     </div>
                     <div class="form-group">
                         <label for="regEmail">Email</label>
-                        <input type="email" id="regEmail" name="email" required>
+                        <input type="email" id="regEmail" required>
                     </div>
                     <div class="form-group">
                         <label for="regPassword">Пароль</label>
-                        <input type="password" id="regPassword" name="password" required>
+                        <input type="password" id="regPassword" required>
                     </div>
                     <div class="form-group">
                         <label for="regConfirmPassword">Подтвердите пароль</label>
                         <input type="password" id="regConfirmPassword" required>
                         <div id="registerError" class="error-message"></div>
                     </div>
-                    <button type="submit" class="submit-btn" id="registerSubmit">Зарегистрироваться</button>
+                    <button type="button" class="submit-btn" id="registerSubmit">Зарегистрироваться</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
     <script>

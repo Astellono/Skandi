@@ -531,6 +531,10 @@
     </script>
 
     <footer class="footer"></footer>
+
+
+
+
     <div onclick="location.href='#'" id="openModal" class="mod">
         <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
@@ -543,7 +547,8 @@
                     <form action="/php/tour/sendTour.php?name=Аджария" method="POST" class="modal__form">
 
                         Фамилия, имя и отчество:
-                        <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>
+                        <input type="text" id="fio" name="fio" value="" required>
+
                         Дата рождения:
                         <input type="text" id="age" name="age" placeholder="Дата рождения 31.12.2000" required>
                         Ваш телефон:
@@ -551,7 +556,7 @@
                         Город в котором вы проживаете:
                         <input type="text" id="city" name="city" placeholder="Ваш ответ" required>
                         Ваш email:
-                        <input type="email" id="email" name="email" placeholder="Ваш ответ" required>
+                        <input type="email" name="email" placeholder="Email" id="email">
                         Ваш рост:
                         <input type="text" id="rost" name="rost" placeholder="Ваш ответ" required>
                         Ваш вес (на некоторых маршрутах лишиний вес является
@@ -620,6 +625,8 @@
             </div>
         </div>
     </div>
+    
+    <script src="../js/get_info_user.js"></script>
     <script src="../modal/zoom.js"></script>
     <script src="../modal/bootstrap.bundle.js"></script>
     <script src="../modal/Burger.js"></script>

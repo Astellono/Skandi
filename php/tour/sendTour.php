@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 $name = $_GET['name'];
 if ($_POST['fio'] == '') {
 
@@ -117,4 +117,123 @@ ini_set('short_open_tag', 'On');
     <h1>Спасибо! Мы свяжемся с вами!</h1>
 </body>
 
+</html> -->
+
+
+
+
+<?php
+session_start();
+require_once '../../phpLogin/connect.php';
+
+if (!isset($_SESSION['user_id'])) {
+    die('Вы не авторизованы');
+}
+
+$user_id = $_SESSION['user_id'];
+
+// Проверяем, существует ли пользователь в таблице users
+$check_user = $connect->prepare('SELECT id FROM users WHERE id = ?');
+$check_user->bind_param('i', $user_id);
+$check_user->execute();
+$check_user->store_result();
+if ($check_user->num_rows === 0) {
+    die('Пользователь с таким user_id не найден в таблице users');
+}
+
+// Получаем все поля из POST
+$fio = $_POST['fio'] ?? '';
+$age = $_POST['age'] ?? '';
+$tel = $_POST['tel'] ?? '';
+$city = $_POST['city'] ?? '';
+$email = $_POST['email'] ?? '';
+$ves = $_POST['ves'] ?? '';
+$rost = $_POST['rost'] ?? '';
+$staj = $_POST['staj'] ?? '';
+$fizNagr = $_POST['fizNagr'] ?? '';
+$zabolevaniya = $_POST['zabolevaniya'] ?? '';
+$davlenie = $_POST['davlenie'] ?? '';
+$chrono = $_POST['chrono'] ?? '';
+$opora = $_POST['opora'] ?? '';
+$perenosimost = $_POST['perenosimost'] ?? '';
+$level = $_POST['level'] ?? '';
+$prohod = $_POST['prohod'] ?? '';
+$perenosimostGori = $_POST['perenosimostGori'] ?? '';
+$ravn = $_POST['ravn'] ?? '';
+$comment = $_POST['comment'] ?? '';
+
+// Логируем всё в debug.log
+file_put_contents('debug.log', print_r([
+    'user_id' => $user_id,
+    'POST' => $_POST
+], true), FILE_APPEND);
+
+// Проверяем — заявка уже существует?
+$check = $connect->prepare('SELECT id FROM tour_requests WHERE user_id = ?');
+$check->bind_param('i', $user_id);
+$check->execute();
+$result = $check->get_result();
+
+if ($result && $result->num_rows > 0) {
+    $stmt = $connect->prepare("UPDATE tour_requests SET
+        fio=?, age=?, tel=?, city=?, email=?, rost=?, ves=?, staj=?,
+        fizNagr=?, zabolevaniya=?, davlenie=?, chrono=?, opora=?,
+        perenosimost=?, level=?, prohod=?, perenosimostGori=?, ravn=?, comment=?
+        WHERE user_id=?");
+
+    if (!$stmt) {
+        file_put_contents('debug.log', "Ошибка подготовки UPDATE: " . $connect->error . "\n", FILE_APPEND);
+        die('Ошибка подготовки UPDATE: ' . $connect->error);
+    }
+
+    $stmt->bind_param(
+        'sssssssssssssssssssi',
+        $fio, $age, $tel, $city, $email, $rost, $ves, $staj,
+        $fizNagr, $zabolevaniya, $davlenie, $chrono, $opora,
+        $perenosimost, $level, $prohod, $perenosimostGori, $ravn, $comment,
+        $user_id
+    );
+} else {
+    $stmt = $connect->prepare("INSERT INTO tour_requests (
+        user_id, fio, age, tel, city, email, rost, ves, staj,
+        fizNagr, zabolevaniya, davlenie, chrono, opora, perenosimost,
+        level, prohod, perenosimostGori, ravn, comment
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+    if (!$stmt) {
+        file_put_contents('debug.log', "Ошибка подготовки INSERT: " . $connect->error . "\n", FILE_APPEND);
+        die('Ошибка подготовки INSERT: ' . $connect->error);
+    }
+
+    $stmt->bind_param(
+        'issssssssssssssssss',
+        $user_id, $fio, $age, $tel, $city, $email, $rost, $ves, $staj,
+        $fizNagr, $zabolevaniya, $davlenie, $chrono, $opora,
+        $perenosimost, $level, $prohod, $perenosimostGori, $ravn, $comment
+    );
+}
+
+if (!$stmt->execute()) {
+    file_put_contents('debug.log', "Ошибка выполнения запроса: " . $stmt->error . "\n", FILE_APPEND);
+    die('Ошибка выполнения запроса: ' . $stmt->error);
+}
+
+header('Content-Type: text/html; charset=UTF-8');
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="refresh" content="3; url=index.html">
+    <title>Спасибо! Мы свяжемся с вами!</title>
+    <meta name="generator">
+    <script type="text/javascript">
+        setTimeout('location.replace("../../index.php")', 3000);
+    </script>
+</head>
+<body>
+    <img src="https://www.pomiru-spalkami.ru/img/lesson/solo.png" alt="" srcset="">
+    <h1>Спасибо! Мы свяжемся с вами!</h1>
+</body>
 </html>
