@@ -2,7 +2,7 @@ document.getElementById("header").innerHTML = '\
     <div class="container">\
         <div class="header__contant">\
             <div class="header__logo">\
-                <a href="index.php">\
+                <a href="/index.php">\
                     <img src="/img/header/logo.svg" alt="" srcset="">\
                 </a>\
             </div>\
@@ -41,11 +41,11 @@ document.getElementById("header").innerHTML = '\
                 <ul class="header__soc-list">\
                     <li class="header__soc-item">\
                         <a href="https://vk.com/pomiru_spalkami" class="header__soc-link" target="_blank">\
-                            <img class="header__soc-icon" src="img/header/vk.svg" alt="">\
+                            <img class="header__soc-icon" src="/img/header/vk.svg" alt="">\
                         </a>\
                     </li>\
                         <a href="https://t.me/pomiruspalkami" class="header__soc-link" target="_blank">\
-                            <img class="header__soc-icon" src="img/header/telega.svg" alt="">\
+                            <img class="header__soc-icon" src="/img/header/telega.svg" alt="">\
                         </a>\
                     </li>\
                 </ul>\
