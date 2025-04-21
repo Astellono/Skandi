@@ -92,8 +92,11 @@ loginSubmit.addEventListener('click', async function () {
 
     if (result.success) {
         loginError.textContent = '';
-        alert('Добро пожаловать, ' + result.name);
+       
         modal.style.display = 'none';
+       
+        window.location.href = 'http://localhost:8888/lk/lk.php';
+    
     } else {
         loginError.textContent = result.message;
     }

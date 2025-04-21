@@ -626,7 +626,7 @@
         </div>
     </div>
     
-    <script src="../js/get_info_user.js"></script>
+   
     <script src="../modal/zoom.js"></script>
     <script src="../modal/bootstrap.bundle.js"></script>
     <script src="../modal/Burger.js"></script>

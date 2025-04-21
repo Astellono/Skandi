@@ -1032,7 +1032,7 @@ require_once 'phpLogin/connect.php';
             <div id="registerForm" class="form-login">
                 <div class="form-container">
                     <div class="form-group">
-                        <label for="regName">Имя</label>
+                        <label for="regName">Введите полное имя</label>
                         <input type="text" id="regName" required>
                     </div>
                     <div class="form-group">

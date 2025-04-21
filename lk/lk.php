@@ -35,8 +35,8 @@
             <aside class="profile-sidebar">
                 <div class="user-card">
                     <img src="/img/otziv/zagl1.png" alt="Аватар" class="avatar">
-                    <h3 class="user-name">Иванов Иван Иванович</h3>
-                    <p class="user-email">ivanov@example.com</p>
+                    <h3 class="user-name" id="fio">Иванов Иван Иванович</h3>
+                    <p class="user-email" id="email">ivanov@example.com</p>
                 </div>
 
                 <ul class="nav-menu">
@@ -198,6 +198,11 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <script src="../js/get_info_user.js"></script>
 </body>
 
 </html>
