@@ -95,7 +95,7 @@ loginSubmit.addEventListener('click', async function () {
        
         modal.style.display = 'none';
        
-        window.location.href = 'http://localhost:8888/lk/lk.php';
+        window.location.href = 'http://localhost/lk/lk.php';
     
     } else {
         loginError.textContent = result.message;
