@@ -34,14 +34,14 @@
     <script defer src="js/scroll.js"></script>
     <script src="modal/verCss.js"></script>
 
-    <script src="js/tourGen.js?ver=<? echo time(); ?>" type="module" defer></script>
+    <script src="js/tourGen.js?ver=<?echo time();?>" type="module" defer></script>
     <title>Туры</title>
 </head>
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js?ver=<? echo time(); ?>"></script>
-
+        <script src="parts/header.js?ver=<?echo time();?>"></script>
+        
     </header>
     <!-- <section class="tourweek" style="background-color:rgba(236, 229, 238, 0.6) ">
         <div class="container">
@@ -49,16 +49,16 @@
             <ul class="tour__list tour__list-week ">
                 <li class="tour__item">
                     <div class="tour__img-box">
-                        <img class="tour__img" src="img/act-tour/med.jpg" alt="" srcset="">
+                        <img class="tour__img" src="img/act-tour/erino.jpg" alt="" srcset="">
                     </div>
                     <h3 class="tour__item-title">
-                        SCANDI-ТУР в "Гости в царство бурого медведя"
+                        ОЗДОРОВИТЕЛЬНЫЙ ТУР ВЫХОДНОГО ДНЯ В САНАТОРИЙ ЕРИНО
                     </h3>
 
                     <p class="tour__date">
-                        26 июля - 27 июля 2025г
+                        6 декабря - 8 декабря 2024г
                     </p>
-                    <a class="tour__link" href="page_tour/med.html">
+                    <a class="tour__link" href="page_tour/erino.html">
                         Подробнее
                         <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -77,18 +77,20 @@
             <h2 class="tour__title tour__title-week " style="text-align: center; margin:20px auto">Туры выходного дня
             </h2>
             <ul class="tour__list tour__list-week ">
+                
+              
                 <li class="tour__item">
                     <div class="tour__img-box">
-                        <img class="tour__img" src="img/act-tour/med.jpg" alt="" srcset="">
+                        <img class="tour__img" src="img/act-tour/ryaz.jpg" alt="" srcset="">
                     </div>
                     <h3 class="tour__item-title">
-                        SCANDI-ТУР в "Гости в царство бурого медведя"
+                        Рязанская область
                     </h3>
 
                     <p class="tour__date">
-                        26 июля - 27 июля 2025г
+                        4 апреля - 6 апреля 2025г
                     </p>
-                    <a class="tour__link" href="page_tour/med.php">
+                    <a class="tour__link" href="page_tour/ryaz.php">
                         Подробнее
                         <svg width="30" height="24" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -96,18 +98,16 @@
                                 fill="#121723" />
                         </svg>
                     </a>
-
                 </li>
-
             </ul>
         </div>
-    </section>
+    </section> 
     <section class="tour">
         <div class="container">
             <h2 class="tour__title">Путешествия</h2>
             <ul class="tour__list" id="tours">
 
-
+               
             </ul>
         </div>
     </section>
@@ -161,10 +161,10 @@
         </div>
     </section> -->
     <section class="questions" id="questions">
-        <script src="parts/questions.js?ver=<? echo time(); ?>"></script>
+        <script src="parts/questions.js?ver=<?echo time();?>"></script>
     </section>
     <section class="contacts" id="contacts">
-        <script src="parts/contact.js?ver=<? echo time(); ?>"></script>
+        <script src="parts/contact.js?ver=<?echo time();?>"></script>
     </section>
 
 

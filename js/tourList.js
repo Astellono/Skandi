@@ -17,7 +17,14 @@ const getDatesArray = (start, end) => {
 export let tourList = [
 
     
-
+ 
+    {
+        nameT: "Армения",
+        date: getDatesArray(new Date('2025-04-16'), new Date('2025-04-20')),
+        link: "page_tour/arm.php",
+        color: '#59bd21',
+        srcImg:'img/act-tour/arm.jpg' ,
+    },
     {
         nameT: "Кахетия",
         date: getDatesArray(new Date('2025-05-01'), new Date('2025-05-07')),
