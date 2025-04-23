@@ -324,7 +324,17 @@ textarea.form-control {
     transition: .4s;
     border-radius: 50%;
 }
-
+.change-data-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 input:checked + .slider {
     background-color: var(--primary);
 }

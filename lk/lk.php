@@ -1,3 +1,12 @@
+<?php
+session_start();
+require 'php/connect.php';
+$user_id = $_SESSION['user_id'];
+
+$result = $connect->query("SELECT * FROM tour_requests WHERE `user_id` = '$user_id'");
+$data = $result->fetch_assoc()
+    ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -14,6 +23,7 @@
     <link rel="stylesheet" href="style/styleLk.css">
     <script src="/modal/Burger.js" defer></script>
     <script src="js/mainLK.js" defer></script>
+    <script src="js/btnChange.js" defer></script>
     <style>
 
     </style>
@@ -24,6 +34,10 @@
         <script src="/parts/header.js?ver=<? echo time(); ?>"></script>
 
     </header>
+
+
+
+
     <div class="container">
         <div class="profile-header">
             <h1 class="profile-title">Личный кабинет</h1>
@@ -68,40 +82,62 @@
 
                 </div>
 
+                <?php
 
-                <!-- <a class="btn btn-primary" href="#openModal" style="display: none;
-                    style="display:block; margin:140px 0 140px 0; width:100%; text-align:center;">
-                    Заполнить анкету
-                </a> -->
 
-                <form action="php/changeDataHealth.php" class="modal__form">
-                    Мой рост
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Мой вес
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Мой стаж занятия Скандинавской ходьбой
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Физические нагрузки
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Наличие сердечно-сосудистных заболеваний
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Давление
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Хронические заболевания, Аллергии
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Заболевания опорно-двигательного аппарата?
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Максимальные расстояния
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Переносимость сложных маршрутов с перепадами высоты
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Готовность проходить в среднем 15 - 20 км
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Переносимость сложных маршрутов
-                    <input type="text" class="change-form-input" value="test" disabled>
-                    Только равнинные маршруты
-                    <input type="text" class="change-form-input" value="test" disabled>
-                </form>
+                if (isset($data['id'])) {
+                    ?>
+                    <form action="php/changeDataHealth.php" class="modal__form" method="POST">
+                        Мой возраст
+                        <input name="age" type="text" class="change-form-input" value="<?=$data['age']?>" disabled>
+                        Мой телефон
+                        <input name="tel" type="text" class="change-form-input" value="<?=$data['tel']?>" disabled>
+                        Мой город
+                        <input name="city" type="text" class="change-form-input" value="<?=$data['city']?>" disabled>
+                        Мой рост
+                        <input name="rost" type="text" class="change-form-input" value="<?=$data['rost']?>" disabled>
+                        Мой вес
+                        <input name="ves" type="text" class="change-form-input" value="<?=$data['ves']?>" disabled>
+                        Мой стаж занятия Скандинавской ходьбой
+                        <input name="staj" type="text" class="change-form-input" value="<?=$data['staj']?>" disabled>
+                        Физические нагрузки
+                        <input name="fizNagr" type="text" class="change-form-input" value="<?=$data['fizNagr']?>" disabled>
+                        Наличие сердечно-сосудистных заболеваний
+                        <input name="zabolevaniya" type="text" class="change-form-input" value="<?=$data['zabolevaniya']?>" disabled>
+                        Давление
+                        <input name="davlenie" type="text" class="change-form-input" value="<?=$data['davlenie']?>" disabled>
+                        Хронические заболевания, Аллергии
+                        <input name="chrono" type="text" class="change-form-input" value="<?=$data['chrono']?>" disabled>
+                        Заболевания опорно-двигательного аппарата?
+                        <input name="opora" type="text" class="change-form-input" value="<?=$data['opora']?>" disabled>
+                        Максимальные расстояния
+                        <input name="perenosimost" type="text" class="change-form-input" value="<?=$data['perenosimost']?>" disabled>
+                        Переносимость сложных маршрутов с перепадами высоты
+                        <input name="level" type="text" class="change-form-input" value="<?=$data['level']?>" disabled>
+                        Готовность проходить в среднем 15 - 20 км
+                        <input name="prohod" type="text" class="change-form-input" value="<?=$data['prohod']?>" disabled>
+                        Переносимость сложных маршрутов
+                        <input name="perenosimostGori" type="text" class="change-form-input" value="<?=$data['perenosimostGori']?>" disabled>
+                        Только равнинные маршруты
+                        <input name="ravn" type="text" class="change-form-input" value="<?=$data['ravn']?>" disabled>
+                        <input id="sendChangeBtn" type="hidden" id="btn" value="Отправить" class="modal-form-btn" style="cursor:pointer;">
+                    </form>
+                    <button id="btnChange" class="btn btn-primary" style="display:block;  width:100%; text-align:center;"> Изменить </button>
+                    <?php
+                } else { ?>
+                    <a class="btn btn-primary" href="#openModal"
+                        style="display:block; margin:140px 0 140px 0; width:100%; text-align:center;">
+                        Заполнить анкету
+                    </a>
+                    <?php
+                } ?>
+
+
+
+
+
+
+
 
             </main>
         </div>
@@ -116,19 +152,16 @@
                     <a href="#close" title="Close" class="close">×</a>
                 </div>
                 <div class="modal-b">
-                    <form action="/php/tour/sendTour.php?name=Армения" method="POST" class="modal__form">
-
-                        <!-- Фамилия, имя и отчество:
-                                    <input type="text" id="fio" name="fio" placeholder="Ваш ответ" required>
-                                    Дата рождения:
-                                    <input type="text" id="age" name="age" placeholder="Дата рождения 31.12.2000"
-                                        required>
-                                    Ваш телефон:
-                                    <input type="tel" id="tel" name="tel" placeholder="Ваш ответ" required>
-                                    Город в котором вы проживаете:
-                                    <input type="text" id="city" name="city" placeholder="Ваш ответ" required>
-                                    Ваш email:
-                                    <input type="email" id="email" name="email" placeholder="Ваш ответ" required> -->
+                    <form action="php/addDataHealth.php" method="POST" class="modal__form">
+ 
+                        Дата рождения:
+                        <input type="text" id="age" name="age" placeholder="Дата рождения 31.12.2000" required>
+                        Ваш телефон:
+                        <input type="tel" id="tel" name="tel" placeholder="Ваш ответ" required>
+                        Город в котором вы проживаете:
+                        <input type="text" id="city" name="city" placeholder="Ваш ответ" required>
+                        Ваш email:
+                        <input type="email" id="email" name="email" placeholder="Ваш ответ" required>
                         Ваш рост:
                         <input type="text" id="rost" name="rost" placeholder="Ваш ответ" required>
                         Ваш вес (на некоторых маршрутах лишиний вес является
@@ -157,7 +190,7 @@
                             required>
                         Вам подходят только равнинные маршруты?
                         <input type="text" id="ravn" name="ravn" placeholder="Ваш ответ" required>
-
+                        <input type="submit" id="btn" value="Отправить" class="modal-form-btn">
                         <!-- <ul class="modal-form-submit">
                                         <li class="modal-form-item">
                                             <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
