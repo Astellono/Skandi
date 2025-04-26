@@ -3,9 +3,14 @@ session_start();
 require 'php/connect.php';
 $user_id = $_SESSION['user_id'];
 
-$result = $connect->query("SELECT * FROM tour_requests WHERE `user_id` = '$user_id'");
-$data = $result->fetch_assoc()
-    ?>
+// Получаем данные пользователя
+$user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
+$user_data = $user_query->fetch_assoc();
+
+// Получаем данные анкеты
+$result = $connect->query("SELECT * FROM tour_requests WHERE user_id = '$user_id'");
+$data = $result->fetch_assoc();
+?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -24,6 +29,7 @@ $data = $result->fetch_assoc()
     <script src="/modal/Burger.js" defer></script>
     <script src="js/mainLK.js" defer></script>
     <script src="js/btnChange.js" defer></script>
+    <script src="js/uploadAvatar.js" defer></script>
     <style>
 
     </style>
@@ -48,7 +54,12 @@ $data = $result->fetch_assoc()
             <!-- Sidebar -->
             <aside class="profile-sidebar">
                 <div class="user-card">
-                    <img src="/img/otziv/zagl1.png" alt="Аватар" class="avatar">
+                <input type="file" id="avatarInput" style="display: none;" accept="image/*">
+                <img src="<?php echo isset($userData['avatar_path']) ? $userData['avatar_path'] : '/img/otziv/zagl1.png'; ?>" 
+                        alt="Аватар" 
+                        class="avatar" 
+                        id="avatarImage"
+                        onclick="document.getElementById('avatarInput').click();">
                     <h3 class="user-name" id="fio">Иванов Иван Иванович</h3>
                     <p class="user-email" id="email">ivanov@example.com</p>
                 </div>
