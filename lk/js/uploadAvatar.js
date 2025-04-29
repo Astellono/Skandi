@@ -1,28 +1,30 @@
-document.getElementById('avatarInput').addEventListener('change', function(e) {
-    let file = e.target.files[0];
-    console.log("Выбран файл:", file);
+document.getElementById('imageInput').addEventListener('change', async function (e) {
 
-    let formData = new FormData();
-    formData.append('avatar', file);
+    const file = e.target.files[0];
+    if (!file) return;
 
-    fetch('/lk/php/upload_avatar.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        console.log("Ответ получен, статус:", response.status);
-        return response.json();
-    })
-    .then(data => {
-        console.log("Данные ответа:", data);
-        if (data.success) {
-            document.getElementById('avatarImage').src = data.avatarPath + '?t=' + Date.now();
+
+    const formData = new FormData();
+    formData.append('image', file); // Ключ 'image' должен совпадать с $_FILES['image'] в PHP
+
+    try {
+        const response = await fetch('/lk/php/upload_avatar.php', {
+            method: 'POST',
+            body: formData,
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            statusElement.textContent = 'Успешно! Файл сохранён как: ' + result.path;
+           
         } else {
-            alert('Ошибка: ' + (data.error || 'Неизвестная ошибка'));
+            throw new Error(result.error || 'Неизвестная ошибка сервера');
         }
-    })
-    .catch(error => {
-        console.error('Ошибка:', error);
-        alert('Произошла сетевая ошибка');
-    });
+
+    } catch (error) {
+
+
+    }
+    location.reload()
 });

@@ -2,11 +2,11 @@
 session_start();
 require 'php/connect.php';
 $user_id = $_SESSION['user_id'];
-
+// print_r($_SESSION['user_id']);
 // Получаем данные пользователя
 $user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
 $user_data = $user_query->fetch_assoc();
-
+// print_r($user_data['avatar_path']);
 // Получаем данные анкеты
 $result = $connect->query("SELECT * FROM tour_requests WHERE user_id = '$user_id'");
 $data = $result->fetch_assoc();
@@ -24,7 +24,6 @@ $data = $result->fetch_assoc();
     <link rel="stylesheet" href="/style/clear.css">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/style-adaptive.css">
-
     <link rel="stylesheet" href="style/styleLk.css">
     <script src="/modal/Burger.js" defer></script>
     <script src="js/mainLK.js" defer></script>
@@ -54,12 +53,20 @@ $data = $result->fetch_assoc();
             <!-- Sidebar -->
             <aside class="profile-sidebar">
                 <div class="user-card">
-                <input type="file" id="avatarInput" style="display: none;" accept="image/*">
-                <img src="<?php echo isset($userData['avatar_path']) ? $userData['avatar_path'] : '/img/otziv/zagl1.png'; ?>" 
-                        alt="Аватар" 
-                        class="avatar" 
-                        id="avatarImage"
-                        onclick="document.getElementById('avatarInput').click();">
+                    <form id="uploadForm" enctype="multipart/form-data" class="avatar__form">
+                        <input id="imageInput" type="file" name="image" accept="image/*" hidden required>
+
+
+                        <!-- <button type="submit">Загрузить</button> -->
+                        <label for="imageInput">
+                            <div class="image-container">
+                                <img src="<?= isset($user_data['avatar_path']) ? $user_data['avatar_path'] : '/img/otziv/zagl1.png'; ?>"
+                                    alt="Аватар" class="avatar" id="avatarImage">
+                            </div>
+
+                        </label>
+                    </form>
+
                     <h3 class="user-name" id="fio">Иванов Иван Иванович</h3>
                     <p class="user-email" id="email">ivanov@example.com</p>
                 </div>
@@ -100,40 +107,47 @@ $data = $result->fetch_assoc();
                     ?>
                     <form action="php/changeDataHealth.php" class="modal__form" method="POST">
                         Мой возраст
-                        <input name="age" type="text" class="change-form-input" value="<?=$data['age']?>" disabled>
+                        <input name="age" type="text" class="change-form-input" value="<?= $data['age'] ?>" disabled>
                         Мой телефон
-                        <input name="tel" type="text" class="change-form-input" value="<?=$data['tel']?>" disabled>
+                        <input name="tel" type="text" class="change-form-input" value="<?= $data['tel'] ?>" disabled>
                         Мой город
-                        <input name="city" type="text" class="change-form-input" value="<?=$data['city']?>" disabled>
+                        <input name="city" type="text" class="change-form-input" value="<?= $data['city'] ?>" disabled>
                         Мой рост
-                        <input name="rost" type="text" class="change-form-input" value="<?=$data['rost']?>" disabled>
+                        <input name="rost" type="text" class="change-form-input" value="<?= $data['rost'] ?>" disabled>
                         Мой вес
-                        <input name="ves" type="text" class="change-form-input" value="<?=$data['ves']?>" disabled>
+                        <input name="ves" type="text" class="change-form-input" value="<?= $data['ves'] ?>" disabled>
                         Мой стаж занятия Скандинавской ходьбой
-                        <input name="staj" type="text" class="change-form-input" value="<?=$data['staj']?>" disabled>
+                        <input name="staj" type="text" class="change-form-input" value="<?= $data['staj'] ?>" disabled>
                         Физические нагрузки
-                        <input name="fizNagr" type="text" class="change-form-input" value="<?=$data['fizNagr']?>" disabled>
+                        <input name="fizNagr" type="text" class="change-form-input" value="<?= $data['fizNagr'] ?>"
+                            disabled>
                         Наличие сердечно-сосудистных заболеваний
-                        <input name="zabolevaniya" type="text" class="change-form-input" value="<?=$data['zabolevaniya']?>" disabled>
+                        <input name="zabolevaniya" type="text" class="change-form-input"
+                            value="<?= $data['zabolevaniya'] ?>" disabled>
                         Давление
-                        <input name="davlenie" type="text" class="change-form-input" value="<?=$data['davlenie']?>" disabled>
+                        <input name="davlenie" type="text" class="change-form-input" value="<?= $data['davlenie'] ?>"
+                            disabled>
                         Хронические заболевания, Аллергии
-                        <input name="chrono" type="text" class="change-form-input" value="<?=$data['chrono']?>" disabled>
+                        <input name="chrono" type="text" class="change-form-input" value="<?= $data['chrono'] ?>" disabled>
                         Заболевания опорно-двигательного аппарата?
-                        <input name="opora" type="text" class="change-form-input" value="<?=$data['opora']?>" disabled>
+                        <input name="opora" type="text" class="change-form-input" value="<?= $data['opora'] ?>" disabled>
                         Максимальные расстояния
-                        <input name="perenosimost" type="text" class="change-form-input" value="<?=$data['perenosimost']?>" disabled>
+                        <input name="perenosimost" type="text" class="change-form-input"
+                            value="<?= $data['perenosimost'] ?>" disabled>
                         Переносимость сложных маршрутов с перепадами высоты
-                        <input name="level" type="text" class="change-form-input" value="<?=$data['level']?>" disabled>
+                        <input name="level" type="text" class="change-form-input" value="<?= $data['level'] ?>" disabled>
                         Готовность проходить в среднем 15 - 20 км
-                        <input name="prohod" type="text" class="change-form-input" value="<?=$data['prohod']?>" disabled>
+                        <input name="prohod" type="text" class="change-form-input" value="<?= $data['prohod'] ?>" disabled>
                         Переносимость сложных маршрутов
-                        <input name="perenosimostGori" type="text" class="change-form-input" value="<?=$data['perenosimostGori']?>" disabled>
+                        <input name="perenosimostGori" type="text" class="change-form-input"
+                            value="<?= $data['perenosimostGori'] ?>" disabled>
                         Только равнинные маршруты
-                        <input name="ravn" type="text" class="change-form-input" value="<?=$data['ravn']?>" disabled>
-                        <input id="sendChangeBtn" type="hidden" id="btn" value="Отправить" class="modal-form-btn" style="cursor:pointer;">
+                        <input name="ravn" type="text" class="change-form-input" value="<?= $data['ravn'] ?>" disabled>
+                        <input id="sendChangeBtn" type="hidden" id="btn" value="Отправить" class="modal-form-btn"
+                            style="cursor:pointer;">
                     </form>
-                    <button id="btnChange" class="btn btn-primary" style="display:block;  width:100%; text-align:center;"> Изменить </button>
+                    <button id="btnChange" class="btn btn-primary" style="display:block;  width:100%; text-align:center;">
+                        Изменить </button>
                     <?php
                 } else { ?>
                     <a class="btn btn-primary" href="#openModal"
@@ -164,7 +178,7 @@ $data = $result->fetch_assoc();
                 </div>
                 <div class="modal-b">
                     <form action="php/addDataHealth.php" method="POST" class="modal__form">
- 
+
                         Дата рождения:
                         <input type="text" id="age" name="age" placeholder="Дата рождения 31.12.2000" required>
                         Ваш телефон:

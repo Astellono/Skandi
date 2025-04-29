@@ -1,6 +1,6 @@
 :root {
     --primary: #4F3156;
-    
+
     --primary-light: #e0e7ff;
     --secondary: #4F3156;
     ;
@@ -21,9 +21,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .modal-form-checkbox {
     cursor: pointer;
 }
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f1f5f9;
@@ -47,7 +49,7 @@ body {
 
 .profile-title {
     width: 100%;
-    margin-top: 30px ;
+    margin-top: 30px;
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
@@ -113,12 +115,50 @@ body {
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
+  
+    width: 200px;
+   
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 1rem;
     border: 4px solid var(--primary-light);
+
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image-container img {
+    display: block;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+    height: auto;
+}
+
+.image-container::after {
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    content: "+";
+    position: absolute;
+    top: 46%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover img {
+    filter: brightness(0.5);
+}
+
+.image-container:hover::after {
+    opacity: 1;
 }
 
 .user-name {
@@ -324,6 +364,7 @@ textarea.form-control {
     transition: .4s;
     border-radius: 50%;
 }
+
 .change-data-btn {
     padding: 0.6rem 1.2rem;
     border-radius: var(--radius);
@@ -335,12 +376,18 @@ textarea.form-control {
     align-items: center;
     gap: 0.5rem;
 }
-input:checked + .slider {
+
+input:checked+.slider {
     background-color: var(--primary);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(26px);
+}
+
+.avatar__form {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Responsive */
@@ -348,15 +395,15 @@ input:checked + .slider:before {
     .dashboard {
         grid-template-columns: 1fr;
     }
-    
+
     .form-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form-group.full-width {
         grid-column: span 1;
     }
-    
+
     .health-status {
         flex-direction: column;
     }

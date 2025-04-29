@@ -1,73 +1,63 @@
 <?php
 session_start();
-require 'connect.php'; 
+require_once 'connect.php';
 header('Content-Type: application/json');
 
-// Debug информации
-error_log("Текущая директория: " . __DIR__);
-error_log("Содержимое FILES: " . print_r($_FILES, true));
-
-if (!isset($_SESSION['user_id'])) {
-    echo json_encode(['success' => false, 'error' => 'Требуется авторизация']);
+// Проверяем, что файл был отправлен
+if (!isset($_FILES['image'])) {
+    echo json_encode(['success' => false, 'error' => 'Файл не загружен.']);
     exit;
 }
 
-try {
-    $user_id = $_SESSION['user_id'];
-    $upload_dir = __DIR__ . '/../../uploads/avatars/'; // Путь относительно php-скрипта
-    
-    error_log("Целевая директория: $upload_dir");
+$file = $_FILES['image'];
 
-    // // Создаем директорию если не существует
-    // if (!file_exists($upload_dir)) {
-    //     mkdir($upload_dir, 0755, true);
-    // }
+// Проверка на ошибки загрузки
+if ($file['error'] !== UPLOAD_ERR_OK) {
+    echo json_encode(['success' => false, 'error' => 'Ошибка загрузки: ' . $file['error']]);
+    exit;
+}
 
-    // Проверяем загруженный файл
-    if (!isset($_FILES['avatar']) || $_FILES['avatar']['error'] !== UPLOAD_ERR_OK) {
-        throw new Exception('Ошибка загрузки файла');
-    }
+// Проверка типа файла (MIME)
+$allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+if (!in_array($file['type'], $allowedTypes)) {
+    echo json_encode(['success' => false, 'error' => 'Только JPG, PNG или GIF!']);
+    exit;
+}
 
-    $file = $_FILES['avatar'];
-    
-    // Проверка типа файла
-    $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
-    $finfo = new finfo(FILEINFO_MIME_TYPE);
-    $mime = $finfo->file($file['tmp_name']);
-    
-    if (!in_array($mime, $allowed_types)) {
-        throw new Exception('Недопустимый тип файла');
-    }
+// Проверка размера (уже есть в JS, но на сервере — дополнительная защита)
+$maxSize = 5 * 1024 * 1024; // 5 МБ
+if ($file['size'] > $maxSize) {
+    echo json_encode(['success' => false, 'error' => 'Файл слишком большой (макс. 5 МБ)']);
+    exit;
+}
 
-    // Генерация уникального имени
-    $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
-    $filename = "avatar_{$user_id}_" . bin2hex(random_bytes(8)) . ".$extension";
-    $target_path = $upload_dir . $filename;
+// Создаем папку uploads, если её нет
+$uploadDir = '../../uploads/avatars/';
+if (!is_dir($uploadDir)) {
+    mkdir($uploadDir, 0755, true);
+}
 
-    // Перемещение файла
-    if (!move_uploaded_file($file['tmp_name'], $target_path)) {
-        throw new Exception('Ошибка сохранения файла');
-    }
+// Генерируем уникальное имя файла
+$fileName = uniqid() . '_' . basename($file['name']);
+$uploadPath = $uploadDir . $fileName;
 
-    // Обновление БД
-    $relative_path = '/uploads/avatars/' . $filename; // Путь для браузера
-    $stmt = $connect->prepare("UPDATE users SET avatar_path = ? WHERE id = ?");
-    $stmt->bind_param("si", $relative_path, $user_id);
-    
-    if (!$stmt->execute()) {
-        throw new Exception('Ошибка базы данных: ' . $stmt->error);
-    }
-
+// Перемещаем файл из временной директории
+if (move_uploaded_file($file['tmp_name'], $uploadPath)) {
     echo json_encode([
         'success' => true,
-        'avatarPath' => $relative_path
+        'path' => $uploadPath,
+        'url' => 'http://ваш-сайт/' . $uploadPath // Опционально: полный URL к файлу
     ]);
-
-} catch (Exception $e) {
-    error_log("Ошибка: " . $e->getMessage());
-    echo json_encode([
-        'success' => false,
-        'error' => $e->getMessage()
-    ]);
+    
+} else {
+    echo json_encode(['success' => false, 'error' => 'Ошибка сохранения файла.']);
 }
+
+$user_id = $_SESSION['user_id'];
+$sql = "UPDATE `users` SET `avatar_path` = '$uploadPath' WHERE id = '$user_id'";
+$connect->query($sql);
+    
+    
+
+
 ?>
