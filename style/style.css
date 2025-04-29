@@ -47,7 +47,7 @@
 }
 
 * {
-   
+
     margin: 0;
     padding: 0;
     font-family: "Roboto";
@@ -76,8 +76,9 @@ a {
     color: black;
 
 }
+
 section {
-    
+
     transform: translateY(50px);
     opacity: 0;
     transition: 1s;
@@ -87,6 +88,7 @@ section.visible {
     transform: translateY(0);
     opacity: 1;
 }
+
 .body__form {
     display: flex;
     flex-direction: column;
@@ -97,7 +99,7 @@ section.visible {
 
 .header {
     background-color: white;
-
+    
     padding: 20px 0;
     width: 100%;
     height: max-content;
@@ -106,11 +108,14 @@ section.visible {
 
 .container {
     margin: 0 auto;
-
+    
     max-width: 1170px;
     padding: 0 77px;
 }
-
+.container__header {
+   
+    
+}
 button {
     background: none;
     border: none;
@@ -129,7 +134,7 @@ button {
 
 .header__logo img {
     width: 200px;
-    margin-right: 50px;
+    margin-right: 25px;
     /* height: 107px; */
 }
 
@@ -137,12 +142,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 50px;
 }
 
 .header__menu {
     display: flex;
     width: 600px;
-    margin-right: 10px;
+    margin-right: 20px;
     justify-content: space-between;
 }
 
@@ -171,10 +177,10 @@ button {
 }
 
 .header__contacts {
-    width: 259px;
+    padding-left: 5px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    
     justify-content: center;
 }
 
@@ -187,7 +193,7 @@ button {
 
 .header__soc-list {
     display: flex;
-    margin-right: 40px;
+    justify-content: space-around;
 }
 
 .header__soc-item:not(:last-child) {
@@ -217,7 +223,35 @@ button {
     color: gray;
     border-bottom: none;
 }
-
+.acc__block {
+    display: flex;
+ 
+    align-items: center;
+}
+.acc__item {
+    
+    
+}
+.acc__item:not(:last-child) {
+    margin-right: 15px;
+}
+.acc__ava__box {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 40px;
+}
+.acc__ava {
+    width: 100%;
+    height: 100%;
+}
+.acc__link {
+    display: block;
+   width: 100%;
+   font-size: 12px;
+   text-decoration: underline;
+}
 /*----------------------------------------------------------------------------------------------*/
 
 
@@ -898,68 +932,69 @@ button {
     width: 100%;
     height: 100%;
 }
+
 .review-card {
     background: white;
     border-radius: 10px;
     padding: 25px;
     margin-bottom: 30px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-  }
-  
-  .review-card__user {
+}
+
+.review-card__user {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-  }
-  
-  .review-card__avatar {
+}
+
+.review-card__avatar {
     min-width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-  }
-  
-  .review-card__name {
+}
+
+.review-card__name {
     margin: 0;
     font-size: 18px;
     color: #333;
-  }
-  
-  .review-card__trip {
+}
+
+.review-card__trip {
     margin: 5px 0 0;
     font-size: 14px;
     color: #666;
-  }
-  
-  .review-card__text {
+}
+
+.review-card__text {
     line-height: 1.6;
     color: #444;
-    margin-bottom:0;
+    margin-bottom: 0;
     text-align: left;
-    
-  }
-  
-  .review-card__gallery {
+
+}
+
+.review-card__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 10px;
-  }
-  
-  .review-card__photo {
+}
+
+.review-card__photo {
     width: 100%;
     height: 120px;
     object-fit: cover;
     border-radius: 5px;
     transition: transform 0.3s;
     cursor: pointer;
-  }
-  
-  .review-card__photo:hover {
+}
+
+.review-card__photo:hover {
     transform: scale(1.03);
-  }
-  
-  .reviews__button {
+}
+
+.reviews__button {
     display: block;
     margin: 40px auto 0;
     padding: 12px 30px;
@@ -970,12 +1005,13 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .reviews__button:hover {
+}
+
+.reviews__button:hover {
     background-color: #3a56d4;
-  }
- .otziv {
+}
+
+.otziv {
     padding: 50px 0;
     padding-bottom: 0;
 
@@ -1096,15 +1132,18 @@ button {
     max-width: 250px;
     height: 150px;
 }
+
 .card {
     padding: 30px 0;
     background: #4F3156;
-    color:white;
+    color: white;
 
 }
+
 .club-text {
     font-size: 20px;
 }
+
 .club-card {
     background: linear-gradient(135deg, #4CAF50, #45a049);
     color: white;
@@ -1127,7 +1166,7 @@ button {
 .percent-bubble {
     width: 80px;
     height: 80px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1138,7 +1177,7 @@ button {
 }
 
 .discount-section {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
     padding: 20px;
     margin-top: 30px;
@@ -1151,7 +1190,7 @@ button {
     display: inline-block;
     margin: -40px auto 20px;
     transform: rotate(-3deg);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     color: #000;
 }
 
@@ -1177,7 +1216,7 @@ button {
     width: 70px;
     height: 70px;
     object-fit: contain;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
 }
 
 .platform:hover {
@@ -1194,7 +1233,7 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 10px;
 }
@@ -1221,12 +1260,13 @@ button {
     color: #48344E;
     padding: 20px 10px;
     border-radius: 15px;
-    
+
     text-align: center;
     min-width: 150px;
     font-weight: 700;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 .price-card h3,
 .price-card div {
     font-size: 20px;
@@ -1245,10 +1285,19 @@ button {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
+
 .modal-content {
     padding: 30px;
 }
@@ -2460,17 +2509,17 @@ table * {
 
 
 .login-btn {
-    position: fixed;
-    top:5px;
-    left: 5px;
-    background-color:#775381;
+
+
+    background-color: #775381;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 10px;
 }
 
 .login-btn:hover {
@@ -2487,7 +2536,7 @@ table * {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content-login {
@@ -2498,7 +2547,7 @@ table * {
     width: 100%;
     max-width: 400px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .close-login {
@@ -2947,7 +2996,7 @@ body.mod {
 .excursions__info__description {
     display: flex;
     margin-top: 10px;
-   
+
     display: flex;
     padding-top: 15px;
     align-items: center;
@@ -2960,12 +3009,14 @@ body.mod {
 .excursions__info .excursions__details {
     display: none;
     margin-top: 10px;
-    
+
     text-align: justify;
 }
+
 .excursions__details__desc {
     padding-bottom: 15px;
 }
+
 .excursions__info .excursions__details ul {
     padding-left: 20px;
 }
@@ -2979,7 +3030,7 @@ body.mod {
     background-color: white;
     pointer-events: none;
     border-radius: 0;
-    
+
     transition: all 0.5s ease;
 }
 
@@ -3021,6 +3072,7 @@ body.mod {
 .excursions__price {
     font-size: 25px;
 }
+
 .excursions__podr {
     position: absolute;
     width: 100%;
@@ -3031,6 +3083,7 @@ body.mod {
     background-color: #e7e7e7;
 
 }
+
 @media (max-width: 768px) {
     .excursions__item {
         flex: 1 1 calc(50% - 20px);
@@ -3043,6 +3096,7 @@ body.mod {
         flex: 1 1 100%;
         max-width: 100%;
     }
+
     .excursions__info__title {
         height: max-content;
     }

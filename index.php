@@ -1,6 +1,11 @@
-<?php 
-require_once 'phpLogin/connect.php'; 
+<?php
+session_start();
+require_once 'phpLogin/connect.php';
+$user_id = $_SESSION['user_id'];
 
+
+$user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
+$user_data = $user_query->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -50,9 +55,10 @@ require_once 'phpLogin/connect.php';
 </head>
 
 <body>
-    <button class="login-btn" id="loginBtn">Войти в аккаунт</button>
+    <!-- <button class="login-btn" id="loginBtn">Войти в аккаунт</button> -->
     <header class="header" id="header">
-        <script src="parts/header.js?ver=<? echo time(); ?>"></script>
+
+        <?php include 'parts/headerPHP.php'; ?>
 
     </header>
     <section class="section hero">
@@ -1002,8 +1008,8 @@ require_once 'phpLogin/connect.php';
         })
     </script> -->
 
-     <!-- Модальное окно -->
-     <div id="loginModal" class="modal">
+    <!-- Модальное окно -->
+    <div id="loginModal" class="modal">
         <div class="modal-content-login">
             <span class="close-login">&times;</span>
 

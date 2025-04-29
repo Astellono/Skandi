@@ -36,7 +36,7 @@ $data = $result->fetch_assoc();
 
 <body>
     <header class="header" id="header">
-        <script src="/parts/header.js?ver=<? echo time(); ?>"></script>
+        <?php include '../parts/headerPHP.php'; ?>
 
     </header>
 
