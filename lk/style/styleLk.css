@@ -115,9 +115,9 @@ body {
 }
 
 .avatar {
-  
-    width: 200px;
-   
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 1rem;
@@ -126,6 +126,8 @@ body {
 }
 .image-container {
     position: relative;
+    width: 200px;
+    height: 200px;
     display: inline-block;
     overflow: hidden;
 }
@@ -134,7 +136,7 @@ body {
     display: block;
     transition: filter 0.3s ease;
     cursor: pointer;
-    height: auto;
+    
 }
 
 .image-container::after {
