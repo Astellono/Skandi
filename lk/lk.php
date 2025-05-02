@@ -87,6 +87,11 @@ $data = $result->fetch_assoc();
                             <i class="fas fa-calendar-check"></i> Мои экскурсии
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="php/logout.php" class="nav-link">
+                            <i class="fas fa-sign-out-alt"></i> Выход
+                        </a>
+                    </li>
 
                 </ul>
             </aside>
