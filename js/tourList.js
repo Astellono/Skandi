@@ -32,13 +32,13 @@ export let tourList = [
         color: "red",
         srcImg:'img/act-tour/kahetia.jpg' ,
     },
-    {
-        nameT: "Азербайджан",
-        date: getDatesArray(new Date('2025-05-18'), new Date('2025-05-24')),
-        link: "page_tour/azer.php",
-        color: "#59bd9f",
-        srcImg:'img/act-tour/azer.jpg' ,
-    },
+    // {
+    //     nameT: "Азербайджан",
+    //     date: getDatesArray(new Date('2025-05-18'), new Date('2025-05-24')),
+    //     link: "page_tour/azer.php",
+    //     color: "#59bd9f",
+    //     srcImg:'img/act-tour/azer.jpg' ,
+    // },
     {
         nameT: "Киргизия",
         date: getDatesArray(new Date('2025-06-12'), new Date('2025-06-22')),
