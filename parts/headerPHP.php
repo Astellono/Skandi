@@ -7,6 +7,20 @@ $user_id = $_SESSION['user_id'];
 $user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
 $user_data = $user_query->fetch_assoc();
 ?>
+<style>
+    .acc__link i {
+    margin-right: 8px;
+}
+
+.acc__item:last-child .acc__link {
+    color: #ff4444; /* красный цвет для кнопки выхода */
+    transition: opacity 0.3s;
+}
+
+.acc__item:last-child .acc__link:hover {
+    opacity: 0.8;
+}
+</style>
 <div class="container__header">
     <div class="header__contant">
         <div class="header__logo">
@@ -57,8 +71,13 @@ $user_data = $user_query->fetch_assoc();
                         </div>
                     </li>
                     <li class="acc__item">
-                        <a href="lk/lk.php" class="acc__link"><?= $user_data['email'] ?></a>
+                        <a href="/lk/lk.php" class="acc__link"><?= $user_data['email'] ?></a>
                     </li>
+                    <li class="acc__item">
+                <a href="php/logout.php" class="acc__link">
+                    <i class="fas fa-sign-out-alt"></i> Выход
+                </a>
+            </li>
                 </ul>
 
             <?php } ?>
