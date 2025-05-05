@@ -74,7 +74,7 @@ $user_data = $user_query->fetch_assoc();
                         <a href="/lk/lk.php" class="acc__link"><?= $user_data['email'] ?></a>
                     </li>
                     <li class="acc__item">
-                <a href="php/logout.php" class="acc__link">
+                <a href="/lk/php/logout.php" class="acc__link">
                     <i class="fas fa-sign-out-alt"></i> Выход
                 </a>
             </li>
