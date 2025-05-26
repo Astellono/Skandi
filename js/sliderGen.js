@@ -1,4 +1,4 @@
-import { tourList } from "./tourList.js";
+import { tourList } from "./tourList.js?ver=7";
 
 function mounthNumberToString(name) {
     let mounthName = '';

@@ -18,20 +18,7 @@ export let tourList = [
 
     
  
-    {
-        nameT: "Армения",
-        date: getDatesArray(new Date('2025-04-16'), new Date('2025-04-20')),
-        link: "page_tour/arm.php",
-        color: '#59bd21',
-        srcImg:'img/act-tour/arm.jpg' ,
-    },
-    {
-        nameT: "Кахетия",
-        date: getDatesArray(new Date('2025-05-01'), new Date('2025-05-07')),
-        link: "page_tour/kahetia.php",
-        color: "red",
-        srcImg:'img/act-tour/kahetia.jpg' ,
-    },
+   
     // {
     //     nameT: "Азербайджан",
     //     date: getDatesArray(new Date('2025-05-18'), new Date('2025-05-24')),
@@ -88,12 +75,20 @@ export let tourList = [
         color: "#bd1e73",
         srcImg:'img/act-tour/baikal.jpg' ,
     },
+   
     {
         nameT: "Грузия (Аджария)",
         date: getDatesArray(new Date('2025-10-04'), new Date('2025-10-11')),
         link: "page_tour/adj.php",
         color: "#bd5e73",
         srcImg:'img/act-tour/adj.jpg' ,
+    },
+    {
+        nameT: "Абхазия",
+        date: getDatesArray(new Date('2025-11-01'), new Date('2025-11-05')),
+        link: "page_tour/abh.php",
+        color: "#d24220",
+        srcImg:'img/act-tour/abh.jpg' ,
     },
     {
         nameT: "Осетия",

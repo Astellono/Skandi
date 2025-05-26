@@ -146,7 +146,7 @@
                     </td>
                     <td>-</td>
                     <td>-</td>
-                    <td>9:00</td>
+                    <td>-</td>
                     <td>19.30</td>
                     <td>-</td>
                     <td>-</td>
@@ -173,49 +173,19 @@
                         <img class="lesson__img" src="img/lesson/voron.jpg" alt="" srcset="">
                         <p class="lesson__img-text">Воронцовский</p>
                     </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
                     <td>19:00 ОФП <br> 20:00 С/Х </td>
-                    <td>-</td>
-                    <td>19:30</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td></td>
                     <td class="td-item"><a class="td-link" href="#mapVorona"><img width="50px" height="50px"
                                 src="img/map.png"></a></td>
                     <td class="td__btn"> <a href="#modal-vorona" class="lesson__btn">Записаться</a></td>
 
                 </tr>
-                <tr>
-                    <th></th>
-                    <th>ПН</th>
-                    <th>ВТ</th>
-                    <th>СР</th>
-                    <th>ЧТ</th>
-                    <th>ПТ</th>
-                    <th>СБ</th>
-                    <th>ВС</th>
-                    <th>Точка сбора</th>
-                    <th></th>
-                </tr>
-
-
-                <tr>
-                    <td class="td__img">
-                        <img class="lesson__img" src="img/lesson/pio.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Дворец Пионеров</p>
-                    </td>
-                    <td>11:00</td>
-                    <td>-</td>
-                    <td>11:00</td>
-                    <td>-</td>
-                    <td>11:15</td>
-                    <td>-</td>
-                    <td></td>
-                    <td class="td-item"><a class="td-link" href="#mapPio"><img width="50px" height="50px"
-                                src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#modal-Pio" class="lesson__btn">Записаться</a></td>
-
-                </tr>
+                
 
             </table>
 
@@ -271,7 +241,7 @@
                     <tr>
                         <td>-</td>
                         <td>-</td>
-                        <td>9:00</td>
+                        <td>-</td>
                         <td>19:30</td>
                         <td>-</td>
                         <td>-</td>
@@ -298,13 +268,13 @@
                         <th>Точка сбора</th>
                     </tr>
                     <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>19:00 ОФП <br> 20:00 С/Х </td>
-                        <td>-</td>
-                        <td>19:30</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td></td>
                         <td class="td-item"><a class="td-link" href="#mapVorona"><img width="50px" height="50px"
                                     src="img/map.png"></a></td>
                     </tr>
@@ -312,35 +282,7 @@
                 <a href="#modal-vorona" class="lesson__btn">Записаться</a>
                 <hr>
 
-                <div class="lesson__table-imgBlock">
-                    <img class="lesson__img-smart" src="img/lesson/pio.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Дворец пионеров</p>
-                </div>
-                <table class="lesson__table table smart__table">
-                    <tr>
-                        <th>ПН</th>
-                        <th>ВТ</th>
-                        <th>СР</th>
-                        <th>ЧТ</th>
-                        <th>ПТ</th>
-                        <th>СБ</th>
-                        <th>ВС</th>
-                        <th>Точка сбора</th>
-                    </tr>
-                    <tr>
-                        <td>11:00</td>
-                        <td>-</td>
-                        <td>11:00</td>
-                        <td>-</td>
-                        <td>11:15</td>
-                        <td>-</td>
-                        <td>
-                        </td>
-                        <td class="td-item"><a class="td-link" href="#mapPio"><img width="50px" height="50px"
-                                    src="img/map.png"></a></td>
-                    </tr>
-                </table>
-                <a href="#modal-Pio" class="lesson__btn">Записаться</a>
+                
             </div>
             <div class="lesson__abik">
                 <h3 class="lesson__title">Абонементы</h3>

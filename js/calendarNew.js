@@ -1,5 +1,5 @@
 import { mounthData } from './calendar2025.js'
-import { tourList } from "./tourList.js";
+import { tourList } from "./tourList.js?ver=9";
 
 let data = mounthData
 console.log(data);
