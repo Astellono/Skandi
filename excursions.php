@@ -28,17 +28,18 @@
         content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <!-- <link rel="stylesheet" href="style/style.css?ver=310">
-    <link rel="stylesheet" href="style/style-adaptive.css?ver=310"> -->
+    <link rel="stylesheet" href="style/style.css?ver=<? echo time(); ?>">
+    <link rel="stylesheet" href="style/style-adaptive.css?ver=<? echo time(); ?>">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
-    <script src="modal/verCss.js"></script>
+  
     <script defer src="js/scroll.js"></script>
     <title>Сканди-экскурсии</title>
 </head>
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js?ver=<? echo time(); ?>"></script>
+
+        <?php include 'parts/headerPHP.php'; ?>
 
     </header>
 
@@ -429,7 +430,7 @@
                                 - Обувь для трекинга + скандинавские палки<br>
                                 - Ланчбокс + термос (или покупка еды в с. Ильинское)<br><br>
 
-                                
+
 
                                 ✨ ОСОБЕННОСТИ МАРШРУТА:<br>
                                 ✅ 23 км с комфортным темпом (5 км/ч)<br>

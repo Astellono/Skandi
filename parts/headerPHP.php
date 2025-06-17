@@ -1,25 +1,32 @@
 <?php
 session_start();
-// require_once 'phpLogin/connect.php';
-$user_id = $_SESSION['user_id'];
+$root = $_SERVER['DOCUMENT_ROOT'];
+$path = $root . '/phpLogin/connect.php';
+require_once $path;
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+    $user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
+    $user_data = $user_query->fetch_assoc();
 
+} else {
+    $user_id = '';
+}
 
-$user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
-$user_data = $user_query->fetch_assoc();
 ?>
 <style>
     .acc__link i {
-    margin-right: 8px;
-}
+        margin-right: 8px;
+    }
 
-.acc__item:last-child .acc__link {
-    color: #ff4444; /* красный цвет для кнопки выхода */
-    transition: opacity 0.3s;
-}
+    .acc__item:last-child .acc__link {
+        color: #ff4444;
+        /* красный цвет для кнопки выхода */
+        transition: opacity 0.3s;
+    }
 
-.acc__item:last-child .acc__link:hover {
-    opacity: 0.8;
-}
+    .acc__item:last-child .acc__link:hover {
+        opacity: 0.8;
+    }
 </style>
 <div class="container__header">
     <div class="header__contant">
@@ -62,7 +69,7 @@ $user_data = $user_query->fetch_assoc();
         <div class="header__contacts">
             <?php if ($user_id == '') {
                 ?>
-                <button class="login-btn" id="loginBtn">Войти в аккаунт</button>
+                <button class="login-btn disable" id="loginBtn">Войти в аккаунт</button>
             <?php } else { ?>
                 <ul class="acc__block">
                     <li class="acc__item">
@@ -74,15 +81,15 @@ $user_data = $user_query->fetch_assoc();
                         <a href="/lk/lk.php" class="acc__link"><?= $user_data['email'] ?></a>
                     </li>
                     <li class="acc__item">
-                <a href="/lk/php/logout.php" class="acc__link">
-                    <i class="fas fa-sign-out-alt"></i> Выход
-                </a>
-            </li>
+                        <a href="/lk/php/logout.php" class="acc__link">
+                            <i class="fas fa-sign-out-alt"></i> Выход
+                        </a>
+                    </li>
                 </ul>
 
             <?php } ?>
 
-                <hr style="margin: 10px 0;">
+            <hr style="margin: 10px 0;">
             <ul class="header__soc-list">
                 <li class="header__soc-item">
                     <a href="tel: +79162027390" class="header__soc-link" target="_blank">

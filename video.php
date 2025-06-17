@@ -30,9 +30,9 @@
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
     <script defer src="js/scroll.js"></script>
-    <!-- <link rel="stylesheet" href="/style/style.css?ver=505">
-    <link rel="stylesheet" href="/style/style-adaptive.css?ver=505"> -->
-    <script src="modal/verCss.js"></script>
+    <link rel="stylesheet" href="style/style.css?ver=<? echo time(); ?>">
+    <link rel="stylesheet" href="style/style-adaptive.css?ver=<? echo time(); ?>">
+
 
 
     <style>
@@ -48,9 +48,11 @@
     <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 
-<body>      
+<body>
     <header class="header" id="header">
-        <script src="parts/header.js"></script>
+
+        <?php include 'parts/headerPHP.php'; ?>
+
     </header>
 
 
@@ -113,7 +115,7 @@
     </script>
 
     <footer class="footer"></footer>
-    
+
     <script src="js/video.js" defer></script>
     <script src="modal/bootstrap.bundle.js"></script>
 

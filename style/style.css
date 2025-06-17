@@ -216,7 +216,9 @@ button {
 .disable {
     color: gray;
     cursor: default;
+    pointer-events: none;
     border-bottom: none;
+    background-color: gray !important;
 }
 
 .disable:hover {
@@ -2365,7 +2367,17 @@ table * {
     margin-bottom: auto;
     text-align: justify;
 }
-
+.tour__page__desc > p {
+    text-indent: 50px;
+}
+.tour__page__desc > ul>li {
+    list-style-type: disc ;
+   color: #60326B;
+}
+.tour__page__desc > ul {
+  
+   padding-left: 50px;
+}
 .tour__page__desc::first-letter {
     font-size: 42px;
     color: #60326B;

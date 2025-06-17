@@ -48,8 +48,11 @@
 
 <body>
     <header class="header" id="header">
-        <script src="/parts/header.js?ver=<?echo time();?>"></script>
-
+        <?php
+        $root =  $_SERVER['DOCUMENT_ROOT']; 
+        $path = $root . '/parts/headerPHP.php';
+        include $path;
+        ?>
     </header>
 
 

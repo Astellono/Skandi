@@ -29,10 +29,10 @@
     <link rel="icon" sizes="120x120" href="/img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/style/clear.css">
     <link rel="stylesheet" href="/style/bootstrap.css">
-    <!-- <link rel="stylesheet" href="/style/style.css?ver=505">
-    <link rel="stylesheet" href="/style/style-adaptive.css?ver=505"> -->
+    <link rel="stylesheet" href="/style/style.css?ver=<? echo time(); ?>">
+    <link rel="stylesheet" href="/style/style-adaptive.css?ver=<? echo time(); ?>">
     <script defer src="/js/scroll.js"></script>
-    <script src="/modal/verCss.js"></script>
+  
     <script src="/js/reg.js" defer></script>
     <script src="/js/fotoslide.js" defer></script>
     <style>
@@ -48,8 +48,11 @@
 
 <body>
     <header class="header" id="header">
-        <script src="/parts/header.js?ver=<?echo time();?>"></script>
-
+        <?php
+        $root =  $_SERVER['DOCUMENT_ROOT']; 
+        $path = $root . '/parts/headerPHP.php';
+        include $path;
+        ?>
     </header>
 
 

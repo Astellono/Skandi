@@ -31,17 +31,18 @@
         content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <!-- <link rel="stylesheet" href="style/style.css?ver=302">
-    <link rel="stylesheet" href="style/style-adaptive.css?ver=302"> -->
+    <link rel="stylesheet" href="style/style.css?ver=<? echo time(); ?>">
+    <link rel="stylesheet" href="style/style-adaptive.css?ver=<? echo time(); ?>">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
-    <script src="/modal/verCss.js"></script>
+  
     <script defer src="js/scroll.js"></script>
     <title>Занятия</title>
 </head>
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js?ver=<? echo time(); ?>"></script>
+
+        <?php include 'parts/headerPHP.php'; ?>
 
     </header>
     <!-- <section class="openlesson">
@@ -185,7 +186,7 @@
                     <td class="td__btn"> <a href="#modal-vorona" class="lesson__btn">Записаться</a></td>
 
                 </tr>
-                
+
 
             </table>
 
@@ -282,7 +283,7 @@
                 <a href="#modal-vorona" class="lesson__btn">Записаться</a>
                 <hr>
 
-                
+
             </div>
             <div class="lesson__abik">
                 <h3 class="lesson__title">Абонементы</h3>

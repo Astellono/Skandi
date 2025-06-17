@@ -29,15 +29,17 @@
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="style/style.css?ver=202">
-    <link rel="stylesheet" href="style/style-adaptive.css?ver=202">
+    <link rel="stylesheet" href="style/style.css?ver=<? echo time(); ?>">
+    <link rel="stylesheet" href="style/style-adaptive.css?ver=<? echo time(); ?>">
     <script defer src="js/scroll.js"></script>
     <title>Меню</title>
 </head>
 
 <body>
     <header class="header" id="header">
-        <script src="parts/header.js?ver=<?echo time();?>"></script>
+
+        <?php include 'parts/headerPHP.php'; ?>
+
     </header>
 
 
