@@ -40,13 +40,7 @@ export let tourList = [
         color: "#3f708c",
         srcImg:'img/act-tour/solov.jpg' ,
     },
-    {
-        nameT: "Селигер",
-        date: getDatesArray(new Date('2025-07-13'), new Date('2025-07-19')),
-        link: "page_tour/seliger.php",
-        color: "#6a118c",
-        srcImg:'img/act-tour/seliger.jpg' ,
-    },
+   
     {
         nameT: "Башкирия",
         date: getDatesArray(new Date('2025-08-06'), new Date('2025-08-10')),

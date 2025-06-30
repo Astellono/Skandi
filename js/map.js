@@ -40,7 +40,12 @@ function init() {
         controls: ["zoomControl", "zoomControl", "fullscreenControl"]
 
      });
+     var myMap6 = new ymaps.Map("map-7", {
+    	center: [55.592555,37.673502],
+    	zoom: 18,
+        controls: ["zoomControl", "zoomControl", "fullscreenControl"]
 
+     });
     var myPlacemark = new ymaps.Placemark([55.616092, 37.674804], null, {
         preset: 'islands#blueDotIcon'
     });
@@ -59,11 +64,14 @@ function init() {
     var myPlacemark5 = new ymaps.Placemark([55.700833, 37.556801], null, {
         preset: 'islands#blueDotIcon'
     });
-
+    var myPlacemark6 = new ymaps.Placemark([55.592555,37.673502], null, {
+        preset: 'islands#blueDotIcon'
+    });
     myMap.geoObjects.add(myPlacemark);
     myMap1.geoObjects.add(myPlacemark1);
     myMap2.geoObjects.add(myPlacemark2);
     myMap3.geoObjects.add(myPlacemark3);
     myMap4.geoObjects.add(myPlacemark4);
     myMap5.geoObjects.add(myPlacemark5);
+    myMap6.geoObjects.add(myPlacemark6);
 }

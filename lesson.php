@@ -5,7 +5,7 @@
     <!-- Yandex.Metrika counter -->
     <script defer src="https://api-maps.yandex.ru/2.1/?apikey=199de9b4-eaf5-45e1-95c2-3510af592354&lang=ru_RU"
         type="text/javascript"></script>
-    <script defer src="js/map.js"></script>
+    <script defer src="js/map.js?ver=<? echo time(); ?>"></script>
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
             m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="style/style.css?ver=<? echo time(); ?>">
     <link rel="stylesheet" href="style/style-adaptive.css?ver=<? echo time(); ?>">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
-  
+
     <script defer src="js/scroll.js"></script>
     <title>Занятия</title>
 </head>
@@ -171,22 +171,21 @@
                 </tr>
                 <tr>
                     <td class="td__img">
-                        <img class="lesson__img" src="img/lesson/voron.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Воронцовский</p>
+                        <img class="lesson__img" src="img/lesson/ber.jpg" alt="" srcset="">
+                        <p class="lesson__img-text">Бирюлевский дендропарк</p>
                     </td>
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
+                    <td>8.00</td>
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
-                    <td>19:00 ОФП <br> 20:00 С/Х </td>
-                    <td class="td-item"><a class="td-link" href="#mapVorona"><img width="50px" height="50px"
+                    <td class="td-item"><a class="td-link" href="#mapBer"><img width="50px" height="50px"
                                 src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#modal-vorona" class="lesson__btn">Записаться</a></td>
+                    <td class="td__btn"> <a href="#modal-ber" class="lesson__btn">Записаться</a></td>
 
                 </tr>
-
 
             </table>
 
@@ -253,9 +252,10 @@
                 </table>
                 <a href="#modal-caricino" class="lesson__btn">Записаться</a>
                 <hr>
+
                 <div class="lesson__table-imgBlock">
-                    <img class="lesson__img-smart" src="img/lesson/voron.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Воронцовский парк</p>
+                    <img class="lesson__img-smart" src="img/lesson/ber.jpg" alt="" srcset="">
+                    <p class="lesson__img-text-smart">Бирюлевский дендропарк</p>
                 </div>
                 <table class="lesson__table table smart__table">
                     <tr>
@@ -272,17 +272,16 @@
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
+                        <td>8:00</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>19:00 ОФП <br> 20:00 С/Х </td>
-                        <td class="td-item"><a class="td-link" href="#mapVorona"><img width="50px" height="50px"
+                        <td class="td-item"><a class="td-link" href="#mapBer"><img width="50px" height="50px"
                                     src="img/map.png"></a></td>
                     </tr>
                 </table>
-                <a href="#modal-vorona" class="lesson__btn">Записаться</a>
+                <a href="#modal-ber" class="lesson__btn">Записаться</a>
                 <hr>
-
 
             </div>
             <div class="lesson__abik">
@@ -595,6 +594,38 @@
             </div>
         </div>
     </div>
+    <div onclick="location.href='#'" id="modal-ber" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на индивидуальное занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+
+                    <form action="php/lesson/ber.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+                        Коментарий, промокод (необязательное поле)
+                        <input type="text" name="comment" placeholder="Ваш ответ">
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div onclick="location.href='#'" id="modal-Pio" class="mod">
         <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
@@ -710,7 +741,19 @@
             </div>
         </div>
     </div>
+    <div id="mapBer" onclick="location.href='#'" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Точка сбора</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
 
+                <div id="map-7" style="height: 500px;"></div>
+
+            </div>
+        </div>
+    </div>
 
 
     <footer class="footer"></footer>
