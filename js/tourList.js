@@ -26,21 +26,7 @@ export let tourList = [
     //     color: "#59bd9f",
     //     srcImg:'img/act-tour/azer.jpg' ,
     // },
-    {
-        nameT: "Киргизия",
-        date: getDatesArray(new Date('2025-06-12'), new Date('2025-06-22')),
-        link: "page_tour/kirg.php",
-        color: "#3f708c",
-        srcImg:'img/act-tour/kirg.JPG' ,
-    },
-    {
-        nameT: "Соловецкие острова",
-        date: getDatesArray(new Date('2025-06-28'), new Date('2025-07-05')),
-        link: "page_tour/solov.php",
-        color: "#3f708c",
-        srcImg:'img/act-tour/solov.jpg' ,
-    },
-   
+    
     {
         nameT: "Башкирия",
         date: getDatesArray(new Date('2025-08-06'), new Date('2025-08-10')),
