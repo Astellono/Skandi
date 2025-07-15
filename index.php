@@ -514,7 +514,32 @@ if (isset($_SESSION['user_id'])) {
     <section class="section otziv">
         <div class="container">
             <h2 class="otziv__title">Что говорят наши клиенты</h2>
+            <div class="review-card">
+                <div class="review-card__user">
+                    <img src="img/otziv/olga.jpg" alt="" class="review-card__avatar">
+                    <div class="review-card__user-info">
+                        <h3 class="review-card__name">Ольга</h3>
+                        <p class="review-card__trip">Мельдино-Дубна</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="review-card__content">
+                    <p class="review-card__text">12 июля 2025 года была в сканди-походе на 20 км Мельдино-Дубна с
+                        Маргаритой Волосюк. Уникальный маршрут вдоль канала имени Москвы, 2 паромные переправы, половина
+                        пути по велотрассе "Вело-1". Погода была жаркая, по пути несколько раз вдоволь накупались, вода
+                        снимала усталость и напитывала энергией. Маргарита включила колонку с плейлистом отлично
+                        подобранной музыки, шли практически пританцовывая. Для меня, как офисного работника, лишённого
+                        необходимого количества движения было несколько стадий: от "зачем напрягаться, сидела бы дома"
+                        ..."к
+                        ак же хорошо окунуться в воды канала, блаженство"...."оказывается открылось второе
+                        дыхание"..."гордость и радость от преодоления себя и пройденного маршрута". Результат на
+                        следующий день поразил, прибавилось сил, спокойствия, мелочи не раздражают). А еще была очень
+                        душевная группа, классные фотки, прекрасные виды, вкусная еда в ресторане "Высоцкий". Всем, кто
+                        сомневается в себе и думает, что не осилит маршрут, рекомендую отбросить сомнения ! Результат
+                        того стоит !</p>
 
+                </div>
+            </div>
             <div class="review-card">
                 <div class="review-card__user">
                     <img src="img/otziv/angel.jpg" alt="" class="review-card__avatar">
@@ -565,29 +590,7 @@ if (isset($_SESSION['user_id'])) {
             </div>
 
             <!-- Отзыв 3 -->
-            <div class="review-card">
-                <div class="review-card__user">
-                    <img src="img/otziv/marta.png" alt="" class="review-card__avatar">
-                    <div class="review-card__user-info">
-                        <h3 class="review-card__name">Марта</h3>
-                        <p class="review-card__trip">Репино</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="review-card__content">
-                    <p class="review-card__text">Была в скандитрипе в Репино в середине июля. Я получила абсолютно все ,
-                        на что рассчитывала: умеренную нагрузку, чистый воздух Финского залива, зарядку для мозга ввиде
-                        историко-экскурсионной части, ненавязчивую компанию, крепкий сон и обычную еду. Как будто к
-                        бабушке в деревню съездила, но приехала подтянутой и похудевшей. Отличный вариант отдыха, без
-                        суеты! Рекомендую!!!</p>
-                    <!-- <div class="review-card__gallery">
-                        <img src="paris-trip1.jpg" alt="Фото из поездки" class="review-card__photo">
-                        <img src="paris-trip2.jpg" alt="Фото из поездки" class="review-card__photo">
-                        <img src="paris-trip3.jpg" alt="Фото из поездки" class="review-card__photo">
-                        <img src="paris-trip4.jpg" alt="Фото из поездки" class="review-card__photo">
-                    </div> -->
-                </div>
-            </div>
+
 
 
             <!-- <ul class="otziv__list">

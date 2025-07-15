@@ -76,6 +76,13 @@ export let tourList = [
         link: "page_tour/osetia.php",
         color: '#add',
         srcImg:'img/act-tour/osetia.jpg' ,
+    },
+    {
+        nameT: "Корея",
+        date: getDatesArray(new Date('2026-03-29'), new Date('2026-04-06')),
+        link: "page_tour/koreya.php",
+        color: '#add',
+        srcImg:'img/act-tour/koreya.jpg' ,
     }
    
   
