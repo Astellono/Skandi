@@ -186,7 +186,64 @@
                     <td class="td__btn"> <a href="#modal-ber" class="lesson__btn">Записаться</a></td>
 
                 </tr>
+                <tr>
+                    <th></th>
+                    <th>ПН</th>
+                    <th>ВТ</th>
+                    <th>СР</th>
+                    <th>ЧТ</th>
+                    <th>ПТ</th>
+                    <th>СБ</th>
+                    <th>ВС</th>
+                    <th>Точка сбора</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td class="td__img">
+                        <img class="lesson__img" src="img/lesson/shkul.jpg" alt="" srcset="">
+                        <p class="lesson__img-text">Парк Шкулева</p>
+                    </td>
+                    <td>11:00</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>9.00</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="td-item"><a class="td-link" href="#mapShkul"><img width="50px" height="50px"
+                                src="img/map.png"></a></td>
+                    <td class="td__btn"> <a href="#modal-shkul" class="lesson__btn">Записаться</a></td>
 
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>ПН</th>
+                    <th>ВТ</th>
+                    <th>СР</th>
+                    <th>ЧТ</th>
+                    <th>ПТ</th>
+                    <th>СБ</th>
+                    <th>ВС</th>
+                    <th>Точка сбора</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td class="td__img">
+                        <img class="lesson__img" src="img/lesson/kuz.jpg" alt="" srcset="">
+                        <p class="lesson__img-text">Парк Кузьминки</p>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>9.00</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="td-item"><a class="td-link" href="#mapkuz"><img width="50px" height="50px"
+                                src="img/map.png"></a></td>
+                    <td class="td__btn"> <a href="#modal-Kuz" class="lesson__btn">Записаться</a></td>
+
+                </tr>
             </table>
 
 
@@ -282,7 +339,64 @@
                 </table>
                 <a href="#modal-ber" class="lesson__btn">Записаться</a>
                 <hr>
-
+                <div class="lesson__table-imgBlock">
+                    <img class="lesson__img-smart" src="img/lesson/shkul.jpg" alt="" srcset="">
+                    <p class="lesson__img-text-smart">Парк Шкулева</p>
+                </div>
+                <table class="lesson__table table smart__table">
+                    <tr>
+                        <th>ПН</th>
+                        <th>ВТ</th>
+                        <th>СР</th>
+                        <th>ЧТ</th>
+                        <th>ПТ</th>
+                        <th>СБ</th>
+                        <th>ВС</th>
+                        <th>Точка сбора</th>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>9:00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="td-item"><a class="td-link" href="#mapShkul"><img width="50px" height="50px"
+                                    src="img/map.png"></a></td>
+                    </tr>
+                </table>
+                <a href="#modal-shkul" class="lesson__btn">Записаться</a>
+                <hr>
+                <div class="lesson__table-imgBlock">
+                    <img class="lesson__img-smart" src="img/lesson/kuz.jpg" alt="" srcset="">
+                    <p class="lesson__img-text-smart">Парк Кузьминки</p>
+                </div>
+                <table class="lesson__table table smart__table">
+                    <tr>
+                        <th>ПН</th>
+                        <th>ВТ</th>
+                        <th>СР</th>
+                        <th>ЧТ</th>
+                        <th>ПТ</th>
+                        <th>СБ</th>
+                        <th>ВС</th>
+                        <th>Точка сбора</th>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>9:00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="td-item"><a class="td-link" href="#mapkuz"><img width="50px" height="50px"
+                                    src="img/map.png"></a></td>
+                    </tr>
+                </table>
+                <a href="#modal-Kuz" class="lesson__btn">Записаться</a>
+                <hr>
             </div>
             <div class="lesson__abik">
                 <h3 class="lesson__title">Абонементы</h3>
@@ -658,6 +772,70 @@
             </div>
         </div>
     </div>
+    <div onclick="location.href='#'" id="modal-shkul" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на индивидуальное занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+
+                    <form action="php/lesson/shkul.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+                        Коментарий, промокод (необязательное поле)
+                        <input type="text" name="comment" placeholder="Ваш ответ">
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div onclick="location.href='#'" id="modal-Kuz" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Запись на индивидуальное занятие</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-b">
+
+                    <form action="php/lesson/kuz.php" method="POST" class="modal__form">
+
+                        Фамилия, имя и отчество:
+                        <input required type="text" name="fio" placeholder="Ваш ответ">
+                        Дата рождения:
+                        <input required type="text" name="age" placeholder="Дата рождения 31.12.2000">
+                        Ваш телефон:
+                        <input required type="tel" name="tel" placeholder="Ваш ответ">
+                        Ваш email:
+                        <input required type="email" name="email" placeholder="Ваш ответ">
+                        Коментарий, промокод (необязательное поле)
+                        <input type="text" name="comment" placeholder="Ваш ответ">
+
+
+
+                        <input type="submit" value="Отправить" class="modal-form-btn">
+
+                        <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="mapCol" onclick="location.href='#'" class="mod">
         <div onclick="event.stopPropagation()" class="modal-d">
             <div class="modal-c">
@@ -754,8 +932,32 @@
             </div>
         </div>
     </div>
+    <div id="mapShkul" onclick="location.href='#'" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Точка сбора</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
 
+                <div id="map-8" style="height: 500px;"></div>
 
+            </div>
+        </div>
+    </div>
+    <div id="mapkuz" onclick="location.href='#'" class="mod">
+        <div onclick="event.stopPropagation()" class="modal-d">
+            <div class="modal-c">
+                <div class="modal-h">
+                    <h3 class="modal-title">Точка сбора</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+
+                <div id="map-9" style="height: 500px;"></div>
+
+            </div>
+        </div>
+    </div>
     <footer class="footer"></footer>
 
     <script src="modal/bootstrap.bundle.js"></script>

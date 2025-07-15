@@ -46,6 +46,18 @@ function init() {
         controls: ["zoomControl", "zoomControl", "fullscreenControl"]
 
      });
+     var myMap7 = new ymaps.Map("map-8", {
+    	center: [55.690477, 37.753919],
+    	zoom: 18,
+        controls: ["zoomControl", "zoomControl", "fullscreenControl"]
+
+     });
+     var myMap8 = new ymaps.Map("map-9", {
+    	center: [55.700602, 37.764278],
+    	zoom: 18,
+        controls: ["zoomControl", "zoomControl", "fullscreenControl"]
+
+     });
     var myPlacemark = new ymaps.Placemark([55.616092, 37.674804], null, {
         preset: 'islands#blueDotIcon'
     });
@@ -67,6 +79,12 @@ function init() {
     var myPlacemark6 = new ymaps.Placemark([55.592555,37.673502], null, {
         preset: 'islands#blueDotIcon'
     });
+    var myPlacemark7 = new ymaps.Placemark([55.690477, 37.753919], null, {
+        preset: 'islands#blueDotIcon'
+    });
+    var myPlacemark8 = new ymaps.Placemark([55.700602, 37.764278], null, {
+        preset: 'islands#blueDotIcon'
+    });
     myMap.geoObjects.add(myPlacemark);
     myMap1.geoObjects.add(myPlacemark1);
     myMap2.geoObjects.add(myPlacemark2);
@@ -74,4 +92,6 @@ function init() {
     myMap4.geoObjects.add(myPlacemark4);
     myMap5.geoObjects.add(myPlacemark5);
     myMap6.geoObjects.add(myPlacemark6);
+    myMap7.geoObjects.add(myPlacemark7);
+    myMap8.geoObjects.add(myPlacemark8);
 }

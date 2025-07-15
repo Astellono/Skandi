@@ -133,7 +133,7 @@ button {
 /*---------------------------------------------------------------------------------------header---*/
 
 .header__logo img {
-    width: 200px;
+    height: 50px;
     margin-right: 25px;
     /* height: 107px; */
 }
@@ -154,7 +154,7 @@ button {
 
 .header__link {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 38px;
     color: #4F3156;
     border-bottom: 2px solid white;
@@ -177,6 +177,7 @@ button {
 }
 
 .header__contacts {
+    display: none;
     padding-left: 5px;
     display: flex;
     flex-direction: column;
