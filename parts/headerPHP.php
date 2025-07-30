@@ -69,7 +69,7 @@ if (isset($_SESSION['user_id'])) {
         <div class="header__contacts">
             <?php if ($user_id == '') {
                 ?>
-                <button class="login-btn disable" id="loginBtn">Войти в аккаунт</button>
+                <button class="login-btn" id="loginBtn">Войти в аккаунт</button>
             <?php } else { ?>
                 <ul class="acc__block">
                     <li class="acc__item">
@@ -106,6 +106,59 @@ if (isset($_SESSION['user_id'])) {
                 </a>
                 </li>
             </ul>
-            </ul>
+
+        </div>
+        <div id="loginModal" class="modal">
+        <div class="modal-content-login">
+            <span class="close-login">&times;</span>
+
+            <div class="form-switcher">
+                <button class="active-login" id="switchToLogin">Вход</button>
+                <button id="switchToRegister">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <div id="loginForm" class="form-login active-login">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" required>
+                        <div id="loginError" class="error-message"></div>
+                    </div>
+                    <button type="button" class="submit-btn" id="loginSubmit">Войти</button>
+                </div>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div id="registerForm" class="form-login">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="regName">Введите полное имя</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Пароль</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Подтвердите пароль</label>
+                        <input type="password" id="regConfirmPassword" required>
+                        <div id="registerError" class="error-message"></div>
+                    </div>
+                    <button type="button" class="submit-btn" id="registerSubmit">Зарегистрироваться</button>
+                </div>
+            </div>
         </div>
     </div>
+    <script defer src="js/login.js"></script>
+    </div>
+  
+ 

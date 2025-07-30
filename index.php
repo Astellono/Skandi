@@ -1,15 +1,15 @@
 <?php
 session_start();
-require_once 'phpLogin/connect.php';
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
-    $user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
-    $user_data = $user_query->fetch_assoc();
-
-} else {
-    $user_id = '';
-}
-
+// require_once 'phpLogin/connect.php';
+// if (isset($_SESSION['user_id'])) {
+//     $user_id = $_SESSION['user_id'];
+//     $user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
+//     $user_data = $user_query->fetch_assoc();
+    
+// } else {
+//     $user_id = 1;
+// }
+// $_SESSION['user_id'] = 1
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -52,9 +52,9 @@ if (isset($_SESSION['user_id'])) {
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script defer src="js/login.js"></script>
+    
     <script type="module" defer src="js/calendarNew.js"></script>
-    <script type="module" src="js/sliderGen.js" defer></script>
+    <script type="module" src="js/sliderGen.js?ver=<? echo time(); ?>" defer></script>
     <title>По миру с палками</title>
 </head>
 
@@ -1026,56 +1026,7 @@ if (isset($_SESSION['user_id'])) {
     </script> -->
 
     <!-- Модальное окно -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content-login">
-            <span class="close-login">&times;</span>
-
-            <div class="form-switcher">
-                <button class="active-login" id="switchToLogin">Вход</button>
-                <button id="switchToRegister">Регистрация</button>
-            </div>
-
-            <!-- Форма входа -->
-            <div id="loginForm" class="form-login active-login">
-                <div class="form-container">
-                    <div class="form-group">
-                        <label for="loginEmail">Email</label>
-                        <input type="email" id="loginEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Пароль</label>
-                        <input type="password" id="loginPassword" required>
-                        <div id="loginError" class="error-message"></div>
-                    </div>
-                    <button type="button" class="submit-btn" id="loginSubmit">Войти</button>
-                </div>
-            </div>
-
-            <!-- Форма регистрации -->
-            <div id="registerForm" class="form-login">
-                <div class="form-container">
-                    <div class="form-group">
-                        <label for="regName">Введите полное имя</label>
-                        <input type="text" id="regName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="regEmail">Email</label>
-                        <input type="email" id="regEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="regPassword">Пароль</label>
-                        <input type="password" id="regPassword" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="regConfirmPassword">Подтвердите пароль</label>
-                        <input type="password" id="regConfirmPassword" required>
-                        <div id="registerError" class="error-message"></div>
-                    </div>
-                    <button type="button" class="submit-btn" id="registerSubmit">Зарегистрироваться</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <script>
         let fields = document.querySelectorAll('.field__file');
         Array.prototype.forEach.call(fields, function (input) {
@@ -1111,7 +1062,7 @@ if (isset($_SESSION['user_id'])) {
         var carousel = new bootstrap.Carousel(myCarousel)
 
     </script>
-    <!-- <script src="modal/modal.js"></script> -->
+    
 </body>
 
 </html>

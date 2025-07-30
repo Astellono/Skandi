@@ -10,12 +10,15 @@
  const registerSubmit = document.getElementById('registerSubmit');
  const loginError = document.getElementById('loginError');
  const registerError = document.getElementById('registerError');
- 
- 
+console.log(modal);
+modal.style.display = 'none';
  // Открываем модальное окно при клике на кнопку
- loginBtn.addEventListener('click', function() {
-     modal.style.display = 'block';
- });
+ if(loginBtn) {
+    loginBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
+ }
+ 
 
  // Закрываем модальное окно при клике на крестик
  closeBtn.addEventListener('click', function() {
@@ -49,28 +52,7 @@
      registerError.textContent = '';
  });
 
-//  // Обработка отправки формы входа
-//  loginSubmit.addEventListener('click', function() {
-//      const email = document.getElementById('loginEmail').value;
-//      const password = document.getElementById('loginPassword').value;
-     
-//      // Простая валидация
-//      if (!email || !password) {
-//          loginError.textContent = 'Пожалуйста, заполните все поля';
-//          return;
-//      }
-     
-//      // Здесь должна быть логика аутентификации
-//      console.log('Вход с:', email, password);
-     
-//      // В реальном приложении здесь был бы AJAX-запрос к серверу
-//      // После успешного входа можно закрыть модальное окно
-//      // modal.style.display = 'none';
-     
-//      // Для примера просто показываем сообщение
-//      loginError.textContent = '';
-//      alert('Вход выполнен! (это демо)');
-//  });
+
 
 
 // обработка входа
@@ -92,7 +74,7 @@ loginSubmit.addEventListener('click', async function () {
 
     if (result.success) {
         loginError.textContent = '';
-       
+        console.log('Привет');
         modal.style.display = 'none';
        
         window.location.href = 'http://localhost/lk/lk.php';
@@ -103,40 +85,7 @@ loginSubmit.addEventListener('click', async function () {
 });
 
 
-//  // Обработка отправки формы регистрации
-//  registerSubmit.addEventListener('click', function() {
-//      const name = document.getElementById('regName').value;
-//      const email = document.getElementById('regEmail').value;
-//      const password = document.getElementById('regPassword').value;
-//      const confirmPassword = document.getElementById('regConfirmPassword').value;
-     
-//      // Простая валидация
-//      if (!name || !email || !password || !confirmPassword) {
-//          registerError.textContent = 'Пожалуйста, заполните все поля';
-//          return;
-//      }
-     
-//      if (password !== confirmPassword) {
-//          registerError.textContent = 'Пароли не совпадают';
-//          return;
-//      }
-     
-//      if (password.length < 6) {
-//          registerError.textContent = 'Пароль должен содержать минимум 6 символов';
-//          return;
-//      }
-     
-//      // Здесь должна быть логика регистрации
-//      console.log('Регистрация:', name, email, password);
-     
-//      // В реальном приложении здесь был бы AJAX-запрос к серверу
-//      // После успешной регистрации можно переключиться на форму входа
-//      // switchToLogin.click();
-     
-//      // Для примера просто показываем сообщение
-//      registerError.textContent = '';
-//      alert('Регистрация успешна! (это демо)');
-//  });
+
 
 
  // обработка регистрации

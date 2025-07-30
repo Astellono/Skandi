@@ -1,3 +1,12 @@
+<?php
+session_start();
+require_once '../phpLogin/connect.php';
+
+$user_id = $_SESSION['user_id'];
+$user_sing = $connect->query("SELECT * FROM signing WHERE signing_user_id = '$user_id'");
+print_r($_SESSION);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +64,7 @@
         ?>
     </header>
 
-
+<a href="../php/sing.php?idTour=<?=$_GET['idTour']?>">Записаться</a>
     <section class="tour">
         <div class="container">
 
@@ -590,7 +599,10 @@
     </section>
     <section class="order">
         <div class="container order__container">
-            <div class="order__contant">
+            <div class="order__contant" <?php 
+                if (mysqli_num_rows($user_sing) > 0) { 
+                    echo "style='pointer-events: none;'";
+                }?>">
                 <div class="tour__page__pricePart">
                     <p class="tour__page__price">Стоимость: 175 700 руб</p>
                     <p class="tour__page__priceIn">В стоимость входит двухместное проживание - в гостинице «Ангара» 3* в
@@ -608,12 +620,16 @@
 
 
 
+                <?php 
+                if (mysqli_num_rows($user_sing) > 0) { 
+                    echo '<a class="tour__page__btn disable" href="#openModal" >Вы записаны</a>';
+                } else echo '<a class="tour__page__btn" href="#openModal" >Записаться</a>';
+                ?>
 
 
 
 
-
-                <a class="tour__page__btn" href="#openModal">Записаться</a>
+                
 
             </div>
         </div>

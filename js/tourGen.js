@@ -1,4 +1,4 @@
-import { tourList } from "./tourList.js?ver=12";
+import { tourList } from "./tourList.js?ver=20";
 
 function mounthNumberToString(name) {
     let mounthName = '';
@@ -71,15 +71,17 @@ tourList.forEach(e => {
     tourTitle.classList.add('tour__item-title')
     tourTitle.textContent = e.nameT
     tourItem.append(tourTitle)
-
+    
     // Дата
 
     // Начало тура
-    let date = e.date[0].split('.', 2)
-    let [day, mounth] = date
+    
+    let date = e.date[0].split('.', 3)
+    
+    let [day, mounth, year] = date
     let mounthName = mounthNumberToString(mounth)
     let startTour = day + ' ' + mounthName
-
+    let yearTour = year
 
     //Конец тура
     let dateEnd = e.date[e.date.length - 1].split('.', 2)
@@ -88,7 +90,7 @@ tourList.forEach(e => {
     let endTour = dayEnd + ' ' + mounthNameEnd
 
     
-    let dateTour = startTour + ' - ' + endTour + " 2025г"
+    let dateTour = startTour + ' - ' + endTour + ' ' + yearTour + 'г'
 
 
     tourDate.classList.add('tour__date')

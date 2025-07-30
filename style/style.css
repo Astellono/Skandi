@@ -96,6 +96,9 @@ section.visible {
     align-items: center;
     height: 98vh;
 }
+.noHover{
+    pointer-events: none;
+}
 
 .header {
     background-color: white;
@@ -3273,7 +3276,7 @@ body.mod {
 }
 
 .menu__lesson {
-    background: rgba(0, 0, 0, .40) url('../img/menu/menuLesson.jpg');
+    background: rgba(0, 0, 0, .40) url('../img/menu/menuLessonNew.jpg');
     background-size: cover;
     background-position-y: center;
     background-blend-mode: darken;

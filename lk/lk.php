@@ -2,6 +2,9 @@
 session_start();
 require 'php/connect.php';
 $user_id = $_SESSION['user_id'];
+if (!$user_id) {
+    header("Location: /", true, 301);
+}
 // print_r($_SESSION['user_id']);
 // Получаем данные пользователя
 $user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
@@ -10,6 +13,20 @@ $user_data = $user_query->fetch_assoc();
 // Получаем данные анкеты
 $result = $connect->query("SELECT * FROM tour_requests WHERE user_id = '$user_id'");
 $data = $result->fetch_assoc();
+
+$myTourList = $connect->query("SELECT t.*
+FROM tours t
+JOIN signing s ON t.tour_id = s.signing_tour_id
+JOIN users u ON s.signing_user_id = u.id
+WHERE u.id = $user_id;");
+
+if ($myTourList->num_rows > 0) {
+    // Получение данных
+    $tours = $myTourList->fetch_all(MYSQLI_ASSOC);
+
+} else {
+    echo "0 results";
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +42,20 @@ $data = $result->fetch_assoc();
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/style-adaptive.css">
     <link rel="stylesheet" href="style/styleLk.css">
+    <script defer src="/js/login.js"></script>
     <script src="/modal/Burger.js" defer></script>
     <script src="js/mainLK.js" defer></script>
     <script src="js/btnChange.js" defer></script>
     <script src="js/uploadAvatar.js" defer></script>
+    <script src="js/switchMenu.js" defer></script>
+    <script src="js/interactiveMenu.js" defer></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script>
+    // Инициализация полифила
+    if ('scrollBehavior' in document.documentElement.style === false) {
+        smoothscroll.polyfill();
+    }
+    </script>
     <style>
 
     </style>
@@ -39,9 +66,6 @@ $data = $result->fetch_assoc();
         <?php include '../parts/headerPHP.php'; ?>
 
     </header>
-
-
-
 
     <div class="container">
         <div class="profile-header">
@@ -55,7 +79,6 @@ $data = $result->fetch_assoc();
                 <div class="user-card">
                     <form id="uploadForm" enctype="multipart/form-data" class="avatar__form">
                         <input id="imageInput" type="file" name="image" accept="image/*" hidden required>
-
 
                         <!-- <button type="submit">Загрузить</button> -->
                         <label for="imageInput">
@@ -73,23 +96,23 @@ $data = $result->fetch_assoc();
 
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">
-                            <i class="fas fa-heartbeat"></i>Анкета участника
+                        <a href="#anceta" class="nav-link">
+                            <i class="fas fa-clipboard-list"></i><span class="nav-text">Анкета участника</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#myTour" class="nav-link">
+                            <i class="fas fa-plane"></i> <span class="nav-text">Мои туры</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="fas fa-calendar-check"></i> Мои туры
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-calendar-check"></i> Мои экскурсии
+                            <i class="fas fa-map-marked-alt"></i> <span class="nav-text">Мои экскурсии</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="php/logout.php" class="nav-link">
-                            <i class="fas fa-sign-out-alt"></i> Выход
+                            <i class="fas fa-sign-out-alt"></i> <span class="nav-text">Выход</span>
                         </a>
                     </li>
 
@@ -98,173 +121,110 @@ $data = $result->fetch_assoc();
 
             <!-- Main content -->
             <main class="profile-content">
-                <div class="content-header">
-                    <h2 class="content-title">
-                        <i class="fas fa-clipboard-list"></i> Моя анкета
-                    </h2>
+            <div id="anceta" class="content-section">
+                    <div class="content-header">
+                        <h2 class="content-title">
+                            <i class="fas fa-clipboard-list"></i>
+                            <?php
+                            echo isset($data) ? "Ваша Анкета" : "Заполните анкету";
+                            ?>
+                        </h2>
+                        <?php echo isset($data) ? " <button id='btnChange' class='change-data-btn'>Изменить</button>" : "";?>
+                    </div>
 
-                </div>
-
-                <?php
-
-
-                if (isset($data['id'])) {
-                    ?>
-                    <form action="php/changeDataHealth.php" class="modal__form" method="POST">
-                        Мой возраст
-                        <input name="age" type="text" class="change-form-input" value="<?= $data['age'] ?>" disabled>
-                        Мой телефон
-                        <input name="tel" type="text" class="change-form-input" value="<?= $data['tel'] ?>" disabled>
-                        Мой город
-                        <input name="city" type="text" class="change-form-input" value="<?= $data['city'] ?>" disabled>
-                        Мой рост
-                        <input name="rost" type="text" class="change-form-input" value="<?= $data['rost'] ?>" disabled>
-                        Мой вес
-                        <input name="ves" type="text" class="change-form-input" value="<?= $data['ves'] ?>" disabled>
-                        Мой стаж занятия Скандинавской ходьбой
-                        <input name="staj" type="text" class="change-form-input" value="<?= $data['staj'] ?>" disabled>
-                        Физические нагрузки
-                        <input name="fizNagr" type="text" class="change-form-input" value="<?= $data['fizNagr'] ?>"
-                            disabled>
-                        Наличие сердечно-сосудистных заболеваний
-                        <input name="zabolevaniya" type="text" class="change-form-input"
-                            value="<?= $data['zabolevaniya'] ?>" disabled>
-                        Давление
-                        <input name="davlenie" type="text" class="change-form-input" value="<?= $data['davlenie'] ?>"
-                            disabled>
-                        Хронические заболевания, Аллергии
-                        <input name="chrono" type="text" class="change-form-input" value="<?= $data['chrono'] ?>" disabled>
+                    <form action="<?php echo isset($data) ? "php/changeDataHealth.php" : "php/addDataHealth.php";?>" class="modal__form" method="POST">
+                        Мой возраст:
+                        <input name="age" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['age'] ?>">
+                        Мой телефон:
+                        <input name="tel" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['tel'] ?>">
+                        Мой город:
+                        <input name="city" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['city'] ?>">
+                        Мой рост:
+                        <input name="rost" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['rost'] ?>">
+                        Мой вес:
+                        <input name="ves" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['ves'] ?>">
+                        Мой стаж занятия Скандинавской ходьбой:
+                        <input name="staj" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['staj'] ?>">
+                        Физические нагрузки:
+                        <input name="fizNagr" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['fizNagr'] ?>">
+                        Наличие сердечно-сосудистных заболеваний:
+                        <input name="zabolevaniya" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?>value="<?= $data['zabolevaniya'] ?>">
+                        Давление:
+                        <input name="davlenie" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['davlenie'] ?>">
+                        Хронические заболевания, Аллергии:
+                        <input name="chrono" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['chrono'] ?>">
                         Заболевания опорно-двигательного аппарата?
-                        <input name="opora" type="text" class="change-form-input" value="<?= $data['opora'] ?>" disabled>
-                        Максимальные расстояния
-                        <input name="perenosimost" type="text" class="change-form-input"
-                            value="<?= $data['perenosimost'] ?>" disabled>
-                        Переносимость сложных маршрутов с перепадами высоты
-                        <input name="level" type="text" class="change-form-input" value="<?= $data['level'] ?>" disabled>
-                        Готовность проходить в среднем 15 - 20 км
-                        <input name="prohod" type="text" class="change-form-input" value="<?= $data['prohod'] ?>" disabled>
-                        Переносимость сложных маршрутов
-                        <input name="perenosimostGori" type="text" class="change-form-input"
-                            value="<?= $data['perenosimostGori'] ?>" disabled>
-                        Только равнинные маршруты
-                        <input name="ravn" type="text" class="change-form-input" value="<?= $data['ravn'] ?>" disabled>
-                        <input id="sendChangeBtn" type="hidden" id="btn" value="Отправить" class="modal-form-btn"
-                            style="cursor:pointer;">
+                        <input name="opora" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['opora'] ?>">
+                        Максимальные расстояния:
+                        <input name="perenosimost" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?>
+                            value="<?= $data['perenosimost'] ?>">
+                        Переносимость сложных маршрутов с перепадами высоты:
+                        <input name="level" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['level'] ?>">
+                        Готовность проходить в среднем 15 - 20 км:
+                        <input name="prohod" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['prohod'] ?>">
+                        Переносимость сложных маршрутов:
+                        <input name="perenosimostGori" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?>
+                            value="<?= $data['perenosimostGori'] ?>">
+                        Только равнинные маршруты:
+                        <input name="ravn" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['ravn'] ?>">
+                        <input type="submit" id="sendDataBtn" value="Отправить" class="modal-form-btn"
+                            style="cursor:pointer; text-align: center;">
                     </form>
-                    <button id="btnChange" class="btn btn-primary" style="display:block;  width:100%; text-align:center;">
-                        Изменить </button>
-                    <?php
-                } else { ?>
-                    <a class="btn btn-primary" href="#openModal"
-                        style="display:block; margin:140px 0 140px 0; width:100%; text-align:center;">
-                        Заполнить анкету
-                    </a>
-                    <?php
-                } ?>
 
+            </div>
 
+                <div id="myTour" class="content-section">
+                        <div class="tours-container">
 
+                            <h3 class="tours-title">Мои туры ✈️</h3>
+                            <div class="tours-grid">
+                                <?php foreach ($tours as $tour) { ?>
 
+                                    <div class="tour-card">
+                                        <div class="tour-image-wrapper">
+                                            <img src="../<?= $tour['tour_imgSrc'] ?>" alt="Горный поход" class="tour-image">
 
+                                        </div>
+                                        <div class="tour-content">
+                                            <h4 class="tour-name"><?= $tour['tour_name'] ?></h4>
+                                            <div class="tour-meta">
+                                                <span class="tour-date">📅 <?= $tour['tour_date'] ?></span>
+                                                <span class="tour-price">💵 24 900 ₽</span>
+                                            </div>
+                                            <a href="../<?= $tour['tour_linkPage'] ?>" class="tour-button">Подробнее →</a>
+                                        </div>
+                                    </div>
+                                    <?php }?>
+                              
+                                <!-- Тур 2 -->
 
-
+                            </div>
+                        </div>
+                    </div>
 
             </main>
-        </div>
+
     </div>
 
-    <div onclick="location.href='#'" id="openModal" class="mod">
-        <div onclick="event.stopPropagation()" class="modal-d">
-            <div class="modal-c">
-                <div class="modal-h">
-                    <h3 class="modal-title">Заполните анкету путешественника</h3>
-
-                    <a href="#close" title="Close" class="close">×</a>
-                </div>
-                <div class="modal-b">
-                    <form action="php/addDataHealth.php" method="POST" class="modal__form">
-
-                        Дата рождения:
-                        <input type="text" id="age" name="age" placeholder="Дата рождения 31.12.2000" required>
-                        Ваш телефон:
-                        <input type="tel" id="tel" name="tel" placeholder="Ваш ответ" required>
-                        Город в котором вы проживаете:
-                        <input type="text" id="city" name="city" placeholder="Ваш ответ" required>
-                        Ваш email:
-                        <input type="email" id="email" name="email" placeholder="Ваш ответ" required>
-                        Ваш рост:
-                        <input type="text" id="rost" name="rost" placeholder="Ваш ответ" required>
-                        Ваш вес (на некоторых маршрутах лишиний вес является
-                        противопоказанием):
-                        <input type="text" id="ves" name="ves" placeholder="Ваш ответ" required>
-                        Стаж занятия Скандинавской ходьбой:
-                        <input type="text" id="staj" name="staj" placeholder="Ваш ответ" required>
-                        Занимаетесь ли Вы активно физическими нагрузками? Какими?
-                        <input type="text" id="fizNagr" name="fizNagr" placeholder="Ваш ответ" required>
-                        Есть ли сердечно-сосудистные заболевания?
-                        <input type="text" id="zabolevania" name="zabolevaniya" placeholder="Ваш ответ" required>
-                        Бывает ли повышенное или пониженное давление? Какое именно?
-                        <input type="text" id="davlenie" name="davlenie" placeholder="Ваш ответ" required>
-                        Хронические заболевания? Аллергия?
-                        <input type="text" id="chrono" name="chrono" placeholder="Ваш ответ" required>
-                        Заболевания опорно-двигательного аппарата?
-                        <input type="text" id="opora" name="opora" placeholder="Ваш ответ" required>
-                        На какие расстояния ходите?
-                        <input type="text" id="perenosimost" name="perenosimost" placeholder="Ваш ответ" required>
-                        Как переносите сложные маршруты со спусками и подъемами?
-                        <input type="text" id="level" name="level" placeholder="Ваш ответ" required>
-                        Готовы ли проходить в среднем 15 - 20 км?
-                        <input type="text" id="prohod" name="prohod" placeholder="Ваш ответ" required>
-                        Как переносите нагрузки на горных маршрутах?
-                        <input type="text" id="perenosimostGori" name="perenosimostGori" placeholder="Ваш ответ"
-                            required>
-                        Вам подходят только равнинные маршруты?
-                        <input type="text" id="ravn" name="ravn" placeholder="Ваш ответ" required>
-                        <input type="submit" id="btn" value="Отправить" class="modal-form-btn">
-                        <!-- <ul class="modal-form-submit">
-                                        <li class="modal-form-item">
-                                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
-                                                    class="modal-form-dogovor" href="/files/Договор.pdf"
-                                                    download>договором</a>
-                                            </p>
-                                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
-                                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с договором!')"
-                                                oninput="setCustomValidity('')">
-                                        </li>
-                                        <li class="modal-form-item">
-                                            <p class="modal-form-sumit-text">Подтвердите что вы ознакомились с <a
-                                                    class="modal-form-dogovor" href="/files/Правила.docx"
-                                                    download>правилами</a>
-                                            </p>
-                                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
-                                                oninvalid="this.setCustomValidity('Подтвердите если ознакомились с правилами!')"
-                                                oninput="setCustomValidity('')">
-                                        </li>
-                                        <li class="modal-form-item">
-                                            <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
-                                                    href="/files/Cогласие на обработку персональных данных.docx"
-                                                    download>согласие на
-                                                    обработку персональных данных</a></p>
-                                            <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
-                                                oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"
-                                                oninput="setCustomValidity('')">
-                                        </li>
-
-
-
-
-                                        <input type="submit" id="btn" value="Отправить" class="modal-form-btn">
-                                    </ul> -->
-                        <!-- <a href="#close" class="btn btn-secondary form-btn close" title="Close">Закрыть</a> -->
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
+    
+<div class="mobile-nav" id="mobileNav">
+    <a href="#anceta" class="mobile-nav-link" data-target="anceta">
+        <i class="fas fa-clipboard-list"></i>
+        <span>Анкета</span>
+    </a>
+    <a href="#myTour" class="mobile-nav-link" data-target="myTour">
+        <i class="fas fa-plane"></i>
+        <span>Туры</span>
+    </a>
+    <a href="#" class="mobile-nav-link" data-target="excursions">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>Экскурсии</span>
+    </a>
+    <a href="php/logout.php" class="mobile-nav-link">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Выход</span>
+    </a>
+</div>
     <script src="../js/get_info_user.js"></script>
 </body>
 

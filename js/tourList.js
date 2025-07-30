@@ -9,7 +9,8 @@ const getDatesArray = (start, end) => {
     arr.forEach(e => {
         let getDate = e.getDate()
         let getMounth = e.getMonth()+1
-        arrNew.push(getDate + '.' +  getMounth)
+        let getYears = e.getFullYear()
+        arrNew.push(getDate + '.' +  getMounth + '.' + getYears)
     });
     return arrNew;
 };
@@ -34,13 +35,7 @@ export let tourList = [
         color: "#42d",
         srcImg:'img/act-tour/bash.jpg' ,
     },
-    {
-        nameT: "Монголия",
-        date: getDatesArray(new Date('2025-08-14'), new Date('2025-08-24')),
-        link: "page_tour/mongol.php",
-        color: "#c9ab5f",
-        srcImg:'img/act-tour/mongol.jpg' ,
-    },
+   
     {
         nameT: "Узбекистан",
         date: getDatesArray(new Date('2025-09-06'), new Date('2025-09-16')),
@@ -56,13 +51,7 @@ export let tourList = [
         srcImg:'img/act-tour/baikal.jpg' ,
     },
    
-    {
-        nameT: "Грузия (Аджария)",
-        date: getDatesArray(new Date('2025-10-04'), new Date('2025-10-11')),
-        link: "page_tour/adj.php",
-        color: "#bd5e73",
-        srcImg:'img/act-tour/adj.jpg' ,
-    },
+   
     {
         nameT: "Абхазия",
         date: getDatesArray(new Date('2025-11-01'), new Date('2025-11-05')),
