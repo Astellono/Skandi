@@ -36,13 +36,13 @@ export let tourList = [
         srcImg:'img/act-tour/bash.jpg' ,
     },
    
-    {
-        nameT: "Узбекистан",
-        date: getDatesArray(new Date('2025-09-06'), new Date('2025-09-16')),
-        link: "page_tour/uz.php",
-        color: "#bd1e73",
-        srcImg:'img/act-tour/uz.jpeg' ,
-    },
+    // {
+    //     nameT: "Узбекистан",
+    //     date: getDatesArray(new Date('2025-09-06'), new Date('2025-09-16')),
+    //     link: "page_tour/uz.php",
+    //     color: "#bd1e73",
+    //     srcImg:'img/act-tour/uz.jpeg' ,
+    // },
     {
         nameT: "Байкал",
         date: getDatesArray(new Date('2025-09-20'), new Date('2025-09-29')),

@@ -406,7 +406,7 @@
                             Павловским Посадом»
                         </h2>
                         <hr>
-                        <p class="excursions__info__date">23 августа 2025г<br><strong>НАЧАЛО: 08:20</strong></p>
+                        <p class="excursions__info__date">24 августа 2025г<br><strong>НАЧАЛО: 08:20</strong></p>
                         <hr>
                         <p class="excursions__info__description">
                             Хотите провести выходные ярко и динамично? Отправляйтесь с нами в однодневный тур,
@@ -489,8 +489,8 @@
 
                             <hr>
                             <p class="excursions__price" style="margin: 0; text-align: left;"><strong>Стоимость:
-                                    <br>9000р (запись до 17.08.2025)<br>
-                                    10000р (запись с 18.08.2025)<br>
+                                    <br>9000р (запись до 18.08.2025)<br>
+                                    10000р (запись с 19.08.2025)<br>
 
 
                                 </strong>

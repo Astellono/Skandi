@@ -69,7 +69,7 @@ if (isset($_SESSION['user_id'])) {
         <div class="header__contacts">
             <?php if ($user_id == '') {
                 ?>
-                <button class="login-btn" id="loginBtn">Войти в аккаунт</button>
+                <button class="login-btn disable" id="loginBtn">Войти в аккаунт</button>
             <?php } else { ?>
                 <ul class="acc__block">
                     <li class="acc__item">
