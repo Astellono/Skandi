@@ -417,7 +417,7 @@ session_start();
             </div>
         </div>
     </section>
-    <section class="section calendar">
+    <!-- <section class="section calendar">
         <div class="container">
             <h2 class="actual-tour__title">
                 Путешествия в 2025 году
@@ -434,7 +434,7 @@ session_start();
         </div>
 
 
-    </section>
+    </section> -->
     <section class="section teamlead">
         <div class="container">
             <h2 class="teamlead__title">Руководитель</h2>

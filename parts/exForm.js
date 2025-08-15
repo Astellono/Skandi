@@ -1,7 +1,7 @@
 let linkForm = document.querySelectorAll('.excursions__link');
 let exForm = document.getElementById('exForm')
-let modal = document.querySelector('.mod')
-let closeModalBtn = document.querySelector('.close')
+let modalEx = document.querySelector('.mod')
+let closeModalExBtn = document.querySelector('.close')
 
 linkForm.forEach(e => {
 
@@ -10,7 +10,7 @@ linkForm.forEach(e => {
 
         let nameHash = '#form' + window.location.hash.slice(1)
         let name = e.dataset.name
-        modal.id = nameHash.slice(1)
+        modalEx.id = nameHash.slice(1)
         console.log(name);
         e.setAttribute('href', nameHash)
 
@@ -20,11 +20,11 @@ linkForm.forEach(e => {
 
     })
 });
-closeModalBtn.addEventListener('click', () => {
+closeModalExBtn.addEventListener('click', () => {
     let prevHash = localStorage.getItem('hash')
     window.location.hash = prevHash
 })
 
 
 exForm.setAttribute('action', 'php/excursion/' + window.location.hash.slice(5) + '.php')
-modal.id = window.location.hash.slice(1)
+modalEx.id = window.location.hash.slice(1)

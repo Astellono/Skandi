@@ -17,32 +17,7 @@ const getDatesArray = (start, end) => {
 
 export let tourList = [
 
-    
- 
-   
-    // {
-    //     nameT: "Азербайджан",
-    //     date: getDatesArray(new Date('2025-05-18'), new Date('2025-05-24')),
-    //     link: "page_tour/azer.php",
-    //     color: "#59bd9f",
-    //     srcImg:'img/act-tour/azer.jpg' ,
-    // },
-    
-    {
-        nameT: "Башкирия",
-        date: getDatesArray(new Date('2025-08-06'), new Date('2025-08-10')),
-        link: "page_tour/bash.php",
-        color: "#42d",
-        srcImg:'img/act-tour/bash.jpg' ,
-    },
-   
-    // {
-    //     nameT: "Узбекистан",
-    //     date: getDatesArray(new Date('2025-09-06'), new Date('2025-09-16')),
-    //     link: "page_tour/uz.php",
-    //     color: "#bd1e73",
-    //     srcImg:'img/act-tour/uz.jpeg' ,
-    // },
+
     {
         nameT: "Байкал",
         date: getDatesArray(new Date('2025-09-20'), new Date('2025-09-29')),
@@ -67,12 +42,20 @@ export let tourList = [
         srcImg:'img/act-tour/osetia.jpg' ,
     },
     {
+        nameT: "Алтайская зимняя сказка",
+        date: getDatesArray(new Date('2026-01-02'), new Date('2026-01-09')),
+        link: "page_tour/altay.php",
+        color: "#bd1e73",
+        srcImg:'img/act-tour/altay.jpg' ,
+    },
+    {
         nameT: "Корея",
         date: getDatesArray(new Date('2026-03-29'), new Date('2026-04-06')),
         link: "page_tour/koreya.php",
         color: '#add',
         srcImg:'img/act-tour/koreya.jpg' ,
-    }
+    },
+   
    
   
 ]
