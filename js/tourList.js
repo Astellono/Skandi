@@ -19,15 +19,6 @@ export let tourList = [
 
 
     {
-        nameT: "Байкал",
-        date: getDatesArray(new Date('2025-09-20'), new Date('2025-09-29')),
-        link: "page_tour/baikal.php",
-        color: "#bd1e73",
-        srcImg:'img/act-tour/baikal.jpg' ,
-    },
-   
-   
-    {
         nameT: "Абхазия",
         date: getDatesArray(new Date('2025-11-01'), new Date('2025-11-05')),
         link: "page_tour/abh.php",

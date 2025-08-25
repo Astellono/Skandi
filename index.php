@@ -53,7 +53,7 @@ session_start();
     <link rel="icon" sizes="120x120" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
-    <script type="module" defer src="js/calendarNew.js"></script>
+
     <script type="module" src="js/sliderGen.js?ver=<? echo time(); ?>" defer></script>
     <title>По миру с палками</title>
 </head>
@@ -417,12 +417,12 @@ session_start();
             </div>
         </div>
     </section>
-    <!-- <section class="section calendar">
+    <section class="section calendar">
         <div class="container">
             <h2 class="actual-tour__title">
-                Путешествия в 2025 году
+                Календарь путешествий
             </h2>
-            <div class="calendar__buttonList">
+            <div class="calendar__buttonList" style='margin-bottom:20px'>
                 <button class="calendar__button" id="slideLeft"> ← </button>
                 <button class="calendar__button" id="slideRight"> → </button>
 
@@ -434,7 +434,7 @@ session_start();
         </div>
 
 
-    </section> -->
+    </section> 
     <section class="section teamlead">
         <div class="container">
             <h2 class="teamlead__title">Руководитель</h2>
@@ -1056,6 +1056,7 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script type="module" src="js/calendar.js?ver=<? echo time(); ?>"></script>
 
     <script>
         var myCarousel = document.querySelector('.carousel')

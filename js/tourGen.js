@@ -1,4 +1,7 @@
-import { tourList } from "./tourList.js?ver=31";
+(async () => {
+try {
+    const mod = await import(`./tourList.js?ver=${Date.now()}`);
+    const tourList = mod.tourList || [];
 
 function mounthNumberToString(name) {
     let mounthName = '';
@@ -108,3 +111,8 @@ tourList.forEach(e => {
 '
     tourItem.append(tourLink)
 });
+
+} catch (e) {
+    console.error('Failed to load tourList', e);
+}
+})();
