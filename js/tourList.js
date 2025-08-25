@@ -58,4 +58,18 @@ export let tourList = [
    
    
   
+    {
+        nameT: "Псковское ожерелье",
+        date: getDatesArray(new Date('2025-10-10'), new Date('2025-10-12')),
+        link: "page_tour/pskov.php",
+        color: "#6b7fb3",
+        srcImg:'img/act-tour/pskov.jpg' ,
+    },
+    {
+        nameT: "Торжок: Императорский шаг",
+        date: getDatesArray(new Date('2025-10-03'), new Date('2025-10-05')),
+        link: "page_tour/torzhok.php",
+        color: "#7a5e3a",
+        srcImg:'img/act-tour/torzhok.jpg' ,
+    },
 ]
