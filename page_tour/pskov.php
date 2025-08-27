@@ -98,7 +98,7 @@
                                 <p class="tour__page__gid__desc">Инструктор</p>
                             </li>
                             <li class="tour__page__gid__item">
-                                <img class="tour__page__gid__img" src="/img/partner/Kuleshov.png" alt="Анна Холмова">
+                                <img class="tour__page__gid__img" src="/img/partner/PskovEks.png" alt="Анна Холмова">
                                 <h3 class="tour__page__gid__title-member">Анна Холмова</h3>
                                 <p class="tour__page__gid__desc">Экскурсовод</p>
                             </li>
@@ -341,3 +341,4 @@
 </body>
 
 </html>
+

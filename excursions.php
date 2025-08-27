@@ -276,7 +276,7 @@
                 </li>
                 
                 <li class="excursions__item" onclick="expandCard(this)" id="hatun">
-                    <img style="object-position: 50% 50%;" class="excursions__img" src="img/excursion/hatun.jpeg"
+                    <img style="object-position: 50% 50%;" class="excursions__img" src="img/excursion/hatun.png"
                         alt="Тропами Хатуни: скалы и водопады">
                     <div class="excursions__info">
 
