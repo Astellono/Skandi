@@ -1,0 +1,46 @@
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Аккаунт</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="btn-group w-100 mb-3" role="group">
+                    <button type="button" class="btn btn-outline-primary active" id="tabLogin">Вход</button>
+                    <button type="button" class="btn btn-outline-secondary" id="tabRegister">Регистрация</button>
+                </div>
+                <form id="loginForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="user_email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Пароль</label>
+                        <input type="password" name="user_pass" class="form-control" required>
+                    </div>
+                    <div class="text-danger small" id="loginError" style="display:none"></div>
+                    <button type="submit" class="btn btn-primary w-100">Войти</button>
+                </form>
+                <form id="registerForm" class="needs-validation" style="display:none" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label">Имя</label>
+                        <input type="text" name="user_name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="user_email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Пароль</label>
+                        <input type="password" name="user_pass" class="form-control" minlength="6" required>
+                    </div>
+                    <div class="text-danger small" id="registerError" style="display:none"></div>
+                    <button type="submit" class="btn btn-success w-100">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,18 +1,4 @@
-<?php
-session_start();
-$root = $_SERVER['DOCUMENT_ROOT'];
-$path = $root . '/phpLogin/connect.php';
-require_once $path;
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
-    $user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
-    $user_data = $user_query->fetch_assoc();
 
-} else {
-    $user_id = '';
-}
-
-?>
 <style>
     .acc__link i {
         margin-right: 8px;
@@ -28,6 +14,7 @@ if (isset($_SESSION['user_id'])) {
         opacity: 0.8;
     }
 </style>
+<?php if (session_status() === PHP_SESSION_NONE) { session_start(); } ?>
 <div class="container__header">
     <div class="header__contant">
         <div class="header__logo">
@@ -67,28 +54,50 @@ if (isset($_SESSION['user_id'])) {
             </svg>
         </div>
         <div class="header__contacts">
-            <?php if ($user_id == '') {
-                ?>
-                <button class="login-btn disable" id="loginBtn">Войти в аккаунт</button>
-            <?php } else { ?>
+            <?php if (!isset($_SESSION['user_id'])): ?>
+                <button class="login-btn" id="loginBtn" data-bs-toggle="modal" data-bs-target="#authModal">Войти в аккаунт</button>
+            <?php else: ?>
                 <ul class="acc__block">
                     <li class="acc__item">
                         <div class="acc__ava__box">
-                            <img class="acc__ava" src="<?= $user_data['avatar_path'] ?>">
+                            <?php
+                                $headerUserId = (int)($_SESSION['user_id'] ?? 0);
+                                $headerAvatar = '/uploads/avatars/' . $headerUserId . '.jpg';
+                                $baseDir = __DIR__ . '/../';
+                                if (!file_exists($baseDir . ltrim($headerAvatar, '/'))) {
+                                    $candidates = ['png','webp'];
+                                    $found = false;
+                                    foreach ($candidates as $ext) {
+                                        $candidate = '/uploads/avatars/' . $headerUserId . '.' . $ext;
+                                        if (file_exists($baseDir . ltrim($candidate, '/'))) {
+                                            $headerAvatar = $candidate;
+                                            $found = true;
+                                            break;
+                                        }
+                                    }
+                                    if (!$found) {
+                                        // Fallback to default placeholder
+                                        $defaultAvatar = '/uploads/avatars/default.png';
+                                        $headerAvatar = file_exists($baseDir . ltrim($defaultAvatar, '/')) ? $defaultAvatar : '/img/icon.svg';
+                                    }
+                                }
+                            ?>
+                            <img class="acc__ava" src="<?php echo htmlspecialchars($headerAvatar); ?>?v=<?php echo time(); ?>" alt="avatar">
                         </div>
                     </li>
                     <li class="acc__item">
-                        <a href="/lk/lk.php" class="acc__link"><?= $user_data['email'] ?></a>
+                        <a href="/lk/lk.php" class="acc__link"><?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Аккаунт'); ?></a>
                     </li>
                     <li class="acc__item">
-                        <a href="/lk/php/logout.php" class="acc__link">
+                        <a href="/php/logout.php" class="acc__link">
                             <i class="fas fa-sign-out-alt"></i> Выход
                         </a>
                     </li>
                 </ul>
+            <?php endif; ?>
 
-            <?php } ?>
 
+          
             <hr style="margin: 10px 0;">
             <ul class="header__soc-list">
                 <li class="header__soc-item">
@@ -108,57 +117,8 @@ if (isset($_SESSION['user_id'])) {
             </ul>
 
         </div>
-        <div id="loginModal" class="modal">
-        <div class="modal-content-login">
-            <span class="close-login">&times;</span>
+        
 
-            <div class="form-switcher">
-                <button class="active-login" id="switchToLogin">Вход</button>
-                <button id="switchToRegister">Регистрация</button>
-            </div>
-
-            <!-- Форма входа -->
-            <div id="loginForm" class="form-login active-login">
-                <div class="form-container">
-                    <div class="form-group">
-                        <label for="loginEmail">Email</label>
-                        <input type="email" id="loginEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Пароль</label>
-                        <input type="password" id="loginPassword" required>
-                        <div id="loginError" class="error-message"></div>
-                    </div>
-                    <button type="button" class="submit-btn" id="loginSubmit">Войти</button>
-                </div>
-            </div>
-
-            <!-- Форма регистрации -->
-            <div id="registerForm" class="form-login">
-                <div class="form-container">
-                    <div class="form-group">
-                        <label for="regName">Введите полное имя</label>
-                        <input type="text" id="regName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="regEmail">Email</label>
-                        <input type="email" id="regEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="regPassword">Пароль</label>
-                        <input type="password" id="regPassword" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="regConfirmPassword">Подтвердите пароль</label>
-                        <input type="password" id="regConfirmPassword" required>
-                        <div id="registerError" class="error-message"></div>
-                    </div>
-                    <button type="button" class="submit-btn" id="registerSubmit">Зарегистрироваться</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script defer src="js/login.js"></script>
     </div>
   
  

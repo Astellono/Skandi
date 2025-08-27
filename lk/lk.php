@@ -1,231 +1,209 @@
 <?php
 session_start();
-require 'php/connect.php';
-$user_id = $_SESSION['user_id'];
-if (!$user_id) {
-    header("Location: /", true, 301);
+if (!isset($_SESSION['user_id'])) {
+    header('Location: /index.php');
+    exit;
 }
-// print_r($_SESSION['user_id']);
-// Получаем данные пользователя
-$user_query = $connect->query("SELECT * FROM users WHERE id = '$user_id'");
-$user_data = $user_query->fetch_assoc();
-// print_r($user_data['avatar_path']);
-// Получаем данные анкеты
-$result = $connect->query("SELECT * FROM tour_requests WHERE user_id = '$user_id'");
-$data = $result->fetch_assoc();
 
-$myTourList = $connect->query("SELECT t.*
-FROM tours t
-JOIN signing s ON t.tour_id = s.signing_tour_id
-JOIN users u ON s.signing_user_id = u.id
-WHERE u.id = $user_id;");
+require_once __DIR__ . '/../php/connect.php';
 
-if ($myTourList->num_rows > 0) {
-    // Получение данных
-    $tours = $myTourList->fetch_all(MYSQLI_ASSOC);
+if (!($connect instanceof mysqli)) {
+    die('Ошибка подключения к базе данных');
+}
 
-} else {
-    echo "0 results";
+$userId = (int)$_SESSION['user_id'];
+
+function prepare_first_success(mysqli $db, array $sqlVariants) {
+    foreach ($sqlVariants as $sql) {
+        $stmt = $db->prepare($sql);
+        if ($stmt !== false) {
+            return $stmt;
+        }
+    }
+    return false;
+}
+
+// Fetch user data (support two possible schemas)
+$userStmt = prepare_first_success($connect, [
+    'SELECT user_name, user_email FROM users WHERE user_id = ? LIMIT 1',
+    'SELECT name AS user_name, email AS user_email FROM users WHERE id = ? LIMIT 1',
+]);
+if ($userStmt === false) {
+    die('Ошибка запроса профиля пользователя: ' . $connect->error);
+}
+$userStmt->bind_param('i', $userId);
+$userStmt->execute();
+$userRes = $userStmt->get_result();
+$user = $userRes ? $userRes->fetch_assoc() : null;
+
+// Fetch tour sign-ups
+$tourStmt = prepare_first_success($connect, [
+    'SELECT signing_tour_id AS tour_id FROM signing WHERE signing_user_id = ? ORDER BY signing_id DESC',
+]);
+$tours = [];
+if ($tourStmt) {
+    $tourStmt->bind_param('i', $userId);
+    $tourStmt->execute();
+    $tourRes = $tourStmt->get_result();
+    if ($tourRes) {
+        while ($row = $tourRes->fetch_assoc()) {
+            $tours[] = $row['tour_id'];
+        }
+    }
+}
+
+// Traveler questionnaire
+$rqStmt = prepare_first_success($connect, [
+    'SELECT fio, age, tel, city, email FROM tour_requests WHERE user_id = ? LIMIT 1',
+]);
+$request = null;
+if ($rqStmt) {
+    $rqStmt->bind_param('i', $userId);
+    $rqStmt->execute();
+    $rqRes = $rqStmt->get_result();
+    $request = $rqRes ? $rqRes->fetch_assoc() : null;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой профиль здоровья</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/style/clear.css">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/style-adaptive.css">
-    <link rel="stylesheet" href="style/styleLk.css">
-    <script defer src="/js/login.js"></script>
-    <script src="/modal/Burger.js" defer></script>
-    <script src="js/mainLK.js" defer></script>
-    <script src="js/btnChange.js" defer></script>
-    <script src="js/uploadAvatar.js" defer></script>
-    <script src="js/switchMenu.js" defer></script>
-    <script src="js/interactiveMenu.js" defer></script>
-    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-    <script>
-    // Инициализация полифила
-    if ('scrollBehavior' in document.documentElement.style === false) {
-        smoothscroll.polyfill();
-    }
-    </script>
-    <style>
-
-    </style>
+    <title>Личный кабинет</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lk/style/styleLk.css?ver=<?php echo time(); ?>">
 </head>
-
 <body>
-    <header class="header" id="header">
-        <?php include '../parts/headerPHP.php'; ?>
-
+<div class="lk-container">
+    <header class="lk-header">
+        <a class="lk-logo" href="/index.php">
+            <img src="/img/header/logo.svg" alt="">
+        </a>
+        <div class="lk-actions">
+            <a href="/index.php" class="btn btn-outline-secondary">На главную</a>
+            <a href="/php/logout.php" class="btn btn-danger">Выйти</a>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="profile-header">
-            <h1 class="profile-title">Личный кабинет</h1>
-
-        </div>
-
-        <div class="dashboard">
-            <!-- Sidebar -->
-            <aside class="profile-sidebar">
-                <div class="user-card">
-                    <form id="uploadForm" enctype="multipart/form-data" class="avatar__form">
-                        <input id="imageInput" type="file" name="image" accept="image/*" hidden required>
-
-                        <!-- <button type="submit">Загрузить</button> -->
-                        <label for="imageInput">
-                            <div class="image-container">
-                                <img src="<?= isset($user_data['avatar_path']) ? $user_data['avatar_path'] : '/img/otziv/zagl1.png'; ?>"
-                                    alt="Аватар" class="avatar" id="avatarImage">
-                            </div>
-
-                        </label>
-                    </form>
-
-                    <h3 class="user-name" id="fio">Иванов Иван Иванович</h3>
-                    <p class="user-email" id="email">ivanov@example.com</p>
-                </div>
-
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#anceta" class="nav-link">
-                            <i class="fas fa-clipboard-list"></i><span class="nav-text">Анкета участника</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#myTour" class="nav-link">
-                            <i class="fas fa-plane"></i> <span class="nav-text">Мои туры</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-map-marked-alt"></i> <span class="nav-text">Мои экскурсии</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="php/logout.php" class="nav-link">
-                            <i class="fas fa-sign-out-alt"></i> <span class="nav-text">Выход</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </aside>
-
-            <!-- Main content -->
-            <main class="profile-content">
-            <div id="anceta" class="content-section">
-                    <div class="content-header">
-                        <h2 class="content-title">
-                            <i class="fas fa-clipboard-list"></i>
-                            <?php
-                            echo isset($data) ? "Ваша Анкета" : "Заполните анкету";
-                            ?>
-                        </h2>
-                        <?php echo isset($data) ? " <button id='btnChange' class='change-data-btn'>Изменить</button>" : "";?>
-                    </div>
-
-                    <form action="<?php echo isset($data) ? "php/changeDataHealth.php" : "php/addDataHealth.php";?>" class="modal__form" method="POST">
-                        Мой возраст:
-                        <input name="age" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['age'] ?>">
-                        Мой телефон:
-                        <input name="tel" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['tel'] ?>">
-                        Мой город:
-                        <input name="city" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['city'] ?>">
-                        Мой рост:
-                        <input name="rost" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['rost'] ?>">
-                        Мой вес:
-                        <input name="ves" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['ves'] ?>">
-                        Мой стаж занятия Скандинавской ходьбой:
-                        <input name="staj" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['staj'] ?>">
-                        Физические нагрузки:
-                        <input name="fizNagr" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['fizNagr'] ?>">
-                        Наличие сердечно-сосудистных заболеваний:
-                        <input name="zabolevaniya" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?>value="<?= $data['zabolevaniya'] ?>">
-                        Давление:
-                        <input name="davlenie" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['davlenie'] ?>">
-                        Хронические заболевания, Аллергии:
-                        <input name="chrono" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['chrono'] ?>">
-                        Заболевания опорно-двигательного аппарата?
-                        <input name="opora" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['opora'] ?>">
-                        Максимальные расстояния:
-                        <input name="perenosimost" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?>
-                            value="<?= $data['perenosimost'] ?>">
-                        Переносимость сложных маршрутов с перепадами высоты:
-                        <input name="level" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['level'] ?>">
-                        Готовность проходить в среднем 15 - 20 км:
-                        <input name="prohod" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['prohod'] ?>">
-                        Переносимость сложных маршрутов:
-                        <input name="perenosimostGori" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?>
-                            value="<?= $data['perenosimostGori'] ?>">
-                        Только равнинные маршруты:
-                        <input name="ravn" type="text" class="change-form-input  "<?php echo isset($data) ? "disabled" : "";?> value="<?= $data['ravn'] ?>">
-                        <input type="submit" id="sendDataBtn" value="Отправить" class="modal-form-btn"
-                            style="cursor:pointer; text-align: center;">
-                    </form>
-
+    <main class="lk-main">
+        <section class="lk-card">
+            <div class="lk-card__header">
+                <h2>Личные данные</h2>
             </div>
-
-                <div id="myTour" class="content-section">
-                        <div class="tours-container">
-
-                            <h3 class="tours-title">Мои туры ✈️</h3>
-                            <div class="tours-grid">
-                                <?php foreach ($tours as $tour) { ?>
-
-                                    <div class="tour-card">
-                                        <div class="tour-image-wrapper">
-                                            <img src="../<?= $tour['tour_imgSrc'] ?>" alt="Горный поход" class="tour-image">
-
-                                        </div>
-                                        <div class="tour-content">
-                                            <h4 class="tour-name"><?= $tour['tour_name'] ?></h4>
-                                            <div class="tour-meta">
-                                                <span class="tour-date">📅 <?= $tour['tour_date'] ?></span>
-                                                <span class="tour-price">💵 24 900 ₽</span>
-                                            </div>
-                                            <a href="../<?= $tour['tour_linkPage'] ?>" class="tour-button">Подробнее →</a>
-                                        </div>
-                                    </div>
-                                    <?php }?>
-                              
-                                <!-- Тур 2 -->
-
-                            </div>
-                        </div>
+            <div class="lk-card__content lk-profile">
+                <div class="lk-avatar">
+                    <?php
+                        $avatarPath = '/uploads/avatars/' . $userId . '.jpg';
+                        if (!file_exists(__DIR__ . '/../' . ltrim($avatarPath, '/'))) {
+                            $png = '/uploads/avatars/' . $userId . '.png';
+                            $webp = '/uploads/avatars/' . $userId . '.webp';
+                            if (file_exists(__DIR__ . '/../' . ltrim($png, '/'))) {
+                                $avatarPath = $png;
+                            } elseif (file_exists(__DIR__ . '/../' . ltrim($webp, '/'))) {
+                                $avatarPath = $webp;
+                            } else {
+                                 $avatarPath = '/img/icon.svg';
+                            }
+                        }
+                    ?>
+                    <img id="userAvatarImg" src="<?php echo htmlspecialchars($avatarPath); ?><?php echo $avatarPath !== '' ? ('?v=' . time()) : ''; ?>" alt="avatar" style="cursor:pointer;">
+                    <div class="lk-avatar__overlay">
+                        <span class="lk-avatar__plus">+</span>
                     </div>
+                    <form id="avatarForm" class="mt-3" action="/php/upload_avatar.php" method="post" enctype="multipart/form-data">
+                        <input id="avatarInput" style="display:none;" type="file" name="avatar" accept="image/jpeg,image/png,image/webp" required>
+                        <button id="avatarSubmit" class="btn btn-primary mt-2" type="submit" style="display:none;">Сменить аватар</button>
+                    </form>
+                </div>
+                <div class="lk-fields">
+                    <div class="lk-field">
+                        <div class="lk-label">Имя</div>
+                        <div class="lk-value"><?php echo htmlspecialchars($user['user_name'] ?? ''); ?></div>
+                    </div>
+                    <div class="lk-field">
+                        <div class="lk-label">Email</div>
+                        <div class="lk-value"><?php echo htmlspecialchars($user['user_email'] ?? ''); ?></div>
+                    </div>
+                    <?php if ($request): ?>
+                        <div class="lk-sep"></div>
+                        <div class="lk-field">
+                            <div class="lk-label">Город</div>
+                            <div class="lk-value"><?php echo htmlspecialchars($request['city'] ?? ''); ?></div>
+                        </div>
+                        <div class="lk-field">
+                            <div class="lk-label">Телефон</div>
+                            <div class="lk-value"><?php echo htmlspecialchars($request['tel'] ?? ''); ?></div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </section>
 
-            </main>
+        <section class="lk-card">
+            <div class="lk-card__header">
+                <h2>Мои туры</h2>
+            </div>
+            <div class="lk-card__content">
+                <?php if (count($tours) === 0): ?>
+                    <div class="lk-empty">Вы пока не записаны на туры.</div>
+                <?php else: ?>
+                    <ul class="lk-list">
+                        <?php foreach ($tours as $tourId): ?>
+                            <li class="lk-list__item">
+                                <div class="lk-list__title">Тур #<?php echo htmlspecialchars($tourId); ?></div>
+                                <div class="lk-list__actions">
+                                    <a class="btn btn-outline-primary btn-sm" href="/tour.php">К списку туров</a>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+                <a class="btn btn-outline-primary" href="/tour.php">Перейти в туры</a>
+            </div>
+        </section>
 
-    </div>
+        <section class="lk-card">
+            <div class="lk-card__header">
+                <h2>Мои экскурсии</h2>
+            </div>
+            <div class="lk-card__content">
+                <div class="lk-empty">Вы пока не записаны на экскурсии.</div><!-- <div class="lk-empty">История записей на экскурсии пока недоступна. Запись оформляется через форму на странице «Сканди-мероприятия».</div> -->
+                <a class="btn btn-outline-primary" href="/excursions.php">Перейти к экскурсиям</a>
+            </div>
+        </section>
+    </main>
 
-    
-<div class="mobile-nav" id="mobileNav">
-    <a href="#anceta" class="mobile-nav-link" data-target="anceta">
-        <i class="fas fa-clipboard-list"></i>
-        <span>Анкета</span>
-    </a>
-    <a href="#myTour" class="mobile-nav-link" data-target="myTour">
-        <i class="fas fa-plane"></i>
-        <span>Туры</span>
-    </a>
-    <a href="#" class="mobile-nav-link" data-target="excursions">
-        <i class="fas fa-map-marked-alt"></i>
-        <span>Экскурсии</span>
-    </a>
-    <a href="php/logout.php" class="mobile-nav-link">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Выход</span>
-    </a>
+    <footer class="lk-footer">
+        <p>© По миру с палками</p>
+    </footer>
 </div>
-    <script src="../js/get_info_user.js"></script>
-</body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    (function(){
+        var img = document.getElementById('userAvatarImg');
+        var input = document.getElementById('avatarInput');
+        var form = document.getElementById('avatarForm');
+        if (!img || !input || !form) return;
+
+        img.addEventListener('click', function(){
+            input.click();
+        });
+
+        input.addEventListener('change', function(){
+            if (!input.files || input.files.length === 0) return;
+            var file = input.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e){
+                if (typeof e.target.result === 'string') {
+                    img.src = e.target.result;
+                }
+            };
+            reader.readAsDataURL(file);
+            form.submit();
+        });
+    })();
+</script>
+</body>
 </html>
+
