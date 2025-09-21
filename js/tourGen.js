@@ -51,7 +51,6 @@ function mounthNumberToString(name) {
 let toursBox = document.getElementById('tours')
 
 
-
 tourList.forEach(e => {
     let tourItem = document.createElement('li')
     let tourImgBox = document.createElement('div')

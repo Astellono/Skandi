@@ -275,36 +275,102 @@
     .header__logo img {
         width: 190px;
     }
-
+    .header__contant {
+        padding: 0 10px;
+    }
+    .header__logo {
+        margin-left: -25px;
+    }
     .header__menu {
         position: fixed;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
         padding-left: 30px;
         padding-top: 40px;
+        padding-right: 40px;
+        padding-bottom: 100px;
         margin-top: 0;
         top: 0;
         left: 0;
         z-index: 1000;
         width: 100vw;
-        background: white;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         height: 100vh;
         transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .header__burger-open {
         transform: translateX(0);
     }
 
+    /* Анимация для элементов меню */
     .header__item {
-        margin-bottom: 40px;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: slideInLeft 0.5s ease forwards;
     }
+
+    .header__item:nth-child(1) { animation-delay: 0.1s; }
+    .header__item:nth-child(2) { animation-delay: 0.2s; }
+    .header__item:nth-child(3) { animation-delay: 0.3s; }
+    .header__item:nth-child(4) { animation-delay: 0.4s; }
+    .header__item:nth-child(5) { animation-delay: 0.5s; }
+    .header__item:nth-child(6) { animation-delay: 0.6s; }
+    .header__item:nth-child(7) { animation-delay: 0.7s; }
+
+    @keyframes slideInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .header__item {
+        
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .header__item:not(.header__burger-cross) {
+        width: 200px;
+    }
+
+    .header__link {
+        color: #60326B;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+        display: inline-block;
+        border:none;
+    }
+
+    .header__link:hover {
+        color: #4a2a56;
+        border:none;
+    }
+
+    
+
+    
 
     .header__burger-cross {
         display: block;
         position: absolute;
         right: 20px;
         margin-bottom: 0;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .header__burger-cross:hover {
+        transform: scale(1.1);
     }
 
     .header__contacts {
@@ -313,6 +379,194 @@
 
     .header__burger {
         display: block;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .header__burger:hover {
+        transform: scale(1.1);
+    }
+
+    /* Мобильная версия авторизации */
+    .header__mobile-auth {
+        display: block !important;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(96, 50, 107, 0.3);
+        position: relative;
+    }
+
+    .header__mobile-auth::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(96, 50, 107, 0.3), transparent);
+    }
+
+    /* Стили для мобильного меню на очень маленьких экранах */
+    @media (max-width: 480px) {
+        .header__menu {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .header__item {
+            margin-bottom: 30px;
+        }
+
+        .header__link {
+            font-size: 16px;
+        }
+
+        .login-btn-mobile {
+            padding: 12px 20px;
+            font-size: 15px;
+        }
+
+        .acc__block-mobile {
+            padding: 15px;
+            gap: 15px;
+        }
+
+        .acc__ava__box-mobile {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .login-btn-mobile {
+        background: linear-gradient(135deg, #60326B 0%, #775381 100%);
+        color: white;
+        border: none;
+        padding: 15px 24px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .login-btn-mobile::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .login-btn-mobile:hover::before {
+        left: 100%;
+    }
+
+    .login-btn-mobile:hover {
+        background: linear-gradient(135deg, #4a2a56 0%, #60326B 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(96, 50, 107, 0.4);
+    }
+
+    .acc__block-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .acc__ava__box-mobile {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #60326B;
+        box-shadow: 0 4px 12px rgba(96, 50, 107, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .acc__ava__box-mobile:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(96, 50, 107, 0.4);
+    }
+
+    .acc__ava-mobile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .acc__link-mobile {
+        color: #60326B;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.3s ease;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid transparent;
+    }
+
+    .acc__link-mobile:hover {
+        color: #4a2a56;
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(96, 50, 107, 0.3);
+        transform: translateY(-1px);
+    }
+
+    .acc__logout-mobile {
+        color: #ff4444 !important;
+        font-size: 14px;
+        background: rgba(255, 68, 68, 0.1) !important;
+        border-color: rgba(255, 68, 68, 0.3) !important;
+    }
+
+    .acc__logout-mobile:hover {
+        color: #cc3333 !important;
+        background: rgba(255, 68, 68, 0.2) !important;
+        border-color: rgba(255, 68, 68, 0.5) !important;
+    }
+
+    /* Дополнительные стили для мобильной авторизации */
+    .header__mobile-auth .login-btn-mobile {
+        box-shadow: 0 4px 8px rgba(96, 50, 107, 0.3);
+    }
+
+    .header__mobile-auth .login-btn-mobile:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 4px rgba(96, 50, 107, 0.3);
+    }
+
+    .acc__block-mobile .acc__ava__box-mobile {
+        box-shadow: 0 4px 8px rgba(96, 50, 107, 0.2);
+    }
+
+    /* Анимация появления мобильной авторизации */
+    .header__mobile-auth {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.8s;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .hero {

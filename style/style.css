@@ -217,6 +217,73 @@ button {
     display: none;
 }
 
+/* Скрываем мобильную авторизацию на десктопе */
+.header__mobile-auth {
+    display: none;
+}
+
+/* Стили для мобильной авторизации (будут переопределены в адаптивных стилях) */
+.login-btn-mobile {
+    background: #60326B;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.login-btn-mobile:hover {
+    background: #4a2a56;
+}
+
+.acc__block-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.acc__ava__box-mobile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #60326B;
+}
+
+.acc__ava-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.acc__link-mobile {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.acc__link-mobile:hover {
+    color: #60326B;
+}
+
+.acc__logout-mobile {
+    color: #ff4444 !important;
+    font-size: 14px;
+}
+
+.acc__logout-mobile:hover {
+    color: #cc3333 !important;
+}
+
 .disable {
     color: gray;
     cursor: default;
@@ -2874,7 +2941,7 @@ body.mod {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-
+    align-items: center;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3232,10 +3299,7 @@ body.mod {
 
 }
 
-.menu__item:last-child {
-    width: 40%;
-    margin: 0 auto;
-}
+
 
 .menu__link {
     color: white;
@@ -3277,6 +3341,12 @@ body.mod {
 
 .menu__lesson {
     background: rgba(0, 0, 0, .40) url('../img/menu/menuLessonNew.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-blend-mode: darken;
+}
+.menu__foto {
+    background: rgba(0, 0, 0, .40) url('../img/menu/foto.jpg');
     background-size: cover;
     background-position-y: center;
     background-blend-mode: darken;

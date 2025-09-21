@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/connect.php';
+require_once '../phpLogin/connect.php';
 
 if (!isset($_SESSION['user_id'])) {
     http_response_code(401);
@@ -72,5 +72,6 @@ $_SESSION['user_avatar'] = '/uploads/avatars/' . $userId . '.' . $ext;
 header('Location: /lk/lk.php');
 exit;
 ?>
+
 
 

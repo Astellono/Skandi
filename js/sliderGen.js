@@ -1,6 +1,6 @@
 (async () => {
 try {
-    const mod = await import(`./tourList.js?ver=${Date.now()}`);
+    const mod = await import(`tourList.js?ver=${Date.now()}`);
     const tourList = mod.tourList || [];
 
 function mounthNumberToString(name) {

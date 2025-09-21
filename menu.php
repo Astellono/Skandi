@@ -57,6 +57,9 @@
                 <li class="menu__item menu__lesson">
                     <a href="lesson.php" class="menu__link">ТРЕНИРОВКИ</a>
                 </li>
+                <li class="menu__item menu__foto">
+                    <a href="fotoclub.php" class="menu__link">ФОТОКЛУБ</a>
+                </li>
             </ul>
             <div class="hell"></div>
         </div>
@@ -78,10 +81,11 @@
 
     <footer class="footer"></footer>
 
+    <!-- Bootstrap JavaScript для работы модального окна -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-
-
-    
 </body>
 
 </html>

@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 document.querySelector(".header__burger").addEventListener("click", function () {
     document.querySelector(".header__menu").classList.add("header__burger-open");
 })

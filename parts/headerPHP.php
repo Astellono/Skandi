@@ -1,4 +1,9 @@
+<?php
 
+require_once $_SERVER['DOCUMENT_ROOT']. '/getDATA/getUserData.php';
+
+
+?>
 <style>
     .acc__link i {
         margin-right: 8px;
@@ -14,7 +19,10 @@
         opacity: 0.8;
     }
 </style>
-<?php if (session_status() === PHP_SESSION_NONE) { session_start(); } ?>
+<?php if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+
+} ?>
 <div class="container__header">
     <div class="header__contant">
         <div class="header__logo">
@@ -22,7 +30,7 @@
                 <img src="/img/header/logo.svg" alt="" srcset="">
             </a>
         </div>
-        <ul class="header__menu">
+        <ul class="header__menu ">
             <li class="header__item header__burger-cross ">
                 <img class="header__cross-img" src="/img/header/cross.png" alt="">
             </li>
@@ -46,58 +54,109 @@
                     Медиа
                 </a>
             </li>
+            <li class="header__item  header__mobile-auth">
+
+                <?php if (!isset($_SESSION['user_id'])): ?>
+                    <button class="login-btn-mobile"  id="loginBtnMobile" data-bs-toggle="modal"
+                        data-bs-target="#authModal">Войти в аккаунт</button>
+                <?php else: ?>
+                    <div class="acc__block-mobile">
+                        <div class="acc__ava__box-mobile">
+                            <?php
+                            $mobileUserId = (int) ($_SESSION['user_id'] ?? 0);
+                            $mobileAvatar = $_SERVER['DOCUMENT_ROOT'] .'uploads/avatars/' . $mobileUserId . '.jpg';
+                            $mobileBaseDir = $_SERVER['DOCUMENT_ROOT'];
+                            if (!file_exists($mobileBaseDir . $mobileAvatar)) {
+                                $mobileCandidates = ['png', 'webp'];
+                                $mobileFound = false;
+                                foreach ($mobileCandidates as $ext) {
+                                    $mobileCandidate = '/uploads/avatars/' . $mobileUserId . '.' . $ext;
+                                    if (file_exists($mobileBaseDir . $mobileCandidate)) {
+                                        $mobileAvatar = $mobileCandidate;
+                                        $mobileFound = true;
+                                        break;
+                                    }
+                                }
+                                if (!$mobileFound) {
+                                    // Fallback to default placeholder
+                                    $mobileDefaultAvatar = $_SERVER['DOCUMENT_ROOT'] .'uploads/avatars/default.png';
+                                    $mobileAvatar = file_exists($mobileBaseDir . $mobileDefaultAvatar) ? $mobileDefaultAvatar : '/img/icon.svg';
+                                }
+                            }
+                            ?>
+                            <img class="acc__ava-mobile"
+                                src="<?php echo htmlspecialchars($mobileAvatar); ?>?v=<?php echo time(); ?>" alt="avatar">
+                        </div>
+                        <a href="/lk/lk.php"
+                            class="acc__link-mobile"><?php echo htmlspecialchars($user['user_name'] ?? 'Аккаунт'); ?></a>
+                        <a href="/phpLogin/logout.php" class="acc__link-mobile acc__logout-mobile">
+                            <i class="fas fa-sign-out-alt"></i> Выход
+                        </a>
+                    </div>
+                <?php endif; ?>
+            </li>
         </ul>
         <div class="header__burger">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24">
                 <path
-                    d="M3.5,7 C3.22385763,7 3,6.77614237 3,6.5 C3,6.22385763 3.22385763,6 3.5,6 L20.5,6 C20.7761424,6 21,6.22385763 21,6.5 C21,6.77614237 20.7761424,7 20.5,7 L3.5,7 Z M3.5,12 C3.22385763,12 3,11.7761424 3,11.5 C3,11.2238576 3.22385763,11 3.5,11 L20.5,11 C20.7761424,11 21,11.2238576 21,11.5 C21,11.7761424 20.7761424,12 20.5,12 L3.5,12 Z M3.5,17 C3.22385763,17 3,16.7761424 3,16.5 C3,16.2238576 3.22385763,16 3.5,16 L20.5,16 C20.7761424,16 21,16.2238576 21,16.5 C21,16.7761424 20.7761424,17 20.5,17 L3.5,17 Z" />
+                    d="M3.5,7 C3.22385763,7 3,6.77614237 3,6.5 C3,6.22385763 3.22385763,6 3.5,6 L20.5,6 C20.7761424,6 21,6.22385763 21,6.5 C21,6.77614237 20.7761424,7 20.5,7 L3.5,7 Z M3.5,12 C3.22385763,12 3,11.7761424 3,11.5 C3,11.2238576 3.22385763,11 3.5,11 L20.5,11 C20.7761424,11 21,11.2238576 21,11.5 C21,11.7761424 20.7761424,12 20.5,12 L3.5,12 Z M3.5,17 C3.22385763,17 3,16.7761424 3,16.5 C3,16.2238576 3.22385763,16 3.5,16 L20.5,16 C20.7761424,16 21,16.2238576 21,16.5 C21,16.7761424 20.7761424,17 20.5,17 Z" />
             </svg>
         </div>
+
         <div class="header__contacts">
+
             <?php if (!isset($_SESSION['user_id'])): ?>
-                <button class="login-btn" id="loginBtn" data-bs-toggle="modal" data-bs-target="#authModal">Войти в аккаунт</button>
+                <button class="login-btn " id="loginBtn" data-bs-toggle="modal" data-bs-target="#authModal">Войти в
+                    аккаунт</button>
             <?php else: ?>
                 <ul class="acc__block">
                     <li class="acc__item">
                         <div class="acc__ava__box">
                             <?php
-                                $headerUserId = (int)($_SESSION['user_id'] ?? 0);
-                                $headerAvatar = '/uploads/avatars/' . $headerUserId . '.jpg';
-                                $baseDir = __DIR__ . '/../';
-                                if (!file_exists($baseDir . ltrim($headerAvatar, '/'))) {
-                                    $candidates = ['png','webp'];
-                                    $found = false;
-                                    foreach ($candidates as $ext) {
-                                        $candidate = '/uploads/avatars/' . $headerUserId . '.' . $ext;
-                                        if (file_exists($baseDir . ltrim($candidate, '/'))) {
-                                            $headerAvatar = $candidate;
-                                            $found = true;
-                                            break;
-                                        }
-                                    }
-                                    if (!$found) {
-                                        // Fallback to default placeholder
-                                        $defaultAvatar = '/uploads/avatars/default.png';
-                                        $headerAvatar = file_exists($baseDir . ltrim($defaultAvatar, '/')) ? $defaultAvatar : '/img/icon.svg';
+
+
+                            $headerUserId = (int) ($_SESSION['user_id'] ?? 0);
+                            $headerAvatar = $_SERVER['DOCUMENT_ROOT'] . '/uploads/avatars/' . $headerUserId . '.jpg';
+
+                            $baseDir = $_SERVER['DOCUMENT_ROOT'];
+                            if (!file_exists($baseDir . $headerAvatar)) {
+                                $candidates = ['png', 'webp'];
+                                $found = false;
+                                foreach ($candidates as $ext) {
+                                    $candidate =  '/uploads/avatars/' . $headerUserId . '.' . $ext;
+                                    if (file_exists($baseDir . $candidate)) {
+                                        $headerAvatar = $candidate;
+                                        $found = true;
+                                        break;
                                     }
                                 }
+                                if (!$found) {
+                                    // Fallback to default placeholder
+                                    $defaultAvatar =$_SERVER['DOCUMENT_ROOT'] . 'uploads/avatars/default.png';
+                                    $headerAvatar = file_exists($baseDir . $defaultAvatar) ? $defaultAvatar : '/img/icon.svg';
+                                }
+                            }
                             ?>
-                            <img class="acc__ava" src="<?php echo htmlspecialchars($headerAvatar); ?>?v=<?php echo time(); ?>" alt="avatar">
+                            <img class="acc__ava"
+                                src="<?php echo htmlspecialchars($headerAvatar); ?>?v=<?php echo time(); ?>" alt="avatar">
                         </div>
                     </li>
                     <li class="acc__item">
-                        <a href="/lk/lk.php" class="acc__link"><?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Аккаунт'); ?></a>
+
+                        <a href="/lk/lk.php"
+                            class="acc__link"><?php echo htmlspecialchars($user['user_name'] ?? 'Акаунт'); ?></a>
                     </li>
                     <li class="acc__item">
-                        <a href="/php/logout.php" class="acc__link">
+                        <a href="/phpLogin/logout.php" class="acc__link">
                             <i class="fas fa-sign-out-alt"></i> Выход
                         </a>
+                       
                     </li>
                 </ul>
             <?php endif; ?>
+                       
 
 
-          
             <hr style="margin: 10px 0;">
             <ul class="header__soc-list">
                 <li class="header__soc-item">
@@ -117,8 +176,17 @@
             </ul>
 
         </div>
-        
+
 
     </div>
-  
- 
+    <script src="/modal/Burger.js"></script>
+    <script>
+
+    </script>
+    <?php
+    // Автоматически подключаем модальное окно авторизации на всех страницах
+    $authModalPath = __DIR__ . '/auth_modal_include.php';
+    if (file_exists($authModalPath)) {
+        include $authModalPath;
+    }
+    ?>
