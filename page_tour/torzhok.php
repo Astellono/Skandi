@@ -77,7 +77,7 @@ require_once '../parts/formTour.php';
                         <h1 class="tour__page__title">
                             SCANDI-ТУР «Торжок: Императорский шаг. Тур скандинавской ходьбы по пушкинским местам»
                         </h1>
-                        <h2 class="tour__page__date">Даты: 3 – 5 октября 2025 г.</h2>
+                        <h2 class="tour__page__date">Даты: 12 – 14 декабря 2025 г.</h2>
                         <p class="tour__page__date">Маршрут: Торжок – усадьба «Грузины» – усадьба «Раёк»</p>
                     </div>
 
@@ -122,7 +122,7 @@ require_once '../parts/formTour.php';
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collaps1">
                             <h3>
-                                День 1 (3 октября). Вечерний переезд в Торжок
+                                День 1 (12 декабря). Вечерний переезд в Торжок
                             </h3>
                         </button>
                     </h2>
@@ -146,7 +146,7 @@ require_once '../parts/formTour.php';
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
                             <h3>
-                                День 2 (4 октября). Архитектурный бриллиант Львова
+                                День 2 (13 декабря). Архитектурный бриллиант Львова
                             </h3>
                         </button>
                     </h2>
@@ -179,7 +179,7 @@ require_once '../parts/formTour.php';
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                             <h3>
-                                День 3 (5 октября). Усадебная гармония «Райка»
+                                День 3 (14 декабря). Усадебная гармония «Райка»
                             </h3>
                         </button>
                     </h2>
