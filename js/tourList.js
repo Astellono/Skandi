@@ -16,13 +16,7 @@ const getDatesArray = (start, end) => {
 };
 
 export let tourList = [
-    {
-        nameT: "Торжок: Императорский шаг",
-        date: getDatesArray(new Date('2025-10-03'), new Date('2025-10-05')),
-        link: "page_tour/torzhok.php",
-        color: "#7a5e3a",
-        srcImg: 'img/act-tour/torzhok.jpg',
-    },
+    
     {
         nameT: "Псковское ожерелье",
         date: getDatesArray(new Date('2025-10-10'), new Date('2025-10-12')),
@@ -46,12 +40,13 @@ export let tourList = [
         color: "#d24220",
         srcImg: 'img/act-tour/abh.jpg',
     },
+  
     {
-        nameT: "Осетия",
-        date: getDatesArray(new Date('2025-11-20'), new Date('2025-11-23')),
-        link: "page_tour/osetia.php",
-        color: 'rgba(18, 110, 90, 1)',
-        srcImg: 'img/act-tour/osetia.jpg',
+        nameT: "Торжок: Императорский шаг",
+        date: getDatesArray(new Date('2025-12-12'), new Date('2025-12-14')),
+        link: "page_tour/torzhok.php",
+        color: "#7a5e3a",
+        srcImg: 'img/act-tour/torzhok.jpg',
     },
     {
         nameT: "Алтайская зимняя сказка",
