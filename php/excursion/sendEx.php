@@ -54,7 +54,7 @@
     <title>Спасибо! Мы свяжемся с вами!</title>
     <meta name="generator">
     <script type="text/javascript">
-    setTimeout('location.replace("../../index.html")', 3000);
+    setTimeout('location.replace("../../index.php")', 3000);
     /*Изменить текущий адрес страницы через 3 секунды (3000 миллисекунд)*/
     </script> 
     </head>

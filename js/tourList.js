@@ -85,6 +85,13 @@ export let tourList = [
         srcImg: 'img/act-tour/kalev.jpg',
     },
     {
+        nameT: "Тур «СЕВЕРНЫЙ ШАГ: Архангельск, Поморье и Каргополье»",
+        date: getDatesArray(new Date('2026-07-12'), new Date('2026-07-18')),
+        link: "page_tour/sever.php",
+        color: 'rgb(139, 167, 221)',
+        srcImg: 'img/act-tour/sever.png',
+    },
+    {
         nameT: "Юг Киргизии",
         date: getDatesArray(new Date('2026-08-06'), new Date('2026-08-15')),
         link: "page_tour/kirg.php",

@@ -20,20 +20,20 @@ if (!($connect instanceof mysqli)) {
 require '../getDATA/getUserData.php';
 
 // Fetch tour sign-ups
-$tourStmt = prepare_first_success($connect, [
-    'SELECT signing_tour_id AS tour_id FROM signing WHERE signing_user_id = ? ORDER BY signing_id DESC',
-]);
-$tours = [];
-if ($tourStmt) {
-    $tourStmt->bind_param('i', $userId);
-    $tourStmt->execute();
-    $tourRes = $tourStmt->get_result();
-    if ($tourRes) {
-        while ($row = $tourRes->fetch_assoc()) {
-            $tours[] = $row['tour_id'];
-        }
-    }
-}
+// $tourStmt = prepare_first_success($connect, [
+//     'SELECT signing_tour_id AS tour_id FROM signing WHERE signing_user_id = ? ORDER BY signing_id DESC',
+// ]);
+// $tours = [];
+// if ($tourStmt) {
+//     $tourStmt->bind_param('i', $userId);
+//     $tourStmt->execute();
+//     $tourRes = $tourStmt->get_result();
+//     if ($tourRes) {
+//         while ($row = $tourRes->fetch_assoc()) {
+//             $tours[] = $row['tour_id'];
+//         }
+//     }
+// }
 
 // Traveler questionnaire
 $rqStmt = prepare_first_success($connect, [
@@ -99,7 +99,7 @@ if ($rqStmt) {
                         <div class="lk-avatar__overlay">
                             <span class="lk-avatar__plus">+</span>
                         </div>
-                        <form id="avatarForm" class="mt-3" action="/php/upload_avatar.php" method="post"
+                        <form id="avatarForm" class="mt-3" action="/php/upload_avatar.php" method="POST"
                             enctype="multipart/form-data">
                             <input id="avatarInput" style="display:none;" type="file" name="avatar"
                                 accept="image/jpeg,image/png,image/webp" required>
@@ -107,12 +107,12 @@ if ($rqStmt) {
                                 style="display:none;">Сменить аватар</button>
                         </form>
                     </div>
-                    <form class="lk-fields">
+                    <form class="lk-fields" action="../phpLogin/changeFio.php" method="post">
                         <div class="lk-field">
                             <div class="lk-label">Фамилия</div>
                             <div class="lk-value" name="user_name">
                                 <input type="text" class="form-control form-control-input" disabled id="user_fam" name="user_fam"
-                                    value="<?php echo htmlspecialchars($user['user_fam'] ?? ''); ?>">
+                                    value="<?php echo htmlspecialchars($user['user_familia'] ?? ''); ?>">
                             </div>
                         </div>
                         <div class="lk-field">
@@ -126,8 +126,8 @@ if ($rqStmt) {
                         <div class="lk-field">
                             <div class="lk-label">Отчество</div>
                             <div class="lk-value" name="user_name">
-                                <input type="text" class="form-control form-control-input" disabled id="user_otch" name="otch"
-                                    value="Вячеславович">
+                                <input type="text" class="form-control form-control-input" disabled id="user_otch" name="user_otch"
+                                    value="<?php echo htmlspecialchars($user['user_otch'] ?? ''); ?>">
                             </div>
                         </div>
                         <div class="lk-field">
@@ -160,20 +160,10 @@ if ($rqStmt) {
                     <h2>Мои туры</h2>
                 </div>
                 <div class="lk-card__content">
-                    <?php if (count($tours) === 0): ?>
+                    
                         <div class="lk-empty">В разработке...</div>
-                    <?php else: ?>
-                        <ul class="lk-list">
-                            <?php foreach ($tours as $tourId): ?>
-                                <li class="lk-list__item">
-                                    <div class="lk-list__title">Тур #<?php echo htmlspecialchars($tourId); ?></div>
-                                    <div class="lk-list__actions">
-                                        <a class="btn btn-outline-primary btn-sm" href="/tour.php">К списку туров</a>
-                                    </div>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    <?php endif; ?>
+                    
+                  
                     <!-- <a class="btn btn-outline-primary" href="/tour.php">Перейти в туры</a> -->
                 </div>
             </section>
