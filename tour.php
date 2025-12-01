@@ -74,7 +74,7 @@
             </ul>
         </div>
     </section> -->
-    <section class="tourweek">
+    <!-- <section class="tourweek">
         <div class="container">
             <h2 class="tour__title tour__title-week " style="text-align: center; margin:20px auto">Туры выходного дня
             </h2>
@@ -104,7 +104,7 @@
 
             </ul>
         </div>
-    </section>
+    </section> -->
     <section class="tour">
         <div class="container">
             <h2 class="tour__title">Путешествия</h2>

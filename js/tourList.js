@@ -18,30 +18,6 @@ const getDatesArray = (start, end) => {
 export let tourList = [
 
     {
-        nameT: "Псковское ожерелье",
-        date: getDatesArray(new Date('2025-10-10'), new Date('2025-10-12')),
-        link: "page_tour/pskov.php",
-        color: "#6b7fb3",
-        srcImg: 'img/act-tour/pskov.jpg',
-    },
-    {
-        nameT: "Касимов. Осенняя мещера.",
-        date: getDatesArray(new Date('2025-10-18'), new Date('2025-10-19')),
-        link: "page_tour/kas.php",
-        color: '#add',
-        srcImg: 'img/act-tour/kas.jpg',
-    },
-
-
-    {
-        nameT: "Абхазия",
-        date: getDatesArray(new Date('2025-11-01'), new Date('2025-11-05')),
-        link: "page_tour/abh.php",
-        color: "#d24220",
-        srcImg: 'img/act-tour/abh.jpg',
-    },
-
-    {
         nameT: "Торжок: Императорский шаг",
         date: getDatesArray(new Date('2025-12-12'), new Date('2025-12-14')),
         link: "page_tour/torzhok.php",
