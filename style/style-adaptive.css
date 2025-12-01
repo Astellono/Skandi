@@ -979,3 +979,58 @@
 ::-webkit-scrollbar-thumb:window-inactive {
     background: #41617D !important;
 }
+
+/* Адаптивные стили для блока цены экскурсий */
+@media (max-width: 768px) {
+    .excursions__price {
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 10px;
+    }
+
+    .excursions__price-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .excursions__price-amount {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .excursions__price-amount strong {
+        font-size: 16px;
+    }
+
+    .excursions__price-included,
+    .excursions__price-additional {
+        padding: 10px 12px;
+        font-size: 13px;
+        margin: 12px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .excursions__price {
+        padding: 12px;
+        border-left-width: 3px;
+    }
+
+    .excursions__price-title {
+        font-size: 15px;
+    }
+
+    .excursions__price-amount {
+        font-size: 13px;
+    }
+
+    .excursions__price-amount strong {
+        font-size: 15px;
+    }
+
+    .excursions__price-included,
+    .excursions__price-additional {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}

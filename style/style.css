@@ -3153,7 +3153,83 @@ body.mod {
 }
 
 .excursions__price {
-    font-size: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #4F3156;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.excursions__price-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.excursions__price-title::before {
+    content: "💰";
+    font-size: 20px;
+}
+
+.excursions__price-amounts {
+    margin-bottom: 15px;
+}
+
+.excursions__price-amount {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4F3156;
+    padding: 5px 0;
+}
+
+.excursions__price-amount strong {
+    color: #4F3156;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.excursions__price-included {
+    background-color: #d4edda;
+    border-left: 3px solid #28a745;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #155724;
+    line-height: 1.6;
+}
+
+.excursions__price-included::before {
+    content: "✓ ";
+    font-weight: bold;
+    color: #28a745;
+}
+
+.excursions__price-additional {
+    background-color: #fff3cd;
+    border-left: 3px solid #ffc107;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #856404;
+    line-height: 1.6;
+}
+
+.excursions__price-additional::before {
+    content: "ℹ ";
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.excursions__price-additional em {
+    font-style: normal;
+    font-weight: 500;
 }
 
 .excursions__podr {

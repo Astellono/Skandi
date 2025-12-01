@@ -115,14 +115,15 @@ require_once 'parts/formEx.php';
                             </p>
 
                             <hr>
-                            <p class="excursions__price" style="margin: 0; text-align: left;"><strong>Стоимость:
-                                    <br>2700р – при регистрации до 31 ноября<br>
-                                    3000р – при регистрации до 5 декабря
-                                </strong>
-                                <br>В стоимость входит: сопровождение инструктора и экскурсионная программа
-                                <br><em>Дополнительно оплачиваются входные билеты в музей: 1000р – полный, 500р –
-                                    льготный</em>
-                            </p>
+                            <div class="excursions__price">
+                                <div class="excursions__price-title">Стоимость</div>
+                                <div class="excursions__price-amounts">
+                                    <div class="excursions__price-amount"><strong>2700р</strong> – при регистрации до 31 ноября</div>
+                                    <div class="excursions__price-amount"><strong>3000р</strong> – при регистрации до 5 декабря</div>
+                                </div>
+                                <div class="excursions__price-included">В стоимость входит: сопровождение инструктора и экскурсионная программа</div>
+                                <div class="excursions__price-additional">Дополнительно оплачиваются входные билеты в музей: 1000р – полный, 500р – льготный</div>
+                            </div>
                             <hr>
 
                             <br>
@@ -181,10 +182,13 @@ require_once 'parts/formEx.php';
                             </p>
 
                             <hr>
-                            <p class="excursions__price" style="margin: 0; text-align: left;"><strong>Стоимость: 1500
-                                    рублей</strong>
-                                <br>В стоимость входит: работа инструктора и экскурсионная программа
-                            </p>
+                            <div class="excursions__price">
+                                <div class="excursions__price-title">Стоимость</div>
+                                <div class="excursions__price-amounts">
+                                    <div class="excursions__price-amount"><strong>1500 рублей</strong></div>
+                                </div>
+                                <div class="excursions__price-included">В стоимость входит: работа инструктора и экскурсионная программа</div>
+                            </div>
                             <hr>
 
                             <br>
@@ -249,11 +253,13 @@ require_once 'parts/formEx.php';
                             </p>
 
                             <hr>
-                            <p class="excursions__price" style="margin: 0; text-align: left;"><strong>Стоимость: 3500
-                                    рублей</strong>
-                                <br>В стоимость входит: работа инструктора и экскурсионная программа в пространстве
-                                «Гений места»
-                            </p>
+                            <div class="excursions__price">
+                                <div class="excursions__price-title">Стоимость</div>
+                                <div class="excursions__price-amounts">
+                                    <div class="excursions__price-amount"><strong>3500 рублей</strong></div>
+                                </div>
+                                <div class="excursions__price-included">В стоимость входит: работа инструктора и экскурсионная программа в пространстве «Гений места»</div>
+                            </div>
                             <hr>
 
                             <br>
@@ -316,13 +322,15 @@ require_once 'parts/formEx.php';
                             </p>
 
                             <hr>
-                            <p class="excursions__price" style="margin: 0; text-align: left;"><strong>Стоимость:
-                                    <br>1500р – при регистрации до 11 января<br>
-                                    1800р – при регистрации с 12 января
-                                </strong>
-                                <br>В стоимость входит: сопровождение профессиональным гидом-инструктором, проведение разминки и дыхательной гимнастики
-                                <br><em>Дополнительно оплачивается: перекус в кафе «Панда», билет на речную прогулку на электрокатере (ориентировочно 120 рублей)</em>
-                            </p>
+                            <div class="excursions__price">
+                                <div class="excursions__price-title">Стоимость</div>
+                                <div class="excursions__price-amounts">
+                                    <div class="excursions__price-amount"><strong>1500р</strong> – при регистрации до 11 января</div>
+                                    <div class="excursions__price-amount"><strong>1800р</strong> – при регистрации с 12 января</div>
+                                </div>
+                                <div class="excursions__price-included">В стоимость входит: сопровождение профессиональным гидом-инструктором, проведение разминки и дыхательной гимнастики</div>
+                                <div class="excursions__price-additional">Дополнительно оплачивается: перекус в кафе «Панда», билет на речную прогулку на электрокатере (ориентировочно 120 рублей)</div>
+                            </div>
                             <hr>
 
                             <br>
@@ -381,14 +389,16 @@ require_once 'parts/formEx.php';
                             </p>
 
                             <hr>
-                            <p class="excursions__price" style="margin: 0; text-align: left;"><strong>Стоимость:
-                                    <br>2200р – при регистрации до 18 января (взрослые)<br>
-                                    2600р – при регистрации с 19 января (взрослые)<br>
-                                    1600р – при регистрации для детей
-                                </strong>
-                                <br>В стоимость входит: сопровождение профессиональным гидом-инструктором, экскурсия по выставке
-                                <br><em>Дополнительно оплачивается: входной билет на выставку «Жили-были. Царство русской сказки» (стоимость 1400 рублей без льгот)</em>
-                            </p>
+                            <div class="excursions__price">
+                                <div class="excursions__price-title">Стоимость</div>
+                                <div class="excursions__price-amounts">
+                                    <div class="excursions__price-amount"><strong>2200р</strong> – при регистрации до 18 января (взрослые)</div>
+                                    <div class="excursions__price-amount"><strong>2600р</strong> – при регистрации с 19 января (взрослые)</div>
+                                    <div class="excursions__price-amount"><strong>1600р</strong> – при регистрации для детей</div>
+                                </div>
+                                <div class="excursions__price-included">В стоимость входит: сопровождение профессиональным гидом-инструктором, экскурсия по выставке</div>
+                                <div class="excursions__price-additional">Дополнительно оплачивается: входной билет на выставку «Жили-были. Царство русской сказки» (стоимость 1400 рублей без льгот)</div>
+                            </div>
                             <hr>
 
                             <br>
@@ -440,13 +450,15 @@ require_once 'parts/formEx.php';
                             </p>
 
                             <hr>
-                            <p class="excursions__price" style="margin: 0; text-align: left;"><strong>Стоимость:
-                                    <br>1900р – при регистрации до 25 января<br>
-                                    2400р – при регистрации с 26 января
-                                </strong>
-                                <br>В стоимость входит: экскурсия по музею, организация прогулки
-                                <br><em>Дополнительно оплачивается входной билет на выставку (400 рублей)</em>
-                            </p>
+                            <div class="excursions__price">
+                                <div class="excursions__price-title">Стоимость</div>
+                                <div class="excursions__price-amounts">
+                                    <div class="excursions__price-amount"><strong>1900р</strong> – при регистрации до 25 января</div>
+                                    <div class="excursions__price-amount"><strong>2400р</strong> – при регистрации с 26 января</div>
+                                </div>
+                                <div class="excursions__price-included">В стоимость входит: экскурсия по музею, организация прогулки</div>
+                                <div class="excursions__price-additional">Дополнительно оплачивается входной билет на выставку (400 рублей)</div>
+                            </div>
                             <hr>
 
                             <br>
