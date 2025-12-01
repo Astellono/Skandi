@@ -16,7 +16,7 @@ const getDatesArray = (start, end) => {
 };
 
 export let tourList = [
-    
+
     {
         nameT: "Псковское ожерелье",
         date: getDatesArray(new Date('2025-10-10'), new Date('2025-10-12')),
@@ -40,7 +40,7 @@ export let tourList = [
         color: "#d24220",
         srcImg: 'img/act-tour/abh.jpg',
     },
-  
+
     {
         nameT: "Торжок: Императорский шаг",
         date: getDatesArray(new Date('2025-12-12'), new Date('2025-12-14')),
@@ -56,6 +56,13 @@ export let tourList = [
         srcImg: 'img/act-tour/altay.jpg',
     },
     {
+        nameT: "Тур «Сибирская Масленица: Тобольск в ритме скандинавской ходьбы»",
+        date: getDatesArray(new Date('2026-02-19'), new Date('2026-02-23')),
+        link: "page_tour/masl.php",
+        color: "#1e48bdff",
+        srcImg: 'img/act-tour/masl.jpeg',
+    },
+    {
         nameT: "Карелия. Паанаярви.",
         date: getDatesArray(new Date('2026-03-07'), new Date('2026-03-11')),
         link: "page_tour/pan.php",
@@ -69,7 +76,7 @@ export let tourList = [
         color: 'rgba(56, 126, 126, 1)',
         srcImg: 'img/act-tour/koreya.jpg',
     },
-    
+
     {
         nameT: "Узбекистан",
         date: getDatesArray(new Date('2026-05-03'), new Date('2026-05-10')),
@@ -98,7 +105,20 @@ export let tourList = [
         color: 'rgba(33, 13, 56, 1)',
         srcImg: 'img/act-tour/kirg.jpg',
     },
-
+    {
+        nameT: "Тур: «Грузия в бархатный сезон: вино, стиль и сезон ртвели»",
+        date: getDatesArray(new Date('2026-09-07'), new Date('2026-09-13')),
+        link: "page_tour/gruz.php",
+        color: 'rgba(119, 104, 138, 1)',
+        srcImg: 'img/act-tour/gruz.jpeg',
+    },
+    {
+        nameT: "Тур: «Дыхание Казахстана: Алматинские горы и легенды Великой Степи»",
+        date: getDatesArray(new Date('2026-10-04'), new Date('2026-10-11')),
+        link: "page_tour/kazah.php",
+        color: 'rgba(110, 182, 116, 1)',
+        srcImg: 'img/act-tour/kazah.jpeg',
+    },
 
 
 
