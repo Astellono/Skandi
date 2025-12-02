@@ -2719,6 +2719,25 @@ table * {
     margin-top: 5px;
 }
 
+/* Стили для кнопки "Забыли пароль?" */
+.fogotPass {
+    display: inline-block;
+    color: #775381;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    cursor: pointer;
+}
+
+.fogotPass:hover {
+    color: #573e5e;
+    text-decoration: underline;
+}
+
+.fogotPass:active {
+    color: #4F3156;
+}
+
 
 
 
