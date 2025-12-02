@@ -129,7 +129,7 @@ require_once 'parts/formEx.php';
                             <br>
 
                             <a class="excursions__link" onclick="event.stopPropagation();"
-                                data-name="Северный маршрут">Записаться</a>
+                                data-name="Северный маршрут" data-id="sever">Записаться</a>
                         </div>
                     </div>
                 </li>
@@ -194,7 +194,7 @@ require_once 'parts/formEx.php';
                             <br>
 
                             <a class="excursions__link" onclick="event.stopPropagation();"
-                                data-name="Остров">Записаться</a>
+                                data-name="Остров" data-id="island">Записаться</a>
                         </div>
                     </div>
                 </li>
@@ -265,7 +265,7 @@ require_once 'parts/formEx.php';
                             <br>
 
                             <a class="excursions__link" onclick="event.stopPropagation();"
-                                data-name="Театр">Записаться</a>
+                                data-name="Театр" data-id="vahtang">Записаться</a>
                         </div>
                     </div>
                 </li>
@@ -336,7 +336,7 @@ require_once 'parts/formEx.php';
                             <br>
 
                             <a class="excursions__link" onclick="event.stopPropagation();"
-                                data-name="Нарышкины-Москва-Сити">Записаться</a>
+                                data-name="Нарышкины-Москва-Сити" data-id="naryshkiny-moscow-city">Записаться</a>
                         </div>
                     </div>
                 </li>
@@ -404,7 +404,7 @@ require_once 'parts/formEx.php';
                             <br>
 
                             <a class="excursions__link" onclick="event.stopPropagation();"
-                                data-name="Лефортово">Записаться</a>
+                                data-name="Лефортово" data-id="lefortovo">Записаться</a>
                         </div>
                     </div>
                 </li>
@@ -464,7 +464,7 @@ require_once 'parts/formEx.php';
                             <br>
 
                             <a class="excursions__link" onclick="event.stopPropagation();"
-                                data-name="Театральная Москва">Записаться</a>
+                                data-name="Театральная Москва" data-id="theatrical-moscow">Записаться</a>
                         </div>
                     </div>
                 </li>

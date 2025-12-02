@@ -19,21 +19,50 @@ if (!($connect instanceof mysqli)) {
 // Fetch user data (support two possible schemas)
 require '../getDATA/getUserData.php';
 
-// Fetch tour sign-ups
-// $tourStmt = prepare_first_success($connect, [
-//     'SELECT signing_tour_id AS tour_id FROM signing WHERE signing_user_id = ? ORDER BY signing_id DESC',
-// ]);
-// $tours = [];
-// if ($tourStmt) {
-//     $tourStmt->bind_param('i', $userId);
-//     $tourStmt->execute();
-//     $tourRes = $tourStmt->get_result();
-//     if ($tourRes) {
-//         while ($row = $tourRes->fetch_assoc()) {
-//             $tours[] = $row['tour_id'];
-//         }
-//     }
-// }
+// Fetch tour sign-ups with tour details
+$tourStmt = prepare_first_success($connect, [
+    'SELECT s.signing_id, s.signing_tour_id, t.tour_name, t.tour_date, t.tour_linkPage 
+     FROM signing s 
+     LEFT JOIN tours t ON s.signing_tour_id = t.tour_id 
+     WHERE s.signing_user_id = ? 
+     ORDER BY s.signing_id DESC',
+]);
+$tours = [];
+if ($tourStmt) {
+    $tourStmt->bind_param('i', $userId);
+    $tourStmt->execute();
+    $tourRes = $tourStmt->get_result();
+    if ($tourRes) {
+        while ($row = $tourRes->fetch_assoc()) {
+            $tours[] = $row;
+        }
+    }
+    $tourStmt->close();
+}
+
+// Fetch excursion sign-ups
+$excursions = [];
+// Проверяем, существует ли таблица excursion_signings
+$tableCheck = $connect->query("SHOW TABLES LIKE 'excursion_signings'");
+if ($tableCheck && $tableCheck->num_rows > 0) {
+    $excursionStmt = prepare_first_success($connect, [
+        'SELECT excursion_id, excursion_name, excursion_link_id, excursion_date, created_at 
+         FROM excursion_signings 
+         WHERE user_id = ? 
+         ORDER BY created_at DESC',
+    ]);
+    if ($excursionStmt) {
+        $excursionStmt->bind_param('i', $userId);
+        $excursionStmt->execute();
+        $excursionRes = $excursionStmt->get_result();
+        if ($excursionRes) {
+            while ($row = $excursionRes->fetch_assoc()) {
+                $excursions[] = $row;
+            }
+        }
+        $excursionStmt->close();
+    }
+}
 
 // Traveler questionnaire
 $rqStmt = prepare_first_success($connect, [
@@ -160,11 +189,31 @@ if ($rqStmt) {
                     <h2>Мои туры</h2>
                 </div>
                 <div class="lk-card__content">
-                    
-                        <div class="lk-empty">В разработке...</div>
-                    
-                  
-                    <!-- <a class="btn btn-outline-primary" href="/tour.php">Перейти в туры</a> -->
+                    <?php if (empty($tours)): ?>
+                        <div class="lk-empty">Вы пока не записаны ни на один тур.</div>
+                        <a class="btn btn-outline-primary mt-3" href="/tour.php">Перейти к турам</a>
+                    <?php else: ?>
+                        <div class="lk-tours-list">
+                            <?php foreach ($tours as $tour): ?>
+                                <div class="lk-tour-item mb-3 p-3 border rounded">
+                                    <h4 class="mb-2">
+                                        <?php echo htmlspecialchars($tour['tour_name'] ?? 'Тур #' . $tour['signing_tour_id']); ?>
+                                    </h4>
+                                    <?php if (!empty($tour['tour_date'])): ?>
+                                        <p class="text-muted mb-2">
+                                            <strong>Даты:</strong> <?php echo htmlspecialchars($tour['tour_date']); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                    <?php if (!empty($tour['tour_linkPage'])): ?>
+                                        <a href="/<?php echo htmlspecialchars($tour['tour_linkPage']); ?>" 
+                                           class="btn btn-sm btn-outline-primary">
+                                            Подробнее о туре
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </section>
 
@@ -173,9 +222,34 @@ if ($rqStmt) {
                     <h2>Мои экскурсии</h2>
                 </div>
                 <div class="lk-card__content">
-                    <div class="lk-empty">В разработке...</div>
-                    <!-- <div class="lk-empty">История записей на экскурсии пока недоступна. Запись оформляется через форму на странице «Сканди-мероприятия».</div> -->
-                    <!-- <a class="btn btn-outline-primary" href="/excursions.php">Перейти к экскурсиям</a> -->
+                    <?php if (empty($excursions)): ?>
+                        <div class="lk-empty">Вы пока не записаны ни на одну экскурсию.</div>
+                        <a class="btn btn-outline-primary mt-3" href="/excursions.php">Перейти к экскурсиям</a>
+                    <?php else: ?>
+                        <div class="lk-excursions-list">
+                            <?php foreach ($excursions as $excursion): ?>
+                                <div class="lk-excursion-item mb-3 p-3 border rounded">
+                                    <h4 class="mb-2">
+                                        <?php echo htmlspecialchars($excursion['excursion_name']); ?>
+                                    </h4>
+                                    <?php if (!empty($excursion['excursion_date'])): ?>
+                                        <p class="text-muted mb-2">
+                                            <strong>Дата:</strong> <?php echo htmlspecialchars($excursion['excursion_date']); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                    <p class="text-muted small mb-2">
+                                        <strong>Дата записи:</strong> <?php echo date('d.m.Y H:i', strtotime($excursion['created_at'])); ?>
+                                    </p>
+                                    <?php if (!empty($excursion['excursion_link_id'])): ?>
+                                        <a href="/excursions.php#<?php echo htmlspecialchars($excursion['excursion_link_id']); ?>" 
+                                           class="btn btn-sm btn-outline-primary mt-2">
+                                            Подробнее об экскурсии
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </section>
 

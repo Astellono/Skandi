@@ -10,12 +10,17 @@ linkForm.forEach(e => {
 
         let nameHash = '#form' + window.location.hash.slice(1)
         let name = e.dataset.name
+        let excursionId = e.dataset.id || ''
         modalEx.id = nameHash.slice(1)
         console.log(name);
         e.setAttribute('href', nameHash)
 
         console.log();
-        exForm.setAttribute('action', 'php/excursion/sendEx.php' + '?name=' + name)
+        let actionUrl = 'php/excursion/sendEx.php?name=' + encodeURIComponent(name)
+        if (excursionId) {
+            actionUrl += '&id=' + encodeURIComponent(excursionId)
+        }
+        exForm.setAttribute('action', actionUrl)
 
 
     })
