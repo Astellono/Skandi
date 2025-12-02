@@ -1,56 +1,153 @@
 <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="authModalLabel">Аккаунт</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="btn-group w-100 mb-3" role="group">
-                    <button type="button" class="btn btn-outline-primary active" id="tabLogin">Вход</button>
-                    <button type="button" class="btn btn-outline-secondary" id="tabRegister">Регистрация</button>
+        <div class="modal-content auth-modal-content">
+            <div class="modal-header auth-modal-header">
+                <div class="auth-header-content">
+                    <h5 class="modal-title auth-modal-title" id="authModalLabel">Добро пожаловать</h5>
+                    <p class="auth-modal-subtitle">Войдите в свой аккаунт или создайте новый</p>
                 </div>
-                <form action="/phpLogin/login.php" id="loginForm" class="needs-validation" method="POST" novalidate>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" name="user_email" class="form-control" required>
+                <button type="button" class="btn-close auth-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body auth-modal-body">
+                <div class="auth-tabs">
+                    <button type="button" class="auth-tab active" id="tabLogin">
+                        <svg class="auth-tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <path d="M20 8v6M23 11h-6"></path>
+                        </svg>
+                        <span>Вход</span>
+                    </button>
+                    <button type="button" class="auth-tab" id="tabRegister">
+                        <svg class="auth-tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <line x1="20" y1="8" x2="20" y2="14"></line>
+                            <line x1="23" y1="11" x2="17" y2="11"></line>
+                        </svg>
+                        <span>Регистрация</span>
+                    </button>
+                </div>
+
+                <form action="/phpLogin/login.php" id="loginForm" class="auth-form needs-validation" method="POST" novalidate>
+                    <div class="auth-form-group">
+                        <label class="auth-form-label">
+                            <svg class="auth-label-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Email</span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input type="email" name="user_email" class="auth-form-input" placeholder="your.email@example.com" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Пароль</label>
-                        <input type="password" name="user_pass" class="form-control" required>
+                    <div class="auth-form-group">
+                        <label class="auth-form-label">
+                            <svg class="auth-label-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>Пароль</span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input type="password" name="user_pass" class="auth-form-input" placeholder="••••••••" required>
+                        </div>
                     </div>
-                    <div class="text-danger small" id="loginError" style="display:none"></div>
-                    <div class="mb-2">
-                        <a href="#" id="forgotPasswordLink" class="fogotPass">Забыли пароль?</a>
+                    <div class="auth-error-message" id="loginError" style="display:none"></div>
+                    <div class="auth-form-footer">
+                        <a href="#" id="forgotPasswordLink" class="auth-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            Забыли пароль?
+                        </a>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Войти</button>
+                    <button type="submit" class="auth-submit-btn">
+                        <span>Войти</span>
+                        <svg class="auth-submit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </form>
-                <form id="forgotPasswordForm" action="/phpLogin/forgot_password.php" class="needs-validation" method="POST" style="display:none" novalidate>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" name="user_email" class="form-control" required>
-                        <small class="form-text text-muted">Введите email, на который будет отправлена ссылка для восстановления пароля</small>
+
+                <form id="forgotPasswordForm" action="/phpLogin/forgot_password.php" class="auth-form needs-validation" method="POST" style="display:none" novalidate>
+                    <div class="auth-form-group">
+                        <label class="auth-form-label">
+                            <svg class="auth-label-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Email</span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input type="email" name="user_email" class="auth-form-input" placeholder="your.email@example.com" required>
+                        </div>
+                        <small class="auth-form-hint">Введите email, на который будет отправлена ссылка для восстановления пароля</small>
                     </div>
-                    <div class="d-flex gap-2">
-                        <button type="button" class="btn btn-secondary" id="backToLoginBtn">Назад</button>
-                        <button type="submit" class="btn btn-primary flex-grow-1">Отправить</button>
+                    <div class="auth-form-footer">
+                        <button type="button" class="auth-link-btn" id="backToLoginBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                            </svg>
+                            <span>Назад</span>
+                        </button>
                     </div>
+                    <button type="submit" class="auth-submit-btn">
+                        <span>Отправить</span>
+                        <svg class="auth-submit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
                 </form>
-                <form id="registerForm" action="/phpLogin/register.php" class="needs-validation" method="POST" style="display:none" novalidate>
-                    <div class="mb-3">
-                        <label class="form-label">Имя</label>
-                        <input type="text" name="user_name" class="form-control" required>
+
+                <form id="registerForm" action="/phpLogin/register.php" class="auth-form needs-validation" method="POST" style="display:none" novalidate>
+                    <div class="auth-form-group">
+                        <label class="auth-form-label">
+                            <svg class="auth-label-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>Имя</span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input type="text" name="user_name" class="auth-form-input" placeholder="Ваше имя" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" name="user_email" class="form-control" required>
+                    <div class="auth-form-group">
+                        <label class="auth-form-label">
+                            <svg class="auth-label-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Email</span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input type="email" name="user_email" class="auth-form-input" placeholder="your.email@example.com" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Пароль</label>
-                        <input type="password" name="user_pass" class="form-control" minlength="6" required>
+                    <div class="auth-form-group">
+                        <label class="auth-form-label">
+                            <svg class="auth-label-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>Пароль</span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input type="password" name="user_pass" class="auth-form-input" placeholder="Минимум 6 символов" minlength="6" required>
+                        </div>
                     </div>
-                    <div class="text-danger small" id="registerError" style="display:none"></div>
-                    <button type="submit" class="btn btn-primary  w-100" >Зарегистрироваться</button>
+                    <div class="auth-error-message" id="registerError" style="display:none"></div>
+                    <button type="submit" class="auth-submit-btn">
+                        <span>Зарегистрироваться</span>
+                        <svg class="auth-submit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>
