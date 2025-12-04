@@ -21,7 +21,7 @@ require '../getDATA/getUserData.php';
 
 // Fetch tour sign-ups with tour details
 $tourStmt = prepare_first_success($connect, [
-    'SELECT s.signing_id, s.signing_tour_id, t.tour_name, t.tour_date, t.tour_linkPage 
+    'SELECT s.signing_id, s.signing_tour_id, s.created_at, t.tour_name, t.tour_date, t.tour_linkPage 
      FROM signing s 
      LEFT JOIN tours t ON s.signing_tour_id = t.tour_id 
      WHERE s.signing_user_id = ? 
@@ -195,19 +195,48 @@ if ($rqStmt) {
                     <?php else: ?>
                         <div class="lk-tours-list">
                             <?php foreach ($tours as $tour): ?>
-                                <div class="lk-tour-item mb-3 p-3 border rounded">
-                                    <h4 class="mb-2">
-                                        <?php echo htmlspecialchars($tour['tour_name'] ?? 'Тур #' . $tour['signing_tour_id']); ?>
-                                    </h4>
-                                    <?php if (!empty($tour['tour_date'])): ?>
-                                        <p class="text-muted mb-2">
-                                            <strong>Даты:</strong> <?php echo htmlspecialchars($tour['tour_date']); ?>
-                                        </p>
-                                    <?php endif; ?>
+                                <div class="lk-tour-item">
+                                    <div class="lk-item-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="lk-item-content">
+                                        <h4 class="lk-item-title">
+                                            <?php echo htmlspecialchars($tour['tour_name'] ?? 'Тур #' . $tour['signing_tour_id']); ?>
+                                        </h4>
+                                        <div class="lk-item-meta-group">
+                                            <?php if (!empty($tour['tour_date'])): ?>
+                                                <div class="lk-item-meta">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                                                        <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                                        <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                                        <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+                                                    </svg>
+                                                    <span><?php echo htmlspecialchars($tour['tour_date']); ?></span>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if (!empty($tour['created_at'])): ?>
+                                                <div class="lk-item-meta">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                                        <polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    <span>Запись: <?php echo date('d.m.Y', strtotime($tour['created_at'])); ?></span>
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
                                     <?php if (!empty($tour['tour_linkPage'])): ?>
                                         <a href="/<?php echo htmlspecialchars($tour['tour_linkPage']); ?>" 
-                                           class="btn btn-sm btn-outline-primary">
-                                            Подробнее о туре
+                                           class="lk-item-link">
+                                            Подробнее
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
                                         </a>
                                     <?php endif; ?>
                                 </div>
@@ -228,22 +257,45 @@ if ($rqStmt) {
                     <?php else: ?>
                         <div class="lk-excursions-list">
                             <?php foreach ($excursions as $excursion): ?>
-                                <div class="lk-excursion-item mb-3 p-3 border rounded">
-                                    <h4 class="mb-2">
-                                        <?php echo htmlspecialchars($excursion['excursion_name']); ?>
-                                    </h4>
-                                    <?php if (!empty($excursion['excursion_date'])): ?>
-                                        <p class="text-muted mb-2">
-                                            <strong>Дата:</strong> <?php echo htmlspecialchars($excursion['excursion_date']); ?>
-                                        </p>
-                                    <?php endif; ?>
-                                    <p class="text-muted small mb-2">
-                                        <strong>Дата записи:</strong> <?php echo date('d.m.Y H:i', strtotime($excursion['created_at'])); ?>
-                                    </p>
+                                <div class="lk-excursion-item">
+                                    <div class="lk-item-icon lk-item-icon-excursion">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="lk-item-content">
+                                        <h4 class="lk-item-title">
+                                            <?php echo htmlspecialchars($excursion['excursion_name']); ?>
+                                        </h4>
+                                        <div class="lk-item-meta-group">
+                                            <?php if (!empty($excursion['excursion_date'])): ?>
+                                                <div class="lk-item-meta">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                                                        <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                                        <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                                        <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+                                                    </svg>
+                                                    <span><?php echo htmlspecialchars($excursion['excursion_date']); ?></span>
+                                                </div>
+                                            <?php endif; ?>
+                                            <div class="lk-item-meta">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                                    <polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>Запись: <?php echo date('d.m.Y', strtotime($excursion['created_at'])); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <?php if (!empty($excursion['excursion_link_id'])): ?>
                                         <a href="/excursions.php#<?php echo htmlspecialchars($excursion['excursion_link_id']); ?>" 
-                                           class="btn btn-sm btn-outline-primary mt-2">
-                                            Подробнее об экскурсии
+                                           class="lk-item-link">
+                                            Подробнее
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
                                         </a>
                                     <?php endif; ?>
                                 </div>

@@ -471,7 +471,7 @@ require_once '../parts/formTour.php';
     <script>
         <?php if ($_SESSION["user_id"] != '') { ?>
             let anceta = <?= json_encode($ancetaData); ?>[0];
-            let fio = '<?= $user['user_name'] ?>';
+            let fio = '<?= $user['user_familia'] . ' ' . $user['user_name'] . ' ' . $user['user_otch'] ?>';
             let email = '<?= $user['user_email'] ?>';
         <?php } ?>
     </script>
