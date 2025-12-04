@@ -1,36 +1,38 @@
 (async () => {
 try {
     const mod = await import(`./tourList.js?ver=${Date.now()}`);
+    // Ждем загрузки данных из БД
+    await mod.tourListPromise;
     const tourList = mod.tourList || [];
 
 function mounthNumberToString(name) {
     let mounthName = '';
     switch (name) {
-        case '1':
+        case '01':
             mounthName = 'января'
             break;
-        case '2':
+        case '02':
             mounthName = 'февраля'
             break;
-        case '3':
+        case '03':
             mounthName = 'марта'
             break;
-        case '4':
+        case '04':
             mounthName = 'апреля'
             break;
-        case '5':
+        case '05':
             mounthName = 'мая'
             break;
-        case '6':
+        case '06':
             mounthName = 'июня'
             break;
-        case '7':
+        case '07':
             mounthName = 'июля'
             break;
-        case '8':
+        case '08':
             mounthName = 'августа'
             break;
-        case '9':
+        case '09':
             mounthName = 'сентября'
             break;
         case '10':

@@ -197,6 +197,8 @@ function renderThreeMonths(startYear, startMonthIndex) {
 (async function initCalendar() {
 	try {
 		const mod = await import(`./tourList.js?ver=${Date.now()}`);
+		// Ждем загрузки данных из БД
+		await mod.tourListPromise;
 		tourList = mod.tourList || [];
 	} catch (e) {
 		console.error('Failed to load tourList', e);
