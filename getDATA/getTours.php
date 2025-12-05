@@ -23,7 +23,23 @@ if (!($connect instanceof mysqli)) {
     exit;
 }
 
-// Запрос к базе данных
+// Параметры сортировки из запроса
+$sort_by = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'tour_date_start';
+$sort_order = isset($_GET['sort_order']) ? strtoupper($_GET['sort_order']) : 'ASC';
+
+// Разрешенные поля для сортировки
+$allowed_sort_fields = ['tour_id', 'tour_name', 'tour_date_start', 'tour_date_end', 'tour_linkPage'];
+$allowed_sort_orders = ['ASC', 'DESC'];
+
+// Валидация параметров сортировки
+if (!in_array($sort_by, $allowed_sort_fields)) {
+    $sort_by = 'tour_date_start';
+}
+if (!in_array($sort_order, $allowed_sort_orders)) {
+    $sort_order = 'ASC';
+}
+
+// Запрос к базе данных с сортировкой
 $query = "SELECT 
     tour_id,
     tour_name,
@@ -33,7 +49,7 @@ $query = "SELECT
     tour_date_start,
     tour_date_end
 FROM tours 
-ORDER BY tour_date_start ASC";
+ORDER BY $sort_by $sort_order";
 
 $result = $connect->query($query);
 

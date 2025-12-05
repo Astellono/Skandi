@@ -18,6 +18,70 @@ require_once $_SERVER['DOCUMENT_ROOT']. '/getDATA/getUserData.php';
     .acc__item:last-child .acc__link:hover {
         opacity: 0.8;
     }
+
+    .admin-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s;
+        margin: 5px 0;
+    }
+
+    .admin-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+
+    .admin-btn i {
+        font-size: 16px;
+    }
+
+    .admin-btn-mobile {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 10px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s;
+        margin: 8px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .admin-btn-mobile:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+
+    .header__link.admin-link {
+        color: #667eea;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .header__link.admin-link:hover {
+        color: #764ba2;
+    }
+
+    .header__link.admin-link i {
+        margin-right: 6px;
+    }
 </style>
 <?php if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -54,6 +118,13 @@ require_once $_SERVER['DOCUMENT_ROOT']. '/getDATA/getUserData.php';
                     Медиа
                 </a>
             </li>
+            <?php if (isset($_SESSION['user_id']) && (int)$_SESSION['user_id'] === 7): ?>
+            <li class="header__item">
+                <a href="/admin/index.php" class="header__link admin-link">
+                    </i> Админ
+                </a>
+            </li>
+            <?php endif; ?>
             <li class="header__item  header__mobile-auth">
 
                 <?php if (!isset($_SESSION['user_id'])): ?>
