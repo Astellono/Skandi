@@ -4,7 +4,8 @@ let tourList = [];
 // Функция для загрузки туров из БД
 async function loadTourList() {
     try {
-        const response = await fetch('/getDATA/getTours.php');
+        // Используем ЧПУ-адрес (переписывается в .htaccess на getTours.php)
+        const response = await fetch('/getDATA/getTours');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

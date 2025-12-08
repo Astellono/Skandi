@@ -11,22 +11,22 @@ document.getElementById("header").innerHTML = '\
                     <img class="header__cross-img" src="/img/header/cross.png" alt="">\
                 </li>\
                 <li class="header__item">\
-                    <a href="/index.php" class="header__link">\
+                <a href="/index" class="header__link">\
                         О нас\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/menu.php" class="header__link">\
+                    <a href="/menu" class="header__link">\
                         Сканди-активности\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/shop.php" class="header__link">\
+                    <a href="/shop" class="header__link">\
                         Товары\
                     </a>\
                 </li>\
                 <li class="header__item">\
-                    <a href="/video.php" class="header__link">\
+                    <a href="/video" class="header__link">\
                         Медиа\
                     </a>\
                 </li>\

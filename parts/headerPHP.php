@@ -99,28 +99,28 @@ require_once $_SERVER['DOCUMENT_ROOT']. '/getDATA/getUserData.php';
                 <img class="header__cross-img" src="/img/header/cross.png" alt="">
             </li>
             <li class="header__item">
-                <a href="/index.php" class="header__link">
+                <a href="/index" class="header__link">
                     О нас
                 </a>
             </li>
             <li class="header__item">
-                <a href="/menu.php" class="header__link">
+                <a href="/menu" class="header__link">
                     Сканди-активности
                 </a>
             </li>
             <li class="header__item">
-                <a href="/shop.php" class="header__link">
+                <a href="/shop" class="header__link">
                     Товары
                 </a>
             </li>
             <li class="header__item">
-                <a href="/video.php" class="header__link">
+                <a href="/video" class="header__link">
                     Медиа
                 </a>
             </li>
             <?php if (isset($_SESSION['user_id']) && (int)$_SESSION['user_id'] === 7): ?>
             <li class="header__item">
-                <a href="/admin/index.php" class="header__link admin-link">
+                <a href="/admin/index" class="header__link admin-link">
                     </i> Админ
                 </a>
             </li>
