@@ -16,7 +16,14 @@ async function deleteTour(tourId, tourName) {
         const result = await response.json();
         
         if (result.success) {
-            alert('Тур успешно удален!');
+            let message = 'Тур успешно удален!';
+            if (result.deleted_files && result.deleted_files.length > 0) {
+                message += '\n\nУдалены файлы:\n' + result.deleted_files.join('\n');
+            }
+            if (result.errors && result.errors.length > 0) {
+                message += '\n\nПредупреждения:\n' + result.errors.join('\n');
+            }
+            alert(message);
             // Перезагружаем страницу для обновления списка
             window.location.reload();
         } else {
