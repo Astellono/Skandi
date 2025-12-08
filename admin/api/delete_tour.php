@@ -39,9 +39,26 @@ if (!($connect instanceof mysqli)) {
     exit;
 }
 
+// Функция для нормализации пути (работает на Windows и Linux)
+function normalizePath($path) {
+    // Заменяем обратные слеши на прямые
+    $path = str_replace('\\', '/', $path);
+    // Убираем начальный слеш, если есть
+    $path = ltrim($path, '/');
+    return $path;
+}
+
+// Функция для получения полного пути к файлу
+function getFullPath($relativePath) {
+    $normalized = normalizePath($relativePath);
+    $docRoot = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
+    $docRoot = rtrim($docRoot, '/');
+    return $docRoot . '/' . $normalized;
+}
+
 try {
-    // Проверяем, существует ли тур
-    $checkStmt = $connect->prepare("SELECT tour_id FROM tours WHERE tour_id = ?");
+    // Получаем данные тура перед удалением
+    $checkStmt = $connect->prepare("SELECT tour_linkPage, tour_imgSrc FROM tours WHERE tour_id = ?");
     $checkStmt->bind_param('i', $tour_id);
     $checkStmt->execute();
     $result = $checkStmt->get_result();
@@ -52,14 +69,81 @@ try {
         $checkStmt->close();
         exit;
     }
+    
+    $tour = $result->fetch_assoc();
     $checkStmt->close();
     
-    // Удаляем тур
+    $deletedFiles = [];
+    $errors = [];
+    
+    // Удаляем файл страницы тура
+    if (!empty($tour['tour_linkPage'])) {
+        $pagePath = trim($tour['tour_linkPage']);
+        $fullPagePath = getFullPath($pagePath);
+        
+        // Логируем для отладки
+        error_log("Удаление страницы тура. Исходный путь из БД: '" . $tour['tour_linkPage'] . "', Полный путь: '" . $fullPagePath . "', DOCUMENT_ROOT: '" . $_SERVER['DOCUMENT_ROOT'] . "'");
+        
+        // Проверяем, существует ли файл и удаляем его
+        if (file_exists($fullPagePath) && is_file($fullPagePath)) {
+            if (@unlink($fullPagePath)) {
+                $deletedFiles[] = 'Страница тура: ' . $pagePath;
+                error_log("Файл страницы успешно удален: " . $fullPagePath);
+            } else {
+                $lastError = error_get_last();
+                $errorMsg = $lastError ? $lastError['message'] : 'Неизвестная ошибка';
+                $errors[] = 'Не удалось удалить файл страницы: ' . $pagePath;
+                error_log("ОШИБКА удаления файла страницы тура: " . $fullPagePath . " (ошибка: " . $errorMsg . ")");
+            }
+        } else {
+            $errors[] = 'Файл страницы не найден: ' . $pagePath . ' (полный путь: ' . $fullPagePath . ')';
+            error_log("Файл страницы не найден. file_exists=" . (file_exists($fullPagePath) ? 'true' : 'false') . ", is_file=" . (is_file($fullPagePath) ? 'true' : 'false') . ", путь: " . $fullPagePath);
+        }
+    }
+    
+    // Удаляем файл картинки
+    if (!empty($tour['tour_imgSrc'])) {
+        $imgPath = trim($tour['tour_imgSrc']);
+        $fullImgPath = getFullPath($imgPath);
+        
+        // Логируем для отладки
+        error_log("Удаление изображения тура. Исходный путь из БД: '" . $tour['tour_imgSrc'] . "', Полный путь: '" . $fullImgPath . "', DOCUMENT_ROOT: '" . $_SERVER['DOCUMENT_ROOT'] . "'");
+        
+        // Проверяем, существует ли файл и удаляем его
+        if (file_exists($fullImgPath) && is_file($fullImgPath)) {
+            if (@unlink($fullImgPath)) {
+                $deletedFiles[] = 'Изображение: ' . $imgPath;
+                error_log("Файл изображения успешно удален: " . $fullImgPath);
+            } else {
+                $lastError = error_get_last();
+                $errorMsg = $lastError ? $lastError['message'] : 'Неизвестная ошибка';
+                $errors[] = 'Не удалось удалить файл изображения: ' . $imgPath;
+                error_log("ОШИБКА удаления файла изображения тура: " . $fullImgPath . " (ошибка: " . $errorMsg . ")");
+            }
+        } else {
+            $errors[] = 'Файл изображения не найден: ' . $imgPath . ' (полный путь: ' . $fullImgPath . ')';
+            error_log("Файл изображения не найден. file_exists=" . (file_exists($fullImgPath) ? 'true' : 'false') . ", is_file=" . (is_file($fullImgPath) ? 'true' : 'false') . ", путь: " . $fullImgPath);
+        }
+    }
+    
+    // Удаляем тур из базы данных
     $stmt = $connect->prepare("DELETE FROM tours WHERE tour_id = ?");
     $stmt->bind_param('i', $tour_id);
     
     if ($stmt->execute()) {
-        echo json_encode(['success' => true, 'message' => 'Тур успешно удален']);
+        $message = 'Тур успешно удален';
+        if (!empty($deletedFiles)) {
+            $message .= '. Удалены файлы: ' . implode(', ', $deletedFiles);
+        }
+        if (!empty($errors)) {
+            $message .= '. Ошибки: ' . implode(', ', $errors);
+        }
+        echo json_encode([
+            'success' => true, 
+            'message' => $message,
+            'deleted_files' => $deletedFiles,
+            'errors' => $errors
+        ]);
     } else {
         http_response_code(500);
         echo json_encode(['success' => false, 'message' => 'Ошибка при удалении: ' . $stmt->error]);

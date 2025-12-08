@@ -80,14 +80,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     <div class="form-group">
                         <label for="tour_linkPage">Ссылка на страницу тура *</label>
                         <input type="text" id="tour_linkPage" name="tour_linkPage" required
-                               value="<?php echo $tour ? htmlspecialchars($tour['tour_linkPage']) : ''; ?>"
+                               value="<?php echo $tour ? htmlspecialchars($tour['tour_linkPage']) : 'page_tour/TestTour.php'; ?>"
                                placeholder="page_tour/torzhok.php">
                     </div>
 
                     <div class="form-group">
                         <label for="tour_imgSrc">Путь к изображению *</label>
                         <input type="text" id="tour_imgSrc" name="tour_imgSrc" required
-                               value="<?php echo $tour ? htmlspecialchars($tour['tour_imgSrc']) : ''; ?>"
+                               value="<?php echo $tour ? htmlspecialchars($tour['tour_imgSrc']) : 'img/act-tour/TestTour.jpg'; ?>"
                                placeholder="img/act-tour/torzhok.jpg">
                     </div>
 

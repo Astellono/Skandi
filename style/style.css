@@ -115,10 +115,7 @@ section.visible {
     max-width: 1170px;
     padding: 0 77px;
 }
-.container__header {
-   
-    
-}
+
 button {
     background: none;
     border: none;
@@ -301,10 +298,7 @@ button {
  
     align-items: center;
 }
-.acc__item {
-    
-    
-}
+
 .acc__item:not(:last-child) {
     margin-right: 15px;
 }
@@ -425,12 +419,12 @@ button {
 }
 
 .about__storySmall {
-    -webkit-line-clamp: 5;
+    line-clamp: 5;
     max-height: 200px;
 }
 
 .about__storyFull {
-    -webkit-line-clamp: 1000;
+    line-clamp: 1000;
     max-height: 1000px;
 }
 
@@ -559,7 +553,7 @@ button {
     display: -webkit-box;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    line-clamp: 4;
     overflow: hidden;
 }
 
