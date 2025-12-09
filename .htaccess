@@ -1,14 +1,17 @@
 Options +FollowSymLinks
 RewriteEngine On
 
-# Redirect direct .php requests to extensionless URLs (force absolute path to avoid leaking FS path on Windows)
-RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?]
+# Redirect direct .php requests to extensionless URLs only for public pages (GET/HEAD) and outside service dirs
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{REQUEST_URI} !^/(php|phpLogin|admin|getDATA|modal|parts|js|style|img|fonts|uploads|files|lk|getDATA)/
+RewriteCond %{THE_REQUEST} \s/([^\s.?]+)\.php(?:[?\s]|$)
 RewriteRule ^ /%1 [R=301,L,NE]
 
 # Redirect /index or /index.php to site root
 RewriteRule ^index(\.php)?$ / [R=301,L]
 
-# Serve extensionless URLs by mapping to .php files
+# Serve extensionless URLs by mapping to .php files (same scope as above)
+RewriteCond %{REQUEST_URI} !^/(php|phpLogin|admin|getDATA|modal|parts|js|style|img|fonts|uploads|files|lk|getDATA)/
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.php -f

@@ -3,7 +3,7 @@ session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/phpLogin/connect.php';
 
 // Проверка авторизации
-if (!isset($_SESSION['user_id']) || ($_SESSION['user_id']!=7)) {
+if (!isset($_SESSION['user_id']) || !in_array((int)$_SESSION['user_id'], [7, 10], true)) {
     header('Location: /');
     exit;
 }
@@ -63,6 +63,7 @@ function getSortIcon($field) {
         <header class="admin-header">
             <h1>Админ-панель</h1>
             <div class="admin-header-actions">
+                <a href="/admin/users.php" class="btn btn-secondary">Пользователи</a>
                 <a href="/index.php" class="btn btn-secondary" target="_blank">На сайт</a>
                 <a href="/phpLogin/logout.php" class="btn btn-danger">Выход</a>
             </div>

@@ -120,7 +120,7 @@ require_once $_SERVER['DOCUMENT_ROOT']. '/getDATA/getUserData.php';
             </li>
             <?php if (isset($_SESSION['user_id']) && (int)$_SESSION['user_id'] === 7): ?>
             <li class="header__item">
-                <a href="/admin/index" class="header__link admin-link">
+                <a href="/admin/admin.php" class="header__link admin-link">
                     </i> Админ
                 </a>
             </li>

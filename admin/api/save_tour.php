@@ -2,7 +2,7 @@
 session_start();
 header('Content-Type: application/json; charset=utf-8');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/phpLogin/connect.php';
-if (!isset($_SESSION['user_id']) || ($_SESSION['user_id']!=7)) {
+if (!isset($_SESSION['user_id']) || !in_array((int)$_SESSION['user_id'], [7, 10], true)) {
     header('Location: /');
     exit;
 }

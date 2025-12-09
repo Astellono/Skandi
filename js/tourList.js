@@ -5,7 +5,7 @@ let tourList = [];
 async function loadTourList() {
     try {
         // Используем ЧПУ-адрес (переписывается в .htaccess на getTours.php)
-        const response = await fetch('/getDATA/getTours');
+        const response = await fetch('/getDATA/getTours.php');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

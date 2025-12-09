@@ -3,7 +3,7 @@ session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/phpLogin/connect.php';
 
 // Проверка авторизации
-if (!isset($_SESSION['user_id']) || ($_SESSION['user_id']!=7)) {
+if (!isset($_SESSION['user_id']) || !in_array((int)$_SESSION['user_id'], [7, 10], true)) {
     header('Location: /');
     exit;
 }
@@ -38,7 +38,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         <header class="admin-header">
             <h1><?php echo $isEdit ? 'Редактирование тура' : 'Добавление тура'; ?></h1>
             <div class="admin-header-actions">
-                <a href="/admin/index.php" class="btn btn-secondary">← Назад к списку</a>
+                <a href="/admin/admin.php" class="btn btn-secondary">← Назад к списку</a>
                 <a href="/phpLogin/logout.php" class="btn btn-danger">Выход</a>
             </div>
         </header>
@@ -107,7 +107,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <button type="submit" class="btn btn-primary">
                             <?php echo $isEdit ? 'Сохранить изменения' : 'Добавить тур'; ?>
                         </button>
-                        <a href="/admin/index.php" class="btn btn-secondary">Отмена</a>
+                        <a href="/admin/admin.php" class="btn btn-secondary">Отмена</a>
                     </div>
                 </form>
             </div>
@@ -146,7 +146,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 
                 if (result.success) {
                     alert('Тур успешно сохранен!');
-                    window.location.href = '/admin/index.php';
+                    window.location.href = '/admin/admin.php';
                 } else {
                     alert('Ошибка: ' + (result.message || 'Не удалось сохранить тур'));
                 }
