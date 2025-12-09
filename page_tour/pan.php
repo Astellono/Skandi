@@ -4,6 +4,17 @@ require_once '../phpLogin/connect.php'; // Подключение к базе д
 require_once '../getDATA/getAncetaData.php';
 require_once '../getDATA/getUserData.php';
 require_once '../parts/formTour.php';
+require_once '../getDATA/tourPageData.php';
+
+$currentPagePath = 'page_tour/' . basename(__FILE__);
+$tourData = getTourPageData($connect, $currentPagePath, [
+    'name' => 'ТУР «ПААНАЯРВИ: СЕВЕРНАЯ СКАЗКА»',
+    'date' => '7–11 марта 2026 года (5 дней / 4 ночи)',
+    'price' => '86 400 рублей'
+]);
+$dateText = $tourData['date']
+    ? 'Зимняя снегоходная экспедиция в сердце дикой Карелии: ' . htmlspecialchars($tourData['date'], ENT_QUOTES, 'UTF-8')
+    : 'Зимняя снегоходная экспедиция в сердце дикой Карелии: 7–11 марта 2026 года (5 дней / 4 ночи)';
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +71,7 @@ require_once '../parts/formTour.php';
             margin-bottom: 20px;
         }
     </style>
-    <title>Тур «Паанаярви: Северная сказка»</title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Тур «Паанаярви: Северная сказка»', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -82,10 +93,9 @@ require_once '../parts/formTour.php';
                         alt="Национальный парк Паанаярви зимой">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            ТУР «ПААНАЯРВИ: СЕВЕРНАЯ СКАЗКА»
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'ТУР «ПААНАЯРВИ: СЕВЕРНАЯ СКАЗКА»', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
-                        <h2 class="tour__page__date">Зимняя снегоходная экспедиция в сердце дикой Карелии: 7–11 марта
-                            2026 года (5 дней / 4 ночи)</h2>
+                        <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
 
                 </div>
@@ -341,7 +351,7 @@ require_once '../parts/formTour.php';
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 86 400 рублей<br> Группа 6 человек </p>
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '86 400 рублей', ENT_QUOTES, 'UTF-8'); ?><br> Группа 6 человек </p>
                     <p class="tour__page__priceIn">В стоимость входит: проживание в избах национального парка на 4 ночи,
                         все трансферы по программе, три запланированные снегоходные экскурсии с гидом-инструктором,
                         питание по программе (ужины в дни 1-4, завтраки и перекусы/обеды в дни 2-4), работа инструктора

@@ -4,6 +4,17 @@ require_once '../phpLogin/connect.php'; // Подключение к базе д
 require_once '../getDATA/getAncetaData.php';
 require_once '../getDATA/getUserData.php';
 require_once '../parts/formTour.php';
+require_once '../getDATA/tourPageData.php';
+
+$currentPagePath = 'page_tour/' . basename(__FILE__);
+$tourData = getTourPageData($connect, $currentPagePath, [
+    'name' => 'Оазисы Востока: тур по Узбекистану для активных путешественников',
+    'date' => '3 – 10 мая 2026 года (8 дней /7 ночей)',
+    'price' => '1410 долларов'
+]);
+$dateText = $tourData['date']
+    ? 'Даты: ' . htmlspecialchars($tourData['date'], ENT_QUOTES, 'UTF-8')
+    : 'Даты: 3 – 10 мая 2026 года (8 дней /7 ночей)';
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +64,7 @@ require_once '../parts/formTour.php';
         
      
     </style>
-    <title>Тур по Узбекистану</title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Тур по Узбекистану', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -74,9 +85,9 @@ require_once '../parts/formTour.php';
                     <img class="tour__page__img" src="../img/act-tour/uz.jpg" alt="Узбекистан">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            Оазисы Востока: тур по Узбекистану для активных путешественников
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'Оазисы Востока: тур по Узбекистану для активных путешественников', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
-                        <h2 class="tour__page__date">Даты: 3 – 10 мая 2026 года (8 дней /7 ночей)</h2>
+                        <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
 
                 </div>
@@ -470,7 +481,7 @@ require_once '../parts/formTour.php';
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 1410 долларов<br> Группа 6 – 10 человек </p>
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '1410 долларов', ENT_QUOTES, 'UTF-8'); ?><br> Группа 6 – 10 человек </p>
                     <p class="tour__page__priceIn">В стоимость входит: проживание в отелях 3* (7 ночей) и юртах (1 ночь) двухместное, питание: завтраки + 6 обедов + 2 ужина, весь трансфер по маршруту на комфортабельном транспорте, ж/д билеты (Фергана-Ташкент, Ташкент-Самарканд), экскурсии с русскоязычным гидом по программе, входные билеты в памятники, услуги инструктора по скандинавской ходьбе.</p>
                     <p class="tour__page__priceOff">Не входит в стоимость: международные авиабилеты, доплата за одноместное размещение 150 долларов, страховка, дополнительные питание (ужины), личные расходы.</p>
                     <p class="tour__page__notice">** ВНИМАНИЕ! Программа может меняться в зависимости от погодных условий<br>

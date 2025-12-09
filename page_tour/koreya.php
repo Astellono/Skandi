@@ -4,6 +4,17 @@ require_once '../phpLogin/connect.php'; // Подключение к базе д
 require_once '../getDATA/getAncetaData.php';
 require_once '../getDATA/getUserData.php';
 require_once '../parts/formTour.php';
+require_once '../getDATA/tourPageData.php';
+
+$currentPagePath = 'page_tour/' . basename(__FILE__);
+$tourData = getTourPageData($connect, $currentPagePath, [
+    'name' => 'Тур «От Сеула до Чеджу: Скандинавская ходьба сквозь красоты Кореи»',
+    'date' => '29 марта – 6 апреля 2026г.',
+    'price' => '2960 долларов'
+]);
+$dateText = $tourData['date']
+    ? 'Даты: ' . htmlspecialchars($tourData['date'], ENT_QUOTES, 'UTF-8')
+    : 'Даты: 29 марта – 6 апреля 2026г.';
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +62,7 @@ require_once '../parts/formTour.php';
             margin-top: 10px;
         }
     </style>
-    <title>Туры</title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Туры', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -72,9 +83,9 @@ require_once '../parts/formTour.php';
                     <img class="tour__page__img" src="../img/act-tour/koreya.jpg" alt="">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            Тур «От Сеула до Чеджу: Скандинавская ходьба сквозь красоты Кореи»
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'Тур «От Сеула до Чеджу: Скандинавская ходьба сквозь красоты Кореи»', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
-                        <h2 class="tour__page__date">Даты: 29 марта – 6 апреля 2026г.</h2>
+                        <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
 
                 </div>
@@ -828,7 +839,7 @@ require_once '../parts/formTour.php';
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 2960 долларов<br> Группа 6-9 человек </p>
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '2960 долларов', ENT_QUOTES, 'UTF-8'); ?><br> Группа 6-9 человек </p>
                     <p class="tour__page__priceIn">В стоимость входят: 2-местное проживание в отеле в Сеуле и Кёнджу,
                         завтраки, обеды и ужины согласно программе,
                         сопровождение местного гида, сопровождение инструктора по скандинавской ходьбе, общий трансфер

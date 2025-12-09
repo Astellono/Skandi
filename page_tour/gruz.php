@@ -4,6 +4,17 @@ require_once '../phpLogin/connect.php'; // Подключение к базе д
 require_once '../getDATA/getAncetaData.php';
 require_once '../getDATA/getUserData.php';
 require_once '../parts/formTour.php';
+require_once '../getDATA/tourPageData.php';
+
+$currentPagePath = 'page_tour/' . basename(__FILE__);
+$tourData = getTourPageData($connect, $currentPagePath, [
+    'name' => 'Тур: «Грузия в бархатный сезон: вино, стиль и сезон ртвели»',
+    'date' => '7 – 13 сентября 2026г',
+    'price' => '1015 долларов'
+]);
+$dateText = $tourData['date']
+    ? 'Даты: ' . htmlspecialchars($tourData['date'], ENT_QUOTES, 'UTF-8')
+    : 'Даты: 7 – 13 сентября 2026г';
 
 ?>
 
@@ -54,7 +65,7 @@ require_once '../parts/formTour.php';
         
       
     </style>
-    <title>Туры</title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Туры', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -75,9 +86,9 @@ require_once '../parts/formTour.php';
                     <img class="tour__page__img" src="../img/act-tour/gruz.jpeg" alt="Грузия">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            Тур: «Грузия в бархатный сезон: вино, стиль и сезон ртвели»
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'Тур: «Грузия в бархатный сезон: вино, стиль и сезон ртвели»', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
-                        <h2 class="tour__page__date">Даты: 7 – 13 сентября 2026г</h2>
+                        <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
 
                 </div>
@@ -271,7 +282,7 @@ require_once '../parts/formTour.php';
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 1015 долларов <br>Группа 6 человек</p>
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '1015 долларов', ENT_QUOTES, 'UTF-8'); ?> <br>Группа 6 человек</p>
                     <p class="tour__page__priceIn">В стоимость входят:
                         2-местное проживание в указанных отелях (Тбилиси: City Hotel, Сигнахи: BelleVue, Кварели: Шато Киндзмараули), завтраки, все трансферы по программе, экскурсии с гидом.
                     </p>

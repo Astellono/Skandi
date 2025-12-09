@@ -4,6 +4,17 @@ require_once '../phpLogin/connect.php'; // Подключение к базе д
 require_once '../getDATA/getAncetaData.php';
 require_once '../getDATA/getUserData.php';
 require_once '../parts/formTour.php';
+require_once '../getDATA/tourPageData.php';
+
+$currentPagePath = 'page_tour/' . basename(__FILE__);
+$tourData = getTourPageData($connect, $currentPagePath, [
+    'name' => 'SCANDI-ТУР «Алтайская снежная сказка: скандинавская ходьба и приключения»',
+    'date' => '2 января – 9 января 2026г.',
+    'price' => '109 700 рублей'
+]);
+$dateText = $tourData['date']
+    ? 'Даты: ' . htmlspecialchars($tourData['date'], ENT_QUOTES, 'UTF-8')
+    : 'Даты: 2 января – 9 января 2026г.';
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +64,7 @@ require_once '../parts/formTour.php';
         
        
     </style>
-    <title>Туры</title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Туры', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -74,9 +85,9 @@ require_once '../parts/formTour.php';
                     <img class="tour__page__img" src="/img/act-tour/altay.jpg" alt="Зимний Алтай">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            SCANDI-ТУР «Алтайская снежная сказка: скандинавская ходьба и приключения»
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'SCANDI-ТУР «Алтайская снежная сказка: скандинавская ходьба и приключения»', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
-                        <h2 class="tour__page__date">Даты: 2 января – 9 января 2025г.</h2>
+                        <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
 
                 </div>
@@ -353,7 +364,7 @@ require_once '../parts/formTour.php';
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 109 700 рублей <br> Группа до 6 человек </p>
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '109 700 рублей', ENT_QUOTES, 'UTF-8'); ?> <br> Группа до 6 человек </p>
                     <p class="tour__page__priceIn">В стоимость входят:
                         трансфер по программе, 2-3-местное проживание в селе Черга и на Телецком озере, все экскурсии и сканди-тренировки, сопровождение гида, сопровождение инструктора по скандинавской ходьбе, питание (завтраки, пикники по программе).
                     </p>

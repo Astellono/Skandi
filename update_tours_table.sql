@@ -1,5 +1,6 @@
 -- Скрипт для обновления существующей таблицы tours
 -- Добавляет новые поля: tour_color, tour_date_start, tour_date_end
+-- А также поле tour_price для хранения стоимости тура
 
 -- Добавляем поле tour_color (выполните только если поле еще не существует)
 -- Если поле уже существует, команда выдаст ошибку - это нормально, просто пропустите её
@@ -13,6 +14,10 @@ ADD COLUMN `tour_date_start` DATE DEFAULT NULL AFTER `tour_color`;
 -- Добавляем поле tour_date_end
 ALTER TABLE `tours` 
 ADD COLUMN `tour_date_end` DATE DEFAULT NULL AFTER `tour_date_start`;
+
+-- Добавляем поле tour_price для вывода стоимости тура на страницах
+ALTER TABLE `tours`
+ADD COLUMN `tour_price` VARCHAR(255) DEFAULT NULL AFTER `tour_date`;
 
 -- Пример обновления существующих записей (раскомментируйте и адаптируйте под ваши данные)
 /*

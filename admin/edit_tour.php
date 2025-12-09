@@ -78,6 +78,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     </div>
 
                     <div class="form-group">
+                        <label for="tour_price">Стоимость *</label>
+                        <input type="text" id="tour_price" name="tour_price" required
+                               value="<?php echo $tour ? htmlspecialchars($tour['tour_price']) : ''; ?>"
+                               placeholder="Например: 109 700 рублей">
+                        <small>Отображается на странице тура (можно указать валюту и пояснения)</small>
+                    </div>
+
+                    <div class="form-group">
                         <label for="tour_linkPage">Ссылка на страницу тура *</label>
                         <input type="text" id="tour_linkPage" name="tour_linkPage" required
                                value="<?php echo $tour ? htmlspecialchars($tour['tour_linkPage']) : 'page_tour/TestTour.php'; ?>"

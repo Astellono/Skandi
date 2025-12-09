@@ -47,7 +47,8 @@ $query = "SELECT
     tour_imgSrc,
     tour_color,
     tour_date_start,
-    tour_date_end
+    tour_date_end,
+    tour_price
 FROM tours 
 ORDER BY $sort_by $sort_order";
 
@@ -73,7 +74,8 @@ while ($row = $result->fetch_assoc()) {
         'date' => $dateArray,
         'link' => $row['tour_linkPage'] ?: '',
         'color' => $row['tour_color'] ?: '#4a90e2',
-        'srcImg' => $row['tour_imgSrc'] ?: ''
+        'srcImg' => $row['tour_imgSrc'] ?: '',
+        'price' => $row['tour_price'] ?: null
     ];
 }
 

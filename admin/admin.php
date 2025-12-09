@@ -78,7 +78,7 @@ function getSortIcon($field) {
                             <?php if ($sort_by !== 'tour_date_start' || $sort_order !== 'DESC'): ?>
                                 <span class="sort-badge">
                                     Сортировка: <?php echo htmlspecialchars($sort_by); ?> (<?php echo $sort_order; ?>)
-                                    <a href="/admin/index.php" class="sort-reset">×</a>
+                                    <a href="/admin/admin.php" class="sort-reset">×</a>
                                 </span>
                             <?php endif; ?>
                         </div>
@@ -115,6 +115,7 @@ function getSortIcon($field) {
                                         Ссылка <span class="sort-icon"><?php echo getSortIcon('tour_linkPage'); ?></span>
                                     </a>
                                 </th>
+                                <th>Стоимость</th>
                                 <th>Цвет</th>
                                 <th>Действия</th>
                             </tr>
@@ -138,6 +139,7 @@ function getSortIcon($field) {
                                                 <?php echo htmlspecialchars($tour['tour_linkPage']); ?>
                                             </a>
                                         </td>
+                                        <td><?php echo htmlspecialchars($tour['tour_price'] ?? '-'); ?></td>
                                         <td>
                                             <span class="color-preview" style="background-color: <?php echo htmlspecialchars($tour['tour_color'] ?: '#4a90e2'); ?>"></span>
                                             <?php echo htmlspecialchars($tour['tour_color'] ?: '#4a90e2'); ?>

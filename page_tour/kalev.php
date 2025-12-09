@@ -4,6 +4,17 @@ require_once '../phpLogin/connect.php'; // Подключение к базе д
 require_once '../getDATA/getAncetaData.php';
 require_once '../getDATA/getUserData.php';
 require_once '../parts/formTour.php';
+require_once '../getDATA/tourPageData.php';
+
+$currentPagePath = 'page_tour/' . basename(__FILE__);
+$tourData = getTourPageData($connect, $currentPagePath, [
+    'name' => 'SCANDI-ТУР «В КРАЮ КАЛЕВАЛЬСКИХ ПЕСЕН»',
+    'date' => '6–11 июня 2026 года (6 дней)',
+    'price' => '108 000 рублей'
+]);
+$dateText = $tourData['date']
+    ? 'Пешее путешествие с палками по следам рунопевцев и коробейников: ' . htmlspecialchars($tourData['date'], ENT_QUOTES, 'UTF-8')
+    : 'Пешее путешествие с палками по следам рунопевцев и коробейников: 6–11 июня 2026 года (6 дней)';
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +67,7 @@ require_once '../parts/formTour.php';
             margin-bottom: 20px;
         }
     </style>
-    <title>Тур «В краю калевальских песен»</title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Тур «В краю калевальских песен»', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -77,9 +88,9 @@ require_once '../parts/formTour.php';
                         alt="Калевальский национальный парк">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            SCANDI-ТУР «В КРАЮ КАЛЕВАЛЬСКИХ ПЕСЕН»
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'SCANDI-ТУР «В КРАЮ КАЛЕВАЛЬСКИХ ПЕСЕН»', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
-                        <h2 class="tour__page__date">Пешее путешествие с палками по следам рунопевцев и коробейников: 6–11 июня 2026 года (6 дней)</h2>
+                        <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
 
                 </div>
@@ -353,7 +364,7 @@ require_once '../parts/formTour.php';
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 108 000 рублей<br> Группа 6 человек </p>
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '108 000 рублей', ENT_QUOTES, 'UTF-8'); ?><br> Группа 6 человек </p>
                     <p class="tour__page__priceIn">В стоимость входит: все трансферы по программе на автомобилях, проживание (1 ночь в гостинице в Костомукше, 2 ночи в гостевом доме в Вокнаволоке, 2 ночи в гостевых домиках в Суднозеро), питание (завтраки со 2 по 6 день, обеды и ужины со 2 по 5 день, перекусы на маршрутах), все экскурсии, мастер-классы и входные билеты по программе, работа гида-инструктора и сопровождающих, баня в Вокнаволоке и Суднозере.</p>
                     <p class="tour__page__priceOff">Не входит в стоимость: ж/д билеты до Костомукши и обратно, питание в 1-й и 6-й день (завтрак, обед, ужин 6 июня; обед, ужин 11 июня), аренда каяков и снаряжения для водной прогулки (~1500 руб./чел.), личные расходы (сувениры, дополнительное питание).</p>
                     <p class="tour__page__notice">** ВНИМАНИЕ! При ухудшении погодных условий (предупреждение МЧС) организаторы оставляют право изменить, отменить или перенести программу. Оповещение участников происходит за 2-3 дня.<br>

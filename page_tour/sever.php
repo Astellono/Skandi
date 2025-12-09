@@ -4,6 +4,17 @@ require_once '../phpLogin/connect.php'; // Подключение к базе д
 require_once '../getDATA/getAncetaData.php';
 require_once '../getDATA/getUserData.php';
 require_once '../parts/formTour.php';
+require_once '../getDATA/tourPageData.php';
+
+$currentPagePath = 'page_tour/' . basename(__FILE__);
+$tourData = getTourPageData($connect, $currentPagePath, [
+    'name' => 'Тур «СЕВЕРНЫЙ ШАГ: Архангельск, Поморье и Каргополье»',
+    'date' => '12 июля – 18 июля 2026г.',
+    'price' => '114 700 рублей'
+]);
+$dateText = $tourData['date']
+    ? 'Даты: ' . htmlspecialchars($tourData['date'], ENT_QUOTES, 'UTF-8')
+    : 'Даты: 12 июля – 18 июля 2026г.';
 
 ?>
 
@@ -54,7 +65,7 @@ require_once '../parts/formTour.php';
         
       
     </style>
-    <title>Туры</title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Туры', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -75,9 +86,9 @@ require_once '../parts/formTour.php';
                     <img class="tour__page__img" src="../img/act-tour/sever.png" alt="">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            Тур «СЕВЕРНЫЙ ШАГ: Архангельск, Поморье и Каргополье»
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'Тур «СЕВЕРНЫЙ ШАГ: Архангельск, Поморье и Каргополье»', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
-                        <h2 class="tour__page__date">Даты: 12 июля – 18 июля 2026г.</h2>
+                        <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
 
                 </div>
@@ -322,7 +333,7 @@ require_once '../parts/formTour.php';
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 114 700 рублей <br> Группа 10-12 человек </p>
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '114 700 рублей', ENT_QUOTES, 'UTF-8'); ?> <br> Группа 10-12 человек </p>
                     <p class="tour__page__priceIn">В стоимость включено: автобусные трансферы внутри программы, полностью экскурсионное обслуживание и входные билеты, прогулки и проживание на пароходе Н.В.Гоголь, двухместное проживание в гостинице «Столица Поморья» или аналогичной, проживание в гостинице в Каргополе, услуги инструктора по скандинавской ходьбе, питание: завтраки (кроме 1-го дня) и обеды.
                     </p>
                     <p class="tour__page__priceOff">Дополнительно оплачивается: ж/д билеты Москва - Архангельск, Архангельск - Няндома, Няндома Москва; одноместное проживание (ориентировочно 11000); завтрак в 1-й день и ужины, страховка путешественника

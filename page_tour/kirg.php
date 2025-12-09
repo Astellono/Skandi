@@ -4,6 +4,17 @@ require_once '../phpLogin/connect.php'; // Подключение к базе д
 require_once '../getDATA/getAncetaData.php';
 require_once '../getDATA/getUserData.php';
 require_once '../parts/formTour.php';
+require_once '../getDATA/tourPageData.php';
+
+$currentPagePath = 'page_tour/' . basename(__FILE__);
+$tourData = getTourPageData($connect, $currentPagePath, [
+    'name' => 'Трекинговый тур «Южный Кыргызстан: От священных гор к ледникам Памира»',
+    'date' => '6 – 15 августа 2026г. (10 дней /9 ночей)',
+    'price' => '1435 долларов'
+]);
+$dateText = $tourData['date']
+    ? 'Даты: ' . htmlspecialchars($tourData['date'], ENT_QUOTES, 'UTF-8')
+    : 'Даты: 6 – 15 августа 2026г. (10 дней /9 ночей)';
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +62,7 @@ require_once '../parts/formTour.php';
             margin-top: 10px;
         }
     </style>
-    <title>Туры</title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Туры', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -72,9 +83,9 @@ require_once '../parts/formTour.php';
                     <img class="tour__page__img" src="../img/act-tour/kirg.jpg" alt="Южный Кыргызстан">
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            Трекинговый тур «Южный Кыргызстан: От священных гор к ледникам Памира»
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'Трекинговый тур «Южный Кыргызстан: От священных гор к ледникам Памира»', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
-                        <h2 class="tour__page__date">Даты: 6 – 15 августа 2026г. (10 дней /9 ночей)</h2>
+                        <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
 
                 </div>
@@ -576,7 +587,7 @@ require_once '../parts/formTour.php';
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: 1435 долларов<br> Группа 7 человек </p>
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '1435 долларов', ENT_QUOTES, 'UTF-8'); ?><br> Группа 7 человек </p>
                     <p class="tour__page__priceIn">В стоимость входит: проживание в гостинице в Оше (2 ночи) с
                         завтраками, размещение в доме местных жителей в селе Кожо-Келен (1 ночь), размещение в
                         двухместных палатках в Базовом лагере и Первом лагере, полный пансион в течение активного тура,

@@ -15,6 +15,19 @@ require_once 'phpLogin/connect.php';
 <html lang="ru">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
+    <meta name="keywords" content="скандинавская ходьба, путешествия, экскурсии, Москва, Подмосковье, туризм, походы">
+    <meta name="yandex-verification" content="783babf1459e4598" />
+    <?php
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'];
+    $canonical = $protocol . '://' . $host . '/';
+    ?>
+    <link rel="canonical" href="<?php echo $canonical; ?>">
+    
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -30,19 +43,13 @@ require_once 'phpLogin/connect.php';
             webvisor: true
         });
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/89691443" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description"
-        content="Сканди-путешествия и экскурсии по Москве, Московской области, России и странам СНГ, зарубеж!">
-    <meta name="yandex-verification" content="783babf1459e4598" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style/clear.css">
     <link rel="stylesheet" href="style/style.css?ver=<? echo time(); ?>">

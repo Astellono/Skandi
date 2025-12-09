@@ -31,7 +31,7 @@ if (!$data) {
 }
 
 // Валидация обязательных полей
-$required = ['tour_name', 'tour_date_start', 'tour_date_end', 'tour_linkPage', 'tour_imgSrc', 'tour_color'];
+$required = ['tour_name', 'tour_date_start', 'tour_date_end', 'tour_linkPage', 'tour_imgSrc', 'tour_color', 'tour_price'];
 foreach ($required as $field) {
     if (empty($data[$field])) {
         http_response_code(400);
@@ -43,6 +43,7 @@ foreach ($required as $field) {
 $tour_id = isset($data['tour_id']) && !empty($data['tour_id']) ? (int)$data['tour_id'] : null;
 $tour_name = trim($data['tour_name']);
 $tour_date = isset($data['tour_date']) ? trim($data['tour_date']) : null;
+$tour_price = isset($data['tour_price']) ? trim($data['tour_price']) : null;
 $tour_linkPage = trim($data['tour_linkPage']);
 $tour_imgSrc = trim($data['tour_imgSrc']);
 $tour_color = trim($data['tour_color']);
@@ -62,6 +63,7 @@ try {
         $stmt = $connect->prepare("UPDATE tours SET 
             tour_name = ?, 
             tour_date = ?, 
+            tour_price = ?, 
             tour_linkPage = ?, 
             tour_imgSrc = ?, 
             tour_color = ?, 
@@ -69,9 +71,10 @@ try {
             tour_date_end = ? 
             WHERE tour_id = ?");
         
-        $stmt->bind_param('sssssssi', 
+        $stmt->bind_param('ssssssssi', 
             $tour_name, 
             $tour_date, 
+            $tour_price,
             $tour_linkPage, 
             $tour_imgSrc, 
             $tour_color, 
@@ -82,12 +85,13 @@ try {
     } else {
         // Добавление нового тура
         $stmt = $connect->prepare("INSERT INTO tours 
-            (tour_name, tour_date, tour_linkPage, tour_imgSrc, tour_color, tour_date_start, tour_date_end) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)");
+            (tour_name, tour_date, tour_price, tour_linkPage, tour_imgSrc, tour_color, tour_date_start, tour_date_end) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         
-        $stmt->bind_param('sssssss', 
+        $stmt->bind_param('ssssssss', 
             $tour_name, 
             $tour_date, 
+            $tour_price,
             $tour_linkPage, 
             $tour_imgSrc, 
             $tour_color, 
