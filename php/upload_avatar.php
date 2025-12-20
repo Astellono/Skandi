@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../phpLogin/connect.php';
+require_once __DIR__ . '/connect.php';
 
 if (!isset($_SESSION['user_id'])) {
     http_response_code(401);

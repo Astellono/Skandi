@@ -39,8 +39,9 @@
 <body>
     <header class="header" id="header">
         <?php
-        // Используем относительный путь вместо абсолютного
-        include 'parts/headerPHP.php';
+        $root =  $_SERVER['DOCUMENT_ROOT']; 
+        $path = $root . '/parts/headerPHP.php';
+        include $path;
         ?>
     </header>
 

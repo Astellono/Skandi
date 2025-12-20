@@ -1,6 +1,6 @@
 
 let btnAuto = document.getElementById('btnAuto')
-
+console.log(anceta);
 if (btnAuto) {
     btnAuto.addEventListener('click', (e) => {
         document.getElementById('fio').value = fio ? fio : '';

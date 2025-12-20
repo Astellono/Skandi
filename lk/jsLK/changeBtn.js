@@ -7,6 +7,7 @@ changeBtn.addEventListener('click', () => {
     inputFio.forEach(input => {
         input.disabled = false
         input.style.border = '1px solid #ced4da'
+        input.style.paddingLeft = '10px'
         
     })
     changeBtn.style.display = 'none'
