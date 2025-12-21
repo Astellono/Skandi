@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id']) || !in_array((int)$_SESSION['user_id'], [7, 10]
 
 // Параметры сортировки
 $sort_by = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'excursion_date';
-$sort_order = isset($_GET['sort_order']) ? strtoupper($_GET['sort_order']) : 'DESC';
+$sort_order = isset($_GET['sort_order']) ? strtoupper($_GET['sort_order']) : 'ASC';
 
 // Разрешенные поля для сортировки
 $allowed_sort_fields = ['excursion_id', 'excursion_name', 'excursion_date'];
@@ -21,7 +21,7 @@ if (!in_array($sort_by, $allowed_sort_fields)) {
     $sort_by = 'excursion_date';
 }
 if (!in_array($sort_order, $allowed_sort_orders)) {
-    $sort_order = 'DESC';
+    $sort_order = 'ASC';
 }
 
 // Проверяем существование таблицы
@@ -99,7 +99,7 @@ function getSortIcon($field) {
                     <h2>Управление экскурсиями</h2>
                     <div class="header-actions-group">
                         <div class="sort-info">
-                            <?php if ($sort_by !== 'excursion_date' || $sort_order !== 'DESC'): ?>
+                            <?php if ($sort_by !== 'excursion_date' || $sort_order !== 'ASC'): ?>
                                 <span class="sort-badge">
                                     Сортировка: <?php echo htmlspecialchars($sort_by); ?> (<?php echo $sort_order; ?>)
                                     <a href="/admin/excursions.php" class="sort-reset">×</a>
@@ -148,11 +148,11 @@ function getSortIcon($field) {
                             <?php else: ?>
                                 <?php foreach ($excursions as $excursion): ?>
                                     <tr>
-                                        <td><?php echo htmlspecialchars($excursion['excursion_id']); ?></td>
-                                        <td class="tour-name"><?php echo htmlspecialchars($excursion['excursion_name']); ?></td>
-                                        <td><?php echo htmlspecialchars($excursion['excursion_date'] ?? '-'); ?></td>
-                                        <td><?php echo htmlspecialchars($excursion['excursion_time'] ?? '-'); ?></td>
-                                        <td class="actions">
+                                        <td data-label="ID"><?php echo htmlspecialchars($excursion['excursion_id']); ?></td>
+                                        <td class="tour-name" data-label="Название"><?php echo htmlspecialchars($excursion['excursion_name']); ?></td>
+                                        <td data-label="Дата"><?php echo htmlspecialchars($excursion['excursion_date'] ?? '-'); ?></td>
+                                        <td data-label="Время"><?php echo htmlspecialchars($excursion['excursion_time'] ?? '-'); ?></td>
+                                        <td class="actions" data-label="">
                                             <a href="/admin/edit_excursion.php?id=<?php echo $excursion['excursion_id']; ?>" class="btn btn-sm btn-edit">Редактировать</a>
                                             <button onclick="deleteExcursion(<?php echo $excursion['excursion_id']; ?>, '<?php echo htmlspecialchars(addslashes($excursion['excursion_name'])); ?>')" class="btn btn-sm btn-delete">Удалить</button>
                                         </td>

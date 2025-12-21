@@ -155,19 +155,19 @@ if ($search !== '') {
                                 <?php foreach ($users as $user): ?>
                                     <?php $isAdmin = in_array((int)$user['user_id'], [7, 10], true); ?>
                                     <tr data-user-id="<?php echo (int) $user['user_id']; ?>">
-                                        <td><?php echo (int) $user['user_id']; ?></td>
-                                        <td>
+                                        <td data-label="ID"><?php echo (int) $user['user_id']; ?></td>
+                                        <td data-label="Имя">
                                             <?php echo htmlspecialchars($user['user_name'] ?: '—'); ?>
                                             <?php if ($isAdmin): ?>
                                                 <span class="badge badge-admin">Администратор</span>
                                             <?php endif; ?>
                                         </td>
-                                        <td>
+                                        <td data-label="Email">
                                             <a href="mailto:<?php echo htmlspecialchars($user['user_email']); ?>" class="link-preview">
                                                 <?php echo htmlspecialchars($user['user_email']); ?>
                                             </a>
                                         </td>
-                                        <td class="actions">
+                                        <td class="actions" data-label="">
                                             <?php if ($isAdmin): ?>
                                                 <span style="color:#6c757d;">Нельзя удалить</span>
                                             <?php else: ?>

@@ -10,10 +10,10 @@ if (!isset($_SESSION['user_id']) || !in_array((int)$_SESSION['user_id'], [7, 10]
 
 // Параметры сортировки
 $sort_by = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'tour_date_start';
-$sort_order = isset($_GET['sort_order']) ? strtoupper($_GET['sort_order']) : 'DESC';
+$sort_order = isset($_GET['sort_order']) ? strtoupper($_GET['sort_order']) : 'ASC';
 
 // Разрешенные поля для сортировки
-$allowed_sort_fields = ['tour_id', 'tour_name', 'tour_date_start', 'tour_date_end', 'tour_linkPage', 'tour_color'];
+$allowed_sort_fields = ['tour_id', 'tour_name', 'tour_date_start', 'tour_date_end', 'tour_linkPage'];
 $allowed_sort_orders = ['ASC', 'DESC'];
 
 // Валидация параметров сортировки
@@ -21,7 +21,7 @@ if (!in_array($sort_by, $allowed_sort_fields)) {
     $sort_by = 'tour_date_start';
 }
 if (!in_array($sort_order, $allowed_sort_orders)) {
-    $sort_order = 'DESC';
+    $sort_order = 'ASC';
 }
 
 // Получаем список всех туров с сортировкой
@@ -83,7 +83,7 @@ function getSortIcon($field) {
                     <h2>Управление турами</h2>
                     <div class="header-actions-group">
                         <div class="sort-info">
-                            <?php if ($sort_by !== 'tour_date_start' || $sort_order !== 'DESC'): ?>
+                            <?php if ($sort_by !== 'tour_date_start' || $sort_order !== 'ASC'): ?>
                                 <span class="sort-badge">
                                     Сортировка: <?php echo htmlspecialchars($sort_by); ?> (<?php echo $sort_order; ?>)
                                     <a href="/admin/admin.php" class="sort-reset">×</a>
@@ -124,36 +124,33 @@ function getSortIcon($field) {
                                         Ссылка <span class="sort-icon"><?php echo getSortIcon('tour_linkPage'); ?></span>
                                     </a>
                                 </th>
-                                <th>Стоимость</th>
-                                <th>Цвет</th>
                                 <th>Действия</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if (empty($tours)): ?>
                                 <tr>
-                                    <td colspan="7" class="empty-state">
+                                    <td colspan="5" class="empty-state">
                                         Туры не найдены. <a href="/admin/edit_tour.php">Добавить первый тур</a>
                                     </td>
                                 </tr>
                             <?php else: ?>
                                 <?php foreach ($tours as $tour): ?>
                                     <tr>
-                                        <td><?php echo htmlspecialchars($tour['tour_id']); ?></td>
-                                        <td class="tour-name"><?php echo htmlspecialchars($tour['tour_name']); ?></td>
-                                        <td><?php echo $tour['tour_date_start'] ? date('d.m.Y', strtotime($tour['tour_date_start'])) : '-'; ?></td>
-                                        <td><?php echo $tour['tour_date_end'] ? date('d.m.Y', strtotime($tour['tour_date_end'])) : '-'; ?></td>
-                                        <td>
-                                            <a href="/<?php echo htmlspecialchars($tour['tour_linkPage']); ?>" target="_blank" class="link-preview">
-                                                <?php echo htmlspecialchars($tour['tour_linkPage']); ?>
-                                            </a>
+                                        <td data-label="ID"><?php echo htmlspecialchars($tour['tour_id']); ?></td>
+                                        <td class="tour-name" data-label="Название"><?php echo htmlspecialchars($tour['tour_name']); ?></td>
+                                        <td data-label="Дата начала"><?php echo $tour['tour_date_start'] ? date('d.m.Y', strtotime($tour['tour_date_start'])) : '-'; ?></td>
+                                        <td data-label="Дата окончания"><?php echo $tour['tour_date_end'] ? date('d.m.Y', strtotime($tour['tour_date_end'])) : '-'; ?></td>
+                                        <td data-label="Ссылка">
+                                            <?php if (!empty($tour['tour_linkPage'])): ?>
+                                                <a href="/<?php echo htmlspecialchars($tour['tour_linkPage']); ?>" target="_blank" class="btn btn-sm btn-secondary" style="text-decoration: none;">
+                                                    К туру
+                                                </a>
+                                            <?php else: ?>
+                                                <span style="color: #999;">-</span>
+                                            <?php endif; ?>
                                         </td>
-                                        <td><?php echo htmlspecialchars($tour['tour_price'] ?? '-'); ?></td>
-                                        <td>
-                                            <span class="color-preview" style="background-color: <?php echo htmlspecialchars($tour['tour_color'] ?: '#4a90e2'); ?>"></span>
-                                            <?php echo htmlspecialchars($tour['tour_color'] ?: '#4a90e2'); ?>
-                                        </td>
-                                        <td class="actions">
+                                        <td class="actions" data-label="">
                                             <a href="/admin/edit_tour.php?id=<?php echo $tour['tour_id']; ?>" class="btn btn-sm btn-edit">Редактировать</a>
                                             <button onclick="deleteTour(<?php echo $tour['tour_id']; ?>, '<?php echo htmlspecialchars(addslashes($tour['tour_name'])); ?>')" class="btn btn-sm btn-delete">Удалить</button>
                                         </td>

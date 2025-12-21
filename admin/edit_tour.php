@@ -158,33 +158,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     </div>
 
                     <hr class="form-divider">
-
-                    <h3 class="form-section-title">Стоимость</h3>
-                    <div class="form-group">
-                        <label for="tour_price"></label>
-                        <input type="text" id="tour_price" name="tour_price" required
-                               value="<?php echo $tour ? htmlspecialchars($tour['tour_price']) : ''; ?>"
-                               placeholder="Например: 109 700 рублей">
-                        <small>Отображается на странице тура (можно указать валюту и пояснения)</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="tour_price_includes">Что входит в стоимость</label>
-                        <textarea id="tour_price_includes" name="tour_price_includes" rows="4"
-                                  placeholder="Проживание в отелях, питание, трансфер, экскурсии..."><?php 
-                            echo $tour && isset($tour['tour_price_includes']) ? $tour['tour_price_includes'] : ''; 
-                        ?></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tour_price_excludes">Что не входит в стоимость</label>
-                        <textarea id="tour_price_excludes" name="tour_price_excludes" rows="4"
-                                  placeholder="Международные авиабилеты, страховка, личные расходы..."><?php 
-                            echo $tour && isset($tour['tour_price_excludes']) ? $tour['tour_price_excludes'] : ''; 
-                        ?></textarea>
-                    </div>
-
-                    <hr class="form-divider">
-
                     <h3 class="form-section-title">Сопровождающие</h3>
                     <div id="guides-container">
                         <?php
@@ -240,6 +213,33 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     </div>
                     <button type="button" class="btn btn-secondary" onclick="addGuide()">+ Добавить сопровождающего</button>
 
+                    
+
+                    <hr class="form-divider">
+                    <h3 class="form-section-title">Стоимость</h3>
+                    <div class="form-group">
+                        <label for="tour_price"></label>
+                        <input type="text" id="tour_price" name="tour_price" required
+                               value="<?php echo $tour ? htmlspecialchars($tour['tour_price']) : ''; ?>"
+                               placeholder="Например: 109 700 рублей">
+                        <small>Отображается на странице тура (можно указать валюту и пояснения)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour_price_includes">Что входит в стоимость</label>
+                        <textarea id="tour_price_includes" name="tour_price_includes" rows="4"
+                                  placeholder="Проживание в отелях, питание, трансфер, экскурсии..."><?php 
+                            echo $tour && isset($tour['tour_price_includes']) ? $tour['tour_price_includes'] : ''; 
+                        ?></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_price_excludes">Что не входит в стоимость</label>
+                        <textarea id="tour_price_excludes" name="tour_price_excludes" rows="4"
+                                  placeholder="Международные авиабилеты, страховка, личные расходы..."><?php 
+                            echo $tour && isset($tour['tour_price_excludes']) ? $tour['tour_price_excludes'] : ''; 
+                        ?></textarea>
+                    </div>
+                    
                     <hr class="form-divider">
 
                     <h3 class="form-section-title">Программа по дням</h3>
@@ -370,6 +370,30 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         // Очищаем hash в URL, если он есть (может вызывать прокрутку)
         if (window.location.hash) {
             window.history.replaceState(null, null, window.location.pathname + window.location.search);
+        }
+        
+        // Очищаем localStorage при переходе между турами
+        // Получаем текущий ID тура из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentTourId = urlParams.get('id') || 'new';
+        
+        // Получаем сохраненный ID тура из localStorage
+        const savedTourId = localStorage.getItem('current_editing_tour_id');
+        
+        // Если ID тура изменился или это новый тур, очищаем все данные редакторов
+        if (savedTourId !== currentTourId) {
+            // Очищаем все ключи localStorage, связанные с редакторами туров
+            const keysToRemove = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key && key.startsWith('tour_editor_')) {
+                    keysToRemove.push(key);
+                }
+            }
+            keysToRemove.forEach(key => localStorage.removeItem(key));
+            
+            // Сохраняем текущий ID тура
+            localStorage.setItem('current_editing_tour_id', currentTourId);
         }
         
         // Прокручиваем вверх сразу при загрузке скрипта

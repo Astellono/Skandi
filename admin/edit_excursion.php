@@ -21,6 +21,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     if ($result->num_rows > 0) {
         $excursion = $result->fetch_assoc();
         $isEdit = true;
+        // Отладочная информация (можно удалить после проверки)
+        // error_log("Загружена экскурсия ID: $excursion_id, дата: " . ($excursion['excursion_date'] ?? 'NULL'));
     }
     $stmt->close();
 }
@@ -34,8 +36,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <link rel="stylesheet" href="/admin/style/admin.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- TinyMCE Editor -->
-    <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
 </head>
 <body>
     <div class="admin-container">
@@ -72,27 +72,51 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <label for="excursion_date">Дата экскурсии *</label>
                         <input type="date" id="excursion_date" name="excursion_date_picker" required
                                value="<?php 
+                                   $parsedDate = '';
                                    if ($excursion && !empty($excursion['excursion_date'])) {
                                        // Пытаемся распарсить текстовую дату в формат YYYY-MM-DD
-                                       $dateText = $excursion['excursion_date'];
+                                       $dateText = trim($excursion['excursion_date']);
+                                       
+                                       // Словарь месяцев в разных падежах
+                                       $months = [
+                                           'января' => '01', 'январь' => '01',
+                                           'февраля' => '02', 'февраль' => '02',
+                                           'марта' => '03', 'март' => '03',
+                                           'апреля' => '04', 'апрель' => '04',
+                                           'мая' => '05', 'май' => '05',
+                                           'июня' => '06', 'июнь' => '06',
+                                           'июля' => '07', 'июль' => '07',
+                                           'августа' => '08', 'август' => '08',
+                                           'сентября' => '09', 'сентябрь' => '09',
+                                           'октября' => '10', 'октябрь' => '10',
+                                           'ноября' => '11', 'ноябрь' => '11',
+                                           'декабря' => '12', 'декабрь' => '12'
+                                       ];
+                                       
                                        // Удаляем "г" в конце
-                                       $dateText = preg_replace('/\s*г\s*$/', '', $dateText);
-                                       // Пытаемся найти дату в разных форматах
-                                       if (preg_match('/(\d{1,2})\s+(\w+)\s+(\d{4})/', $dateText, $matches)) {
-                                           $day = $matches[1];
-                                           $monthRu = $matches[2];
-                                           $year = $matches[3];
-                                           $months = ['января' => '01', 'февраля' => '02', 'марта' => '03', 'апреля' => '04',
-                                                     'мая' => '05', 'июня' => '06', 'июля' => '07', 'августа' => '08',
-                                                     'сентября' => '09', 'октября' => '10', 'ноября' => '11', 'декабря' => '12'];
-                                           if (isset($months[$monthRu])) {
+                                       $dateText = preg_replace('/\s*г\s*\.?\s*$/i', '', $dateText);
+                                       
+                                       // Пытаемся найти дату в формате: день месяц год
+                                       // Паттерн: 1-2 цифры, пробел, слово (месяц), пробел, 4 цифры (год)
+                                       if (preg_match('/(\d{1,2})\s+([а-яё]+)\s+(\d{4})/ui', $dateText, $matches)) {
+                                           $day = (int)$matches[1];
+                                           $monthRu = mb_strtolower(trim($matches[2]), 'UTF-8');
+                                           $year = (int)$matches[3];
+                                           
+                                           if (isset($months[$monthRu]) && $day >= 1 && $day <= 31 && $year >= 1900 && $year <= 2100) {
                                                $day = str_pad($day, 2, '0', STR_PAD_LEFT);
-                                               echo htmlspecialchars($year . '-' . $months[$monthRu] . '-' . $day);
+                                               $parsedDate = $year . '-' . $months[$monthRu] . '-' . $day;
+                                               echo htmlspecialchars($parsedDate);
                                            }
+                                       }
+                                       // Если не удалось распарсить, пробуем формат YYYY-MM-DD (на случай, если уже сохранено в таком формате)
+                                       elseif (preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', $dateText, $matches)) {
+                                           echo htmlspecialchars($dateText);
                                        }
                                    }
                                ?>">
-                        <input type="hidden" id="excursion_date_text" name="excursion_date">
+                        <input type="hidden" id="excursion_date_text" name="excursion_date" 
+                               value="<?php echo $excursion && !empty($excursion['excursion_date']) ? htmlspecialchars($excursion['excursion_date']) : ''; ?>">
                         <small>Выберите дату в календаре. Дата автоматически будет сохранена в текстовом формате для отображения на сайте.</small>
                     </div>
 
@@ -214,6 +238,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         </div>
     </div>
 
+    <!-- TinyMCE Editor - загружаем перед нашими скриптами -->
+    <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
     <script src="/admin/js/admin.js"></script>
     <script>
         // Обработка загрузки изображения экскурсии
@@ -276,6 +302,45 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 return day + ' ' + month + ' ' + year + 'г';
             }
             
+            // Функция парсинга русской даты в формат YYYY-MM-DD
+            function parseRussianDate(dateText) {
+                if (!dateText) return '';
+                
+                // Удаляем "г" в конце
+                dateText = dateText.replace(/\s*г\s*\.?\s*$/i, '').trim();
+                
+                const months = {
+                    'января': '01', 'январь': '01',
+                    'февраля': '02', 'февраль': '02',
+                    'марта': '03', 'март': '03',
+                    'апреля': '04', 'апрель': '04',
+                    'мая': '05', 'май': '05',
+                    'июня': '06', 'июнь': '06',
+                    'июля': '07', 'июль': '07',
+                    'августа': '08', 'август': '08',
+                    'сентября': '09', 'сентябрь': '09',
+                    'октября': '10', 'октябрь': '10',
+                    'ноября': '11', 'ноябрь': '11',
+                    'декабря': '12', 'декабрь': '12'
+                };
+                
+                // Пытаемся распарсить формат: день месяц год
+                const match = dateText.match(/(\d{1,2})\s+([а-яё]+)\s+(\d{4})/i);
+                if (match) {
+                    const day = parseInt(match[1], 10);
+                    const monthRu = match[2].toLowerCase();
+                    const year = parseInt(match[3], 10);
+                    
+                    if (months[monthRu] && day >= 1 && day <= 31 && year >= 1900 && year <= 2100) {
+                        const month = months[monthRu];
+                        const dayStr = String(day).padStart(2, '0');
+                        return year + '-' + month + '-' + dayStr;
+                    }
+                }
+                
+                return '';
+            }
+            
             // Обновление скрытого поля при выборе даты в календаре
             datePicker.addEventListener('change', function() {
                 if (this.value) {
@@ -285,8 +350,19 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 }
             });
             
-            // Инициализация: если дата выбрана в календаре, форматируем её
-            if (datePicker.value) {
+            // Инициализация при загрузке страницы
+            // Если поле даты пустое, но в скрытом поле есть текстовая дата, пытаемся распарсить её
+            if (!datePicker.value && dateTextInput.value) {
+                const parsedDate = parseRussianDate(dateTextInput.value);
+                if (parsedDate) {
+                    datePicker.value = parsedDate;
+                    console.log('Дата распарсена из текстового формата:', dateTextInput.value, '->', parsedDate);
+                } else {
+                    console.warn('Не удалось распарсить дату:', dateTextInput.value);
+                }
+            }
+            // Если дата выбрана в календаре, но скрытое поле пустое, форматируем её
+            else if (datePicker.value && !dateTextInput.value) {
                 dateTextInput.value = formatDateToRussian(datePicker.value);
             }
         }
@@ -344,81 +420,60 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             history.scrollRestoration = 'manual';
         }
         
-        // Инициализация текстовых редакторов TinyMCE
-        document.addEventListener('DOMContentLoaded', function() {
-            // Прокручиваем страницу вверх при загрузке
-            window.scrollTo(0, 0);
+        // Очищаем localStorage при переходе между экскурсиями
+        // Получаем текущий ID экскурсии из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentExcursionId = urlParams.get('id') || 'new';
+        
+        // Получаем сохраненный ID экскурсии из localStorage
+        const savedExcursionId = localStorage.getItem('current_editing_excursion_id');
+        
+        // Если ID экскурсии изменился или это новая экскурсия, очищаем все данные редакторов
+        if (savedExcursionId !== currentExcursionId) {
+            // Очищаем все ключи localStorage, связанные с редакторами экскурсий
+            const keysToRemove = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key && key.startsWith('excursion_editor_')) {
+                    keysToRemove.push(key);
+                }
+            }
+            keysToRemove.forEach(key => localStorage.removeItem(key));
             
-            // Проверяем, что TinyMCE загружен
-            if (typeof tinymce === 'undefined') {
-                console.error('TinyMCE не загружен!');
+            // Сохраняем текущий ID экскурсии
+            localStorage.setItem('current_editing_excursion_id', currentExcursionId);
+        }
+        
+        // Инициализация текстовых редакторов TinyMCE
+        let initAttempts = 0;
+        const maxAttempts = 50; // Максимум 5 секунд (50 * 100ms)
+        
+        function initTinyMCEEditors() {
+            initAttempts++;
+            
+            // Проверяем, что TinyMCE загружен и готов
+            if (typeof tinymce === 'undefined' || !tinymce.util || !tinymce.util.Tools) {
+                if (initAttempts < maxAttempts) {
+                    console.log('TinyMCE еще не загружен, попытка ' + initAttempts + '/' + maxAttempts + '...');
+                    setTimeout(initTinyMCEEditors, 100);
+                } else {
+                    console.error('TinyMCE не загрузился после ' + maxAttempts + ' попыток. Проверьте подключение к интернету и CDN.');
+                    alert('Ошибка: не удалось загрузить текстовый редактор. Проверьте подключение к интернету и обновите страницу.');
+                }
                 return;
             }
             
-            // Конфигурация TinyMCE
-            const tinymceConfig = {
-                selector: '',
-                height: 300,
-                menubar: false,
-                plugins: 'lists link code',
-                toolbar: 'undo redo | formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | link | code',
-                content_style: 'body { font-family: Arial, sans-serif; font-size: 14px; text-align: justify; }',
-                setup: function(editor) {
-                    // Автосохранение в localStorage
-                    const fieldId = editor.id;
-                    const storageKey = 'excursion_editor_' + fieldId;
+            console.log('TinyMCE загружен успешно, начинаем инициализацию редакторов...');
+            
+                // Функция инициализации TinyMCE для поля
+                function initTinyMCEField(fieldId) {
                     const textarea = document.getElementById(fieldId);
-                    
-                    // Загружаем данные из localStorage или textarea
-                    const savedContent = localStorage.getItem(storageKey);
-                    if (savedContent) {
-                        editor.setContent(savedContent);
-                    } else if (textarea && textarea.value) {
-                        editor.setContent(textarea.value);
+                    if (!textarea) {
+                        console.warn('Textarea не найдено:', fieldId);
+                        return;
                     }
                     
-                    // Автосохранение при изменении
-                    editor.on('input change', function() {
-                        const content = editor.getContent();
-                        localStorage.setItem(storageKey, content);
-                        if (textarea) {
-                            textarea.value = content;
-                        }
-                        
-                        // Обновляем HTML view, если он открыт
-                        const htmlViewContainer = document.getElementById(fieldId + '_html_view');
-                        if (htmlViewContainer && htmlViewContainer.style.display !== 'none') {
-                            const escapedHtml = content
-                                .replace(/&/g, '&amp;')
-                                .replace(/</g, '&lt;')
-                                .replace(/>/g, '&gt;')
-                                .replace(/"/g, '&quot;')
-                                .replace(/'/g, '&#039;');
-                            htmlViewContainer.innerHTML = '<pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word;">' + escapedHtml + '</pre>';
-                        }
-                    });
-                    
-                    // Синхронизация при отправке формы
-                    const form = textarea ? textarea.closest('form') : null;
-                    if (form) {
-                        form.addEventListener('submit', function() {
-                            if (textarea) {
-                                textarea.value = editor.getContent();
-                                localStorage.removeItem(storageKey);
-                            }
-                        });
-                    }
-                }
-            };
-
-            // Инициализация для всех textarea полей экскурсии
-            const excursionFields = ['excursion_description', 'excursion_details', 'excursion_price', 
-                                     'excursion_price_included', 'excursion_price_additional'];
-            excursionFields.forEach(fieldId => {
-                const textarea = document.getElementById(fieldId);
-                if (textarea) {
-                    // Скрываем textarea, TinyMCE заменит его
-                    textarea.style.display = 'none';
+                    console.log('Начинаем инициализацию TinyMCE для поля:', fieldId);
                     
                     // Создаем кнопку для просмотра HTML
                     const htmlViewBtn = document.createElement('button');
@@ -446,41 +501,128 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     htmlViewContainer.style.fontSize = '12px';
                     htmlViewBtn.parentNode.insertBefore(htmlViewContainer, htmlViewBtn.nextSibling);
                     
-                    // Инициализируем TinyMCE для этого поля
-                    const config = Object.assign({}, tinymceConfig, {
-                        selector: '#' + fieldId
-                    });
+                    // Ключ для localStorage
+                    const storageKey = 'excursion_editor_' + fieldId;
                     
-                    tinymce.init(config);
-                }
-            });
-            
-            // Функция для отображения HTML кода
-            window.showHtmlView = function(fieldId) {
-                const htmlViewContainer = document.getElementById(fieldId + '_html_view');
-                const htmlViewBtn = htmlViewContainer.previousElementSibling;
-                
-                if (htmlViewContainer.style.display === 'none') {
-                    const editor = tinymce.get(fieldId);
-                    if (editor) {
-                        const html = editor.getContent();
-                        // Экранируем HTML для отображения
-                        const escapedHtml = html
-                            .replace(/&/g, '&amp;')
-                            .replace(/</g, '&lt;')
-                            .replace(/>/g, '&gt;')
-                            .replace(/"/g, '&quot;')
-                            .replace(/'/g, '&#039;');
-                        htmlViewContainer.innerHTML = '<pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word;">' + escapedHtml + '</pre>';
-                        htmlViewContainer.style.display = 'block';
-                        htmlViewBtn.textContent = 'Скрыть HTML';
+                    // Загружаем данные из localStorage или textarea
+                    const savedContent = localStorage.getItem(storageKey);
+                    if (savedContent) {
+                        textarea.value = savedContent;
                     }
-                } else {
-                    htmlViewContainer.style.display = 'none';
-                    htmlViewBtn.textContent = 'Показать HTML';
+                    
+                    // Инициализируем TinyMCE для этого поля
+                    tinymce.init({
+                        selector: '#' + fieldId,
+                        height: 300,
+                        menubar: false,
+                        readonly: false,
+                        plugins: 'lists link code',
+                        toolbar: 'undo redo | formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | link | code',
+                        content_style: 'body { font-family: Arial, sans-serif; font-size: 14px; text-align: justify; }',
+                        setup: function(editor) {
+                            // Скрываем textarea после инициализации редактора
+                            editor.on('init', function() {
+                                if (textarea) {
+                                    textarea.style.display = 'none';
+                                }
+                                // Убеждаемся, что редактор в режиме редактирования
+                                console.log('Редактор инициализирован для поля:', fieldId, 'Режим:', editor.mode.get());
+                            });
+                            
+                            // Автосохранение при изменении
+                            editor.on('input change', function() {
+                                const content = editor.getContent();
+                                localStorage.setItem(storageKey, content);
+                                if (textarea) {
+                                    textarea.value = content;
+                                }
+                                
+                                // Обновляем HTML view, если он открыт
+                                const htmlViewContainer = document.getElementById(fieldId + '_html_view');
+                                if (htmlViewContainer && htmlViewContainer.style.display !== 'none') {
+                                    const escapedHtml = content
+                                        .replace(/&/g, '&amp;')
+                                        .replace(/</g, '&lt;')
+                                        .replace(/>/g, '&gt;')
+                                        .replace(/"/g, '&quot;')
+                                        .replace(/'/g, '&#039;');
+                                    htmlViewContainer.innerHTML = '<pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word;">' + escapedHtml + '</pre>';
+                                }
+                            });
+                            
+                            // Синхронизация при отправке формы
+                            const form = textarea ? textarea.closest('form') : null;
+                            if (form) {
+                                form.addEventListener('submit', function() {
+                                    if (textarea) {
+                                        textarea.value = editor.getContent();
+                                        localStorage.removeItem(storageKey);
+                                    }
+                                });
+                            }
+                        }
+                    });
                 }
-            };
-        });
+
+                // Инициализация для всех textarea полей экскурсии
+                const excursionFields = ['excursion_description', 'excursion_details', 'excursion_price', 
+                                         'excursion_price_included', 'excursion_price_additional'];
+                
+                console.log('Найдено полей для инициализации:', excursionFields.length);
+                excursionFields.forEach(fieldId => {
+                    const textarea = document.getElementById(fieldId);
+                    if (textarea) {
+                        console.log('Инициализация редактора для поля:', fieldId);
+                        initTinyMCEField(fieldId);
+                    } else {
+                        console.warn('Поле не найдено:', fieldId);
+                    }
+                });
+        }
+        
+        // Функция для отображения HTML кода
+        window.showHtmlView = function(fieldId) {
+            const htmlViewContainer = document.getElementById(fieldId + '_html_view');
+            if (!htmlViewContainer) return;
+            
+            const htmlViewBtn = htmlViewContainer.previousElementSibling;
+            
+            if (htmlViewContainer.style.display === 'none') {
+                const editor = tinymce.get(fieldId);
+                if (editor) {
+                    const html = editor.getContent();
+                    // Экранируем HTML для отображения
+                    const escapedHtml = html
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#039;');
+                    htmlViewContainer.innerHTML = '<pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word;">' + escapedHtml + '</pre>';
+                    htmlViewContainer.style.display = 'block';
+                    htmlViewBtn.textContent = 'Скрыть HTML';
+                }
+            } else {
+                htmlViewContainer.style.display = 'none';
+                htmlViewBtn.textContent = 'Показать HTML';
+            }
+        };
+        
+        // Запускаем инициализацию после загрузки DOM и TinyMCE
+        function startInitialization() {
+            window.scrollTo(0, 0);
+            // Небольшая задержка, чтобы убедиться, что TinyMCE начал загружаться
+            setTimeout(function() {
+                initTinyMCEEditors();
+            }, 200);
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', startInitialization);
+        } else {
+            // DOM уже загружен
+            startInitialization();
+        }
 
         // Обработка отправки формы
         document.getElementById('excursionForm').addEventListener('submit', async function(e) {
