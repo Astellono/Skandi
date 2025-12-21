@@ -14,11 +14,25 @@ let tourList = [];
 		.calendar__day--empty { background: transparent; }
 		.calendar__day--today { outline: 2px solid #121723; outline-offset: -2px; background: #eef6ff; }
 		.calendar__day--tour { color: #fff; cursor: pointer; }
+		.calendar__day--excursion { 
+			border: 2px dashed rgba(255,255,255,0.8) !important; 
+			box-shadow: 0 0 0 1px rgba(0,0,0,0.1) inset;
+		}
+		.calendar__day--excursion::before {
+			content: '★';
+			position: absolute;
+			top: 2px;
+			right: 3px;
+			font-size: 10px;
+			color: rgba(255,255,255,0.9);
+			text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+		}
 		.calendar__dots { position: absolute; bottom: 3px; left: 50%; transform: translateX(-50%); display: flex; gap: 3px; }
 		.calendar__dot { width: 5px; height: 5px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); }
 		.calendar__legend { margin-top: 10px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 6px 10px; }
 		.calendar__legend-item { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: #121723; text-decoration: none; }
 		.calendar__legend-item:hover { text-decoration: underline; }
+		.calendar__legend-item--excursion { font-weight: 600; }
 		.calendar__legend-dot { width: 12px; height: 12px; border-radius: 3px; border: 1px solid rgba(0,0,0,0.15); flex: 0 0 12px; }
 
 		/* Responsive */
@@ -55,10 +69,15 @@ const ruWeekdays = ["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
 // Map dates to tours for quick lookup
 function buildDateToToursMap() {
 	const map = new Map(); // key: YYYY-MM-DD -> array of tours
+	console.log('Building date map from tourList:', tourList.length, 'items');
 	tourList.forEach(tour => {
 		(tour.date || []).forEach(d => {
 			// input like "D.M.YYYY"
 			const [dayStr, monthStr, yearStr] = d.split('.');
+			if (!dayStr || !monthStr || !yearStr) {
+				console.warn('Invalid date format:', d, 'in tour:', tour);
+				return;
+			}
 			const day = String(parseInt(dayStr, 10)).padStart(2, '0');
 			const month = String(parseInt(monthStr, 10)).padStart(2, '0');
 			const key = `${yearStr}-${month}-${day}`;
@@ -66,6 +85,7 @@ function buildDateToToursMap() {
 			map.get(key).push(tour);
 		});
 	});
+	console.log('Date map built:', map.size, 'dates with events');
 	return map;
 }
 
@@ -115,8 +135,22 @@ function renderMonth(container, year, monthIndex, dateMap) {
 			if (key === todayKey) cell.classList.add('calendar__day--today');
 			if (tours && tours.length) {
 				cell.classList.add('calendar__day--tour');
-				// Color background. If multiple tours, create simple striped gradient of up to 3 colors
-				const colors = tours.slice(0,3).map(t => t.color || '#4a90e2');
+				
+				// Проверяем, есть ли среди событий экскурсии
+				const hasExcursions = tours.some(t => t.type === 'excursion');
+				if (hasExcursions) {
+					cell.classList.add('calendar__day--excursion');
+				}
+				
+				// Разделяем туры и экскурсии для правильного отображения цветов
+				const regularTours = tours.filter(t => t.type !== 'excursion');
+				const excursions = tours.filter(t => t.type === 'excursion');
+				
+				// Если есть и туры, и экскурсии, показываем их вместе
+				// Приоритет: сначала экскурсии (они более заметные)
+				const displayItems = excursions.length > 0 ? [...excursions, ...regularTours] : regularTours;
+				const colors = displayItems.slice(0,3).map(t => t.color || '#4a90e2');
+				
 				if (colors.length === 1) {
 					cell.style.background = colors[0];
 				} else if (colors.length === 2) {
@@ -127,15 +161,15 @@ function renderMonth(container, year, monthIndex, dateMap) {
 				cell.style.color = '#fff';
 				cell.title = tours.map(t => t.nameT).join(', ');
 				cell.addEventListener('click', () => {
-					// Open the first tour link for this day
-					const first = tours[0];
+					// Приоритет: сначала экскурсии, потом туры
+					const first = excursions.length > 0 ? excursions[0] : tours[0];
 					if (first && first.link) window.location.href = first.link;
 				});
 				// Dots for additional tours
 				if (tours.length > 1) {
 					const dots = document.createElement('div');
 					dots.className = 'calendar__dots';
-					tours.slice(0,3).forEach(t => {
+					displayItems.slice(0,3).forEach(t => {
 						const dot = document.createElement('span');
 						dot.className = 'calendar__dot';
 						dot.style.background = t.color || '#4a90e2';
@@ -151,13 +185,19 @@ function renderMonth(container, year, monthIndex, dateMap) {
 	monthEl.appendChild(grid);
 
 	// Legend for visible month
-	const legendItems = new Map(); // key: name -> color/link
+	const legendItems = new Map(); // key: name -> color/link/type
 	const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
 	for (let d = 1; d <= daysInMonth; d++) {
 		const key = `${year}-${String(monthIndex+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
 		const tours = dateMap.get(key) || [];
 		tours.forEach(t => {
-			if (!legendItems.has(t.nameT)) legendItems.set(t.nameT, { color: t.color || '#4a90e2', link: t.link || '#' });
+			if (!legendItems.has(t.nameT)) {
+				legendItems.set(t.nameT, { 
+					color: t.color || '#4a90e2', 
+					link: t.link || '#',
+					type: t.type || 'tour'
+				});
+			}
 		});
 	}
 	if (legendItems.size) {
@@ -166,13 +206,26 @@ function renderMonth(container, year, monthIndex, dateMap) {
 		legendItems.forEach((val, name) => {
 			const a = document.createElement('a');
 			a.className = 'calendar__legend-item';
+			if (val.type === 'excursion') {
+				a.classList.add('calendar__legend-item--excursion');
+			}
 			a.href = val.link;
 			a.title = name;
 			const dot = document.createElement('span');
 			dot.className = 'calendar__legend-dot';
 			dot.style.background = val.color;
+			if (val.type === 'excursion') {
+				dot.style.border = '2px dashed rgba(255,255,255,0.8)';
+			}
 			a.appendChild(dot);
-			a.appendChild(document.createTextNode(name));
+			const nameText = document.createTextNode(name);
+			if (val.type === 'excursion') {
+				const star = document.createTextNode(' ★');
+				a.appendChild(nameText);
+				a.appendChild(star);
+			} else {
+				a.appendChild(nameText);
+			}
 			legend.appendChild(a);
 		});
 		monthEl.appendChild(legend);
@@ -199,7 +252,14 @@ function renderThreeMonths(startYear, startMonthIndex) {
 		const mod = await import(`./tourList.js?ver=${Date.now()}`);
 		// Ждем загрузки данных из БД
 		await mod.tourListPromise;
-		tourList = mod.tourList || [];
+		// Получаем обновленный список после загрузки
+		tourList = await mod.getTourList();
+		console.log('Calendar initialized with tourList:', tourList.length, 'items');
+		const excursions = tourList.filter(t => t.type === 'excursion');
+		console.log('Excursions in calendar:', excursions.length);
+		if (excursions.length > 0) {
+			console.log('Excursions data:', excursions);
+		}
 	} catch (e) {
 		console.error('Failed to load tourList', e);
 		tourList = [];
@@ -211,7 +271,10 @@ function renderThreeMonths(startYear, startMonthIndex) {
 	const leftBtn = document.getElementById('slideLeft');
 	const rightBtn = document.getElementById('slideRight');
 
-	const update = () => renderThreeMonths(currentYear, currentMonth);
+	const update = () => {
+		console.log('Updating calendar, tourList length:', tourList.length);
+		renderThreeMonths(currentYear, currentMonth);
+	};
 	update();
 
 	if (leftBtn) {
