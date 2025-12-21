@@ -25,11 +25,6 @@ document.getElementById("header").innerHTML = '\
                         Товары\
                     </a>\
                 </li>\
-                <li class="header__item">\
-                    <a href="/video" class="header__link">\
-                        Медиа\
-                    </a>\
-                </li>\
             </ul>\
             <div class="header__burger">\
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24">\

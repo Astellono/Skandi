@@ -18,3 +18,4 @@ ALTER TABLE `excursion_signings`
   CHANGE COLUMN `signing_id` `excursion_id` INT(11) NOT NULL AUTO_INCREMENT;
 
 
+

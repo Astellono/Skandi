@@ -113,11 +113,6 @@ require_once $_SERVER['DOCUMENT_ROOT']. '/getDATA/getUserData.php';
                     Товары
                 </a>
             </li>
-            <li class="header__item">
-                <a href="/video" class="header__link">
-                    Медиа
-                </a>
-            </li>
             <?php if (isset($_SESSION['user_id']) && ((int)$_SESSION['user_id'] === 7 || (int)$_SESSION['user_id'] === 10)): ?>
             <li class="header__item">
                 <a href="/admin/admin.php" class="header__link admin-link">

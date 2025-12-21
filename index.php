@@ -315,7 +315,7 @@ require_once 'phpLogin/connect.php';
     <section class="section actual-tour">
         <div class="container">
             <h2 class="actual-tour__title">
-                Ближайшие путешестивия
+                Ближайшие путешествия
             </h2>
 
             <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">

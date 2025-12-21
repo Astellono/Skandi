@@ -30,3 +30,4 @@ ALTER TABLE `tours`
 ADD COLUMN IF NOT EXISTS `tour_program` TEXT NULL COMMENT 'Программа тура по дням в формате JSON' AFTER `tour_guides`;
 
 
+
