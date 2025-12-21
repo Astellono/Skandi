@@ -90,7 +90,15 @@ if ($search !== '') {
         <header class="admin-header">
             <h1>Админ-панель</h1>
             <div class="admin-header-actions">
-                <a href="/admin/admin.php" class="btn btn-secondary">Туры</a>
+                <?php
+                $current_page = basename($_SERVER['PHP_SELF']);
+                $is_tours = ($current_page === 'admin.php' || $current_page === 'edit_tour.php');
+                $is_excursions = ($current_page === 'excursions.php' || $current_page === 'edit_excursion.php');
+                $is_users = ($current_page === 'users.php');
+                ?>
+                <a href="/admin/admin.php" class="btn btn-secondary <?php echo $is_tours ? 'active' : ''; ?>">Туры</a>
+                <a href="/admin/excursions.php" class="btn btn-secondary <?php echo $is_excursions ? 'active' : ''; ?>">Экскурсии</a>
+                <a href="/admin/users.php" class="btn btn-secondary <?php echo $is_users ? 'active' : ''; ?>">Пользователи</a>
                 <a href="/index.php" class="btn btn-secondary" target="_blank">На сайт</a>
                 <a href="/phpLogin/logout.php" class="btn btn-danger">Выход</a>
             </div>

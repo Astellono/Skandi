@@ -73,6 +73,20 @@ try {
     $tour = $result->fetch_assoc();
     $checkStmt->close();
     
+    // Удаляем все связанные записи людей из таблицы signing
+    $deletedSignings = 0;
+    $tableCheck = $connect->query("SHOW TABLES LIKE 'signing'");
+    if ($tableCheck && $tableCheck->num_rows > 0) {
+        $deleteSigningsStmt = $connect->prepare("DELETE FROM signing WHERE signing_tour_id = ?");
+        if ($deleteSigningsStmt) {
+            $deleteSigningsStmt->bind_param('i', $tour_id);
+            if ($deleteSigningsStmt->execute()) {
+                $deletedSignings = $deleteSigningsStmt->affected_rows;
+            }
+            $deleteSigningsStmt->close();
+        }
+    }
+    
     $deletedFiles = [];
     $errors = [];
     
@@ -132,6 +146,9 @@ try {
     
     if ($stmt->execute()) {
         $message = 'Тур успешно удален';
+        if ($deletedSignings > 0) {
+            $message .= '. Удалено записей людей: ' . $deletedSignings;
+        }
         if (!empty($deletedFiles)) {
             $message .= '. Удалены файлы: ' . implode(', ', $deletedFiles);
         }
@@ -141,6 +158,7 @@ try {
         echo json_encode([
             'success' => true, 
             'message' => $message,
+            'deleted_signings' => $deletedSignings,
             'deleted_files' => $deletedFiles,
             'errors' => $errors
         ]);

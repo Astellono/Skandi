@@ -19,8 +19,9 @@ if (!$connect) {
   
 }
 
-// Устанавливаем кодировку
-$connect->set_charset("utf8");
+// Устанавливаем кодировку utf8mb4 для поддержки эмодзи и 4-байтовых символов
+$connect->set_charset("utf8mb4");
+$connect->query("SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci");
 
 // Устанавливаем часовой пояс (опционально)
 $connect->query("SET time_zone = '+03:00'");

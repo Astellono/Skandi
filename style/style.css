@@ -68,13 +68,18 @@ body {
 
 }
 
-ul,
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
 li,
 a {
     text-decoration: none;
-    list-style-type: none;
     color: black;
-
 }
 
 section {
@@ -146,6 +151,7 @@ button {
 }
 
 .header__menu {
+    list-style-type: none;
     display: flex;
     width: 600px;
     margin-right: 20px;
@@ -193,6 +199,7 @@ button {
 }
 
 .header__soc-list {
+    list-style-type: none;
     display: flex;
     justify-content: space-around;
 }
@@ -239,6 +246,7 @@ button {
 }
 
 .acc__block-mobile {
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -294,8 +302,8 @@ button {
     border-bottom: none;
 }
 .acc__block {
+    list-style-type: none;
     display: flex;
- 
     align-items: center;
 }
 
@@ -487,6 +495,7 @@ button {
 }
 
 .adv__list {
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -577,6 +586,7 @@ button {
 }
 
 .actual-tour__list {
+    list-style-type: none;
     display: flex;
     justify-content: space-between;
     width: 70%;
@@ -695,6 +705,7 @@ button {
 
 
 .calendar__list {
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -970,6 +981,7 @@ button {
 }
 
 .team__list {
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1171,6 +1183,7 @@ button {
 }
 
 .partner__list {
+    list-style-type: none;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -1403,6 +1416,7 @@ button {
 }
 
 .modal-tour-list {
+    list-style-type: none;
     margin-bottom: 20px;
 }
 
@@ -1438,8 +1452,8 @@ button {
 }
 
 .modal-body {
-    font-size: 24px;
-    font-weight: 700;
+    /* font-size: 24px;
+    font-weight: 700; */
     text-align: center;
     padding: 0 1rem 0 1rem;
     margin: 10px 0;
@@ -1462,7 +1476,26 @@ button {
 }
 
 .modal-active-item {
-    list-style-type: disc;
+    margin-bottom: 10px;
+}
+.modal-active-item > ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+/* Стили для списков внутри modal-active-content (HTML из Quill редактора) */
+.modal-active-content ul {
+    
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.modal-active-content ol {
+    
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.modal-active-content li {
     margin-bottom: 10px;
 }
 
@@ -1690,6 +1723,7 @@ table * {
 }
 
 .lesson__list {
+    list-style-type: none;
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
@@ -2014,6 +2048,7 @@ table * {
 }
 
 .tour__list {
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2433,10 +2468,9 @@ table * {
     text-align: justify;
 }
 .tour__page__desc > p {
-    text-indent: 50px;
+    margin-bottom: 0;
 }
 .tour__page__desc > ul>li {
-    list-style-type: disc ;
    color: #60326B;
 }
 .tour__page__desc > ul {
@@ -2454,11 +2488,18 @@ table * {
 .tour__page__rateTitle {
     font-size: 24px;
     width: 300px;
+    max-width: 100%;
     margin-bottom: 15px;
     text-align: center;
 
     color: #60326B;
 
+}
+
+.tour__page__rate img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .order {
@@ -2535,10 +2576,18 @@ table * {
     font-weight: 700;
 }
 
+.tour__page__priceIn__content {
+    font-weight: 400;
+}
+
 .tour__page__priceOff {
     color: #c44f42;
     font-size: 14px;
     font-weight: 700;
+}
+
+.tour__page__priceOff__content {
+    font-weight: 400;
 }
 
 
@@ -2552,6 +2601,7 @@ table * {
 }
 
 .tour__page__gid__list {
+    list-style-type: none;
     display: flex;
 }
 
@@ -2565,8 +2615,22 @@ table * {
 
 .tour__page__gid__img {
     width: 180px;
+    height: 180px;
+    max-width: 100%;
+    object-fit: cover;
     margin-bottom: 5px;
+    border-radius: 50%;
+    
+    
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+ 
+    padding: 3px;
 }
+
+
+
+
 
 .tour__page__gid__title-member {
     color: #60326B;
@@ -3542,8 +3606,8 @@ body.mod {
 
 
 .excursions__list {
+    list-style-type: none;
     display: flex;
-
     position: relative;
     flex-wrap: wrap;
     gap: 20px;
@@ -3921,6 +3985,7 @@ body.mod {
 }
 
 .menu__list {
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -4073,6 +4138,7 @@ body.mod {
 }
 
 .video__list {
+    list-style-type: none;
     width: 300px;
     height: 100%;
     border-right: 1px solid black;

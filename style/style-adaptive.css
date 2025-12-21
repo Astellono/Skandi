@@ -136,6 +136,24 @@
         width: 100%;
         margin-bottom: 20px;
     }
+    
+    .tour__page__gid__img {
+        width: 150px;
+        height: 150px;
+        max-width: 100%;
+    }
+    
+    .tour__page__rateTitle {
+        font-size: 22px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .tour__page__rate img {
+        max-width: 220px;
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 968px) {
@@ -672,6 +690,18 @@
         /* justify-content: center;
         align-items: center; */
     }
+    
+    .tour__page__rateTitle {
+        font-size: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .tour__page__rate img {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+    }
 
     .menu__list {
         flex-direction: column;
@@ -690,6 +720,24 @@
     /* Улучшенный контейнер для экскурсий */
     .excursions .container {
         padding: 0 16px;
+    }
+    
+    .tour__page__rateTitle {
+        font-size: 19px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .tour__page__rate img {
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .tour__page__gid__img {
+        width: 120px;
+        height: 120px;
+        max-width: 100%;
     }
 }
 
@@ -804,6 +852,8 @@
     }
     .tour__page__gid__img {
         width: 100px;
+        height: 100px;
+        max-width: 100%;
     }
     .tour__page__gid__title-member {
         font-size: 14px;
@@ -814,6 +864,19 @@
         flex-direction: column;
         align-items: center;
     }
+    
+    .tour__page__rateTitle {
+        font-size: 18px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .tour__page__rate img {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+    }
+    
     .container {
         padding: 0 10px;
     }
@@ -1624,6 +1687,34 @@
     
     .excursions__details__desc {
         font-size: 14px;
+    }
+    
+    .tour__page__gid__img {
+        width: 80px;
+        height: 80px;
+        max-width: 100%;
+    }
+    
+    .tour__page__gid__title-member {
+        font-size: 13px;
+    }
+    
+    .tour__page__gid__desc {
+        font-size: 11px;
+    }
+    
+    .tour__page__rateTitle {
+        font-size: 16px;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .tour__page__rate img {
+        max-width: 120px;
+        width: 100%;
+        height: auto;
+    }
         line-height: 1.5;
     }
 }

@@ -139,6 +139,17 @@ body {
     background-color: #5a6268;
 }
 
+.btn-secondary.active {
+    background-color: #667eea;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary.active:hover {
+    background-color: #5568d3;
+}
+
 .btn-danger {
     background-color: #dc3545;
     color: white;
@@ -354,20 +365,37 @@ body {
 }
 
 .form-group input[type="text"],
-.form-group input[type="date"] {
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ced4da;
     border-radius: 6px;
     font-size: 1rem;
     transition: border-color 0.2s;
+    font-family: inherit;
 }
 
 .form-group input[type="text"]:focus,
-.form-group input[type="date"]:focus {
+.form-group input[type="date"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: #667eea;
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group select {
+    cursor: pointer;
+    background-color: white;
 }
 
 .form-group small {
@@ -389,6 +417,7 @@ body {
     align-items: center;
 }
 
+
 .color-input-group input[type="color"] {
     width: 60px;
     height: 40px;
@@ -407,6 +436,162 @@ body {
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid #e9ecef;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    justify-content: center;
+    margin-top: 0;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Отступ снизу для формы, чтобы кнопки не перекрывали содержимое */
+.tour-form,
+#tourForm,
+#excursionForm {
+    padding-bottom: 80px;
+}
+
+/* Form sections */
+.form-divider {
+    margin: 2rem 0;
+    border: none;
+    border-top: 2px solid #e0e0e0;
+}
+
+.form-section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+/* Dynamic items */
+.guide-item,
+.day-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.guide-item-header,
+.day-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.guide-item-header strong,
+.day-item-header strong {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.btn-remove-guide,
+.btn-remove-day {
+    padding: 0.375rem 0.75rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+}
+
+.btn-remove-guide:hover,
+.btn-remove-day:hover {
+    background-color: #c82333;
+}
+
+/* File upload styles */
+.file-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.file-upload-display {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.file-upload-display input[type="text"] {
+    flex: 1;
+}
+
+.btn-upload {
+    white-space: nowrap;
+}
+
+.image-preview {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    max-width: 400px;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.image-preview-small {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    max-width: 150px;
+}
+
+.image-preview-small img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Стили для фото гидов - улучшенный дизайн */
+.guide_image_preview_container {
+    margin-top: 1rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    max-width: 200px;
+}
+
+.guide_image_preview_container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.guide_image_preview_container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    border-color: #5568d3;
 }
 
 /* Responsive */
@@ -454,5 +639,80 @@ body {
     .btn-sm {
         width: 100%;
     }
+}
+
+/* Стили для TinyMCE редактора */
+.tox-tinymce {
+    border: 1px solid #ced4da !important;
+    border-radius: 6px !important;
+}
+
+.tox .tox-toolbar {
+    background-color: #f8f9fa;
+}
+
+.tox .tox-edit-area__iframe {
+    min-height: 200px;
+}
+
+/* Фиксированное расположение кнопок действий формы */
+.form-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Отступ снизу для формы, чтобы кнопки не перекрывали содержимое */
+.tour-form,
+#tourForm,
+#excursionForm {
+    padding-bottom: 80px;
+}
+
+/* Стили для форматирования текста в TinyMCE редакторе */
+.mce-content-body strong,
+.mce-content-body b {
+    font-weight: bold !important;
+}
+
+.mce-content-body em,
+.mce-content-body i {
+    font-style: italic !important;
+}
+
+.mce-content-body u {
+    text-decoration: underline !important;
+}
+
+.mce-content-body s,
+.mce-content-body strike {
+    text-decoration: line-through !important;
+}
+
+/* Стили для TinyMCE редактора */
+.mce-content-body {
+    text-align: justify !important;
+}
+
+.mce-content-body ul ul,
+.mce-content-body ol ol,
+.mce-content-body ul ol,
+.mce-content-body ol ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+}
+
+.mce-content-body li {
+    margin-bottom: 0.25em;
 }
 
