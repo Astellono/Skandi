@@ -31,3 +31,4 @@ ADD COLUMN IF NOT EXISTS `tour_program` TEXT NULL COMMENT 'Программа т
 
 
 
+
