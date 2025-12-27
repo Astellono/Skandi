@@ -91,374 +91,277 @@
     <section class="lesson">
         <div class="container">
 
-            <h2 class="lesson__title">Групповые занятия</h2>
-
-            <p class="lesson__group-how">Цена занятия: 700р</p>
-            <hr>
-            <table class="lesson__table table big__table">
-                <h2 class="lesson__table-title">Расписание</h2>
-
-
-                <tr>
-                    <th>ПАРК</th>
-                    <th>ПН</th>
-                    <th>ВТ</th>
-                    <th>СР</th>
-                    <th>ЧТ</th>
-                    <th>ПТ</th>
-                    <th>СБ</th>
-                    <th>ВС</th>
-                    <th>Точка сбора</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td class="td__img">
-                        <img class="lesson__img" src="img/lesson/luzh.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Лужники</p>
-                    </td>
-                    <td>-</td>
-                    <td>07:00</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="td-item"><a class="td-link" href="#mapLuzh"><img width="50px" height="50px"
-                                src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#modal-luzh" class="lesson__btn">Записаться</a></td>
-
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>ПН</th>
-                    <th>ВТ</th>
-                    <th>СР</th>
-                    <th>ЧТ</th>
-                    <th>ПТ</th>
-                    <th>СБ</th>
-                    <th>ВС</th>
-                    <th>Точка сбора</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td class="td__img">
-                        <img class="lesson__img" src="img/lesson/king.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Царицыно</p>
-                    </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>19.30</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="td-item"><a class="td-link" href="#mapCar"><img width="50px" height="50px"
-                                src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#modal-caricino" class="lesson__btn">Записаться</a></td>
-
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>ПН</th>
-                    <th>ВТ</th>
-                    <th>СР</th>
-                    <th>ЧТ</th>
-                    <th>ПТ</th>
-                    <th>СБ</th>
-                    <th>ВС</th>
-                    <th>Точка сбора</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td class="td__img">
-                        <img class="lesson__img" src="img/lesson/ber.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Бирюлевский дендропарк</p>
-                    </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>8.00</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="td-item"><a class="td-link" href="#mapBer"><img width="50px" height="50px"
-                                src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#modal-ber" class="lesson__btn">Записаться</a></td>
-
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>ПН</th>
-                    <th>ВТ</th>
-                    <th>СР</th>
-                    <th>ЧТ</th>
-                    <th>ПТ</th>
-                    <th>СБ</th>
-                    <th>ВС</th>
-                    <th>Точка сбора</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td class="td__img">
-                        <img class="lesson__img" src="img/lesson/shkul.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Парк Шкулева</p>
-                    </td>
-                    <td>11:00</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>9.00</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="td-item"><a class="td-link" href="#mapShkul"><img width="50px" height="50px"
-                                src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#modal-shkul" class="lesson__btn">Записаться</a></td>
-
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>ПН</th>
-                    <th>ВТ</th>
-                    <th>СР</th>
-                    <th>ЧТ</th>
-                    <th>ПТ</th>
-                    <th>СБ</th>
-                    <th>ВС</th>
-                    <th>Точка сбора</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td class="td__img">
-                        <img class="lesson__img" src="img/lesson/kuz.jpg" alt="" srcset="">
-                        <p class="lesson__img-text">Парк Кузьминки</p>
-                    </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>9.00</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="td-item"><a class="td-link" href="#mapkuz"><img width="50px" height="50px"
-                                src="img/map.png"></a></td>
-                    <td class="td__btn"> <a href="#modal-Kuz" class="lesson__btn">Записаться</a></td>
-
-                </tr>
-            </table>
-
-
-            <div class="lesson__smart__table">
-                <hr>
-
-                <hr>
-                <div class="lesson__table-imgBlock">
-                    <img class="lesson__img-smart" src="img/lesson/luzh.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Лужники</p>
-                </div>
-                <table class="lesson__table table smart__table">
-                    <tr>
-                        <th>ПН</th>
-                        <th>ВТ</th>
-                        <th>СР</th>
-                        <th>ЧТ</th>
-                        <th>ПТ</th>
-                        <th>СБ</th>
-                        <th>ВС</th>
-                        <th>Точка сбора</th>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>7:00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td class="td-item"><a class="td-link" href="#mapLuzh"><img width="50px" height="50px"
-                                    src="img/map.png"></a></td>
-                    </tr>
-                </table>
-                <a href="#modal-luzh" class="lesson__btn">Записаться</a>
-                <hr>
-                <div class="lesson__table-imgBlock">
-                    <img class="lesson__img-smart" src="img/lesson/king.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Царицыно</p>
-                </div>
-                <table class="lesson__table table smart__table">
-                    <tr>
-                        <th>ПН</th>
-                        <th>ВТ</th>
-                        <th>СР</th>
-                        <th>ЧТ</th>
-                        <th>ПТ</th>
-                        <th>СБ</th>
-                        <th>ВС</th>
-                        <th>Точка сбора</th>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>19:30</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td class="td-item"><a class="td-link" href="#mapCar"><img width="50px" height="50px"
-                                    src="img/map.png"></a></td>
-                    </tr>
-                </table>
-                <a href="#modal-caricino" class="lesson__btn">Записаться</a>
-                <hr>
-
-                <div class="lesson__table-imgBlock">
-                    <img class="lesson__img-smart" src="img/lesson/ber.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Бирюлевский дендропарк</p>
-                </div>
-                <table class="lesson__table table smart__table">
-                    <tr>
-                        <th>ПН</th>
-                        <th>ВТ</th>
-                        <th>СР</th>
-                        <th>ЧТ</th>
-                        <th>ПТ</th>
-                        <th>СБ</th>
-                        <th>ВС</th>
-                        <th>Точка сбора</th>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>8:00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td class="td-item"><a class="td-link" href="#mapBer"><img width="50px" height="50px"
-                                    src="img/map.png"></a></td>
-                    </tr>
-                </table>
-                <a href="#modal-ber" class="lesson__btn">Записаться</a>
-                <hr>
-                <div class="lesson__table-imgBlock">
-                    <img class="lesson__img-smart" src="img/lesson/shkul.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Парк Шкулева</p>
-                </div>
-                <table class="lesson__table table smart__table">
-                    <tr>
-                        <th>ПН</th>
-                        <th>ВТ</th>
-                        <th>СР</th>
-                        <th>ЧТ</th>
-                        <th>ПТ</th>
-                        <th>СБ</th>
-                        <th>ВС</th>
-                        <th>Точка сбора</th>
-                    </tr>
-                    <tr>
-                        <td>11:00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>9:00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td class="td-item"><a class="td-link" href="#mapShkul"><img width="50px" height="50px"
-                                    src="img/map.png"></a></td>
-                    </tr>
-                </table>
-                <a href="#modal-shkul" class="lesson__btn">Записаться</a>
-                <hr>
-                <div class="lesson__table-imgBlock">
-                    <img class="lesson__img-smart" src="img/lesson/kuz.jpg" alt="" srcset="">
-                    <p class="lesson__img-text-smart">Парк Кузьминки</p>
-                </div>
-                <table class="lesson__table table smart__table">
-                    <tr>
-                        <th>ПН</th>
-                        <th>ВТ</th>
-                        <th>СР</th>
-                        <th>ЧТ</th>
-                        <th>ПТ</th>
-                        <th>СБ</th>
-                        <th>ВС</th>
-                        <th>Точка сбора</th>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>9:00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td class="td-item"><a class="td-link" href="#mapkuz"><img width="50px" height="50px"
-                                    src="img/map.png"></a></td>
-                    </tr>
-                </table>
-                <a href="#modal-Kuz" class="lesson__btn">Записаться</a>
-                <hr>
+            <div class="lesson__header">
+                <h2 class="lesson__title">Групповые занятия</h2>
             </div>
-            <div class="lesson__abik">
-                <h3 class="lesson__title">Абонементы</h3>
-                <ul class="lesson__abik-list">
 
-                    <li class="lesson__abik-item">
-                        <div class="lesson__abik-img-box">
-                            <img class="lesson__abik-img" src="img/lesson/abon.png" alt="" srcset="">
+            <?php
+            require_once $_SERVER['DOCUMENT_ROOT'] . '/phpLogin/connect.php';
+            
+            // Получаем расписание из БД
+            $lessons = [];
+            $query = "SELECT * FROM lessons_schedule ORDER BY `order` ASC, lesson_id ASC";
+            $result = $connect->query($query);
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
+                    $lessons[] = $row;
+                }
+            }
+            
+            // Подготавливаем данные для JavaScript
+            $lessonsJson = json_encode($lessons, JSON_UNESCAPED_UNICODE | JSON_HEX_QUOT | JSON_HEX_APOS);
+            
+            if (!empty($lessons)):
+            ?>
+            <script>
+                // Передаем данные о занятиях в JavaScript для создания карт
+                window.lessonsData = <?php echo $lessonsJson; ?>;
+            </script>
+            
+            <?php
+            // Динамически создаем модальные окна с картами для каждого занятия
+            foreach ($lessons as $lesson):
+                if (!empty($lesson['map_link']) && !empty($lesson['latitude']) && !empty($lesson['longitude'])):
+                    $mapLinkId = htmlspecialchars($lesson['map_link']);
+                    $mapContainerId = 'map-' . $mapLinkId;
+            ?>
+            <div id="<?php echo $mapLinkId; ?>" onclick="location.href='#'" class="mod">
+                <div onclick="event.stopPropagation()" class="modal-d">
+                    <div class="modal-c">
+                        <div class="modal-h">
+                            <h3 class="modal-title">Точка сбора - <?php echo htmlspecialchars($lesson['park_name']); ?></h3>
+                            <a href="#close" title="Close" class="close">×</a>
                         </div>
-                        <h3 class="lesson__abik-title-item">4 занятия</h3>
-                        <p class="lesson__abik-title-srok">2 месяца</p>
-                        <p class="lesson__abik-title-price">2500р</p>
+                        <div id="<?php echo $mapContainerId; ?>" style="height: 500px;"></div>
+                    </div>
+                </div>
+            </div>
+            <?php
+                endif;
+            endforeach;
+            ?>
 
-                    </li>
-                    <li class="lesson__abik-item">
-                        <div class="lesson__abik-img-box">
-                            <img class="lesson__abik-img" src="img/lesson/abon.png" alt="" srcset="">
+            <!-- Десктопная таблица (скрывается на мобильных) -->
+            <div class="lesson__schedule-desktop">
+                <h3 class="lesson__schedule-title">Расписание занятий</h3>
+                <div class="lesson__table-wrapper">
+                    <table class="lesson__table lesson__table-desktop">
+                        <thead>
+                            <tr>
+                                <th>ПАРК</th>
+                                <th>ПН</th>
+                                <th>ВТ</th>
+                                <th>СР</th>
+                                <th>ЧТ</th>
+                                <th>ПТ</th>
+                                <th>СБ</th>
+                                <th>ВС</th>
+                                <th>Точка сбора</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($lessons as $index => $lesson): ?>
+                                <tr><td></td></tr>
+                                <tr>
+                                    <td class="lesson__table-park">
+                                        <?php 
+                                        $imgSrc = !empty($lesson['park_image']) ? $lesson['park_image'] : 'img/lesson/default.jpg';
+                                        $imgSrc = ($imgSrc[0] === '/') ? substr($imgSrc, 1) : $imgSrc;
+                                        ?>
+                                        <div class="lesson__park-image">
+                                            <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="<?php echo htmlspecialchars($lesson['park_name']); ?>">
+                                            <span class="lesson__park-name"><?php echo htmlspecialchars($lesson['park_name']); ?></span>
+                                        </div>
+                                    </td>
+                                    <td class="<?php echo (!empty($lesson['monday']) && $lesson['monday'] !== '-') ? 'lesson__time-cell' : 'lesson__time-empty'; ?>"><?php echo htmlspecialchars($lesson['monday'] ?? '-'); ?></td>
+                                    <td class="<?php echo (!empty($lesson['tuesday']) && $lesson['tuesday'] !== '-') ? 'lesson__time-cell' : 'lesson__time-empty'; ?>"><?php echo htmlspecialchars($lesson['tuesday'] ?? '-'); ?></td>
+                                    <td class="<?php echo (!empty($lesson['wednesday']) && $lesson['wednesday'] !== '-') ? 'lesson__time-cell' : 'lesson__time-empty'; ?>"><?php echo htmlspecialchars($lesson['wednesday'] ?? '-'); ?></td>
+                                    <td class="<?php echo (!empty($lesson['thursday']) && $lesson['thursday'] !== '-') ? 'lesson__time-cell' : 'lesson__time-empty'; ?>"><?php echo htmlspecialchars($lesson['thursday'] ?? '-'); ?></td>
+                                    <td class="<?php echo (!empty($lesson['friday']) && $lesson['friday'] !== '-') ? 'lesson__time-cell' : 'lesson__time-empty'; ?>"><?php echo htmlspecialchars($lesson['friday'] ?? '-'); ?></td>
+                                    <td class="<?php echo (!empty($lesson['saturday']) && $lesson['saturday'] !== '-') ? 'lesson__time-cell' : 'lesson__time-empty'; ?>"><?php echo htmlspecialchars($lesson['saturday'] ?? '-'); ?></td>
+                                    <td class="<?php echo (!empty($lesson['sunday']) && $lesson['sunday'] !== '-') ? 'lesson__time-cell' : 'lesson__time-empty'; ?>"><?php echo htmlspecialchars($lesson['sunday'] ?? '-'); ?></td>
+                                    <td class="lesson__table-map">
+                                        <?php if (!empty($lesson['map_link'])): ?>
+                                            <a class="lesson__map-link" href="#<?php echo htmlspecialchars($lesson['map_link']); ?>" title="Посмотреть на карте">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                                                </svg>
+                                            </a>
+                                        <?php else: ?>
+                                            <span class="lesson__map-disabled" title="Карта недоступна">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                                                </svg>
+                                            </span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td class="lesson__table-action">
+                                        <?php if (!empty($lesson['modal_id'])): ?>
+                                            <a href="#<?php echo htmlspecialchars($lesson['modal_id']); ?>" class="lesson__btn lesson__btn-table">Записаться</a>
+                                        <?php else: ?>
+                                            <span class="lesson__btn lesson__btn-table lesson__btn-disabled">Записаться</span>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
+                                <tr><td></td></tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Мобильные карточки (показываются на мобильных) -->
+            <div class="lesson__schedule-mobile">
+                <h3 class="lesson__schedule-title">Расписание занятий</h3>
+                <div class="lesson__cards">
+                    <?php foreach ($lessons as $lesson): ?>
+                        <?php 
+                        $imgSrc = !empty($lesson['park_image']) ? $lesson['park_image'] : 'img/lesson/default.jpg';
+                        $imgSrc = ($imgSrc[0] === '/') ? substr($imgSrc, 1) : $imgSrc;
+                        ?>
+                        <div class="lesson__card">
+                            <div class="lesson__card-header">
+                                <div class="lesson__card-image">
+                                    <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="<?php echo htmlspecialchars($lesson['park_name']); ?>">
+                                    <div class="lesson__card-overlay"></div>
+                                    <h4 class="lesson__card-title"><?php echo htmlspecialchars($lesson['park_name']); ?></h4>
+                                </div>
+                            </div>
+                            <div class="lesson__card-body">
+                                <div class="lesson__card-schedule">
+                                    <div class="lesson__schedule-grid">
+                                        <div class="lesson__schedule-day">
+                                            <span class="lesson__day-name">ПН</span>
+                                            <span class="lesson__day-time"><?php echo htmlspecialchars($lesson['monday'] ?? '-'); ?></span>
+                                        </div>
+                                        <div class="lesson__schedule-day">
+                                            <span class="lesson__day-name">ВТ</span>
+                                            <span class="lesson__day-time"><?php echo htmlspecialchars($lesson['tuesday'] ?? '-'); ?></span>
+                                        </div>
+                                        <div class="lesson__schedule-day">
+                                            <span class="lesson__day-name">СР</span>
+                                            <span class="lesson__day-time"><?php echo htmlspecialchars($lesson['wednesday'] ?? '-'); ?></span>
+                                        </div>
+                                        <div class="lesson__schedule-day">
+                                            <span class="lesson__day-name">ЧТ</span>
+                                            <span class="lesson__day-time"><?php echo htmlspecialchars($lesson['thursday'] ?? '-'); ?></span>
+                                        </div>
+                                        <div class="lesson__schedule-day">
+                                            <span class="lesson__day-name">ПТ</span>
+                                            <span class="lesson__day-time"><?php echo htmlspecialchars($lesson['friday'] ?? '-'); ?></span>
+                                        </div>
+                                        <div class="lesson__schedule-day">
+                                            <span class="lesson__day-name">СБ</span>
+                                            <span class="lesson__day-time"><?php echo htmlspecialchars($lesson['saturday'] ?? '-'); ?></span>
+                                        </div>
+                                        <div class="lesson__schedule-day">
+                                            <span class="lesson__day-name">ВС</span>
+                                            <span class="lesson__day-time"><?php echo htmlspecialchars($lesson['sunday'] ?? '-'); ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lesson__card-actions">
+                                    <?php if (!empty($lesson['map_link'])): ?>
+                                        <a href="#<?php echo htmlspecialchars($lesson['map_link']); ?>" class="lesson__card-map-btn" title="Посмотреть на карте">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                                            </svg>
+                                            <span>Карта</span>
+                                        </a>
+                                    <?php endif; ?>
+                                    <?php if (!empty($lesson['modal_id'])): ?>
+                                        <a href="#<?php echo htmlspecialchars($lesson['modal_id']); ?>" class="lesson__card-register-btn">Записаться</a>
+                                    <?php else: ?>
+                                        <span class="lesson__card-register-btn lesson__card-register-btn-disabled">Записаться</span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="lesson__abik-title-item">10 занятий</h3>
-                        <p class="lesson__abik-title-srok">6 месяцев</p>
-                        <p class="lesson__abik-title-price">6000р</p>
-
-                    </li>
-                </ul>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <?php else: ?>
+                <p style="text-align: center; padding: 40px; color: #999;">Расписание пока не добавлено</p>
+            <?php endif; ?>
+            
+            <div class="lesson__price-after-table">
+                <div class="lesson__price-badge">
+                    <span class="lesson__price-label">Цена занятия:</span>
+                    <span class="lesson__price-value">700₽</span>
+                </div>
+            </div>
+            
+            <div class="lesson__subscriptions">
+                <h3 class="lesson__section-title">Абонементы на групповые занятия</h3>
+                <div class="lesson__subscriptions-grid">
+                    <div class="lesson__subscription-card">
+                        <div class="lesson__subscription-icon">
+                            <img src="img/lesson/abon.png" alt="Абонемент">
+                        </div>
+                        <div class="lesson__subscription-content">
+                            <h4 class="lesson__subscription-title">4 занятия</h4>
+                            <p class="lesson__subscription-period">Срок действия: 2 месяца</p>
+                            <div class="lesson__subscription-price">
+                                <span class="lesson__subscription-price-value">2500₽</span>
+                                <span class="lesson__subscription-price-per">625₽ за занятие</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson__subscription-card lesson__subscription-card-featured">
+                        <div class="lesson__subscription-badge">Выгодно</div>
+                        <div class="lesson__subscription-icon">
+                            <img src="img/lesson/abon.png" alt="Абонемент">
+                        </div>
+                        <div class="lesson__subscription-content">
+                            <h4 class="lesson__subscription-title">10 занятий</h4>
+                            <p class="lesson__subscription-period">Срок действия: 6 месяцев</p>
+                            <div class="lesson__subscription-price">
+                                <span class="lesson__subscription-price-value">6000₽</span>
+                                <span class="lesson__subscription-price-per">600₽ за занятие</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <section class="solo">
+    <section class="lesson__individual">
         <div class="container">
-            <div class="lesson__solo">
-                <div class="lesson__solo-left">
-                    <h2 class="lesson__solo-title">
-                        Индивидуальные занятия
-                    </h2>
-                    <div class="lesson__solo-desc">
-                        В этом формате у вас есть возможность выбрать подходящее для вас место и время. Оставьте заявку
-                        и с вами свяжутся и обговорят все интересующие вас вопросы.
-                    </div>
-                    <p class="lesson__solo-how">Цена: 3000р</p>
-                    <a href="#modal-solo" style="margin-left: 0;" class="lesson__btn">Записаться</a>
-                </div>
-                <div class="lesson__solo-right">
-                    <img class="lesson__solo-right-img" src="img/lesson/solo.png" alt="" srcset="">
-                </div>
-
-            </div>
-            <hr>
-            <div class="lesson__abik">
-                <h3 class="lesson__title">Абонементы</h3>
-                <ul class="lesson__abik-list">
-
-                    <li class="lesson__abik-item">
-                        <div class="lesson__abik-img-box">
-                            <img class="lesson__abik-img" src="img/lesson/abon.png" alt="" srcset="">
+            <div class="lesson__individual-wrapper">
+                <div class="lesson__individual-content">
+                    <div class="lesson__individual-text">
+                        <h2 class="lesson__individual-title">Индивидуальные занятия</h2>
+                        <p class="lesson__individual-description">
+                            В этом формате у вас есть возможность выбрать подходящее для вас место и время. Оставьте заявку
+                            и с вами свяжутся и обговорят все интересующие вас вопросы.
+                        </p>
+                        <div class="lesson__individual-price">
+                            <span class="lesson__individual-price-label">Цена:</span>
+                            <span class="lesson__individual-price-value">3000₽</span>
                         </div>
-                        <h3 class="lesson__abik-title-item">3 занятия</h3>
-                        <p class="lesson__abik-title-srok">1 месяц</p>
-                        <p class="lesson__abik-title-price">7500р</p>
-
-                    </li>
-
-                </ul>
+                        <a href="#modal-solo" class="lesson__btn lesson__btn-primary">Записаться</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lesson__subscriptions lesson__subscriptions-individual">
+                <h3 class="lesson__section-title">Абонементы на индивидуальные занятия</h3>
+                <div class="lesson__subscriptions-grid lesson__subscriptions-grid-single">
+                    <div class="lesson__subscription-card">
+                        <div class="lesson__subscription-icon">
+                            <img src="img/lesson/abon.png" alt="Абонемент">
+                        </div>
+                        <div class="lesson__subscription-content">
+                            <h4 class="lesson__subscription-title">3 занятия</h4>
+                            <p class="lesson__subscription-period">Срок действия: 1 месяц</p>
+                            <div class="lesson__subscription-price">
+                                <span class="lesson__subscription-price-value">7500₽</span>
+                                <span class="lesson__subscription-price-per">2500₽ за занятие</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

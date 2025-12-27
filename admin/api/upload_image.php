@@ -30,8 +30,8 @@ if (!isset($_FILES['image']) || $_FILES['image']['error'] !== UPLOAD_ERR_OK) {
 }
 
 $file = $_FILES['image'];
-$type = isset($_POST['type']) ? $_POST['type'] : (isset($_POST['upload_type']) && $_POST['upload_type'] === 'guide_photo' ? 'guide' : 'tour'); // 'tour', 'excursion' или 'guide'
-$tour_name = isset($_POST['tour_name']) ? trim($_POST['tour_name']) : (isset($_POST['excursion_name']) ? trim($_POST['excursion_name']) : ''); // Название тура/экскурсии для генерации имени файла
+$type = isset($_POST['type']) ? $_POST['type'] : (isset($_POST['upload_type']) && $_POST['upload_type'] === 'guide_photo' ? 'guide' : 'tour'); // 'tour', 'excursion', 'guide' или 'lesson'
+$tour_name = isset($_POST['tour_name']) ? trim($_POST['tour_name']) : (isset($_POST['excursion_name']) ? trim($_POST['excursion_name']) : (isset($_POST['park_name']) ? trim($_POST['park_name']) : '')); // Название тура/экскурсии/парка для генерации имени файла
 
 // Проверка размера (максимум 10MB)
 if ($file['size'] > 10 * 1024 * 1024) {
@@ -65,6 +65,9 @@ if ($type === 'guide') {
 } elseif ($type === 'excursion') {
     $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/img/excursion';
     $urlPath = '/img/excursion';
+} elseif ($type === 'lesson') {
+    $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/img/lesson';
+    $urlPath = '/img/lesson';
 } else {
     $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/img/act-tour';
     $urlPath = '/img/act-tour';
@@ -80,6 +83,16 @@ if (($type === 'tour' || $type === 'excursion') && !empty($tour_name) && functio
     // Для туров и экскурсий используем транслит названия (без расширения .php)
     $baseName = basename(generateTourFileName($tour_name), '.php');
     $fileName = $baseName . '.' . $ext;
+} elseif ($type === 'lesson' && !empty($tour_name)) {
+    // Для занятий используем транслит названия парка
+    $originalName = pathinfo($tour_name, PATHINFO_FILENAME);
+    $cleanName = preg_replace('/[^a-z0-9_\-]/i', '_', $originalName);
+    $cleanName = preg_replace('/_+/', '_', $cleanName);
+    $cleanName = trim($cleanName, '_');
+    if (empty($cleanName)) {
+        $cleanName = 'park_' . time();
+    }
+    $fileName = $cleanName . '.' . $ext;
 } else {
     // Для гидов и остальных случаев используем оригинальное имя файла
     $originalName = pathinfo($file['name'], PATHINFO_FILENAME);

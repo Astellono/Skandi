@@ -67,47 +67,11 @@
     }
 
 
-    .big__table {
-        display: none;
-    }
-
-    .lesson__table-imgBlock {
-        position: relative;
-        max-width: 450px;
-        height: 200px;
-        margin: 0 auto;
-        margin-bottom: 15px;
-    }
-
-    .lesson__img-smart {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .lesson__img-text-smart {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: white;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-        font-size: 28px;
-    }
-
-    .lesson__btn {
-        width: 450px;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 20px;
-    }
-
-    .lesson__smart__table {
-        display: block;
+    /* Старые таблицы скрыты - используется новый дизайн */
+    .big__table,
+    .lesson__smart__table,
+    .smart__table {
+        display: none !important;
     }
 
     .order__contant {
@@ -274,55 +238,7 @@
 
     }
 
-    .openlesson__mainblock {
-        position: relative;
-        justify-content: center;
-        text-align: center;
-
-        background-image: url(../img/lesson/openlesson.jpeg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 10px;
-    }
-
-    .openlesson__mainblock:before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, .5);
-        border-radius: 10px;
-    }
-
-    .openlesson__imgblock {
-        display: none;
-    }
-
-    .openlesson__info {
-        z-index: 1000;
-        color: white;
-        margin-right: 0;
-
-    }
-
-    .openlesson__btn {
-        width: 100%;
-        margin: 10px auto;
-    }
-
-    .openlesson__title {
-        font-size: 26px;
-    }
-
-    .openlesson__item {
-        color: white;
-        margin-bottom: 10px;
-    }
+    /* Старые стили для openlesson удалены - используется новый редизайн */
 
     .excursions__item.long .excursions__img-block {
         height: auto;
@@ -1716,5 +1632,351 @@
         height: auto;
     }
         line-height: 1.5;
+    }
+}
+
+/* ============================================
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ РЕДИЗАЙНА LESSON.PHP
+   ============================================ */
+
+/* Планшеты (до 1205px) */
+@media (max-width: 1205px) {
+    .lesson__schedule-desktop {
+        display: none;
+    }
+    
+    .lesson__schedule-mobile {
+        display: block;
+    }
+    
+    .lesson__individual-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lesson__subscriptions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+/* Планшеты средние (до 968px) */
+@media (max-width: 968px) {
+    .lesson {
+        padding: 40px 0;
+    }
+    
+    .lesson__title {
+        font-size: 36px;
+    }
+    
+    .lesson__price-badge {
+        padding: 14px 28px;
+    }
+    
+    .lesson__price-value {
+        font-size: 24px;
+    }
+    
+    .lesson__schedule-title {
+        font-size: 28px;
+    }
+    
+    .lesson__cards {
+        gap: 20px;
+    }
+    
+    .lesson__card-header {
+        height: 180px;
+    }
+    
+    .lesson__schedule-grid {
+        gap: 10px;
+    }
+    
+    .lesson__schedule-day {
+        padding: 10px 6px;
+    }
+    
+    .lesson__day-name {
+        font-size: 11px;
+    }
+    
+    .lesson__day-time {
+        font-size: 12px;
+    }
+    
+    .lesson__section-title {
+        font-size: 28px;
+    }
+    
+    .lesson__subscriptions-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .lesson__individual-title {
+        font-size: 36px;
+    }
+    
+    .lesson__individual-description {
+        font-size: 16px;
+    }
+}
+
+/* Мобильные устройства (до 600px) */
+@media (max-width: 600px) {
+    .lesson {
+        padding: 30px 0;
+    }
+    
+    .lesson__header {
+        margin-bottom: 30px;
+    }
+    
+    .lesson__title {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    
+    .lesson__title::after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .lesson__price-badge {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: 30px;
+    }
+    
+    .lesson__price-label {
+        font-size: 16px;
+    }
+    
+    .lesson__price-value {
+        font-size: 24px;
+    }
+    
+    .lesson__schedule-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .lesson__cards {
+        gap: 16px;
+    }
+    
+    .lesson__card {
+        border-radius: 16px;
+    }
+    
+    .lesson__card-header {
+        height: 160px;
+    }
+    
+    .lesson__card-title {
+        font-size: 20px;
+        padding: 16px;
+    }
+    
+    .lesson__card-body {
+        padding: 20px;
+    }
+    
+    .lesson__schedule-grid {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+    }
+    
+    .lesson__schedule-day {
+        padding: 8px 4px;
+        border-radius: 10px;
+    }
+    
+    .lesson__day-name {
+        font-size: 10px;
+    }
+    
+    .lesson__day-time {
+        font-size: 11px;
+    }
+    
+    .lesson__card-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .lesson__card-map-btn,
+    .lesson__card-register-btn {
+        width: 100%;
+        flex: none;
+    }
+    
+    .lesson__section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .lesson__section-title::after {
+        width: 80px;
+        height: 3px;
+    }
+    
+    .lesson__subscriptions {
+        margin-top: 40px;
+    }
+    
+    .lesson__subscription-card {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+    
+    .lesson__subscription-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 16px;
+    }
+    
+    .lesson__subscription-icon img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .lesson__subscription-title {
+        font-size: 20px;
+    }
+    
+    .lesson__subscription-period {
+        font-size: 14px;
+    }
+    
+    .lesson__subscription-price-value {
+        font-size: 32px;
+    }
+    
+    .lesson__subscription-price-per {
+        font-size: 13px;
+    }
+    
+    .lesson__individual {
+        padding: 50px 0;
+    }
+    
+    .lesson__individual-content {
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .lesson__individual-title {
+        font-size: 28px;
+    }
+    
+    .lesson__individual-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .lesson__individual-price {
+        padding: 16px 24px;
+        border-radius: 12px;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .lesson__individual-price-label {
+        font-size: 16px;
+    }
+    
+    .lesson__individual-price-value {
+        font-size: 28px;
+    }
+    
+    .lesson__btn-primary {
+        width: 100%;
+        padding: 14px 32px;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+/* Очень маленькие экраны (до 400px) */
+@media (max-width: 400px) {
+    .lesson__title {
+        font-size: 24px;
+    }
+    
+    .lesson__price-badge {
+        padding: 10px 20px;
+    }
+    
+    .lesson__price-value {
+        font-size: 20px;
+    }
+    
+    .lesson__schedule-title {
+        font-size: 22px;
+    }
+    
+    .lesson__card-header {
+        height: 140px;
+    }
+    
+    .lesson__card-title {
+        font-size: 18px;
+        padding: 12px;
+    }
+    
+    .lesson__card-body {
+        padding: 16px;
+    }
+    
+    .lesson__schedule-day {
+        padding: 6px 3px;
+    }
+    
+    .lesson__day-name {
+        font-size: 9px;
+    }
+    
+    .lesson__day-time {
+        font-size: 10px;
+    }
+    
+    .lesson__section-title {
+        font-size: 22px;
+    }
+    
+    .lesson__subscription-card {
+        padding: 20px 16px;
+    }
+    
+    .lesson__subscription-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .lesson__subscription-icon img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .lesson__subscription-title {
+        font-size: 18px;
+    }
+    
+    .lesson__subscription-price-value {
+        font-size: 28px;
+    }
+    
+    .lesson__individual-title {
+        font-size: 24px;
+    }
+    
+    .lesson__individual-price-value {
+        font-size: 24px;
     }
 }
