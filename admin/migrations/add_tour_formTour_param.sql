@@ -5,3 +5,4 @@ ALTER TABLE tours ADD COLUMN IF NOT EXISTS tour_formTour_param VARCHAR(255) NULL
 
 
 
+

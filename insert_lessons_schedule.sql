@@ -26,3 +26,4 @@ VALUES
 -- Проверка вставленных данных
 -- SELECT * FROM lessons_schedule ORDER BY `order` ASC;
 
+
