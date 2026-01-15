@@ -62,7 +62,8 @@ require_once 'parts/formEx.php';
                 $excursions = [];
                 $tableCheck = $connect->query("SHOW TABLES LIKE 'excursions'");
                 if ($tableCheck && $tableCheck->num_rows > 0) {
-                    $query = "SELECT * FROM excursions ORDER BY excursion_date ASC";
+                    // Сортировка: сначала по excursion_id (порядок добавления), затем по дате если есть
+                    $query = "SELECT * FROM excursions ORDER BY excursion_id ASC";
                     $result = $connect->query($query);
                     if ($result) {
                         while ($row = $result->fetch_assoc()) {
