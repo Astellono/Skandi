@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/phpLogin/connect.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/admin/functions/tour_helpers.php';
 
 // Проверка подключения к БД
 if (!($connect instanceof mysqli)) {
@@ -9,7 +10,7 @@ if (!($connect instanceof mysqli)) {
     exit;
 }
 
-// Параметры сортировки из запроса
+// Параметры сортировки из запроса (по умолчанию — по дате по возрастанию)
 $sort_by = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'excursion_date';
 $sort_order = isset($_GET['sort_order']) ? strtoupper($_GET['sort_order']) : 'ASC';
 
@@ -32,7 +33,7 @@ if (!$tableCheck || $tableCheck->num_rows === 0) {
     exit;
 }
 
-// Запрос к базе данных с сортировкой
+// Запрос без ORDER BY — сортировка по дате делается в PHP (дата в БД — VARCHAR, формат "6 декабря 2025г")
 $query = "SELECT 
     excursion_id,
     excursion_name,
@@ -46,8 +47,7 @@ $query = "SELECT
     excursion_imgSrc,
     excursion_link_id,
     excursion_formTour_param
-FROM excursions 
-ORDER BY $sort_by $sort_order";
+FROM excursions";
 
 $result = $connect->query($query);
 
@@ -74,6 +74,23 @@ while ($row = $result->fetch_assoc()) {
         'link_id' => $row['excursion_link_id'],
         'formTour_param' => $row['excursion_formTour_param']
     ];
+}
+
+// Сортировка по дате по возрастанию (поддержка "6 декабря 2025г" и Y-m-d)
+if ($sort_by === 'excursion_date' && function_exists('parse_excursion_date_for_sort')) {
+    usort($excursions, function ($a, $b) use ($sort_order) {
+        $d1 = parse_excursion_date_for_sort($a['date'] ?? null);
+        $d2 = parse_excursion_date_for_sort($b['date'] ?? null);
+        $cmp = strcmp($d1, $d2);
+        return $sort_order === 'DESC' ? -$cmp : $cmp;
+    });
+} elseif ($sort_by !== 'excursion_date') {
+    usort($excursions, function ($a, $b) use ($sort_by, $sort_order) {
+        $v1 = $a[$sort_by === 'excursion_id' ? 'id' : ($sort_by === 'excursion_name' ? 'name' : ($sort_by === 'excursion_link_id' ? 'link_id' : ''))] ?? '';
+        $v2 = $b[$sort_by === 'excursion_id' ? 'id' : ($sort_by === 'excursion_name' ? 'name' : ($sort_by === 'excursion_link_id' ? 'link_id' : ''))] ?? '';
+        $cmp = strcmp((string)$v1, (string)$v2);
+        return $sort_order === 'DESC' ? -$cmp : $cmp;
+    });
 }
 
 echo json_encode($excursions, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);

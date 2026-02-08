@@ -62,12 +62,20 @@ require_once 'parts/formEx.php';
                 $excursions = [];
                 $tableCheck = $connect->query("SHOW TABLES LIKE 'excursions'");
                 if ($tableCheck && $tableCheck->num_rows > 0) {
-                    // Сортировка: сначала по excursion_id (порядок добавления), затем по дате если есть
-                    $query = "SELECT * FROM excursions ORDER BY excursion_id ASC";
+                    require_once __DIR__ . '/admin/functions/tour_helpers.php';
+                    $query = "SELECT * FROM excursions";
                     $result = $connect->query($query);
                     if ($result) {
                         while ($row = $result->fetch_assoc()) {
                             $excursions[] = $row;
+                        }
+                        // Сортировка по дате по возрастанию (поддержка форматов "6 декабря 2025г" и Y-m-d)
+                        if (function_exists('parse_excursion_date_for_sort')) {
+                            usort($excursions, function ($a, $b) {
+                                $d1 = parse_excursion_date_for_sort($a['excursion_date'] ?? null);
+                                $d2 = parse_excursion_date_for_sort($b['excursion_date'] ?? null);
+                                return strcmp($d1, $d2);
+                            });
                         }
                     }
                 }

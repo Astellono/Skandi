@@ -81,6 +81,49 @@ if (!function_exists('generateTourFileName')) {
     }
 }
 
+if (!function_exists('parse_excursion_date_for_sort')) {
+    /**
+     * Преобразует дату экскурсии (текст или Y-m-d) в строку Y-m-d для сортировки по возрастанию.
+     * Поддерживает форматы: "6 декабря 2025г", "2025-12-06".
+     * @param string|null $dateStr
+     * @return string Y-m-d или '9999-12-31' для неразобранных дат (в конец при ASC)
+     */
+    function parse_excursion_date_for_sort($dateStr) {
+        if ($dateStr === null || $dateStr === '') {
+            return '9999-12-31';
+        }
+        $dateStr = trim($dateStr);
+        // Уже YYYY-MM-DD
+        if (preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', $dateStr, $m)) {
+            return $dateStr;
+        }
+        // Русский формат: "6 декабря 2025г" или "6 декабря 2025"
+        $months = [
+            'января' => '01', 'январь' => '01',
+            'февраля' => '02', 'февраль' => '02',
+            'марта' => '03', 'март' => '03',
+            'апреля' => '04', 'апрель' => '04',
+            'мая' => '05', 'май' => '05',
+            'июня' => '06', 'июнь' => '06',
+            'июля' => '07', 'июль' => '07',
+            'августа' => '08', 'август' => '08',
+            'сентября' => '09', 'сентябрь' => '09',
+            'октября' => '10', 'октябрь' => '10',
+            'ноября' => '11', 'ноябрь' => '11',
+            'декабря' => '12', 'декабрь' => '12',
+        ];
+        $dateStr = preg_replace('/\s*г\s*\.?\s*$/ui', '', $dateStr);
+        if (preg_match('/^(\d{1,2})\s+([а-яё]+)\s+(\d{4})$/ui', $dateStr, $m)) {
+            $monthRu = mb_strtolower(trim($m[2]), 'UTF-8');
+            if (isset($months[$monthRu])) {
+                $d = str_pad((string)(int)$m[1], 2, '0', STR_PAD_LEFT);
+                return $m[3] . '-' . $months[$monthRu] . '-' . $d;
+            }
+        }
+        return '9999-12-31';
+    }
+}
+
 if (!function_exists('generateTourPageFile')) {
     /**
      * Генерирует PHP файл страницы тура
