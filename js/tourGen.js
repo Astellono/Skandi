@@ -3,7 +3,8 @@ try {
     const mod = await import(`./tourList.js?ver=${Date.now()}`);
     // Ждем загрузки данных из БД
     await mod.tourListPromise;
-    const tourList = mod.tourList || [];
+    // Фильтруем только туры, исключаем экскурсии (они должны быть только на excursions.php)
+    const tourList = (mod.tourList || []).filter(tour => tour.type !== 'excursion');
 
 function mounthNumberToString(name) {
     let mounthName = '';

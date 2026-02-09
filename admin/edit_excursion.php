@@ -520,6 +520,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         readonly: false,
                         plugins: 'lists link code',
                         toolbar: 'undo redo | formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | link | code',
+                        contextmenu: 'cut copy paste | selectall',
                         content_style: 'body { font-family: Arial, sans-serif; font-size: 14px; text-align: justify; }',
                         setup: function(editor) {
                             // Скрываем textarea после инициализации редактора
