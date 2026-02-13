@@ -247,6 +247,7 @@ require_once 'parts/formEx.php';
     <!-- <script src="js/regEx.js?ver=<? echo time(); ?>"></script> -->
     <script defer src="parts/exForm.js?ver=<? echo time(); ?>"></script>
     <script defer src="js/ex.js?ver=<? echo time(); ?>"></script>
+    <script src="parts/footer.js?ver=<? echo time(); ?>"></script>
     <script src="modal/bootstrap.bundle.js"></script>
 
     <!-- <script src="modal/modal.js"></script> -->

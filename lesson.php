@@ -862,6 +862,7 @@
         </div>
     </div>
     <footer class="footer"></footer>
+    <script src="parts/footer.js?ver=<? echo time(); ?>"></script>
 
     <script src="modal/bootstrap.bundle.js"></script>
     <script src="modal/Burger.js"></script>

@@ -115,6 +115,7 @@
     </script>
 
     <footer class="footer"></footer>
+    <script src="parts/footer.js?ver=<? echo time(); ?>"></script>
 
     <script src="js/video.js" defer></script>
     <script src="modal/bootstrap.bundle.js"></script>

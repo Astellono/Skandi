@@ -1609,6 +1609,281 @@ button {
 
 /*---------------------------------------------------------------------------------------quest--*/
 
+/*---------------------------------------------------------------------------------------Loyalty Program--*/
+
+.loyalty-program {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(236, 229, 238, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+    position: relative;
+}
+
+.loyalty-program__title {
+    font-size: 32px;
+    text-align: center;
+    color: #4F3156;
+    margin-bottom: 30px;
+    font-weight: 700;
+    border-bottom: 3px solid #824292;
+    padding-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loyalty-program__content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.loyalty-program__intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4F3156;
+    text-align: justify;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.loyalty-program__benefits {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.loyalty-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loyalty-benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(130, 66, 146, 0.2);
+}
+
+.loyalty-benefit__icon {
+    font-size: 48px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.loyalty-benefit__text h3 {
+    font-size: 22px;
+    color: #4F3156;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.loyalty-benefit__text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4F3156;
+    margin: 0;
+    text-align: justify;
+}
+
+.loyalty-benefit__text strong {
+    color: #824292;
+    font-weight: 700;
+}
+
+.loyalty-program__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 40px;
+    background-color: #824292;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(130, 66, 146, 0.3);
+}
+
+.loyalty-program__btn:hover {
+    background-color: #60326B;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(130, 66, 146, 0.4);
+}
+
+.loyalty-program__btn:active {
+    transform: translateY(0);
+}
+
+/* Стили для модального окна программы лояльности */
+.loyalty-modal-body {
+    padding: 30px;
+    color: #4F3156;
+    line-height: 1.8;
+}
+
+.loyalty-modal-intro {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #824292;
+}
+
+.loyalty-modal-body p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.loyalty-modal-subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4F3156;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #824292;
+}
+
+.loyalty-modal-section {
+    margin: 25px 0;
+}
+
+.loyalty-modal-benefit {
+    background: rgba(236, 229, 238, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.loyalty-modal-benefit h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #824292;
+    margin-bottom: 15px;
+}
+
+.loyalty-modal-benefit ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.loyalty-modal-benefit li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.loyalty-modal-conditions {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.loyalty-modal-conditions li {
+    padding: 12px 0;
+    padding-left: 25px;
+    position: relative;
+    border-bottom: 1px solid rgba(130, 66, 146, 0.2);
+    font-size: 16px;
+    text-align: justify;
+}
+
+.loyalty-modal-conditions li:before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: #824292;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.loyalty-modal-conditions li strong {
+    color: #824292;
+}
+
+.loyalty-modal-faq {
+    margin: 25px 0;
+}
+
+.loyalty-faq-item {
+    background: rgba(236, 229, 238, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.loyalty-faq-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4F3156;
+    margin-bottom: 10px;
+}
+
+.loyalty-faq-item p {
+    margin: 0;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.loyalty-modal-why {
+    background: linear-gradient(135deg, rgba(236, 229, 238, 0.4) 0%, rgba(255, 255, 255, 0.6) 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.loyalty-modal-closing {
+    font-size: 18px;
+    font-weight: 600;
+    color: #824292;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.loyalty-modal-signature {
+    text-align: right;
+    font-style: italic;
+    color: #4F3156;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .loyalty-program__title {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+    
+    .loyalty-program__intro {
+        font-size: 16px;
+    }
+    
+    .loyalty-program__benefits {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .loyalty-benefit {
+        max-width: 100%;
+    }
+    
+    .loyalty-modal-body {
+        padding: 20px;
+    }
+    
+    .loyalty-modal-subtitle {
+        font-size: 20px;
+    }
+}
+
 .questions {
     padding: 50px 0;
     background-color: #48344E;
@@ -1691,8 +1966,76 @@ button {
 }
 
 footer {
-    height: 60px;
+    min-height: 60px;
     background-color: #4F3156;
+    padding: 20px 0;
+    color: #fff !important;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+footer * {
+    color: #fff !important;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer__links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer__link {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s;
+    display: inline-block;
+}
+
+.footer__link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+    color: #fff !important;
+}
+
+.footer__copyright {
+    font-size: 14px;
+    color: #fff !important;
+}
+
+.footer__copyright p {
+    margin: 0;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__links {
+        justify-content: center;
+    }
+
+    .footer__link,
+    .footer__copyright {
+        font-size: 13px;
+    }
 }
 
 table * {

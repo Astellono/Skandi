@@ -512,10 +512,9 @@ require_once '../getDATA/tourPageData.php';
     </section>
 
     <footer class="footer"></footer>
+    <script src="../parts/footer.js?ver=<? echo time(); ?>"></script>
 
     <script src="../node_modules/jquery/dist/jquery.js"></script>
-
-    <footer class="footer"></footer>
 
     <?php 
         // Используем tour_formTour_param из БД, если указан, иначе название тура

@@ -673,6 +673,8 @@ require_once 'parts/formFoto.php';
         <?php } ?>
     </script>
     <script src="js/anceta.js"></script>
+    <footer class="footer"></footer>
+    <script src="parts/footer.js?ver=<? echo time(); ?>"></script>
     <script src="modal/bootstrap.bundle.js"></script>
 </body>
 

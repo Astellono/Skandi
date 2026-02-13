@@ -177,6 +177,7 @@
 
 
     <footer class="footer"></footer>
+    <script src="parts/footer.js?ver=<? echo time(); ?>"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="modal/bootstrap.bundle.js"></script>
     <script src="modal/Burger.js"></script>

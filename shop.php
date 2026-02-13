@@ -157,7 +157,7 @@
 
 
     <footer class="footer"></footer>
-
+    <script src="parts/footer.js?ver=<? echo time(); ?>"></script>
 
     <div onclick="location.href='#'" class="mod">
         <div onclick="event.stopPropagation()" class="modal-d">
