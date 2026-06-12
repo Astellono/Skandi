@@ -703,6 +703,12 @@ session_start();
                 </div>
                 <input type="checkbox" name="fax_only" id="fax_only" value="1" style="display:none;"
                     autocomplete="off" />
+                <label class="feedback__consent">
+                    <input type="checkbox" name="privacy_consent" required
+                        oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                        oninput="setCustomValidity('')">
+                    <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                </label>
                 <input value="Отправить" type="submit" id="submitFF"
                     style="height: 40px; border: none; border-radius: 10px;" class="modal-form-btn">
 

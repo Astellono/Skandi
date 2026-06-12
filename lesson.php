@@ -399,7 +399,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -436,7 +441,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -471,7 +481,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -504,7 +519,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -537,7 +557,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -569,7 +594,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -601,7 +631,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -633,7 +668,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -665,7 +705,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -697,7 +742,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 
@@ -729,7 +779,12 @@
                         Коментарий, промокод (необязательное поле)
                         <input type="text" name="comment" placeholder="Ваш ответ">
 
-
+                        <label class="modal-form-consent">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
 
                         <input type="submit" value="Отправить" class="modal-form-btn">
 

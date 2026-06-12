@@ -141,6 +141,14 @@
                             <input type="password" name="user_pass" class="auth-form-input" placeholder="Минимум 6 символов" minlength="6" required>
                         </div>
                     </div>
+                    <div class="auth-form-group auth-form-consent">
+                        <label class="auth-consent-label">
+                            <input type="checkbox" name="privacy_consent" required
+                                oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                oninput="setCustomValidity('')">
+                            <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                        </label>
+                    </div>
                     <div class="auth-error-message" id="registerError" style="display:none"></div>
                     <button type="submit" class="auth-submit-btn">
                         <span>Зарегистрироваться</span>

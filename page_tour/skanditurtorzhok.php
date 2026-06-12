@@ -8,9 +8,9 @@ require_once '../getDATA/tourPageData.php';
 
 $currentPagePath = 'page_tour/' . basename(__FILE__);
 $tourData = getTourPageData($connect, $currentPagePath, [
-    'name' => 'Карелия. Паанаярви.',
+    'name' => 'Сканди-тур «Торжок: путешествие во времени с палками в руках»',
     'date' => '',
-    'price' => '86 400'
+    'price' => '24400 рублей.   Скидка на участие детей от 10 лет 15%'
 ]);
 
                 // Загружаем полные данные тура из БД для отображения
@@ -145,7 +145,9 @@ $tourData = getTourPageData($connect, $currentPagePath, [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Забудьте о цивилизации и отправляйтесь в настоящее зимнее приключение в один из самых удаленных и красивых национальных парков России &mdash; Паанаярв...">
+    <meta name="description" content="Двухдневный пешеходный маршрут по древнему городу, где каждый камень помнит Пушкина, Львова и вкус легендарной котлеты.
+&nbsp;
+Торжок &mdash; город, г...">
     <link rel="icon" sizes="120x120" href="/img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../style/clear.css">
     <link rel="stylesheet" href="../style/bootstrap.css">
@@ -161,7 +163,7 @@ $tourData = getTourPageData($connect, $currentPagePath, [
             margin-top: 10px;
         }
     </style>
-    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Карелия. Паанаярви.', ENT_QUOTES, 'UTF-8'); ?></title>
+    <title><?php echo htmlspecialchars($tourData['name'] ?? 'Сканди-тур «Торжок: путешествие во времени с палками в руках»', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 
 <body>
@@ -178,13 +180,13 @@ $tourData = getTourPageData($connect, $currentPagePath, [
 
                 <div class="tour__page__imgBox">
                     <?php if (!empty($tourImgPath)): ?>
-                    <img class="tour__page__img" src="<?php echo htmlspecialchars($tourImgPath, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($tourData['name'] ?? 'Карелия. Паанаярви.', ENT_QUOTES, 'UTF-8'); ?>">
+                    <img class="tour__page__img" src="<?php echo htmlspecialchars($tourImgPath, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($tourData['name'] ?? 'Сканди-тур «Торжок: путешествие во времени с палками в руках»', ENT_QUOTES, 'UTF-8'); ?>">
                     <?php else: ?>
-                    <img class="tour__page__img" src="../img/act-tour/default.jpg" alt="<?php echo htmlspecialchars($tourData['name'] ?? 'Карелия. Паанаярви.', ENT_QUOTES, 'UTF-8'); ?>">
+                    <img class="tour__page__img" src="../img/act-tour/default.jpg" alt="<?php echo htmlspecialchars($tourData['name'] ?? 'Сканди-тур «Торжок: путешествие во времени с палками в руках»', ENT_QUOTES, 'UTF-8'); ?>">
                     <?php endif; ?>
                     <div class="tour__page__titleBox">
                         <h1 class="tour__page__title">
-                            <?php echo htmlspecialchars($tourData['name'] ?? 'Карелия. Паанаярви.', ENT_QUOTES, 'UTF-8'); ?>
+                            <?php echo htmlspecialchars($tourData['name'] ?? 'Сканди-тур «Торжок: путешествие во времени с палками в руках»', ENT_QUOTES, 'UTF-8'); ?>
                         </h1>
                         <h2 class="tour__page__date"><?php echo $dateText; ?></h2>
                     </div>
@@ -305,7 +307,7 @@ $tourData = getTourPageData($connect, $currentPagePath, [
         <div class="container order__container">
             <div class="order__contant">
                 <div class="tour__page__pricePart">
-                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '86 400', ENT_QUOTES, 'UTF-8'); ?><?php 
+                    <p class="tour__page__price">Стоимость: <?php echo htmlspecialchars($tourData['price'] ?? '24400 рублей.   Скидка на участие детей от 10 лет 15%', ENT_QUOTES, 'UTF-8'); ?><?php 
                     if (!empty($fullTourData['group_size'])): 
                     ?><br> Группа <?php echo htmlspecialchars($fullTourData['group_size'], ENT_QUOTES, 'UTF-8'); ?> <?php endif; ?></p>
                     <?php if (!empty($fullTourData['price_includes'])): ?>
@@ -330,12 +332,6 @@ $tourData = getTourPageData($connect, $currentPagePath, [
                 <input type="tel" name="tel" placeholder="Телефон" required>
                 <input type="text" name="email" placeholder="email" required>
                 <input required type="text" class="questions__input-text" name="message" placeholder="Ваш вопрос?">
-                <label class="questions__consent">
-                    <input type="checkbox" name="privacy_consent" required
-                        oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
-                        oninput="setCustomValidity('')">
-                    <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
-                </label>
                 <input type="submit" value="Отправить" class="questions__btn">
             </form>
         </div>
@@ -346,9 +342,10 @@ $tourData = getTourPageData($connect, $currentPagePath, [
     </section>
 
     <footer class="footer"></footer>
-    <script src="../parts/footer.js?ver=<? echo time(); ?>"></script>
 
     <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+    <footer class="footer"></footer>
 
     <?php 
         // Используем tour_formTour_param из БД, если указан, иначе название тура
@@ -356,7 +353,7 @@ $tourData = getTourPageData($connect, $currentPagePath, [
         if (!empty($fullTourData['formTour_param'])) {
             $formTourParam = htmlspecialchars($fullTourData['formTour_param'], ENT_QUOTES, 'UTF-8');
         } else {
-            $formTourParam = htmlspecialchars($tourData['name'] ?? 'Карелия. Паанаярви.', ENT_QUOTES, 'UTF-8');
+            $formTourParam = htmlspecialchars($tourData['name'] ?? 'Сканди-тур «Торжок: путешествие во времени с палками в руках»', ENT_QUOTES, 'UTF-8');
         }
         formTour($formTourParam); 
     ?>

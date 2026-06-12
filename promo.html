@@ -203,6 +203,12 @@
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="text" name="email" placeholder="email" required>
                 <input required type="text" class="questions__input-text" name="message" placeholder="Ваш вопрос?">
+                <label class="questions__consent">
+                    <input type="checkbox" name="privacy_consent" required
+                        oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                        oninput="setCustomValidity('')">
+                    <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                </label>
                 <input type="submit" class="questions__btn">
 
             </form>

@@ -58,11 +58,9 @@ function formFoto()
                                     oninput="setCustomValidity('')">
                             </li>
                             <li class="modal-form-item">
-                                <p class="modal-form-sumit-text">Подтвердите <a class="modal-form-dogovor"
-                                        href="/files/Cогласие на обработку персональных данных.docx" download>согласие
-                                        на обработку персональных данных</a></p>
-                                <input class="modal-form-checkbox" name="dogovor" type="checkbox" required
-                                    oninvalid="this.setCustomValidity('Подтвердите если дали согласие!')"
+                                <p class="modal-form-sumit-text">Подтвердите согласие на обработку персональных данных в соответствии с <a class="modal-form-dogovor" href="/privacy.php" target="_blank">политикой конфиденциальности</a></p>
+                                <input class="modal-form-checkbox" name="privacy_consent" type="checkbox" required
+                                    oninvalid="this.setCustomValidity('Подтвердите согласие на обработку персональных данных!')"
                                     oninput="setCustomValidity('')">
                             </li>
 

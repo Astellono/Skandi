@@ -1604,6 +1604,48 @@ button {
     border-bottom: 1px solid blueviolet;
 }
 
+.modal-form-consent,
+.feedback__consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.modal-form-consent input,
+.feedback__consent input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+.modal-form-consent a,
+.feedback__consent a {
+    color: #824292;
+    text-decoration: underline;
+}
+
+.lk-consent,
+.lk-consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.lk-consent input,
+.lk-consent-label input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+.lk-consent a,
+.lk-consent-label a {
+    color: #824292;
+    text-decoration: underline;
+}
+
 /*----------------------------------------------------------------------------------------------*/
 
 
@@ -1933,6 +1975,24 @@ button {
 
 .questions__btn:hover {
     opacity: 0.5;
+}
+
+.questions__consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.questions__consent input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+.questions__consent a {
+    color: #824292;
+    text-decoration: underline;
 }
 
 
@@ -3075,6 +3135,27 @@ table * {
     color: #777;
     line-height: 1.5;
     padding-left: 2px;
+}
+
+.auth-form-consent {
+    margin-top: 12px;
+}
+.auth-consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #555;
+}
+.auth-consent-label input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+.auth-consent-label a {
+    color: #824292;
+    text-decoration: underline;
 }
 
 /* Сообщения об ошибках */

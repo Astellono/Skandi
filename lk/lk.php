@@ -161,6 +161,17 @@ if ($rqStmt) {
                         </div>
                         <div class="lk-field">
                             <div class="lk-label"></div>
+                            <div class="lk-value">
+                                <label class="lk-consent">
+                                    <input type="checkbox" name="privacy_consent" required
+                                        oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                        oninput="setCustomValidity('')">
+                                    <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="lk-field">
+                            <div class="lk-label"></div>
                             <div class="lk-value lk__btn__send" name="user_name">
                                <input type="submit" class="lk_change_send" value="Сохранить" id="changeSend">
                             </div>
@@ -464,6 +475,15 @@ if ($rqStmt) {
                             <label for="comment" class="form-label">Дополнительные комментарии</label>
                             <textarea class="form-control" id="comment" name="comment"
                                 rows="4"><?php echo htmlspecialchars($request['comment'] ?? ''); ?></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label lk-consent-label">
+                                <input type="checkbox" name="privacy_consent" required
+                                    oninvalid="this.setCustomValidity('Необходимо дать согласие на обработку персональных данных')"
+                                    oninput="setCustomValidity('')">
+                                <span>Я даю согласие на <a href="/privacy.php" target="_blank">обработку персональных данных</a> в соответствии с политикой конфиденциальности</span>
+                            </label>
                         </div>
 
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
